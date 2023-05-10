@@ -1,0 +1,11 @@
+{
+    "acopio-racimos": [
+
+    ],
+    "usuarios" : [
+
+    ],
+    "credenciales": [
+        {"id": "admin", "user": "admin", "role":"admin","password":"admin"}
+    ]
+}
