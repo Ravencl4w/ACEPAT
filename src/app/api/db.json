@@ -1,11 +1,143 @@
 {
-    "acopio-racimos": [
-
-    ],
-    "usuarios" : [
-
-    ],
-    "credenciales": [
-        {"id": "admin", "user": "admin", "role":"admin","password":"admin"}
-    ]
+  "acopio-racimos": [],
+  "socios": [
+    {
+      "fecha": "2023-05-11",
+      "codigo": "1321",
+      "dni": "74046161",
+      "socio": "SEBASTIAN RAMIREZ VASQUEZ",
+      "central": "ASPAT",
+      "local": "TARAPOTO",
+      "direccion": "JR. SAN MARTIN 2173 ",
+      "estados": "ACTIVO",
+      "fundos": "2"
+    },{
+        "fecha": "2023-05-11",
+        "codigo": "76556",
+        "dni": "74046161",
+        "socio": "SEBASTIAN RAMIREZ VASQUEZ",
+        "central": "ASPAT",
+        "local": "TARAPOTO",
+        "direccion": "JR. SAN MARTIN 2173 ",
+        "estados": "ACTIVO",
+        "fundos": "2"
+      },{
+        "fecha": "2023-05-11",
+        "codigo": "54231",
+        "dni": "74046161",
+        "socio": "SEBASTIAN RAMIREZ VASQUEZ",
+        "central": "ASPAT",
+        "local": "TARAPOTO",
+        "direccion": "JR. SAN MARTIN 2173 ",
+        "estados": "ACTIVO",
+        "fundos": "2"
+      },{
+        "fecha": "2023-05-11",
+        "codigo": "11111",
+        "dni": "74046161",
+        "socio": "SEBASTIAN RAMIREZ VASQUEZ",
+        "central": "ASPAT",
+        "local": "TARAPOTO",
+        "direccion": "JR. SAN MARTIN 2173 ",
+        "estados": "ACTIVO",
+        "fundos": "2"
+      },{
+        "fecha": "2023-05-11",
+        "codigo": "1234",
+        "dni": "74046161",
+        "socio": "SEBASTIAN RAMIREZ VASQUEZ",
+        "central": "ASPAT",
+        "local": "TARAPOTO",
+        "direccion": "JR. SAN MARTIN 2173 ",
+        "estados": "ACTIVO",
+        "fundos": "2"
+      }
+    
+  ],
+  "credentials": [
+    {
+      "id": "admin",
+      "name": "admin",
+      "role": "admin",
+      "password": "1234"
+    },
+    {
+      "id": "usu2",
+      "name": "admin",
+      "role": "admin",
+      "password": "1234"
+    },
+    {
+      "id": "usu3",
+      "name": "admin",
+      "role": "admin",
+      "password": "1234"
+    },
+    {
+      "id": "usu4",
+      "name": "admin",
+      "role": "admin",
+      "password": "1234"
+    },
+    {
+      "id": "usu5",
+      "name": "admin",
+      "role": "admin",
+      "password": "1234"
+    },
+    {
+      "id": "usu6",
+      "name": "admin",
+      "role": "admin",
+      "password": "1234"
+    },
+    {
+      "id": "usu7",
+      "name": "admin",
+      "role": "admin",
+      "password": "1234"
+    },
+    {
+      "id": "usu8",
+      "name": "admin",
+      "role": "admin",
+      "password": "1234"
+    },
+    {
+      "id": "usu9",
+      "name": "admin",
+      "role": "admin",
+      "password": "1234"
+    },
+    {
+      "id": "usu10'",
+      "name": "admin",
+      "role": "admin",
+      "password": "1234"
+    },
+    {
+      "id": "pruebap",
+      "name": "Sebastian",
+      "role": "admin",
+      "password": "12345"
+    },
+    {
+      "id": "prueba",
+      "name": "sdadas",
+      "role": "admin",
+      "password": "1234567"
+    },
+    {
+      "id": "cvasquezp",
+      "name": "Carlos Vasquez",
+      "role": "admin",
+      "password": "1207"
+    },
+    {
+      "id": "_ouzvfT",
+      "name": "",
+      "role": "",
+      "password": ""
+    }
+  ]
 }

@@ -1,41 +1,37 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
+
+
+  // Función para cambiar el valor de isLoggedIn
+  
   constructor(private http:HttpClient) { 
 
   }
-  apiurl='http://localhost:3000/credenciales';
+  apiurl='http://26.186.124.160:4100/credentials';
 
-  RegisterUser(inputdata:any){
-    return this.http.post(this.apiurl,inputdata)
+  private isLoggedInSubject = new BehaviorSubject<boolean>(true);
+  public isLoggedIn$ = this.isLoggedInSubject.asObservable();
+
+  getIsLoggedIn(): boolean {
+    return this.isLoggedInSubject.value;
+  }
+
+  setIsLoggedIn(value: boolean) {
+    this.isLoggedInSubject.next(value);
   }
   GetUserbyCode(id:any){
     return this.http.get(this.apiurl+'/'+id);
+    
   }
-  Getall(){
-    return this.http.get(this.apiurl);
-  }
-  updateuser(id:any,inputdata:any){
-    return this.http.put(this.apiurl+'/'+id,inputdata);
-  }
-  getuserrole(){
-    return this.http.get('http://localhost:3000/role');
-  }
-  isloggedin(){
-    return sessionStorage.getItem('username')!=null;
-  }
-  getrole(){
-    return sessionStorage.getItem('role')!=null?sessionStorage.getItem('role')?.toString():'';
-  }
-  GetAllCustomer(){
-    return this.http.get('http://localhost:3000/customer');
-  }
-  Getaccessbyrole(role:any,menu:any){
-    return this.http.get('http://localhost:3000/roleaccess?role='+role+'&menu='+menu)
-  }
+
+  
+
+
 }

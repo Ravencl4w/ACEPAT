@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router, RouterFeature } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -9,7 +8,7 @@ import { AuthService } from 'src/app/services/auth.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit{
 
     loginForm: FormGroup;
   
@@ -20,31 +19,27 @@ export class LoginComponent implements OnInit {
         password: ['', Validators.required]
       });
     }
+  ngOnInit(): void {
+    this.service.setIsLoggedIn(false);
+  }
 
     result: any;
-    ngOnInit(): void {
-      //ingresar codigo aca
-    }
+   
   
   onSubmit(): void {
     if (this.loginForm.valid) {
       this.service.GetUserbyCode(this.loginForm.value.username).subscribe(item => {
         this.result = item;
         if (this.result.password === this.loginForm.value.password) {
-          if (this.result.isactive) {
-            sessionStorage.setItem('username',this.result.username);
-            sessionStorage.setItem('role',this.result.role);
+            this.service.setIsLoggedIn(true);
             this.router.navigate(["acopio-racimos"]);
-          } else {
-            console.log("hola")
-          }
         } else {
-          console.log("hola")
+          console.log("usuario incorrecto")
         }
       });
 
-      this.router.navigate(["acopio-racimos"]);
     } 
+    
   }
   }
 

@@ -1,18 +1,4 @@
-
-.main_content .header{
-    padding: 20px;
-    background: #fff;
-    color: #717171;
-    border-bottom: 1px solid #e0e4e8;
-    font-size: 35px;
-  }
-  
-
-  table {
-    width: 100%;
-  }
-
-  .login{
+.login{
     display: flex;
     justify-content: center;
     align-items: center;

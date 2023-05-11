@@ -1,0 +1,25 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit(formulario)">
+    <mat-form-field class="example-full-width">
+      <mat-label>Socio</mat-label>
+      <input matInput formControlName="socio" required>
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Apellidos y Nombres</mat-label>
+      <input matInput formControlName="apellidosNombres" required>
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Cantidad</mat-label>
+      <input matInput formControlName="cantidad" required>
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Producción</mat-label>
+      <input matInput formControlName="produccion" required>
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" type="submit">Enviar</button>
+    <button mat-raised-button color="accent" type="button" (click)="onClose()">Cerrar</button>
+  </form>
+  

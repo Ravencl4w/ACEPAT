@@ -1,0 +1,36 @@
+<h1 mat-dialog-title>Formulario de datos</h1>
+<div mat-dialog-content>
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit(formulario)">
+    <mat-form-field>
+      <input matInput type="text" formControlName="fecha" placeholder="Fecha">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" formControlName="codigo" placeholder="Código">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" formControlName="dni" placeholder="DNI">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" formControlName="socio" placeholder="Socio">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" formControlName="central" placeholder="Central">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" formControlName="local" placeholder="Local">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" formControlName="direccion" placeholder="Dirección">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" formControlName="estados" placeholder="Estados">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" formControlName="fundos" placeholder="Fundos">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onClose()">Cerrar</button>
+  <button mat-button color="primary" [disabled]="!formulario.valid" (click)="onSubmit(formulario)">Enviar</button>
+</div>

@@ -16,6 +16,12 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UsersManagementComponent } from './admin/users-management/users-management.component';
+import { UserCreationDialogComponent } from './shared/user-creation-dialog/user-creation-dialog.component';
+import { PartnerCreationDialogComponent } from './shared/partner-creation-dialog/partner-creation-dialog.component';
+import { MatIconModule } from '@angular/material/icon';
+import {MatSortModule} from '@angular/material/sort';
+import { AcopioDialogComponent } from './shared/acopio-dialog/acopio-dialog.component';
 
 
 
@@ -24,7 +30,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     CreacionUsuariosComponent,
     AcopioDeRacimosComponent,
-    LoginComponent
+    LoginComponent,
+    UsersManagementComponent,
+    UserCreationDialogComponent,
+    PartnerCreationDialogComponent,
+    AcopioDialogComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -38,7 +49,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     MatCardModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatIconModule,
+    MatSortModule
 
   ],
   providers: [],
