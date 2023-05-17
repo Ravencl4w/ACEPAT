@@ -10,11 +10,21 @@ import * as XLSX from 'xlsx';
 @Component({
   selector: 'app-creacion-usuarios',
   templateUrl: './creacion-usuarios.component.html',
-  styleUrls: ['./creacion-usuarios.component.css']
+  styleUrls: ['./creacion-usuarios.component.css'],
 })
 export class CreacionUsuariosComponent implements AfterViewInit {
-  displayedColumns: string[] = ['fecha', 'codigo', 'dni', 'socio', 'central' , 'local', 'direccion', 'estados','fundos'] ;
-  dataSource = new MatTableDataSource<Partner>;
+  displayedColumns: string[] = [
+    'fecha',
+    'codigo',
+    'dni',
+    'socio',
+    'central',
+    'local',
+    'direccion',
+    'estados',
+    'fundos',
+  ];
+  dataSource = new MatTableDataSource<Partner>();
 
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
@@ -25,29 +35,31 @@ export class CreacionUsuariosComponent implements AfterViewInit {
   }
 
   getPartners(): void {
-    this.service.getPartners()
-      .subscribe(partners => {
-        this.dataSource = new MatTableDataSource<Partner>(partners);
-        this.dataSource.paginator = this.paginator;
+    this.service.getPartners().subscribe((partners) => {
+      this.dataSource = new MatTableDataSource<Partner>(partners);
+      this.dataSource.paginator = this.paginator;
+    });
+  }
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+  exportToExcel(): void {
+    const data = this.dataSource.data;
+    const paginatedData = data.slice(
+      this.paginator.pageIndex * this.paginator.pageSize,
+      (this.paginator.pageIndex + 1) * this.paginator.pageSize
+    );
 
-      });
-}
+    const workbook = XLSX.utils.book_new();
+    const worksheet = XLSX.utils.json_to_sheet(paginatedData);
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Datos');
 
-exportToExcel(): void {
-  const data = this.dataSource.data;
-  const paginatedData = data.slice(this.paginator.pageIndex * this.paginator.pageSize, (this.paginator.pageIndex + 1) * this.paginator.pageSize);
+    XLSX.writeFile(workbook, 'datos.xlsx');
+  }
 
-  const workbook = XLSX.utils.book_new();
-  const worksheet = XLSX.utils.json_to_sheet(paginatedData);
-  XLSX.utils.book_append_sheet(workbook, worksheet, 'Datos');
-
-  XLSX.writeFile(workbook, 'datos.xlsx');
-}
-
-openDialog(): void {
-  const dialogRef = this.dialog.open(PartnerCreationDialogComponent, {
-    width: '900px'
-  });
-}
-
+  openDialog(): void {
+    const dialogRef = this.dialog.open(PartnerCreationDialogComponent, {
+      width: '900px',
+    });
+  }
 }

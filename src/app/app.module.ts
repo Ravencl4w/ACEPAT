@@ -22,6 +22,14 @@ import { PartnerCreationDialogComponent } from './shared/partner-creation-dialog
 import { MatIconModule } from '@angular/material/icon';
 import {MatSortModule} from '@angular/material/sort';
 import { AcopioDialogComponent } from './shared/acopio-dialog/acopio-dialog.component';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { MatListModule } from '@angular/material/list';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+
 
 
 
@@ -35,6 +43,7 @@ import { AcopioDialogComponent } from './shared/acopio-dialog/acopio-dialog.comp
     UserCreationDialogComponent,
     PartnerCreationDialogComponent,
     AcopioDialogComponent,
+    SidebarComponent,
 
   ],
   imports: [
@@ -51,7 +60,13 @@ import { AcopioDialogComponent } from './shared/acopio-dialog/acopio-dialog.comp
     MatInputModule,
     ReactiveFormsModule,
     MatIconModule,
-    MatSortModule
+    MatSortModule,
+    MatListModule,
+    MatExpansionModule,
+    MatSidenavModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSelectModule
 
   ],
   providers: [],

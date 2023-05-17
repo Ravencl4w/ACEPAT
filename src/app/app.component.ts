@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { AuthService } from './services/auth.service';
 
 @Component({
@@ -6,15 +6,17 @@ import { AuthService } from './services/auth.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent  {
-    title = 'ACEPAT';
+export class AppComponent  implements OnInit {
+  title = 'ACEPAT';
+  public isLoggedIn: boolean = false;
   
-    public isLoggedIn: boolean = false;
-
-    constructor(private authService: AuthService) {
-      this.authService.isLoggedIn$.subscribe(isLoggedIn => {
-        this.isLoggedIn = isLoggedIn;
-        console.log(isLoggedIn)
-      });
-    }
+  constructor(private authService: AuthService, private cdr: ChangeDetectorRef) {}
+  
+  ngOnInit() {
+  this.authService.isLoggedIn$.subscribe(isLoggedIn => {
+  this.isLoggedIn = isLoggedIn;
+  console.log(isLoggedIn);
+  this.cdr.detectChanges();
+  });
+  }
   }
