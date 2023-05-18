@@ -10,7 +10,7 @@ export class AcopioService {
 
   constructor(private http: HttpClient) { }
 
-  apiurl = 'http://26.186.124.160:4100/acopio-racimos';
+  apiurl = 'http://localhost:4100/acopio-racimos';
 
   getAcopios(startDate: Date, endDate: Date): Observable<Acopio[]> {
   return this.http.get<Acopio[]>(this.apiurl).pipe(

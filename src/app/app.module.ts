@@ -35,6 +35,7 @@ import { BankAccDialogComponent } from './shared/bank-acc-dialog/bank-acc-dialog
 import { PartnerStatusComponent } from './shared/partner-status/partner-status.component';
 import { UbigeoDialogComponent } from './shared/ubigeo-dialog/ubigeo-dialog.component';
 import {MatRadioModule} from '@angular/material/radio';
+import { ReportAcopioTransporteComponent } from './reports/report-acopio-transporte/report-acopio-transporte.component';
 
 
 
@@ -55,6 +56,7 @@ import {MatRadioModule} from '@angular/material/radio';
     BankAccDialogComponent,
     PartnerStatusComponent,
     UbigeoDialogComponent,
+    ReportAcopioTransporteComponent,
 
   ],
   imports: [
