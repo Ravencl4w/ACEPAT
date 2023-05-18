@@ -1,5 +1,48 @@
 <div class="main_content">
   <div class="header">Acopio de racimos</div>
+  <div class="button-container-padre">
+    <div class="button-container-hijo1">
+      <br />
+
+      <label class="circle-checkbox-label">
+        <input type="checkbox" class="circle-checkbox" />
+        Consolidado
+      </label>
+      <br />
+      <br />
+      
+      <label class="circle-checkbox-label">
+        <input type="checkbox" class="circle-checkbox" />
+        Desagregado
+      </label>
+    </div>
+    <div class="button-container-hijo2">
+      <label class="font-checkbox"
+        ><input type="checkbox" class="almacen" />
+        Almacen</label
+      >
+
+    </div>
+    
+    <div class="button-container-hijo4">
+    <label class="font-checkboxDesde"
+    ><input type="checkbox" class="fechaDesde" (click)="activarPicker()" />
+    Desde</label
+  >
+</div>
+<div class="button-container-hijo3">
+  <label class="circle-checkbox-label">
+    <input type="checkbox" class="circle-checkbox" />
+    Fecha AC
+  </label>
+  <br />
+  <br />
+  <label class="circle-checkbox-label">
+    <input type="checkbox" class="circle-checkbox" />
+    Fecha OLP
+  </label>
+</div>
+  </div>
 
   <div class="button-container">
     <!-- Botón de agregar usuario -->
@@ -9,10 +52,11 @@
       class="add-user-btn"
       (click)="openDialog()"
     >
+    
       <mat-icon>add_circle</mat-icon>
-      Agregar acopio
+      Agregar Acopio
     </button>
-
+    
     <!-- Botón de descarga -->
     <button
       mat-raised-button
@@ -24,7 +68,7 @@
       Exportar a Excel
     </button>
 
-    <mat-form-field>
+    <mat-form-field class="date-picker">
       <mat-label>Seleccione una opción</mat-label>
       <mat-select [(value)]="selectedOption">
         <mat-option *ngFor="let option of options" [value]="option.value">{{
@@ -34,12 +78,19 @@
     </mat-form-field>
 
     <mat-form-field class="date-picker">
-      <input matInput [matDatepicker]="pickerDesde" placeholder="Desde" />
+      <input
+        matInput
+        [matDatepicker]="picker"
+        placeholder="Desde"
+        [readonly]="radioSelected"
+        [formControl]="fechaDesdeControl"
+      />
       <mat-datepicker-toggle
         matSuffix
-        [for]="pickerDesde"
+        [for]="picker"
+        [disabled]="radioSelected"
       ></mat-datepicker-toggle>
-      <mat-datepicker #pickerDesde></mat-datepicker>
+      <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
 
     <mat-form-field class="date-picker">
@@ -50,6 +101,15 @@
       ></mat-datepicker-toggle>
       <mat-datepicker #pickerHasta></mat-datepicker>
     </mat-form-field>
+    <button
+      mat-raised-button
+      color="primary"
+      class="report-btn"
+      (click)="verReportes()"
+    >
+      <mat-icon>search</mat-icon>
+      Ver Reportes
+    </button>
   </div>
 
   <div class="info">

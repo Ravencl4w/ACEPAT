@@ -34,6 +34,7 @@ import { ParientesDialogComponent } from './shared/parientes-dialog/parientes-di
 import { BankAccDialogComponent } from './shared/bank-acc-dialog/bank-acc-dialog.component';
 import { PartnerStatusComponent } from './shared/partner-status/partner-status.component';
 import { UbigeoDialogComponent } from './shared/ubigeo-dialog/ubigeo-dialog.component';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 
@@ -76,7 +77,8 @@ import { UbigeoDialogComponent } from './shared/ubigeo-dialog/ubigeo-dialog.comp
     MatSidenavModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSelectModule
+    MatSelectModule,
+    MatRadioModule
 
   ],
   providers: [],

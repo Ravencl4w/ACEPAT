@@ -11,48 +11,51 @@
       "direccion": "JR. SAN MARTIN 2173 ",
       "estados": "ACTIVO",
       "fundos": "2"
-    },{
-        "fecha": "2023-05-11",
-        "codigo": "76556",
-        "dni": "74046161",
-        "socio": "SEBASTIAN RAMIREZ VASQUEZ",
-        "central": "ASPAT",
-        "local": "TARAPOTO",
-        "direccion": "JR. SAN MARTIN 2173 ",
-        "estados": "ACTIVO",
-        "fundos": "2"
-      },{
-        "fecha": "2023-05-11",
-        "codigo": "54231",
-        "dni": "74046161",
-        "socio": "SEBASTIAN RAMIREZ VASQUEZ",
-        "central": "ASPAT",
-        "local": "TARAPOTO",
-        "direccion": "JR. SAN MARTIN 2173 ",
-        "estados": "ACTIVO",
-        "fundos": "2"
-      },{
-        "fecha": "2023-05-11",
-        "codigo": "11111",
-        "dni": "74046161",
-        "socio": "SEBASTIAN RAMIREZ VASQUEZ",
-        "central": "ASPAT",
-        "local": "TARAPOTO",
-        "direccion": "JR. SAN MARTIN 2173 ",
-        "estados": "ACTIVO",
-        "fundos": "2"
-      },{
-        "fecha": "2023-05-11",
-        "codigo": "1234",
-        "dni": "74046161",
-        "socio": "SEBASTIAN RAMIREZ VASQUEZ",
-        "central": "ASPAT",
-        "local": "TARAPOTO",
-        "direccion": "JR. SAN MARTIN 2173 ",
-        "estados": "ACTIVO",
-        "fundos": "2"
-      }
-    
+    },
+    {
+      "fecha": "2023-05-11",
+      "codigo": "76556",
+      "dni": "74046161",
+      "socio": "SEBASTIAN RAMIREZ VASQUEZ",
+      "central": "ASPAT",
+      "local": "TARAPOTO",
+      "direccion": "JR. SAN MARTIN 2173 ",
+      "estados": "ACTIVO",
+      "fundos": "2"
+    },
+    {
+      "fecha": "2023-05-11",
+      "codigo": "54231",
+      "dni": "74046161",
+      "socio": "SEBASTIAN RAMIREZ VASQUEZ",
+      "central": "ASPAT",
+      "local": "TARAPOTO",
+      "direccion": "JR. SAN MARTIN 2173 ",
+      "estados": "ACTIVO",
+      "fundos": "2"
+    },
+    {
+      "fecha": "2023-05-11",
+      "codigo": "11111",
+      "dni": "74046161",
+      "socio": "SEBASTIAN RAMIREZ VASQUEZ",
+      "central": "ASPAT",
+      "local": "TARAPOTO",
+      "direccion": "JR. SAN MARTIN 2173 ",
+      "estados": "ACTIVO",
+      "fundos": "2"
+    },
+    {
+      "fecha": "2023-05-11",
+      "codigo": "1234",
+      "dni": "74046161",
+      "socio": "SEBASTIAN RAMIREZ VASQUEZ",
+      "central": "ASPAT",
+      "local": "TARAPOTO",
+      "direccion": "JR. SAN MARTIN 2173 ",
+      "estados": "ACTIVO",
+      "fundos": "2"
+    }
   ],
   "credentials": [
     {
@@ -138,6 +141,12 @@
       "name": "",
       "role": "",
       "password": ""
+    },
+    {
+      "id": "seba",
+      "name": "sebastian",
+      "role": "admin",
+      "password": "44910665"
     }
   ]
 }
