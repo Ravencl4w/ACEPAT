@@ -29,6 +29,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
+import { FundoDialogComponent } from './shared/fundo-dialog/fundo-dialog.component';
+import { ParientesDialogComponent } from './shared/parientes-dialog/parientes-dialog.component';
+import { BankAccDialogComponent } from './shared/bank-acc-dialog/bank-acc-dialog.component';
+import { PartnerStatusComponent } from './shared/partner-status/partner-status.component';
+import { UbigeoDialogComponent } from './shared/ubigeo-dialog/ubigeo-dialog.component';
 
 
 
@@ -44,6 +49,11 @@ import { MatSelectModule } from '@angular/material/select';
     PartnerCreationDialogComponent,
     AcopioDialogComponent,
     SidebarComponent,
+    FundoDialogComponent,
+    ParientesDialogComponent,
+    BankAccDialogComponent,
+    PartnerStatusComponent,
+    UbigeoDialogComponent,
 
   ],
   imports: [

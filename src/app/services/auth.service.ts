@@ -14,7 +14,7 @@ export class AuthService {
   constructor(private http:HttpClient) { 
 
   }
-  apiurl='http://26.186.124.160:4100/credentials';
+  apiurl='http://localhost:4100/credentials';
 
   private isLoggedInSubject = new BehaviorSubject<boolean>(true);
   public isLoggedIn$ = this.isLoggedInSubject.asObservable();

@@ -1,33 +1,77 @@
-<h1 mat-dialog-title>Formulario de datos</h1>
+<h1 mat-dialog-title>Formulario de datos <i class="user-icon material-icons">account_circle</i></h1>
 <div mat-dialog-content>
   <form [formGroup]="formulario" (ngSubmit)="onSubmit(formulario)">
-    <mat-form-field>
-      <input matInput type="text" formControlName="fecha" placeholder="Fecha">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput type="text" formControlName="codigo" placeholder="Código">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput type="text" formControlName="dni" placeholder="DNI">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput type="text" formControlName="socio" placeholder="Socio">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput type="text" formControlName="central" placeholder="Central">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput type="text" formControlName="local" placeholder="Local">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput type="text" formControlName="direccion" placeholder="Dirección">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput type="text" formControlName="estados" placeholder="Estados">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput type="text" formControlName="fundos" placeholder="Fundos">
-    </mat-form-field>
+    <div class="form-row">
+      <div class="left-column">
+        <mat-form-field class="form-field">
+          <input matInput type="text" formControlName="fecha" placeholder="Fecha">
+        </mat-form-field>
+        <mat-form-field class="form-field">
+          <input matInput type="text" formControlName="codigo" placeholder="Código">
+        </mat-form-field>
+        <mat-form-field class="form-field">
+          <input matInput type="text" formControlName="dni" placeholder="DNI">
+        </mat-form-field>
+        <mat-form-field class="form-field">
+          <input matInput type="text" formControlName="socio" placeholder="Socio">
+        </mat-form-field>
+        <mat-form-field class="form-field">
+          <input matInput type="text" formControlName="central" placeholder="Central">
+        </mat-form-field>
+        <mat-form-field class="form-field">
+          <input matInput type="text" formControlName="local" placeholder="Local">
+        </mat-form-field>
+        <mat-form-field class="form-field">
+          <input matInput type="text" formControlName="direccion" placeholder="Dirección">
+        </mat-form-field>
+        <mat-form-field class="form-field">
+          <mat-select formControlName="estados" placeholder="Estados">
+            <mat-option value="opcion1">Opción 1</mat-option>
+            <mat-option value="opcion2">Opción 2</mat-option>
+            <mat-option value="opcion3">Opción 3</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="form-field">
+          <input matInput type="text" formControlName="fundos" placeholder="Fundos">
+        </mat-form-field>
+      </div>
+      <div class="right-column">
+        <div class="form-row">
+          <h3 class="location-title">Ubicación</h3>
+        </div>
+        <div class="form-row">
+          <mat-form-field class="form-field">
+            <mat-label>Departamento</mat-label>
+            <mat-select formControlName="departamento">
+              <mat-option value="departamento1">Departamento 1</mat-option>
+              <mat-option value="departamento2">Departamento 2</mat-option>
+              <mat-option value="departamento3">Departamento 3</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="form-row">
+          <mat-form-field class="form-field">
+            <mat-label>Provincia</mat-label>
+            <mat-select formControlName="provincia">
+              <mat-option value="provincia1">Provincia 1</mat-option>
+              <mat-option value="provincia2">Provincia 2</mat-option>
+              <mat-option value="provincia3">Provincia 3</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="form-row">
+          <mat-form-field class="form-field">
+            <mat-label>Distrito</mat-label>
+            <mat-select formControlName="distrito">
+              <mat-option value="distrito1">Distrito 1</mat-option>
+              <mat-option value="distrito2">Distrito 2</mat-option>
+              <mat-option value="distrito3">Distrito 3</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        
+      </div>
+    </div>
   </form>
 </div>
 <div mat-dialog-actions>
