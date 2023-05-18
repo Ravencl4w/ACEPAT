@@ -10,7 +10,7 @@ export class UserManagementService {
 
   constructor(private http:HttpClient) { }
 
-  apiurl='http://26.186.124.160:4100/credentials';
+  apiurl='http://localhost:4100/credentials';
 
   createUser(inputdata:any){
     return this.http.post(this.apiurl,inputdata)

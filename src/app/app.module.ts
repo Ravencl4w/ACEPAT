@@ -29,7 +29,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
-
+import {MatRadioModule} from '@angular/material/radio';
 
 
 
@@ -66,7 +66,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatSidenavModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSelectModule
+    MatSelectModule,
+    MatRadioModule
 
   ],
   providers: [],

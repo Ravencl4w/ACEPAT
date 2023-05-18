@@ -10,59 +10,56 @@ import { UserCreationDialogComponent } from 'src/app/shared/user-creation-dialog
 import * as XLSX from 'xlsx';
 import * as pdfMake from 'pdfmake/build/pdfmake';
 import * as pdfFonts from 'pdfmake/build/vfs_fonts';
-
-
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-acopio-de-racimos',
   templateUrl: './acopio-de-racimos.component.html',
-  styleUrls: ['./acopio-de-racimos.component.css']
+  styleUrls: ['./acopio-de-racimos.component.css'],
 })
 export class AcopioDeRacimosComponent implements AfterViewInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
-  
-  fechaDesde: Date = new Date(); 
+  fechaDesdeControl: FormControl = new FormControl();
+  fechaDesde = new Date();
+  radioSelected: boolean = false;
 
   options = [
     { value: 1, label: 'Centro de acopio Florida' },
     { value: 2, label: 'Centro de acopio 2' },
-    { value: 3, label: 'Centro de acopio 3' }
+    { value: 3, label: 'Centro de acopio 3' },
   ];
 
   selectedOption: number | undefined;
 
-  constructor( private dialog: MatDialog) {
-
-  }
+  constructor(private dialog: MatDialog) {}
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
-  
-
 
   ngAfterViewInit() {
-    this.dataSource = new MatTableDataSource(ELEMENT_DATA);
+    this.activarPicker();
+    this.dataSource = new MatTableDataSource();
     this.dataSource.paginator = this.paginator;
-
-    this.fechaDesde = new Date();
-
   }
 
   exportToExcel(): void {
     const data = this.dataSource.data;
-    const paginatedData = data.slice(this.paginator.pageIndex * this.paginator.pageSize, (this.paginator.pageIndex + 1) * this.paginator.pageSize);
-  
+    const paginatedData = data.slice(
+      this.paginator.pageIndex * this.paginator.pageSize,
+      (this.paginator.pageIndex + 1) * this.paginator.pageSize
+    );
+
     const workbook = XLSX.utils.book_new();
     const worksheet = XLSX.utils.json_to_sheet(paginatedData);
     XLSX.utils.book_append_sheet(workbook, worksheet, 'Datos');
-  
+
     XLSX.writeFile(workbook, 'datos.xlsx');
   }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(AcopioDialogComponent, {
-      width: '500px'
+      width: '500px',
     });
   }
 
@@ -70,6 +67,17 @@ export class AcopioDeRacimosComponent implements AfterViewInit {
     filterValue = filterValue.trim(); // Elimina los espacios en blanco
     filterValue = filterValue.toLowerCase(); // Convierte el texto a minúsculas
     this.dataSource.filter = filterValue;
+  }
+  verReportes(): void {
+    this.dataSource = new MatTableDataSource(ELEMENT_DATA);
+    this.dataSource.paginator = this.paginator;
+  }
+  activarPicker(): void {
+    this.radioSelected = !this.radioSelected;
+    
+  }
+  consoleLog(): void {
+    console.log(this.radioSelected);
   }
 }
 
@@ -81,18 +89,88 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, date: 'CARLOS VASQUEZ GARCIA', turbity:0.86, ph: 'Fruto suelto de P.A'},
-  {position: 1, date: 'CARLOS VASQUEZ GARCIA', turbity:0.86, ph: 'Fruto suelto de P.A'},
-  {position: 1, date: 'CARLOS VASQUEZ GARCIA', turbity:0.86, ph: 'Fruto suelto de P.A'},
-  {position: 1, date: 'CARLOS VASQUEZ GARCIA', turbity:0.86, ph: 'Fruto suelto de P.A'},
-  {position: 1, date: 'CARLOS VASQUEZ GARCIA', turbity:0.86, ph: 'Fruto suelto de P.A'},
-  {position: 1, date: 'CARLOS VASQUEZ GARCIA', turbity:0.86, ph: 'Fruto suelto de P.A'},
-  {position: 1, date: 'CARLOS VASQUEZ GARCIA', turbity:0.86, ph: 'Fruto suelto de P.A'},
-  {position: 1, date: 'CARLOS VASQUEZ GARCIA', turbity:0.86, ph: 'Fruto suelto de P.A'},
-  {position: 1, date: 'CARLOS VASQUEZ GARCIA', turbity:0.86, ph: 'Fruto suelto de P.A'},
-  {position: 1, date: 'CARLOS VASQUEZ GARCIA', turbity:0.86, ph: 'Fruto suelto de P.A'},
-  {position: 1, date: 'CARLOS VASQUEZ GARCIA', turbity:0.86, ph: 'Fruto suelto de P.A'},
-  {position: 1, date: 'CARLOS VASQUEZ GARCIA', turbity:0.86, ph: 'Fruto suelto de P.A'},
-  {position: 1, date: 'CARLOS VASQUEZ GARCIA', turbity:0.86, ph: 'Fruto suelto de P.A'},
-  {position: 1, date: 'CARLOS VASQUEZ GARCIA', turbity:0.86, ph: 'Fruto suelto de P.A'}
-]
+  {
+    position: 1,
+    date: 'CARLOS VASQUEZ GARCIA',
+    turbity: 0.86,
+    ph: 'Fruto suelto de P.A',
+  },
+  {
+    position: 1,
+    date: 'CARLOS VASQUEZ GARCIA',
+    turbity: 0.86,
+    ph: 'Fruto suelto de P.A',
+  },
+  {
+    position: 1,
+    date: 'CARLOS VASQUEZ GARCIA',
+    turbity: 0.86,
+    ph: 'Fruto suelto de P.A',
+  },
+  {
+    position: 1,
+    date: 'CARLOS VASQUEZ GARCIA',
+    turbity: 0.86,
+    ph: 'Fruto suelto de P.A',
+  },
+  {
+    position: 1,
+    date: 'CARLOS VASQUEZ GARCIA',
+    turbity: 0.86,
+    ph: 'Fruto suelto de P.A',
+  },
+  {
+    position: 1,
+    date: 'CARLOS VASQUEZ GARCIA',
+    turbity: 0.86,
+    ph: 'Fruto suelto de P.A',
+  },
+  {
+    position: 1,
+    date: 'CARLOS VASQUEZ GARCIA',
+    turbity: 0.86,
+    ph: 'Fruto suelto de P.A',
+  },
+  {
+    position: 1,
+    date: 'CARLOS VASQUEZ GARCIA',
+    turbity: 0.86,
+    ph: 'Fruto suelto de P.A',
+  },
+  {
+    position: 1,
+    date: 'CARLOS VASQUEZ GARCIA',
+    turbity: 0.86,
+    ph: 'Fruto suelto de P.A',
+  },
+  {
+    position: 1,
+    date: 'CARLOS VASQUEZ GARCIA',
+    turbity: 0.86,
+    ph: 'Fruto suelto de P.A',
+  },
+  {
+    position: 1,
+    date: 'CARLOS VASQUEZ GARCIA',
+    turbity: 0.86,
+    ph: 'Fruto suelto de P.A',
+  },
+  {
+    position: 1,
+    date: 'CARLOS VASQUEZ GARCIA',
+    turbity: 0.86,
+    ph: 'Fruto suelto de P.A',
+  },
+  {
+    position: 1,
+    date: 'CARLOS VASQUEZ GARCIA',
+    turbity: 0.86,
+    ph: 'Fruto suelto de P.A',
+  },
+  {
+    position: 1,
+    date: 'CARLOS VASQUEZ GARCIA',
+    turbity: 0.86,
+    ph: 'Fruto suelto de P.A',
+  },
+];
