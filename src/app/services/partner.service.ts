@@ -10,7 +10,7 @@ export class PartnerService {
 
   constructor(private http:HttpClient) { }
 
-  apiurl='http://localhost:4100/socios';
+  apiurl='http://26.186.124.160:4100/socios';
 
   createPartners(inputdata:any){
     return this.http.post(this.apiurl,inputdata);
