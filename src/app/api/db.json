@@ -1,5 +1,20 @@
 {
-  "acopio-racimos": [],
+  "acopio-racimos": [
+    {
+      "codigo": "FS",
+      "produccion": "FRUTO SUELTO DE P.A",
+      "cantidad":28.75,
+      "importe": 11900,
+      "fecha": "2023-05-11"
+    },
+    {
+      "codigo": "RFF",
+      "produccion": "RACIMO DE FRUTA FRESCA DE P.A",
+      "cantidad":653.70,
+      "importe": 219590,
+      "fecha": "2023-05-11"
+    }
+  ],
   "socios": [
     {
       "fecha": "2023-05-11",

@@ -17,14 +17,18 @@ table {
 }
 
 .download-btn {
-  margin-left: 8px;
-  font-size: 12px;
-  height: 24px;
+  top: -10px;
+  font-size: 14px;
+  height: 42px;
   padding: 0 12px;
+  width: 180px;
 }
 
 .add-user-btn {
-  font-size: 12px;
-  height: 24px;
+  top: -10px;
+  font-size: 14px;
+  height: 42px;
   padding: 0 12px;
+  width: 180px;
+  margin-right: 8px; /* Modificado */
 }

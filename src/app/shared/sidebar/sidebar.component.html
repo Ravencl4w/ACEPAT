@@ -1,26 +1,27 @@
 <mat-nav-list class="sidebar">
-    <h3 matSubheader>ACEPAT</h3>
+    <h3 matSubheader class="sidebar-title">ACEPAT</h3>
     <mat-divider></mat-divider>
     <mat-list-item routerLink="/acopio-racimos">
-        <mat-icon mat-list-icon>home</mat-icon>
-        <span mat-line>Reporte de acopios</span>
+      <mat-icon mat-list-icon>home</mat-icon>
+      <span mat-line class="sidebar-item">Reporte de acopios</span>
     </mat-list-item>
     <!-- <mat-list-item routerLink="/acopio-racimos">
-        <mat-icon mat-list-icon>home</mat-icon>
-        <span mat-line>Reporte de materia prima</span>
+      <mat-icon mat-list-icon>home</mat-icon>
+      <span mat-line class="sidebar-item">Reporte de materia prima</span>
     </mat-list-item> -->
     <mat-list-item routerLink="/creacion-usuarios">
-        <mat-icon mat-list-icon>person</mat-icon>
-        <span mat-line>Socios</span>
+      <mat-icon mat-list-icon>person</mat-icon>
+      <span mat-line class="sidebar-item">Socios</span>
     </mat-list-item>
     <mat-list-item routerLink="/usersmanagement">
-        <mat-icon mat-list-icon>admin_panel_settings</mat-icon>
-        <span mat-line>Administrador</span>
+      <mat-icon mat-list-icon>admin_panel_settings</mat-icon>
+      <span mat-line class="sidebar-item">Administrador</span>
     </mat-list-item>
-
+  
     <mat-divider></mat-divider>
     <mat-list-item (click)="logout()" routerLink="">
-        <mat-icon mat-list-icon>logout</mat-icon>
-        <span mat-line>Log Out</span>
+      <mat-icon mat-list-icon>logout</mat-icon>
+      <span mat-line class="sidebar-item">Log Out</span>
     </mat-list-item>
-</mat-nav-list>
+  </mat-nav-list>
+  

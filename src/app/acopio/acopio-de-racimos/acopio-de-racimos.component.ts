@@ -11,6 +11,8 @@ import * as XLSX from 'xlsx';
 import * as pdfMake from 'pdfmake/build/pdfmake';
 import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Acopio } from 'src/app/Interfaces/Acopio';
+import { AcopioService } from 'src/app/services/acopio.service';
 
 @Component({
   selector: 'app-acopio-de-racimos',
@@ -18,11 +20,12 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./acopio-de-racimos.component.css'],
 })
 export class AcopioDeRacimosComponent implements AfterViewInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  displayedColumns: string[] = ['codigo', 'produccion', 'cantidad', 'importe'];
+  dataSource = new MatTableDataSource<Acopio>;
 
   fechaDesdeControl: FormControl = new FormControl();
-  fechaDesde = new Date();
+  fechaDesde: Date = new Date();
+  fechaHasta = new Date();
   radioSelected: boolean = false;
 
   options = [
@@ -33,7 +36,7 @@ export class AcopioDeRacimosComponent implements AfterViewInit {
 
   selectedOption: number | undefined;
 
-  constructor(private dialog: MatDialog) {}
+  constructor(private dialog: MatDialog, private service: AcopioService) {}
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
 
@@ -69,10 +72,19 @@ export class AcopioDeRacimosComponent implements AfterViewInit {
     this.dataSource.filter = filterValue;
   }
   verReportes(): void {
-    this.dataSource = new MatTableDataSource(ELEMENT_DATA);
-    this.dataSource.paginator = this.paginator;
+    if (this.fechaDesde && this.fechaHasta) {
+    this.service.getAcopios(this.fechaDesde, this.fechaHasta)
+      .subscribe(acopios => {
+        this.dataSource = new MatTableDataSource<Acopio>(acopios);
+        this.dataSource.paginator = this.paginator;
+      });
+    }
+    else{
+      console.log("error")
+    }
   }
   activarPicker(): void {
+    this.fechaDesde = new Date(2023,5,18);
     this.radioSelected = !this.radioSelected;
     
   }
@@ -81,96 +93,3 @@ export class AcopioDeRacimosComponent implements AfterViewInit {
   }
 }
 
-export interface PeriodicElement {
-  date: string;
-  position: number;
-  turbity: number;
-  ph: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {
-    position: 1,
-    date: 'CARLOS VASQUEZ GARCIA',
-    turbity: 0.86,
-    ph: 'Fruto suelto de P.A',
-  },
-  {
-    position: 1,
-    date: 'CARLOS VASQUEZ GARCIA',
-    turbity: 0.86,
-    ph: 'Fruto suelto de P.A',
-  },
-  {
-    position: 1,
-    date: 'CARLOS VASQUEZ GARCIA',
-    turbity: 0.86,
-    ph: 'Fruto suelto de P.A',
-  },
-  {
-    position: 1,
-    date: 'CARLOS VASQUEZ GARCIA',
-    turbity: 0.86,
-    ph: 'Fruto suelto de P.A',
-  },
-  {
-    position: 1,
-    date: 'CARLOS VASQUEZ GARCIA',
-    turbity: 0.86,
-    ph: 'Fruto suelto de P.A',
-  },
-  {
-    position: 1,
-    date: 'CARLOS VASQUEZ GARCIA',
-    turbity: 0.86,
-    ph: 'Fruto suelto de P.A',
-  },
-  {
-    position: 1,
-    date: 'CARLOS VASQUEZ GARCIA',
-    turbity: 0.86,
-    ph: 'Fruto suelto de P.A',
-  },
-  {
-    position: 1,
-    date: 'CARLOS VASQUEZ GARCIA',
-    turbity: 0.86,
-    ph: 'Fruto suelto de P.A',
-  },
-  {
-    position: 1,
-    date: 'CARLOS VASQUEZ GARCIA',
-    turbity: 0.86,
-    ph: 'Fruto suelto de P.A',
-  },
-  {
-    position: 1,
-    date: 'CARLOS VASQUEZ GARCIA',
-    turbity: 0.86,
-    ph: 'Fruto suelto de P.A',
-  },
-  {
-    position: 1,
-    date: 'CARLOS VASQUEZ GARCIA',
-    turbity: 0.86,
-    ph: 'Fruto suelto de P.A',
-  },
-  {
-    position: 1,
-    date: 'CARLOS VASQUEZ GARCIA',
-    turbity: 0.86,
-    ph: 'Fruto suelto de P.A',
-  },
-  {
-    position: 1,
-    date: 'CARLOS VASQUEZ GARCIA',
-    turbity: 0.86,
-    ph: 'Fruto suelto de P.A',
-  },
-  {
-    position: 1,
-    date: 'CARLOS VASQUEZ GARCIA',
-    turbity: 0.86,
-    ph: 'Fruto suelto de P.A',
-  },
-];
