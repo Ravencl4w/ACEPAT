@@ -3,14 +3,14 @@
     {
       "codigo": "FS",
       "produccion": "FRUTO SUELTO DE P.A",
-      "cantidad":28.75,
+      "cantidad": 28.75,
       "importe": 11900,
       "fecha": "2023-05-11"
     },
     {
       "codigo": "RFF",
       "produccion": "RACIMO DE FRUTA FRESCA DE P.A",
-      "cantidad":653.70,
+      "cantidad": 653.7,
       "importe": 219590,
       "fecha": "2023-05-11"
     }
@@ -81,87 +81,15 @@
     },
     {
       "id": "usu2",
-      "name": "admin",
+      "name": "Henry",
       "role": "admin",
       "password": "1234"
     },
     {
       "id": "usu3",
-      "name": "admin",
+      "name": "Mafa",
       "role": "admin",
       "password": "1234"
-    },
-    {
-      "id": "usu4",
-      "name": "admin",
-      "role": "admin",
-      "password": "1234"
-    },
-    {
-      "id": "usu5",
-      "name": "admin",
-      "role": "admin",
-      "password": "1234"
-    },
-    {
-      "id": "usu6",
-      "name": "admin",
-      "role": "admin",
-      "password": "1234"
-    },
-    {
-      "id": "usu7",
-      "name": "admin",
-      "role": "admin",
-      "password": "1234"
-    },
-    {
-      "id": "usu8",
-      "name": "admin",
-      "role": "admin",
-      "password": "1234"
-    },
-    {
-      "id": "usu9",
-      "name": "admin",
-      "role": "admin",
-      "password": "1234"
-    },
-    {
-      "id": "usu10'",
-      "name": "admin",
-      "role": "admin",
-      "password": "1234"
-    },
-    {
-      "id": "pruebap",
-      "name": "Sebastian",
-      "role": "admin",
-      "password": "12345"
-    },
-    {
-      "id": "prueba",
-      "name": "sdadas",
-      "role": "admin",
-      "password": "1234567"
-    },
-    {
-      "id": "cvasquezp",
-      "name": "Carlos Vasquez",
-      "role": "admin",
-      "password": "1207"
-    },
-    {
-      "id": "_ouzvfT",
-      "name": "",
-      "role": "",
-      "password": ""
-    },
-    {
-      "id": "seba",
-      "name": "sebastian",
-      "role": "admin",
-      "password": "44910665"
     }
   ]
 }

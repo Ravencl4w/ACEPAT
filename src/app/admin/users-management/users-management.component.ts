@@ -5,6 +5,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { User } from 'src/app/Interfaces/User';
 import { UserManagementService } from 'src/app/services/user-management.service';
 import { UserCreationDialogComponent } from 'src/app/shared/user-creation-dialog/user-creation-dialog.component';
+import { UserModifyDialogComponent } from 'src/app/shared/user-modify-dialog/user-modify-dialog.component';
 import * as XLSX from 'xlsx';
 
 @Component({
@@ -13,17 +14,19 @@ import * as XLSX from 'xlsx';
   styleUrls: ['./users-management.component.css']
 })
 export class UsersManagementComponent implements AfterViewInit {
-  displayedColumns: string[] = ['id', 'name', 'role', 'password'];
+  displayedColumns: string[] = ['id', 'name', 'role', 'password','modify'];
   dataSource = new MatTableDataSource<User>
 
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
-
+  selectedElement: any;
+  
   constructor(private service: UserManagementService, private dialog: MatDialog) {}
   ngAfterViewInit() {
     
     this.getUsers();
   }
+  
 
   getUsers(): void {
     this.service.getUsers()
@@ -49,6 +52,23 @@ export class UsersManagementComponent implements AfterViewInit {
     const dialogRef = this.dialog.open(UserCreationDialogComponent, {
       width: '500px'
     });
+  }
+  openModify(element: any) {
+    this.selectedElement = element;
+    const dialogRef = this.dialog.open(UserModifyDialogComponent, {
+      width: '500px',
+      data: this.selectedElement
+    });
+    
+  }
+  visiblePasswords: boolean[] = [];
+
+  togglePasswordVisibility(index: number): void {
+    if (this.visiblePasswords[index]) {
+      this.visiblePasswords[index] = false;
+    } else {
+      this.visiblePasswords[index] = true;
+    }
   }
 }
 

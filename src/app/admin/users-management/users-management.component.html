@@ -1,61 +1,87 @@
-<div class="login">
-    
-    <mat-card class="login-card">
-        
-        <mat-card-header>
-            <mat-card-title>USUARIOS</mat-card-title>
-          </mat-card-header>
-          <div class="button-container">
-            <!-- Botón de agregar usuario -->
-            <button mat-raised-button color="primary" class="add-user-btn" (click)="openDialog()">
-              <mat-icon>add_circle</mat-icon>
-              Agregar usuario
-            </button>
-            
-            <!-- Botón de descarga -->
-            <button mat-raised-button color="primary" class="download-btn" (click)="exportToExcel()">
-              <mat-icon>get_app</mat-icon>
-              Exportar a Excel
-            </button>
-          </div>
-          
-          <mat-card-content>
-            <div class="mat-elevation-z8">
+<div class="main_content">
+  <div class="header">USUARIOS</div>
 
-                <table mat-table [dataSource]="dataSource">
-                  <!-- Position Column -->
-                  <ng-container matColumnDef="id">
-                    <th mat-header-cell *matHeaderCellDef> Usuario </th>
-                    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-                  </ng-container>
-              
-                  <!-- Name Column -->
-                  <ng-container matColumnDef="name">
-                    <th mat-header-cell *matHeaderCellDef> Nombre</th>
-                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-                  </ng-container>
-              
-                  <!-- Weight Column -->
-                  <ng-container matColumnDef="role">
-                    <th mat-header-cell *matHeaderCellDef> Roles </th>
-                    <td mat-cell *matCellDef="let element"> {{element.role}}</td>
-                  </ng-container>
-              
-                  <!-- Symbol Column -->
-                  <ng-container matColumnDef="password">
-                    <th mat-header-cell *matHeaderCellDef> Contraseña </th>
-                    <td mat-cell *matCellDef="let element"> {{element.password}} </td>
-                  </ng-container>
-              
-                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                </table>
-              
-                <mat-paginator [pageSizeOptions]="[5, 10, 20]"
-                               showFirstLastButtons
-                               aria-label="Select page of periodic elements">
-                </mat-paginator>
-              </div>
-          </mat-card-content>
-    </mat-card>
+  <div class="button-container">
+    <!-- Botón de agregar usuario -->
+    <button
+      mat-raised-button
+      color="primary"
+      class="add-user-btn"
+      (click)="openDialog()"
+    >
+      <mat-icon>add_circle</mat-icon>
+      Agregar Usuario
+    </button>
+    
+    <!-- Botón de descarga -->
+    <button
+      mat-raised-button
+      color="primary"
+      class="download-btn"
+      (click)="exportToExcel()"
+    >
+      <mat-icon>get_app</mat-icon>
+      Exportar a Excel
+    </button>
+
+  </div>
+
+  <div class="info">
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource">
+        <!-- Columna de ID -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>Uusario</th>
+          <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+        </ng-container>
+
+        <!-- Columna de Nombre -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Nombre</th>
+          <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+        </ng-container>
+
+        <!-- Columna de Roles -->
+        <ng-container matColumnDef="role">
+          <th mat-header-cell *matHeaderCellDef>Roles</th>
+          <td mat-cell *matCellDef="let element">{{ element.role }}</td>
+        </ng-container>
+
+        <!-- Columna de Contraseña -->
+        <ng-container matColumnDef="password">
+          <th mat-header-cell *matHeaderCellDef>Contraseña</th>
+          <td mat-cell *matCellDef="let element; let i = index">
+            <div class="password-cell">
+              <span *ngIf="!visiblePasswords[i]">********</span>
+              <span *ngIf="visiblePasswords[i]">{{ element.password }}</span>
+              <button mat-icon-button color="primary" (click)="togglePasswordVisibility(i)">
+                <mat-icon>{{ visiblePasswords[i] ? 'visibility_off' : 'visibility' }}</mat-icon>
+              </button>
+            </div>
+          </td>
+        </ng-container>
+
+        <!-- Columna de Modificar -->
+        <ng-container matColumnDef="modify">
+          <th mat-header-cell *matHeaderCellDef>Modificar</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.modify }}
+            <button mat-icon-button color="primary" (click)="openModify(element)">
+              <mat-icon>edit</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+
+      <mat-paginator
+        [pageSizeOptions]="[5, 10, 20]"
+        showFirstLastButtons
+        aria-label="Select page of periodic elements"
+      >
+      </mat-paginator>
+    </div>
+  </div>
 </div>

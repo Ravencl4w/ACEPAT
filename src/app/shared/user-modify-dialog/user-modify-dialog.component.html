@@ -1,0 +1,24 @@
+<div class="header">Modificar Usuario</div>
+ <!-- Guardar los datos del usuario -->
+<form class="register-form"[formGroup]="userForm" (ngSubmit)="onSubmit(userForm)">
+  
+  <!-- Datos del usuario -->
+  <div class="form-group">
+    <mat-form-field class="id">
+      <input matInput [(ngModel)]="selectedElement.id" placeholder="ID" formControlName="id">
+    </mat-form-field>
+    <mat-form-field class="name">
+      <input matInput [(ngModel)]="selectedElement.name" placeholder="Nombre" formControlName="name">
+    </mat-form-field>
+    <mat-form-field class="role">
+      <input matInput [(ngModel)]="selectedElement.role" placeholder="Rol" formControlName="role">
+    </mat-form-field>
+    <mat-form-field class="password">
+      <input matInput [(ngModel)]="selectedElement.password" placeholder="Contraseña" formControlName="password" type="password">
+    </mat-form-field>
+  </div>
+
+  <!-- Botón de crear el usuario -->
+  <button mat-raised-button color="primary" type="submit">Modificar usuario</button>
+
+</form>

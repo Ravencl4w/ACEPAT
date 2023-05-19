@@ -25,7 +25,10 @@
     margin-bottom: 15px;
   }
   
-  .table-inputs{
+  .id,
+  .name,
+  .role,
+  .password{
     width: 400px;
   }
 
