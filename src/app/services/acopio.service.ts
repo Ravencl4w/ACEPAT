@@ -23,4 +23,8 @@ export class AcopioService {
     })
   );
 }
+
+createAcopios(inputdata:any){
+  return this.http.post(this.apiurl,inputdata);
+}
 }

@@ -1,25 +1,39 @@
-<form [formGroup]="formulario" (ngSubmit)="onSubmit(formulario)">
-    <mat-form-field class="example-full-width">
-      <mat-label>Socio</mat-label>
-      <input matInput formControlName="socio" required>
+<h2 mat-dialog-title>Crear Elemento</h2>
+<mat-dialog-content>
+  <form [formGroup]="formulario">
+    <mat-form-field>
+      <mat-label>Código</mat-label>
+      <input matInput formControlName="codigo" required>
     </mat-form-field>
-  
-    <mat-form-field class="example-full-width">
-      <mat-label>Apellidos y Nombres</mat-label>
-      <input matInput formControlName="apellidosNombres" required>
-    </mat-form-field>
-  
-    <mat-form-field class="example-full-width">
-      <mat-label>Cantidad</mat-label>
-      <input matInput formControlName="cantidad" required>
-    </mat-form-field>
-  
-    <mat-form-field class="example-full-width">
+
+    <mat-form-field>
       <mat-label>Producción</mat-label>
       <input matInput formControlName="produccion" required>
+
     </mat-form-field>
-  
-    <button mat-raised-button color="primary" type="submit">Enviar</button>
-    <button mat-raised-button color="accent" type="button" (click)="onClose()">Cerrar</button>
+
+    <mat-form-field>
+      <mat-label>Cantidad</mat-label>
+      <input matInput formControlName="cantidad" type="number" required>
+
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Importe</mat-label>
+      <input matInput formControlName="importe" type="number" required>
+
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Fecha</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="fecha" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+
+    </mat-form-field>
   </form>
-  
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onClose()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="onSubmit(formulario)" [disabled]="formulario.invalid">Crear</button>
+</mat-dialog-actions>
