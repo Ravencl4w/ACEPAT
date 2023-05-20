@@ -70,6 +70,18 @@
       "direccion": "JR. SAN MARTIN 2173 ",
       "estados": "ACTIVO",
       "fundos": "2"
+    },
+    {
+      "id": "up3s7vuic",
+      "fecha": "2023-05-20T14:22:40.868Z",
+      "codigo": "sfasd",
+      "dni": "asfasfas",
+      "socio": "fasfasf",
+      "central": "asfasfas",
+      "local": "fasfasf",
+      "direccion": "asfas",
+      "estados": "asfasfa",
+      "fundos": "asfasfas"
     }
   ],
   "credentials": [
@@ -88,6 +100,12 @@
     {
       "id": "usu3",
       "name": "Mafa",
+      "role": "admin",
+      "password": "1234"
+    },
+    {
+      "id": "sramirez-i",
+      "name": "Sebastian Ramirez",
       "role": "admin",
       "password": "1234"
     }

@@ -1,5 +1,6 @@
 export interface Partner {
-    fecha: string,
+    id:number,
+    fecha: Date,
     codigo: string,
     dni: string,
     socio: string,

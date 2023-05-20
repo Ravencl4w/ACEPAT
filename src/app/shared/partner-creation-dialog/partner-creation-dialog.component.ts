@@ -14,6 +14,7 @@ export class PartnerCreationDialogComponent implements OnInit {
 
   constructor(private fb: FormBuilder, public dialogRef: MatDialogRef<PartnerCreationDialogComponent>, private service: PartnerService) {
     this.formulario = this.fb.group({
+      id: null,
       fecha: [new Date().toISOString(), Validators.required],
       codigo: ['', Validators.required],
       dni: ['', Validators.required],
@@ -31,6 +32,7 @@ export class PartnerCreationDialogComponent implements OnInit {
   }
 
   onSubmit(formulario: FormGroup) {
+  this.formulario.value.id = Math.random().toString(36).substr(2, 9);
   const partner = formulario.value;
   this.service.createPartners(partner).subscribe(response => {
   console.log('Usuario creado:', response);
