@@ -13,13 +13,14 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { Acopio } from 'src/app/Interfaces/Acopio';
 import { AcopioService } from 'src/app/services/acopio.service';
 
+
 @Component({
-  selector: 'app-report-acopio-transporte',
-  templateUrl: './report-acopio-transporte.component.html',
-  styleUrls: ['./report-acopio-transporte.component.css']
+  selector: 'app-compras-acopio',
+  templateUrl: './compras-acopio.component.html',
+  styleUrls: ['./compras-acopio.component.css']
 })
-export class ReportAcopioTransporteComponent implements AfterViewInit {
-  displayedColumns: string[] = ['nroDoc', 'iden', 'nombres', 'produccion','impBruto','dscto','flete','impNeto'];
+export class ComprasAcopioComponent implements AfterViewInit {
+  displayedColumns: string[] = ['fechaDoc', 'cod', 'tipoDoc', 'serie','nroDoc','docIdent','ruc','nombres','fechaCompran','ticket','producto'];
   dataSource = new MatTableDataSource<Acopio>;
 
   fechaDesdeControl: FormControl = new FormControl();

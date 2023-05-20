@@ -36,6 +36,7 @@ import { PartnerStatusComponent } from './shared/partner-status/partner-status.c
 import { UbigeoDialogComponent } from './shared/ubigeo-dialog/ubigeo-dialog.component';
 import {MatRadioModule} from '@angular/material/radio';
 import { ReportAcopioTransporteComponent } from './reports/report-acopio-transporte/report-acopio-transporte.component';
+import { ComprasAcopioComponent } from './reports/compras-acopio/compras-acopio.component';
 
 
 
@@ -57,6 +58,7 @@ import { ReportAcopioTransporteComponent } from './reports/report-acopio-transpo
     PartnerStatusComponent,
     UbigeoDialogComponent,
     ReportAcopioTransporteComponent,
+    ComprasAcopioComponent,
 
   ],
   imports: [

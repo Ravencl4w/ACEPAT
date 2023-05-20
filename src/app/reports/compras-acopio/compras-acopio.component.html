@@ -1,0 +1,152 @@
+<div class="main_content">
+    <div class="header">Reporte de Compras de Acopio</div>
+    <div class="button-container-padre">
+      <div class="button-container-hijo1">
+      
+        <label class="font-checkboxDesde"
+        ><input type="checkbox" class="fechaDesde" (click)="activarPicker()" />
+        Desde</label>
+      </div>
+      
+      
+    <br>
+  <div class="button-container-hijo3">
+   
+    <label class="circle-checkbox-label">
+        <input type="checkbox" class="circle-checkbox" />
+        Consolidado
+      </label>
+      <br />
+      <br />
+      
+      <label class="circle-checkbox-label">
+        <input type="checkbox" class="circle-checkbox" />
+        Desagregado
+      </label>
+  </div>
+    </div>
+  <br>
+  <div class="button-container-padre">
+    <div class="button-container1">
+
+   <!-- Date Picker -->
+      <mat-form-field class="date-picker">
+        <input
+          matInput
+          [matDatepicker]="picker"
+          placeholder="Desde"
+          [readonly]="radioSelected"
+          [formControl]="fechaDesdeControl"
+          (dateChange)="fechaDesde = $event.value"
+        />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="picker"
+          [disabled]="radioSelected"
+         
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field> </div>
+         <!-- Date Picker -->
+         <div class="button-container3">
+      <mat-form-field class="date-picker">
+        <input
+          matInput
+          [matDatepicker]="pickerHasta"
+          placeholder="Hasta"
+          (dateChange)="fechaHasta = $event.value"
+        />
+        <mat-datepicker-toggle matSuffix [for]="pickerHasta"></mat-datepicker-toggle>
+        <mat-datepicker #pickerHasta></mat-datepicker>
+      </mat-form-field>
+    </div>
+      <div class="button-container-2">
+         <!-- Reportes -->
+      <button
+        mat-raised-button
+        color="primary"
+        class="report-btn"
+        (click)="verReportes()"
+      >
+        <mat-icon>search</mat-icon>
+        Ver Reportes
+      </button>
+    </div> </div>
+     <!-- tablas -->
+     <div class="info">
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource">
+          <!-- Position Column -->
+          <ng-container matColumnDef="fechaDoc">
+            <th mat-header-cell *matHeaderCellDef>FECHA</th>
+            <td mat-cell *matCellDef="let element">{{ element.fechaDoc }}</td>
+          </ng-container>
+  
+          <!-- Name Column -->
+          <ng-container matColumnDef="cod">
+            <th mat-header-cell *matHeaderCellDef>COD DOC</th>
+            <td mat-cell *matCellDef="let element">{{ element.cod }}</td>
+          </ng-container>
+  
+          <!-- Weight Column -->
+          <ng-container matColumnDef="tipoDoc">
+            <th mat-header-cell *matHeaderCellDef>TIPO DOC</th>
+            <td mat-cell *matCellDef="let element">{{ element.tipoDoc }}</td>
+          </ng-container>
+  
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="serie">
+            <th mat-header-cell *matHeaderCellDef>SERIE</th>
+            <td mat-cell *matCellDef="let element">{{ element.serie }}</td>
+          </ng-container>
+           <!-- Symbol Column -->
+           <ng-container matColumnDef="nroDoc">
+            <th mat-header-cell *matHeaderCellDef>N° DOC</th>
+            <td mat-cell *matCellDef="let element">{{ element.nroDoc }}</td>
+          </ng-container>
+           <!-- Symbol Column -->
+           <ng-container matColumnDef="docIdent">
+            <th mat-header-cell *matHeaderCellDef>DOC IDENT</th>
+            <td mat-cell *matCellDef="let element">{{ element.docIDent }}</td>
+          </ng-container>
+           <!-- Symbol Column -->
+           <ng-container matColumnDef="ruc">
+            <th mat-header-cell *matHeaderCellDef>RUC</th>
+            <td mat-cell *matCellDef="let element">{{ element.ruc }}</td>
+          </ng-container>
+           <!-- Symbol Column -->
+           <ng-container matColumnDef="nombres">
+            <th mat-header-cell *matHeaderCellDef>APELLIDOS Y NOMBRES</th>
+            <td mat-cell *matCellDef="let element">{{ element.nombres }}</td>
+          </ng-container>
+           <!-- Symbol Column -->
+           <ng-container matColumnDef="fechaCompran">
+            <th mat-header-cell *matHeaderCellDef>FECHA COMPRAN°</th>
+            <td mat-cell *matCellDef="let element">{{ element.fechaCompran }}</td>
+          </ng-container>
+           <!-- Symbol Column -->
+           <ng-container matColumnDef="ticket">
+            <th mat-header-cell *matHeaderCellDef>TICKET</th>
+            <td mat-cell *matCellDef="let element">{{ element.ticket }}</td>
+          </ng-container>
+           <!-- Symbol Column -->
+           <ng-container matColumnDef="producto">
+            <th mat-header-cell *matHeaderCellDef>PRODUCTO</th>
+            <td mat-cell *matCellDef="let element">{{ element.producto }}</td>
+          </ng-container>
+          
+  
+  
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+           <!-- Paginator -->
+        <mat-paginator
+          [pageSizeOptions]="[5, 10, 20]"
+          showFirstLastButtons
+          aria-label="Select page of periodic elements">
+        </mat-paginator>
+      </div>
+    </div>
+  </div>
+  
