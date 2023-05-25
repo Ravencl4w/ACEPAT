@@ -1,24 +1,35 @@
 <mat-nav-list class="sidebar">
     <h3 matSubheader class="sidebar-title">ACEPAT</h3>
+    <!-- DIVISOR DE NAVBAR -->
     <mat-divider></mat-divider>
+    <!-- ITEM DE NAVBAR -->
     <mat-list-item routerLink="/acopio-racimos">
       <mat-icon mat-list-icon>home</mat-icon>
       <span mat-line class="sidebar-item">Reporte de acopios</span>
     </mat-list-item>
-    <!-- <mat-list-item routerLink="/acopio-racimos">
-      <mat-icon mat-list-icon>home</mat-icon>
-      <span mat-line class="sidebar-item">Reporte de materia prima</span>
-    </mat-list-item> -->
-    <mat-list-item routerLink="/vista-socios">
+       <!-- ITEM DE NAVBAR -->
+    <mat-list-item routerLink="/vista-socio">
       <mat-icon mat-list-icon>person</mat-icon>
       <span mat-line class="sidebar-item">Socios</span>
     </mat-list-item>
+    <!-- ITEM DE NAVBAR -->
     <mat-list-item routerLink="/usersmanagement">
       <mat-icon mat-list-icon>admin_panel_settings</mat-icon>
       <span mat-line class="sidebar-item">Administrador</span>
     </mat-list-item>
-  
+    <!-- ITEM DE NAVBAR -->
+    <mat-list-item routerLink="/reporte-acopio-transporte">
+      <mat-icon mat-list-icon>local_shipping</mat-icon>
+      <span mat-line class="sidebar-item">Acopio Transporte</span>
+    </mat-list-item>
+     <!-- ITEM DE NAVBAR -->
+     <mat-list-item routerLink="/compras-acopio">
+      <mat-icon mat-list-icon>shopping_basket</mat-icon>
+      <span mat-line class="sidebar-item">Compras Acopio</span>
+    </mat-list-item>
+    <!-- DIVISOR DE NAVBAR -->
     <mat-divider></mat-divider>
+    <!-- ITEM DE NAVBAR -->
     <mat-list-item (click)="logout()" routerLink="">
       <mat-icon mat-list-icon>logout</mat-icon>
       <span mat-line class="sidebar-item">Log Out</span>

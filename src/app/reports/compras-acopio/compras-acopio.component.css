@@ -1,0 +1,183 @@
+.main_content .header {
+    padding: 20px;
+    background: #fff;
+    color: #717171;
+    border-bottom: 1px solid #e0e4e8;
+    font-size: 35px;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .button-container-padre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  .button-container-hijo1 {
+    position: relative;
+    top: 10px;
+    left: -30px;
+   
+    
+  }
+  
+    .button-container-hijo3 {
+      position: relative;
+     top: 10px;
+     left: -960px;
+      
+    }
+
+  .button-container1{
+    position: relative;
+     top: 10px;
+     left: 0px;
+  }
+  .button-container3{
+    position: relative;
+     top: 10px;
+     left: -320px;
+    
+}
+  .button-container-2{
+    position: relative;
+    top: 10px;
+    left: 0px;   
+}
+  .button-container-report {
+    position: relative;
+    top: 10px;
+    left: 0;
+    
+  }
+  
+  .font-checkbox{
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    margin-right: 0px;
+    bottom: -12px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #000;}
+    .font-checkboxDesde{
+      display: inline-block;
+      position: relative;
+      padding-left: 30px;
+      margin-right: 0px;
+      bottom: -12px;
+      cursor: pointer;
+      font-size: 15px;
+      color: #000;
+  }
+  .fechaDesde{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    top: 20px;
+    width: 15px;
+    height: 15px;
+    border-radius: 0%;
+    border: 2px solid #000;
+    outline: none;
+    cursor: pointer;
+    vertical-align: middle;
+  }
+  
+  .almacen {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    top: 20px;
+    width: 15px;
+    height: 15px;
+    border-radius: 0%;
+    border: 2px solid #000;
+    outline: none;
+    cursor: pointer;
+    vertical-align: middle;
+    
+  }
+  .almacen:checked {
+    background-color: #673ab7;
+  }
+  .report-btn {
+    top: -10px;
+    font-size: 15px;
+    height: 55px;
+    padding: 0 12px;
+    width: 200px; /* Nuevo */
+  }
+
+  
+  .nombre{
+    min-width: 150px;
+    max-width: 350px;
+    width: 100%;
+  }
+  .nDoc {
+    min-width: 10px;
+    max-width: 150px;
+    width: 100%;
+  }
+  .example-full-width {
+    width: 100%;
+  }
+  .date-picker {
+    width: 200px; 
+    height:74px;
+    font-size: 12px;
+    
+  }
+  .circle-checkbox-label{
+    display: inline-block;
+    vertical-align: relative;
+    margin-right: 0px;
+    
+    cursor: pointer;
+    font-size: 15px;
+    color: #000;
+  }
+  .circle-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    top: 20px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    outline: none;
+    cursor: pointer;
+    vertical-align: middle;
+  }
+  
+  .circle-checkbox:checked {
+    background-color: #673ab7;
+  }
+  .fechaDesde:checked {
+    background-color: #673ab7;
+  }
+  .almacen:checked {
+    background-color: #673ab7;
+  }
+  
+  .example-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    align-items: flex-start;
+  }
+  
+  .example-radio-button {
+    margin: 5px;
+  }

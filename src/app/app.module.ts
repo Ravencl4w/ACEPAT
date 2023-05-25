@@ -34,7 +34,8 @@ import { PartnerEditionDialogComponent } from './shared/partner-edition-dialog/p
 import { MatTabsModule } from '@angular/material/tabs';
 import { DeleteDialogComponent } from './shared/delete-dialog/delete-dialog.component';
 import { PartnerViewComponent } from './partners/partner-view/partner-view.component';
-
+import { ReportAcopioTransporteComponent } from './reports/report-acopio-transporte/report-acopio-transporte.component';
+import { ComprasAcopioComponent } from './reports/compras-acopio/compras-acopio.component';
 
 
 
@@ -52,8 +53,9 @@ import { PartnerViewComponent } from './partners/partner-view/partner-view.compo
     UserModifyDialogComponent,
     PartnerEditionDialogComponent,
     DeleteDialogComponent,
-    PartnerViewComponent
-
+    PartnerViewComponent,
+    ReportAcopioTransporteComponent,
+    ComprasAcopioComponent
   ],
   imports: [
     BrowserModule,
