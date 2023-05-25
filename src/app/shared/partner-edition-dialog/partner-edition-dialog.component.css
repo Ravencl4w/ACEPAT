@@ -1,0 +1,13 @@
+.mat-tab-group {
+    margin-bottom: 48px;
+  }
+
+.custom-input{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.button-add{
+
+}

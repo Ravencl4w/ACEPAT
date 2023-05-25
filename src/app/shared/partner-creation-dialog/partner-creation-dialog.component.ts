@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { PartnerService } from 'src/app/services/partner.service';
 
+
 @Component({
   selector: 'app-partner-creation-dialog',
   templateUrl: './partner-creation-dialog.component.html',
@@ -11,23 +12,60 @@ import { PartnerService } from 'src/app/services/partner.service';
 export class PartnerCreationDialogComponent implements OnInit {
 
   formulario: FormGroup;
+  selectedFile: File | null = null;
+  selectedFileUrl: string | ArrayBuffer | null = null;
+
 
   constructor(private fb: FormBuilder, public dialogRef: MatDialogRef<PartnerCreationDialogComponent>, private service: PartnerService) {
+    
     this.formulario = this.fb.group({
-      fecha: [new Date().toISOString(), Validators.required],
+      date_emp: [new Date().toISOString(), Validators.required],
+      date_asoc: [new Date().toISOString(), Validators.required],
+      date_nac: [new Date().toISOString(), Validators.required],
       codigo: ['', Validators.required],
-      dni: ['', Validators.required],
-      socio: ['', Validators.required],
-      central: ['', Validators.required],
-      local: ['', Validators.required],
+      foto: ['', Validators.required],
+      tipo_doc: ['', Validators.required],
+      numero_doc: ['', Validators.required],
+      apellido_p: ['', Validators.required],
+      apellido_m: ['', Validators.required],
+      celular: ['', Validators.required],
+      nombres: ['', Validators.required],
+      ruc: ['', Validators.required],
+      estado_civil: ['', Validators.required],
+      grado_i: ['', Validators.required],
+      produccion: ['', Validators.required],
       direccion: ['', Validators.required],
-      estados: ['', Validators.required],
-      fundos: ['', Validators.required]
+      ocupacion: ['', Validators.required],
+      socio: ['', Validators.required],
+      genero: ['', Validators.required],
+      dpto: ['', Validators.required],
+      provincia: ['', Validators.required],
+      distrito: ['', Validators.required],
+      comite_central: ['', Validators.required],
+      comite_local: ['', Validators.required],
+      parientes: ['', Validators.required],
+      fundos: ['', Validators.required],
+      cuentas: ['', Validators.required]
     });
   }
 
   ngOnInit(): void {
     //agregar metodo
+  }
+
+  onFileSelected(event: any) {
+    this.selectedFile = event.target.files[0];
+    this.getFileUrl();
+  }
+
+  getFileUrl() {
+    if (this.selectedFile) {
+      const reader = new FileReader();
+      reader.onload = (event: any) => {
+        this.selectedFileUrl = event.target.result;
+      };
+      reader.readAsDataURL(this.selectedFile);
+    }
   }
 
   onSubmit(formulario: FormGroup) {

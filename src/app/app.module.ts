@@ -35,6 +35,9 @@ import { BankAccDialogComponent } from './shared/bank-acc-dialog/bank-acc-dialog
 import { PartnerStatusComponent } from './shared/partner-status/partner-status.component';
 import { UbigeoDialogComponent } from './shared/ubigeo-dialog/ubigeo-dialog.component';
 import {MatRadioModule} from '@angular/material/radio';
+import { PartnerEditionDialogComponent } from './shared/partner-edition-dialog/partner-edition-dialog.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { DeleteDialogComponent } from './shared/delete-dialog/delete-dialog.component';
 
 
 
@@ -55,6 +58,8 @@ import {MatRadioModule} from '@angular/material/radio';
     BankAccDialogComponent,
     PartnerStatusComponent,
     UbigeoDialogComponent,
+    PartnerEditionDialogComponent,
+    DeleteDialogComponent,
 
   ],
   imports: [
@@ -78,7 +83,8 @@ import {MatRadioModule} from '@angular/material/radio';
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
-    MatRadioModule
+    MatRadioModule,
+    MatTabsModule
 
   ],
   providers: [],
