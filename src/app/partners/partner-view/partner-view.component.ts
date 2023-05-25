@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { Partner } from 'src/app/Interfaces/Partner';
+import { Partner } from 'src/app/interfaces/Partner';
 import { PartnerService } from 'src/app/services/partner.service';
 import { PartnerCreationDialogComponent } from 'src/app/shared/partner-creation-dialog/partner-creation-dialog.component';
 import { PartnerEditionDialogComponent } from 'src/app/shared/partner-edition-dialog/partner-edition-dialog.component';
@@ -16,10 +16,11 @@ import {
 } from '@angular/animations';
 import { DeleteDialogComponent } from 'src/app/shared/delete-dialog/delete-dialog.component';
 
+
 @Component({
-  selector: 'app-creacion-usuarios',
-  templateUrl: './creacion-usuarios.component.html',
-  styleUrls: ['./creacion-usuarios.component.css'],
+  selector: 'app-partner-view',
+  templateUrl: './partner-view.component.html',
+  styleUrls: ['./partner-view.component.css'],
   animations: [
     trigger('hoverAnimation', [
       state('initial', style({})),
@@ -29,8 +30,7 @@ import { DeleteDialogComponent } from 'src/app/shared/delete-dialog/delete-dialo
     ]),
   ],
 })
-
-export class CreacionUsuariosComponent implements AfterViewInit {
+export class PartnerViewComponent implements AfterViewInit {
   displayedColumns: string[] = [
     'fecha',
     'codigo',

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
-import { Acopio } from '../Interfaces/Acopio';
+import { Acopio } from '../interfaces/Acopio';
 
 @Injectable({
   providedIn: 'root'

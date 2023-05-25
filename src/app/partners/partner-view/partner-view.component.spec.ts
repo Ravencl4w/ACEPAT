@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PartnerStatusComponent } from './partner-status.component';
+import { PartnerViewComponent } from './partner-view.component';
 
-describe('PartnerStatusComponent', () => {
-  let component: PartnerStatusComponent;
-  let fixture: ComponentFixture<PartnerStatusComponent>;
+describe('PartnerViewComponent', () => {
+  let component: PartnerViewComponent;
+  let fixture: ComponentFixture<PartnerViewComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PartnerStatusComponent ]
+      declarations: [ PartnerViewComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PartnerStatusComponent);
+    fixture = TestBed.createComponent(PartnerViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

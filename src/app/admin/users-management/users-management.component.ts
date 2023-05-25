@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { User } from 'src/app/Interfaces/User';
+import { User } from 'src/app/interfaces/User';
 import { UserManagementService } from 'src/app/services/user-management.service';
 import { UserCreationDialogComponent } from 'src/app/shared/user-creation-dialog/user-creation-dialog.component';
 import { UserModifyDialogComponent } from 'src/app/shared/user-modify-dialog/user-modify-dialog.component';

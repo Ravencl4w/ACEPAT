@@ -1,17 +1,11 @@
-import { DatePipe } from '@angular/common';
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { UserManagementService } from 'src/app/services/user-management.service';
 import { AcopioDialogComponent } from 'src/app/shared/acopio-dialog/acopio-dialog.component';
-import { UserCreationDialogComponent } from 'src/app/shared/user-creation-dialog/user-creation-dialog.component';
 import * as XLSX from 'xlsx';
-import * as pdfMake from 'pdfmake/build/pdfmake';
-import * as pdfFonts from 'pdfmake/build/vfs_fonts';
-import { FormControl, FormGroup } from '@angular/forms';
-import { Acopio } from 'src/app/Interfaces/Acopio';
+import { FormControl } from '@angular/forms';
+import { Acopio } from 'src/app/interfaces/Acopio';
 import { AcopioService } from 'src/app/services/acopio.service';
 
 @Component({

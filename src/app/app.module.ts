@@ -3,9 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CreacionUsuariosComponent } from './acopio/creacion-usuarios/creacion-usuarios.component';
 import { AcopioDeRacimosComponent } from './acopio/acopio-de-racimos/acopio-de-racimos.component';
-import { LoginComponent } from './seguridad/login/login.component';
+import { LoginComponent } from './security/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
@@ -29,16 +28,13 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
-import { FundoDialogComponent } from './shared/fundo-dialog/fundo-dialog.component';
-import { ParientesDialogComponent } from './shared/parientes-dialog/parientes-dialog.component';
-import { BankAccDialogComponent } from './shared/bank-acc-dialog/bank-acc-dialog.component';
-import { PartnerStatusComponent } from './shared/partner-status/partner-status.component';
-import { UbigeoDialogComponent } from './shared/ubigeo-dialog/ubigeo-dialog.component';
 import {MatRadioModule} from '@angular/material/radio';
 import { UserModifyDialogComponent } from './shared/user-modify-dialog/user-modify-dialog.component';
 import { PartnerEditionDialogComponent } from './shared/partner-edition-dialog/partner-edition-dialog.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { DeleteDialogComponent } from './shared/delete-dialog/delete-dialog.component';
+import { PartnerViewComponent } from './partners/partner-view/partner-view.component';
+
 
 
 
@@ -46,7 +42,6 @@ import { DeleteDialogComponent } from './shared/delete-dialog/delete-dialog.comp
 @NgModule({
   declarations: [
     AppComponent,
-    CreacionUsuariosComponent,
     AcopioDeRacimosComponent,
     LoginComponent,
     UsersManagementComponent,
@@ -54,14 +49,10 @@ import { DeleteDialogComponent } from './shared/delete-dialog/delete-dialog.comp
     PartnerCreationDialogComponent,
     AcopioDialogComponent,
     SidebarComponent,
-    FundoDialogComponent,
-    ParientesDialogComponent,
-    BankAccDialogComponent,
-    PartnerStatusComponent,
-    UbigeoDialogComponent,
     UserModifyDialogComponent,
     PartnerEditionDialogComponent,
     DeleteDialogComponent,
+    PartnerViewComponent
 
   ],
   imports: [
