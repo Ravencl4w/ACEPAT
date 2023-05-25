@@ -36,6 +36,9 @@ import { PartnerStatusComponent } from './shared/partner-status/partner-status.c
 import { UbigeoDialogComponent } from './shared/ubigeo-dialog/ubigeo-dialog.component';
 import {MatRadioModule} from '@angular/material/radio';
 import { UserModifyDialogComponent } from './shared/user-modify-dialog/user-modify-dialog.component';
+import { PartnerEditionDialogComponent } from './shared/partner-edition-dialog/partner-edition-dialog.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { DeleteDialogComponent } from './shared/delete-dialog/delete-dialog.component';
 
 
 
@@ -57,6 +60,8 @@ import { UserModifyDialogComponent } from './shared/user-modify-dialog/user-modi
     PartnerStatusComponent,
     UbigeoDialogComponent,
     UserModifyDialogComponent,
+    PartnerEditionDialogComponent,
+    DeleteDialogComponent,
 
   ],
   imports: [
@@ -80,7 +85,8 @@ import { UserModifyDialogComponent } from './shared/user-modify-dialog/user-modi
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
-    MatRadioModule
+    MatRadioModule,
+    MatTabsModule
 
   ],
   providers: [],

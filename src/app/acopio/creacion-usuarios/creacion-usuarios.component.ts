@@ -5,13 +5,31 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Partner } from 'src/app/Interfaces/Partner';
 import { PartnerService } from 'src/app/services/partner.service';
 import { PartnerCreationDialogComponent } from 'src/app/shared/partner-creation-dialog/partner-creation-dialog.component';
+import { PartnerEditionDialogComponent } from 'src/app/shared/partner-edition-dialog/partner-edition-dialog.component';
 import * as XLSX from 'xlsx';
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate,
+} from '@angular/animations';
+import { DeleteDialogComponent } from 'src/app/shared/delete-dialog/delete-dialog.component';
 
 @Component({
   selector: 'app-creacion-usuarios',
   templateUrl: './creacion-usuarios.component.html',
   styleUrls: ['./creacion-usuarios.component.css'],
+  animations: [
+    trigger('hoverAnimation', [
+      state('initial', style({})),
+      state('hovered', style({ background: 'lightgray' })),
+      transition('initial => hovered', animate('225ms ease')),
+      transition('hovered => initial', animate('225ms ease')),
+    ]),
+  ],
 })
+
 export class CreacionUsuariosComponent implements AfterViewInit {
   displayedColumns: string[] = [
     'fecha',
@@ -23,6 +41,7 @@ export class CreacionUsuariosComponent implements AfterViewInit {
     'direccion',
     'estados',
     'fundos',
+    'delete',
   ];
   dataSource = new MatTableDataSource<Partner>();
 
@@ -59,7 +78,41 @@ export class CreacionUsuariosComponent implements AfterViewInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(PartnerCreationDialogComponent, {
-      width: '900px',
+      width: '1400px',
     });
   }
+  openDialog2(element: any): void {
+    const dialogRef = this.dialog.open(PartnerEditionDialogComponent, {
+      width: '1400px',
+      height:'800px'
+    });
+  }
+  
+  deleteRow(element: any): void {
+    const dialogRef = this.dialog.open(DeleteDialogComponent, {
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        // Si el resultado es verdadero (presionó "Sí"), elimina la columna
+        this.deleteColumn(element);
+      }
+  });
+}
+
+deleteColumn(element: any): void {
+  // Obtiene el índice del elemento en la fuente de datos
+  const index = this.dataSource.data.indexOf(element);
+
+  if (index >= 0) {
+    // Crea una copia del arreglo de datos
+    const data = this.dataSource.data.slice();
+
+    // Elimina el elemento del arreglo
+    data.splice(index, 1);
+
+    // Asigna la nueva fuente de datos al MatTableDataSource
+    this.dataSource = new MatTableDataSource(data);
+  }
+}
 }

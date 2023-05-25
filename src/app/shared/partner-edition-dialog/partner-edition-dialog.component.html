@@ -1,0 +1,191 @@
+<mat-tab-group>
+    <mat-tab label="Datos Principales" class="datoprin">
+      <form
+      class="form-group"
+      [formGroup]="partner"
+      (ngSubmit)="onSubmit(partner,partnerData)"
+    >
+      <mat-form-field class="custom-input">
+        <input matInput placeholder="DNI" formControlName="dni"/>
+      </mat-form-field>
+      <mat-form-field class="custom-input">
+        <input matInput placeholder="Nombre" formControlName="nombre"/>
+      </mat-form-field>
+      <mat-form-field class="custom-input">
+        <input matInput placeholder="Estado" formControlName="estado"/>
+      </mat-form-field>
+      <mat-form-field
+      class="custom-input"
+    >
+      <input
+        matInput
+        [matDatepicker]="datepicker_nac"
+        placeholder="Fecha de Nacimiento"
+        formControlName="date_nac"
+      />
+      <mat-datepicker-toggle
+        matSuffix
+        [for]="datepicker_nac"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #datepicker_nac></mat-datepicker>
+    </mat-form-field>
+      <mat-form-field class="custom-input">
+        <input matInput placeholder="Estado Civil" formControlName="estado_civil"/>
+      </mat-form-field>
+      <mat-form-field class="custom-input">
+        <input matInput placeholder="Grado Instrucción" formControlName="grado_i"/>
+      </mat-form-field>
+      <mat-form-field class="custom-input">
+        <input matInput placeholder="Télefono" formControlName="telefono"/>
+      </mat-form-field>
+      <mat-form-field class="custom-input">
+        <input matInput placeholder="Comite sectorial" formControlName="comite_sec"/>
+      </mat-form-field>
+      <mat-form-field class="custom-input">
+        <input matInput placeholder="Entidad bancaria" formControlName="entidad_bancaria"/>
+      </mat-form-field>
+      <mat-form-field class="custom-input">
+        <input matInput placeholder="Número de cuenta" formControlName="nro_cuenta"/>
+      </mat-form-field>
+      <mat-form-field class="custom-input">
+        <input matInput placeholder="E-mail" formControlName="email"/>
+      </mat-form-field>
+      <mat-form-field class="custom-input">
+        <input matInput placeholder="Residencia" formControlName="residencia"/>
+      </mat-form-field>
+      <mat-form-field class="custom-input">
+        <input matInput placeholder="Localidad" formControlName="localidad"/>
+      </mat-form-field>
+      <mat-form-field class="custom-input">
+        <input matInput placeholder="Distrito" formControlName="distrito"/>
+      </mat-form-field>
+      <mat-form-field class="custom-input">
+        <input matInput placeholder="Provincia" formControlName="provincia"/>
+      </mat-form-field>
+      <mat-form-field class="custom-input">
+        <input matInput placeholder="Departamento" formControlName="departamento"/>
+      </mat-form-field>
+      <mat-form-field class="custom-input">
+        <input matInput placeholder="Beneficiario" formControlName="beneficiario"/>
+      </mat-form-field>
+      <mat-form-field class="custom-input">
+        <input matInput placeholder="DNI Beneficiario" formControlName="dni_beneficiario"/>
+      </mat-form-field>
+      <mat-form-field class="custom-input">
+        <input matInput placeholder="Estado predio" formControlName="estado_predio"/>
+      </mat-form-field>
+      </form>
+    </mat-tab>
+    
+    <mat-tab label="Datos Secundarios" class="datosec">
+      <form
+      class="form-group"
+      [formGroup]="partnerData"
+      (ngSubmit)="onSubmit(partner,partnerData)"
+    >
+      <mat-form-field>
+        <input matInput placeholder="Documento" formControlName="documento"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Condición" formControlName="condicion"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Documento General" formControlName="docgeneral"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Observaciones" formControlName="observaciones"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Nombre predio" formControlName="nombrepredio"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="1 Titular" formControlName="titular1"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="2 Titular" formControlName="titular2"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Partida" formControlName="partida"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Centro Idee" formControlName="centroidee"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Centro Iden" formControlName="centroiden"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Codigo Catastral" formControlName="codcatastral"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Área" formControlName="area"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Localidadd predio" formControlName="localidadpred"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Distrito predio" formControlName="distritopred"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Provincia predio" formControlName="provinciapred"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Departamento predio" formControlName="departamentopred"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Área total palma" formControlName="areatotalpalma"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Palma 1" formControlName="p1"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Palma 2" formControlName="p2"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Palma 3" formControlName="p3"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Palma 4" formControlName="p4"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Palma 5" formControlName="p5"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="1 Año" formControlName="ano1"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="2 Año" formControlName="ano2"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="3 Año" formControlName="ano3"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="4 Año" formControlName="ano4"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="5 año" formControlName="ano5"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Plantas 1" formControlName="plantas1"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Plantas 2" formControlName="plantas2"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Plantas 3" formControlName="plantas3"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Plantas 4" formControlName="plantas4"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Plantas 5" formControlName="plantas5"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Uso Previo" formControlName="usoprevio"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Productividad" formControlName="productividad"/>
+      </mat-form-field>
+      </form>
+    </mat-tab>
+  </mat-tab-group>
+  <button class="button-add" mat-raised-button color="primary" type="submit">Guardar</button>

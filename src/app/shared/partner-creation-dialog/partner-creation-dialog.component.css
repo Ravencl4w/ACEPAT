@@ -1,35 +1,87 @@
-.form-row {
+   .body_partner{
     display: flex;
   }
-  
-  .left-column {
-    flex-grow: 1;
+
+  .columna{
+    flex-basis: 70%;
+    padding: 10px;  /* Opcional: añade un espaciado interno si lo deseas */
+    margin: 20px;  /* Añade un margen alrededor de la columna */
+  }
+
+  .tables{
+    flex-basis: 30%;
+    padding-left: 30px;  /* Opcional: añade un espaciado interno si lo deseas */
+  }
+
+  .bordered-column {
+    padding: 10px;  /* Opcional: añade un espaciado interno si lo deseas */
+    margin: 20px;  /* Añade un margen alrededor de la columna */
+    border: 1px solid black;  /* Cambia el color y grosor según tus preferencias */
+  }
+
+  .custom-input {
+    margin-bottom: 10px;  /* Añade un margen inferior entre los inputs */
+    margin-right: 20px;
+    font-size: 14px;
+  }
+
+  .custom-mat-select{
+    font-size: 14px;
+  }
+
+  .fila_columna{
+    display: flex;
+    gap: 10px;
+    width: 800px;
+  }
+
+  .file-input-container input[type="file"] {
+    visibility: hidden;
   }
   
-  .right-column {
-    flex-shrink: 0;
-    width: 300px;
-    margin-left: 20px;
+  .file-input-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
   }
   
-  .form-field {
-    width: 100%;
-    margin-bottom: 10px;
+  .file-input-label mat-icon {
+    font-size: 20px;
+  }
+
+  .photo-preview {
+    max-width: calc(100% - 30px); /* Ancho máximo de la imagen teniendo en cuenta los márgenes */
+    max-height: calc(100% - 20px); /* Alto máximo de la imagen teniendo en cuenta los márgenes */
+    object-fit: contain; /* La imagen se ajustará manteniendo la relación de aspecto */
+    margin: 10px; /* Márgenes alrededor de la imagen */
+  }
+
+  .cuerpo {
+    background-color:aliceblue;
+  }
+
+  .fila_1columna{
+    flex-basis: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .fila_12columna{
+    flex-basis: 30%;
+  }
+
+  .field-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
-  .location-title {
-    margin-bottom: 10px;
-    font-size: 18px;
+  .field-label {
+    margin-bottom: 5px; /* Espacio entre el texto y el campo de fecha */
   }
-  
-  .mat-dialog-title {
-    position: relative;
-  }
-  
-  .user-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-  }
-  

@@ -1,65 +1,292 @@
-<h2 mat-dialog-title>Crear Socio</h2>
-<mat-dialog-content>
-  <form [formGroup]="formulario">
-    <mat-form-field>
-      <mat-label>Fecha</mat-label>
-      <input matInput formControlName="fecha" [matDatepicker]="picker" required>
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-
+<!-- Datos del usuario -->
+<div class="cuerpo">
+<div class="body_partner">
+  <div class="col bordered-column">
+    <form
+      class="form-group"
+      [formGroup]="formulario"
+      (ngSubmit)="onSubmit(formulario)"
+    >
+    <div class="fila_columna">
+      <div class="fila_1columna">
+      <mat-form-field [style.width.px]="140" [style.height.px]="70">
+        <mat-select
+          class="custom-mat-select"
+          formControlName="socio"
+          placeholder="Estado socio"
+        >
+          <mat-option value="activo">Socio Activo</mat-option>
+          <mat-option value="ausente">Socio Ausente</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field [style.width.px]="160" [style.height.px]="70">
+        <mat-select
+          class="custom-mat-select"
+          formControlName="genero"
+          placeholder="Género"
+        >
+          <mat-option value="masculino">Masculino</mat-option>
+          <mat-option value="femenino">Femenino</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field
+        class="custom-input"
+        [style.width.px]="120"
+        [style.height.px]="70"
+      >
+        <input matInput placeholder="Codigo" formControlName="codigo" />
+      </mat-form-field>
+      <div class="field-container">
+      <label class="field-label">Fecha Asociado</label>
+      <mat-form-field
+        class="custom-input"
+        [style.width.px]="140"
+        [style.height.px]="70"
+      >
+        <input
+          matInput
+          [matDatepicker]="datepicker_asoc"
+          placeholder="Fecha Asociado"
+          formControlName="date_asoc"
+        />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="datepicker_asoc"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #datepicker_asoc></mat-datepicker>
+      </mat-form-field>
+    </div>
+      <mat-form-field
+        class="custom-input"
+        [style.width.px]="140"
+        [style.height.px]="70"
+      >
+        <input
+          matInput
+          [matDatepicker]="datepicker_emp"
+          placeholder="Fecha Empadron"
+          formControlName="date_emp"
+        />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="datepicker_emp"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #datepicker_emp></mat-datepicker>
+      </mat-form-field>
+     </div>
+      <div class="fila_2columna">
+      <div
+         class="file-input-container"
+         [style.width.px]="200"
+         [style.height.px]="200"
+      >
+      <input type="file" (change)="onFileSelected($event)" accept="image/*" id="fileInput" />
+      <label for="fileInput" class="file-input-label">
+        <mat-icon>camera_alt</mat-icon>
+      </label>
+      <img *ngIf="selectedFileUrl" [src]="selectedFileUrl" alt="Imagen seleccionada" class="photo-preview" />
+    </div>
+    </div>
+  </div>
+      <mat-form-field [style.width.px]="160" [style.height.px]="70">
+        <mat-select
+          class="custom-input"
+          placeholder="Tipo Documento"
+          formControlName="tipo_doc"
+        >
+          <mat-option value="a">Pasaporte</mat-option>
+          <mat-option value="b">DNI</mat-option>
+          <mat-option value="c">Carnet de extranjeria</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field
+        class="custom-input"
+        [style.width.px]="160"
+        [style.height.px]="70"
+      >
+        <input matInput placeholder="Número" formControlName="numero_doc" />
+      </mat-form-field>
+      <mat-form-field
+        class="custom-input"
+        [style.width.px]="140"
+        [style.height.px]="70"
+      >
+        <input
+          matInput
+          [matDatepicker]="datepicker_nac"
+          placeholder="Fecha de Nacimiento"
+          formControlName="date_nac"
+        />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="datepicker_nac"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #datepicker_nac></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field
+        class="custom-input"
+        [style.width.px]="220"
+        [style.height.px]="70"
+      >
+        <input
+          matInput
+          placeholder="Apellido paterno"
+          formControlName="apellido_p"
+        />
+      </mat-form-field>
+      <mat-form-field
+        class="custom-input"
+        [style.width.px]="110"
+        [style.height.px]="70"
+      >
+        <input matInput placeholder="Celular" formControlName="celular" />
+      </mat-form-field>
+      <mat-form-field
+        class="custom-input"
+        [style.width.px]="160"
+        [style.height.px]="70"
+      >
+        <input
+          matInput
+          placeholder="Apellido materno"
+          formControlName="apellido_m"
+        />
+      </mat-form-field>
+      <mat-form-field
+        class="custom-input"
+        [style.width.px]="370"
+        [style.height.px]="70"
+      >
+        <input matInput placeholder="Nombres" formControlName="nombres" />
+      </mat-form-field>
+      <mat-form-field
+        class="custom-input"
+        [style.width.px]="160"
+        [style.height.px]="70"
+      >
+        <input matInput placeholder="R.U.C" formControlName="ruc" />
+      </mat-form-field>
+      <mat-form-field
+        class="custom-input"
+        [style.width.px]="200"
+        [style.height.px]="70"
+      >
+        <input
+          matInput
+          placeholder="Estado Civil"
+          formControlName="estado_civil"
+        />
+      </mat-form-field>
+      <mat-form-field
+        class="custom-input"
+        [style.width.px]="200"
+        [style.height.px]="70"
+      >
+        <input
+          matInput
+          placeholder="Grado Instrucción"
+          formControlName="grado_i"
+        />
+      </mat-form-field>
+      <mat-form-field
+        class="custom-input"
+        [style.width.px]="200"
+        [style.height.px]="70"
+      >
+        <input matInput placeholder="Producción" formControlName="produccion" />
+      </mat-form-field>
+      <mat-form-field
+        class="custom-input"
+        [style.width.px]="350"
+        [style.height.px]="70"
+      >
+        <input matInput placeholder="Dirección" formControlName="direccion" />
+      </mat-form-field>
+      <mat-form-field
+        class="custom-input"
+        [style.width.px]="200"
+        [style.height.px]="70"
+      >
+        <input matInput placeholder="Ocupación" formControlName="ocupacion" />
+      </mat-form-field>
+    </form>
+  </div>
+  <div class="columna">
+    <mat-form-field [style.width.px]="160" [style.height.px]="70">
+      <mat-select
+        class="custom-input"
+        placeholder="Departamento"
+        formControlName="dpto"
+      >
+        <mat-option value="a">a</mat-option>
+        <mat-option value="b">b</mat-option>
+        <mat-option value="c">c</mat-option>
+      </mat-select>
     </mat-form-field>
-
-    <mat-form-field>
-      <mat-label>Código</mat-label>
-      <input matInput formControlName="codigo" required>
-
+    <mat-form-field
+      class="custom-input"
+      [style.width.px]="160"
+      [style.height.px]="70"
+    >
+      <input matInput placeholder="Provincia" formControlName="provincia" />
     </mat-form-field>
-
-    <mat-form-field>
-      <mat-label>DNI</mat-label>
-      <input matInput formControlName="dni" required>
-
+    <mat-form-field
+      class="custom-input"
+      [style.width.px]="160"
+      [style.height.px]="70"
+    >
+      <input matInput placeholder="Distrito" formControlName="distrito" />
     </mat-form-field>
-
-    <mat-form-field>
-      <mat-label>Socio</mat-label>
-      <input matInput formControlName="socio" required>
-   
+    <mat-form-field
+      class="custom-input"
+      [style.width.px]="160"
+      [style.height.px]="70"
+    >
+      <input
+        matInput
+        placeholder="Comite Central"
+        formControlName="comite_central"
+      />
     </mat-form-field>
-
-    <mat-form-field>
-      <mat-label>Central</mat-label>
-      <input matInput formControlName="central" required>
-
+    <mat-form-field
+      class="custom-input"
+      [style.width.px]="160"
+      [style.height.px]="70"
+    >
+      <input
+        matInput
+        placeholder="Comite local"
+        formControlName="comite_local"
+      />
     </mat-form-field>
-
-    <mat-form-field>
-      <mat-label>Local</mat-label>
-      <input matInput formControlName="local" required>
-
+  </div>
+</div>
+<div>
+  <div class="tables">
+    <mat-form-field
+      class="custom-input"
+      [style.width.px]="160"
+      [style.height.px]="70"
+    >
+      <input matInput placeholder="Parientes" formControlName="parientes" />
     </mat-form-field>
-
-    <mat-form-field>
-      <mat-label>Dirección</mat-label>
-      <input matInput formControlName="direccion" required>
-
+    <mat-form-field
+      class="custom-input"
+      [style.width.px]="160"
+      [style.height.px]="70"
+    >
+      <input matInput placeholder="Fundos" formControlName="fundos" />
     </mat-form-field>
-
-    <mat-form-field>
-      <mat-label>Estados</mat-label>
-      <input matInput formControlName="estados" required>
-
+    <mat-form-field
+      class="custom-input"
+      [style.width.px]="160"
+      [style.height.px]="70"
+    >
+      <input matInput placeholder="Ctas Bancarias" formControlName="cuentas" />
     </mat-form-field>
+  </div>
 
-    <mat-form-field>
-      <mat-label>Fundos</mat-label>
-      <input matInput formControlName="fundos" required>
-
-    </mat-form-field>
-
-  </form>
-</mat-dialog-content>
-<mat-dialog-actions align="end">
-  <button mat-button (click)="onClose()">Cancelar</button>
-  <button mat-raised-button color="primary" (click)="onSubmit(formulario)" [disabled]="formulario.invalid">Crear</button>
-</mat-dialog-actions>
+  <!-- Botón de crear el usuario -->
+  <!-- <button mat-raised-button color="primary" type="submit">Guardar</button>-->
+</div>
+</div>
