@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { Partner } from 'src/app/interfaces/Partner';
 import { PartnerService } from 'src/app/services/partner.service';
 
 
@@ -13,22 +14,22 @@ import { PartnerService } from 'src/app/services/partner.service';
 export class PartnerEditionDialogComponent implements OnInit {
 
   partner: FormGroup;
-  partnerData: FormGroup;
 
-  constructor(private fb: FormBuilder, public dialogRef: MatDialogRef<PartnerEditionDialogComponent>, private service: PartnerService) {
+  constructor(private fb: FormBuilder, public dialogRef: MatDialogRef<PartnerEditionDialogComponent>, private service: PartnerService,
+    @Inject(MAT_DIALOG_DATA) public selectedElement: Partner) {
     
     this.partner = this.fb.group({
-      id_socio: ['', Validators.required],
+      id: ['', Validators.required],
       dni: ['', Validators.required],
       nombre: ['', Validators.required],
       estado: ['', Validators.required],
-      date_nac: [new Date().toISOString(), Validators.required],
-      estado_civil: ['', Validators.required],
-      grado_i: ['', Validators.required],
+      fechanaci: ['', Validators.required],
+      estadocivil: ['', Validators.required],
+      gradoinstruccion: ['', Validators.required],
       telefono: ['', Validators.required],
-      comite_sec: ['', Validators.required],
-      entidad_bancaria: ['', Validators.required],
-      nro_cuenta: ['', Validators.required],
+      comitesectorial: ['', Validators.required],
+      entidadbancaria: ['', Validators.required],
+      nrocuenta: ['', Validators.required],
       email: ['', Validators.required],
       residencia: ['', Validators.required],
       localidad: ['', Validators.required],
@@ -36,56 +37,39 @@ export class PartnerEditionDialogComponent implements OnInit {
       provincia: ['', Validators.required],
       departamento: ['', Validators.required],
       beneficiario: ['', Validators.required],
-      dni_beneficiario: ['', Validators.required],
-      predio: ['', Validators.required]
+      dnibeneficiario: ['', Validators.required],
+      estadodelpredio: ['', Validators.required]
 
-    });
-    this.partnerData = this.fb.group({
-      documento: ['', Validators.required],
-      condicion: ['', Validators.required],
-      docgeneral: ['', Validators.required],
-      observaciones: ['', Validators.required],
-      nombrepredio: ['', Validators.required],
-      titular1: ['', Validators.required],
-      titular2: ['', Validators.required],
-      partida: ['', Validators.required],
-      centroide: ['', Validators.required],
-      centroiden: ['', Validators.required],
-      codcatastral: ['', Validators.required],
-      area: ['', Validators.required],
-      localidadpred: ['', Validators.required],
-      distritopred: ['', Validators.required],
-      provinciapred: ['', Validators.required],
-      departamentopred: ['', Validators.required],
-      areatotalpalma: ['', Validators.required],
-      p1: ['', Validators.required],
-      p2: ['', Validators.required],
-      p3: ['', Validators.required],
-      p4: ['', Validators.required],
-      p5: ['', Validators.required],
-      ano1: ['', Validators.required],
-      ano2: ['', Validators.required],
-      ano3: ['', Validators.required],
-      ano4: ['', Validators.required],
-      ano5: ['', Validators.required],
-      plantas1: ['', Validators.required],
-      plantas2: ['', Validators.required],
-      plantas3: ['', Validators.required],
-      plantas4: ['', Validators.required],
-      plantas5: ['', Validators.required],
-      usoprevio: ['', Validators.required],
-      productividad: ['', Validators.required]
     });
   }
-
   ngOnInit(): void {
-    //agregar metodo
+    this.partner.controls['id'].setValue(this.selectedElement.id);
+    this.partner.controls['dni'].setValue(this.selectedElement.dni);
+    this.partner.controls['nombre'].setValue(this.selectedElement.nombre);
+    this.partner.controls['estado'].setValue(this.selectedElement.estado);
+    this.partner.controls['fechanaci'].setValue(this.selectedElement.fechanaci);
+    this.partner.controls['estadocivil'].setValue(this.selectedElement.estadocivil);
+    this.partner.controls['gradoinstruccion'].setValue(this.selectedElement.gradoinstruccion);
+    this.partner.controls['telefono'].setValue(this.selectedElement.telefono);
+    this.partner.controls['comitesectorial'].setValue(this.selectedElement.comitesectorial);
+    this.partner.controls['entidadbancaria'].setValue(this.selectedElement.entidadbancaria);
+    this.partner.controls['nrocuenta'].setValue(this.selectedElement.nrocuenta);
+    this.partner.controls['email'].setValue(this.selectedElement.email);
+    this.partner.controls['residencia'].setValue(this.selectedElement.residencia);
+    this.partner.controls['localidad'].setValue(this.selectedElement.localidad);
+    this.partner.controls['distrito'].setValue(this.selectedElement.distrito);
+    this.partner.controls['provincia'].setValue(this.selectedElement.provincia);
+    this.partner.controls['departamento'].setValue(this.selectedElement.departamento);
+    this.partner.controls['beneficiario'].setValue(this.selectedElement.beneficiario);
+    this.partner.controls['dnibeneficiario'].setValue(this.selectedElement.dnibeneficiario);
+    this.partner.controls['estadodelpredio'].setValue(this.selectedElement.estadodelpredio);
+
   }
 
-  onSubmit(partner: FormGroup,partnerData:FormGroup) {
-    const partner2 = partner.value;
-    this.service.createPartners(partner2).subscribe(response => {
-    console.log('Datos de socio', response);
+  onSubmit(partner: FormGroup) {
+    const editedPartner = partner.value;
+    this.service.patchPartner(editedPartner).subscribe(response => {
+    console.log('Se actualizo el socio', response);
     this.dialogRef.close();
   }, error => {
     console.error('Error al visualizar datos', error);

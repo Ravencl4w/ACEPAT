@@ -49,13 +49,13 @@ export class UsersManagementComponent implements AfterViewInit {
   }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(UserCreationDialogComponent, {
+    this.dialog.open(UserCreationDialogComponent, {
       width: '500px'
     });
   }
   openModify(element: any) {
     this.selectedElement = element;
-    const dialogRef = this.dialog.open(UserModifyDialogComponent, {
+    this.dialog.open(UserModifyDialogComponent, {
       width: '500px',
       data: this.selectedElement
     });

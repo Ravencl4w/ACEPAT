@@ -16,6 +16,16 @@ export class PartnerService {
     return this.http.post(this.apiurl,inputdata);
   }
   getPartners(): Observable<Partner[]>{
-    return this.http.get<Partner[]>(this.apiurl);
+    const url = `${this.apiurl}?estado=A`;
+    return this.http.get<Partner[]>(url);
+  }
+  patchPartner(inputdata: Partner){
+    const url = `${this.apiurl}/${inputdata.id}`;
+    return this.http.patch(url, inputdata);
+  }
+  setPartnerToInactive(inputdata: Partner){
+    const url = `${this.apiurl}/${inputdata.id}`;
+    inputdata.estado = "I";
+    return this.http.patch(url, inputdata);
   }
 }

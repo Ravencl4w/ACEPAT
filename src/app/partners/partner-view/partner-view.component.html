@@ -7,7 +7,7 @@
         mat-raised-button
         color="primary"
         class="add-user-btn"
-        (click)="openDialog()"
+        (click)="openCreationDialog()"
       >
         <mat-icon>face</mat-icon>
         Socio
@@ -30,53 +30,53 @@
           <!-- Position Column -->
           <ng-container matColumnDef="id">
             <th mat-header-cell *matHeaderCellDef>ID</th>
-            <td mat-cell *matCellDef="let element" (click)="openDialog2(element)">{{ element.id }}</td>
+            <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.id }}</td>
           </ng-container>
   
           <!-- Name Column -->
           <ng-container matColumnDef="dni">
             <th mat-header-cell *matHeaderCellDef>DNI</th>
-            <td mat-cell *matCellDef="let element" (click)="openDialog2(element)">{{ element.dni }}</td>
+            <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.dni }}</td>
           </ng-container>
           <!-- Weight Column -->
           <ng-container matColumnDef="nombre">
             <th mat-header-cell *matHeaderCellDef>SOCIO</th>
-            <td mat-cell *matCellDef="let element" (click)="openDialog2(element)">{{ element.nombre }}</td>
+            <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.nombre }}</td>
           </ng-container>
           <!-- Symbol Column -->
           <ng-container matColumnDef="estado">
             <th mat-header-cell *matHeaderCellDef>ESTADO</th>
-            <td mat-cell *matCellDef="let element" (click)="openDialog2(element)">{{ element.estado }}</td>
+            <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.estado }}</td>
           </ng-container>
           <!-- Symbol Column -->
           <ng-container matColumnDef="fechanaci">
             <th mat-header-cell *matHeaderCellDef>FECHA NACIMIENTO</th>
-            <td mat-cell *matCellDef="let element" (click)="openDialog2(element)">{{ element.fechanaci }}</td>
+            <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.fechanaci }}</td>
           </ng-container>
           <!-- Symbol Column -->
           <ng-container matColumnDef="residencia">
             <th mat-header-cell *matHeaderCellDef>RESIDENCIA</th>
-            <td mat-cell *matCellDef="let element" (click)="openDialog2(element)">{{ element.residencia }}</td>
+            <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.residencia }}</td>
           </ng-container>
           <!-- Symbol Column -->
           <ng-container matColumnDef="localidad">
             <th mat-header-cell *matHeaderCellDef>LOCALIDAD</th>
-            <td mat-cell *matCellDef="let element" (click)="openDialog2(element)">{{ element.localidad }}</td>
+            <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.localidad }}</td>
           </ng-container>
           <!-- Symbol Column -->
           <ng-container matColumnDef="distrito">
             <th mat-header-cell *matHeaderCellDef>DISTRITO</th>
-            <td mat-cell *matCellDef="let element" (click)="openDialog2(element)">{{ element.distrito }}</td>
+            <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.distrito }}</td>
           </ng-container>
           <!-- Symbol Column -->
           <ng-container matColumnDef="provincia">
             <th mat-header-cell *matHeaderCellDef>PROVINCIA</th>
-            <td mat-cell *matCellDef="let element" (click)="openDialog2(element)">{{ element.provincia }}</td>
+            <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.provincia }}</td>
           </ng-container>
           <!-- Symbol Column -->
           <ng-container matColumnDef="departamento">
             <th mat-header-cell *matHeaderCellDef>DEPARTAMENTO</th>
-            <td mat-cell *matCellDef="let element" (click)="openDialog2(element)">{{ element.departamento }}</td>
+            <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.departamento }}</td>
           </ng-container>
           <ng-container matColumnDef="delete">
             <th mat-header-cell *matHeaderCellDef></th>

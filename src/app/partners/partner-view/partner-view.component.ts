@@ -48,6 +48,7 @@ export class PartnerViewComponent implements AfterViewInit {
 
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
+  selectedElement: any;
 
   constructor(private service: PartnerService, private dialog: MatDialog) {}
   ngAfterViewInit() {
@@ -74,43 +75,26 @@ export class PartnerViewComponent implements AfterViewInit {
     XLSX.writeFile(workbook, 'datos.xlsx');
   }
 
-  openDialog(): void {
-    const dialogRef = this.dialog.open(PartnerCreationDialogComponent, {
+  openCreationDialog(): void {
+    this.dialog.open(PartnerCreationDialogComponent, {
       width: '1400px',
     });
   }
-  openDialog2(element: any): void {
-    const dialogRef = this.dialog.open(PartnerEditionDialogComponent, {
+  openEditionDialog(element: Partner): void {
+    this.selectedElement = element;
+    this.dialog.open(PartnerEditionDialogComponent, {
       width: '1400px',
-      height:'800px'
+      height:'800px',
+      data: this.selectedElement
     });
   }
   
-  deleteRow(element: any): void {
-    const dialogRef = this.dialog.open(DeleteDialogComponent, {
+  deleteRow(element: Partner): void {
+    this.selectedElement = element;
+    this.dialog.open(DeleteDialogComponent, {
+      data: this.selectedElement
     });
-
-    dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        // Si el resultado es verdadero (presionó "Sí"), elimina la columna
-        this.deleteColumn(element);
-      }
-  });
 }
 
-deleteColumn(element: any): void {
-  // Obtiene el índice del elemento en la fuente de datos
-  const index = this.dataSource.data.indexOf(element);
 
-  if (index >= 0) {
-    // Crea una copia del arreglo de datos
-    const data = this.dataSource.data.slice();
-
-    // Elimina el elemento del arreglo
-    data.splice(index, 1);
-
-    // Asigna la nueva fuente de datos al MatTableDataSource
-    this.dataSource = new MatTableDataSource(data);
-  }
-}
 }

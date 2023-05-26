@@ -56,7 +56,7 @@ export class ComprasAcopioComponent implements AfterViewInit {
   }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(AcopioDialogComponent, {
+    this.dialog.open(AcopioDialogComponent, {
       width: '500px',
     });
   }
