@@ -32,15 +32,16 @@ import { DeleteDialogComponent } from 'src/app/shared/delete-dialog/delete-dialo
 })
 export class PartnerViewComponent implements AfterViewInit {
   displayedColumns: string[] = [
-    'fecha',
-    'codigo',
+    'id',
     'dni',
-    'socio',
-    'central',
-    'local',
-    'direccion',
-    'estados',
-    'fundos',
+    'nombre',
+    'estado',
+    'fechanaci',
+    'residencia',
+    'localidad',
+    'distrito',
+    'provincia',
+    'departamento',
     'delete',
   ];
   dataSource = new MatTableDataSource<Partner>();
@@ -58,9 +59,6 @@ export class PartnerViewComponent implements AfterViewInit {
       this.dataSource = new MatTableDataSource<Partner>(partners);
       this.dataSource.paginator = this.paginator;
     });
-  }
-  applyFilter(filterValue: string) {
-    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
   exportToExcel(): void {
     const data = this.dataSource.data;
