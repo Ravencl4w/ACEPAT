@@ -1,67 +1,90 @@
 <mat-tab-group>
     <mat-tab label="SOCIO" class="sticky-tabs">
+    
       <form
       class="form-group"
       [formGroup]="partner"
-      (ngSubmit)="onSubmit(partner)"
-    >
+      (ngSubmit)="onSubmit(partner)">
+      <div class="div1"> <br>
+      <label class="labels">DNI</label>
       <mat-form-field class="custom-input">
         <input matInput placeholder="DNI" formControlName="dni"/>
       </mat-form-field>
+      <label class="labels">NOMBRE</label>
       <mat-form-field class="custom-input">
         <input matInput placeholder="Nombre" formControlName="nombre"/>
       </mat-form-field>
+      <label class="labels">ESTADO</label>
       <mat-form-field class="custom-input">
         <input matInput placeholder="Estado" formControlName="estado"/>
       </mat-form-field>
+      <label class="labels">FECHA DE NACIMIENTO</label>
       <mat-form-field class="custom-input">
         <input matInput placeholder="Fecha de nacimiento" formControlName="fechanaci"/>
       </mat-form-field>
+      <label class="labels">ESTADO CIVIL </label>
       <mat-form-field class="custom-input">
         <input matInput placeholder="Estado Civil" formControlName="estadocivil"/>
       </mat-form-field>
+      <label class="labels">GRADO INSTITUCIÓN</label>
       <mat-form-field class="custom-input">
         <input matInput placeholder="Grado Instrucción" formControlName="gradoinstruccion"/>
       </mat-form-field>
+      <label class="labels">TELEFONO</label>
       <mat-form-field class="custom-input">
         <input matInput placeholder="Télefono" formControlName="telefono"/>
       </mat-form-field>
+      <label class="labels">COMITE SECTORIAL</label>
       <mat-form-field class="custom-input">
         <input matInput placeholder="Comite sectorial" formControlName="comitesectorial"/>
       </mat-form-field>
+      <label class="labels">ENTIDAD BANCARIA</label>
       <mat-form-field class="custom-input">
         <input matInput placeholder="Entidad bancaria" formControlName="entidadbancaria"/>
       </mat-form-field>
+    </div>
+    <div class="div2">
+      <label class="labels">NÚMERO DE CUENTA</label>
       <mat-form-field class="custom-input">
         <input matInput placeholder="Número de cuenta" formControlName="nrocuenta"/>
       </mat-form-field>
+      <label class="labels">E-MAIL</label>
       <mat-form-field class="custom-input">
         <input matInput placeholder="E-mail" formControlName="email"/>
       </mat-form-field>
+      <label class="labels">RESIDENCIA</label>
       <mat-form-field class="custom-input">
         <input matInput placeholder="Residencia" formControlName="residencia"/>
       </mat-form-field>
+      <label class="labels">LOCALIDAD</label>
       <mat-form-field class="custom-input">
         <input matInput placeholder="Localidad" formControlName="localidad"/>
       </mat-form-field>
+      <label class="labels">DISTRITO</label>
       <mat-form-field class="custom-input">
         <input matInput placeholder="Distrito" formControlName="distrito"/>
       </mat-form-field>
+      <label class="labels">PROVINCIA</label>
       <mat-form-field class="custom-input">
         <input matInput placeholder="Provincia" formControlName="provincia"/>
       </mat-form-field>
+      <label class="labels">DEPARTAMENTO</label>
       <mat-form-field class="custom-input">
         <input matInput placeholder="Departamento" formControlName="departamento"/>
       </mat-form-field>
+      <label class="labels">BENEFICIARIO</label>
       <mat-form-field class="custom-input">
         <input matInput placeholder="Beneficiario" formControlName="beneficiario"/>
       </mat-form-field>
+      <label class="labels">DNI BENEFICIARIO</label>
       <mat-form-field class="custom-input">
         <input matInput placeholder="DNI Beneficiario" formControlName="dnibeneficiario"/>
       </mat-form-field>
+      <label class="labels">ESTADO PREDIO</label>
       <mat-form-field class="custom-input">
         <input matInput placeholder="Estado predio" formControlName="estadodelpredio"/>
       </mat-form-field>
+    </div>
       </form>
       <button class="button-add" mat-raised-button color="primary" type="submit" (click)="onSubmit(partner)">Guardar</button>
     </mat-tab>
