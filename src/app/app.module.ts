@@ -36,6 +36,8 @@ import { DeleteDialogComponent } from './shared/delete-dialog/delete-dialog.comp
 import { PartnerViewComponent } from './partners/partner-view/partner-view.component';
 import { ReportAcopioTransporteComponent } from './reports/report-acopio-transporte/report-acopio-transporte.component';
 import { ComprasAcopioComponent } from './reports/compras-acopio/compras-acopio.component';
+import { PartnerDetailEditionDialogComponent } from './shared/partner-detail-edition-dialog/partner-detail-edition-dialog.component';
+import { DeletePartnerDetailDialogComponent } from './shared/delete-partner-detail-dialog/delete-partner-detail-dialog.component';
 
 
 
@@ -55,7 +57,9 @@ import { ComprasAcopioComponent } from './reports/compras-acopio/compras-acopio.
     DeleteDialogComponent,
     PartnerViewComponent,
     ReportAcopioTransporteComponent,
-    ComprasAcopioComponent
+    ComprasAcopioComponent,
+    PartnerDetailEditionDialogComponent,
+    DeletePartnerDetailDialogComponent
   ],
   imports: [
     BrowserModule,

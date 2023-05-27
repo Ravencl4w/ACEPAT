@@ -14,3 +14,44 @@
   z-index: 1;
   background-color: #fff; /* Cambia el color de fondo según tus necesidades */
 }
+
+.main_content .header {
+  padding: 25px;
+  background: #fff;
+  color: #717171;
+  border-bottom: 1px solid #e0e4e8;
+  font-size: 35px;
+}
+
+table {
+  width: 100%;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.download-btn,
+.add-user-btn {
+  top: 15px;
+  font-size: 14px;
+  height: 42px;
+  padding: 0 12px;
+  width: 180px; 
+}
+
+.add-user-btn {
+  margin-right: 8px; 
+}
+
+.info {
+  margin-top: 30px;
+}

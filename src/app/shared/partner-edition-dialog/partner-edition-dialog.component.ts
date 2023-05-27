@@ -1,22 +1,58 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 import { Partner } from 'src/app/interfaces/Partner';
 import { PartnerService } from 'src/app/services/partner.service';
-
+import { DeletePartnerDetailDialogComponent } from '../delete-partner-detail-dialog/delete-partner-detail-dialog.component';
+import { PartnerDetail } from 'src/app/interfaces/PartnerDetail';
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-partner-edition-dialog',
   templateUrl: './partner-edition-dialog.component.html',
   styleUrls: ['./partner-edition-dialog.component.css'],
+  animations: [
+    trigger('hoverAnimation', [
+      state('initial', style({})),
+      state('hovered', style({ background: 'lightgray' })),
+      transition('initial => hovered', animate('225ms ease')),
+      transition('hovered => initial', animate('225ms ease')),
+    ]),
+  ],
 })
 
 export class PartnerEditionDialogComponent implements OnInit {
+  
+  displayedColumns: string[] = [
+    'id',
+    'dni',
+    'nombre',
+    'estado',
+    'fechanaci',
+    'residencia',
+    'localidad',
+    'distrito',
+    'provincia',
+    'departamento',
+    'delete',
+  ];
+  dataSource = new MatTableDataSource<PartnerDetail>();
 
+  @ViewChild(MatPaginator)
+  paginator!: MatPaginator;
   partner: FormGroup;
+  selectedDetail: any;
 
   constructor(private fb: FormBuilder, public dialogRef: MatDialogRef<PartnerEditionDialogComponent>, private service: PartnerService,
-    @Inject(MAT_DIALOG_DATA) public selectedElement: Partner) {
+    @Inject(MAT_DIALOG_DATA) public selectedElement: Partner, private dialog: MatDialog) {
     
     this.partner = this.fb.group({
       id: ['', Validators.required],
@@ -43,6 +79,7 @@ export class PartnerEditionDialogComponent implements OnInit {
     });
   }
   ngOnInit(): void {
+    this.getPartnerDetail();
     this.partner.controls['id'].setValue(this.selectedElement.id);
     this.partner.controls['dni'].setValue(this.selectedElement.dni);
     this.partner.controls['nombre'].setValue(this.selectedElement.nombre);
@@ -79,5 +116,26 @@ export class PartnerEditionDialogComponent implements OnInit {
 
 onClose(): void {
   this.dialogRef.close();
+}
+
+getPartnerDetail(): void {
+  this.service.getPartnerDetails(this.selectedElement.id).subscribe((partnerDetails) => {
+    this.dataSource = new MatTableDataSource<PartnerDetail>(partnerDetails);
+    this.dataSource.paginator = this.paginator;
+  });
+}
+openEditionDialog(element: PartnerDetail): void {
+  this.selectedDetail = element;
+  this.dialog.open(PartnerEditionDialogComponent, {
+    width: '1400px',
+    height:'800px',
+    data: this.selectedDetail
+  });
+}
+deleteRow(element: PartnerDetail): void {
+  this.selectedDetail = element;
+  this.dialog.open(DeletePartnerDetailDialogComponent, {
+    data: this.selectedDetail
+  });
 }
 }
