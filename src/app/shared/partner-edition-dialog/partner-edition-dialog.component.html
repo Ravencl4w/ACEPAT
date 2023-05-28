@@ -42,13 +42,14 @@
       <mat-form-field class="custom-input">
         <input matInput placeholder="Entidad bancaria" formControlName="entidadbancaria"/>
       </mat-form-field>
-      <button class="button-add" mat-raised-button color="primary" type="submit" (click)="onSubmit(partner)">Guardar</button>
-    </div>
-    <div class="div2">
       <label class="labels">NÚMERO DE CUENTA</label>
       <mat-form-field class="custom-input">
         <input matInput placeholder="Número de cuenta" formControlName="nrocuenta"/>
       </mat-form-field>
+   
+    </div>
+    <div class="div2">
+      
       <label class="labels">E-MAIL</label>
       <mat-form-field class="custom-input">
         <input matInput placeholder="E-mail" formControlName="email"/>
@@ -85,7 +86,9 @@
       <mat-form-field class="custom-input">
         <input matInput placeholder="Estado predio" formControlName="estadodelpredio"/>
       </mat-form-field>
-    </div>
+      
+      <button class="button-add" mat-raised-button color="primary" type="submit" (click)="onSubmit(partner)">Guardar</button> </div>
+    
       </form>
     </mat-tab>
     
