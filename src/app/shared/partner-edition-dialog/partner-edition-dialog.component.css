@@ -5,14 +5,19 @@
   top: 10px; 
 
 }
-.div1{
- 
+.form-group{
+  display: flex;
+  max-width: 1400px;
+  max-height: 800px;
+}
+.div1{  
+  flex: 50%;
+  padding: 0 10px;
 }
 
 .div2{
-  position: absolute; /* Establece la posición absoluta */
- top: -90px;
-  left: 720px; /* Ubicación desde la izquierda */
+  position: relative;
+  top: 20px;
 }
 
 .mat-tab-group {

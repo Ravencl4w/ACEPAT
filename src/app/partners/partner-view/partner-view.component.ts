@@ -89,8 +89,6 @@ export class PartnerViewComponent implements AfterViewInit {
   openEditionDialog(element: Partner): void {
     this.selectedElement = element;
     this.dialog.open(PartnerEditionDialogComponent, {
-      width: '1400px',
-      height:'800px',
       data: this.selectedElement
     });
   }
