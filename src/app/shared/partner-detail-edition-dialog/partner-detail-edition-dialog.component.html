@@ -1,1 +1,149 @@
-<p>partner-detail-edition-dialog works!</p>
+<form
+class="form-group"
+[formGroup]="partner"
+(ngSubmit)="onSubmit(partner)">
+<div class="div1"> <br>
+<label class="labels">DOCUMENTO</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Documento" formControlName="documento"/>
+</mat-form-field>
+<label class="labels">CONDICIÓN</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Condición" formControlName="condicion"/>
+</mat-form-field>
+<label class="labels">DOCUMENTO GENERAL</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Documento General" formControlName="docgeneral"/>
+</mat-form-field>
+<label class="labels">OBSERVACIONES</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Observaciones" formControlName="observaciones"/>
+</mat-form-field>
+<label class="labels">NOMBRE DEL PREDIO</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Nombre del predio" formControlName="nombrepredio"/>
+</mat-form-field>
+<label class="labels">TITULAR 1</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Titular 1" formControlName="titular1"/>
+</mat-form-field>
+<label class="labels">TITULAR 2</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Titular 2" formControlName="titular2"/>
+</mat-form-field>
+<label class="labels">PARTIDA</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Partida" formControlName="partida"/>
+</mat-form-field>
+<label class="labels">CENTRO IDEE</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Centro Idee" formControlName="centroidee"/>
+</mat-form-field>
+<label class="labels">CENTRO IDEN</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Centro Iden" formControlName="centroiden"/>
+</mat-form-field>
+<label class="labels">CODIGO CATASTRAL</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Codigo Catastral" formControlName="codcatastral"/>
+</mat-form-field>
+<label class="labels">AREA</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Area" formControlName="area"/>
+</mat-form-field>
+<label class="labels">LOCALIDAD PREDIO</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Localidad predio" formControlName="localidadpred"/>
+</mat-form-field>
+<label class="labels">DISTRITO PREDIO</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Distrito predio" formControlName="distritopred"/>
+</mat-form-field>
+<label class="labels">PROVINCIA PREDIO</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Provincia predio" formControlName="provinciapred"/>
+</mat-form-field>
+<label class="labels">DEPARTAMENTO PREDIO</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Departamento predio" formControlName="departamentopred"/>
+</mat-form-field>
+<label class="labels">AREA TOTAL PALMA</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Area total palma" formControlName="areatotalpalma"/>
+</mat-form-field>
+</div>
+<div class="div2">
+
+<label class="labels">P1</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="P1" formControlName="p1"/>
+</mat-form-field>
+<label class="labels">P2</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="P2" formControlName="p2"/>
+</mat-form-field>
+<label class="labels">P3</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="P3" formControlName="p3"/>
+</mat-form-field>
+<label class="labels">P4</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="P4" formControlName="p4"/>
+</mat-form-field>
+<label class="labels">P5</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="P5" formControlName="p5"/>
+</mat-form-field>
+<label class="labels">AÑO 1</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Año 1" formControlName="ano1"/>
+</mat-form-field>
+<label class="labels">AÑO 2</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Año 2" formControlName="ano2"/>
+</mat-form-field>
+<label class="labels">AÑO 3</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Año 3" formControlName="ano3"/>
+</mat-form-field>
+<label class="labels">AÑO 4</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Año 4" formControlName="ano4"/>
+</mat-form-field>
+<label class="labels">AÑO 5</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Año 5" formControlName="ano5"/>
+</mat-form-field>
+<label class="labels">PLANTAS 1</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Plantas 1" formControlName="plantas1"/>
+</mat-form-field>
+<label class="labels">PLANTAS 2</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Plantas 2" formControlName="plantas2"/>
+</mat-form-field>
+<label class="labels">PLANTAS 3</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Plantas 3" formControlName="plantas3"/>
+</mat-form-field>
+<label class="labels">PLANTAS 4</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Plantas 4" formControlName="plantas4"/>
+</mat-form-field>
+<label class="labels">PLANTAS 5</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Plantas 5" formControlName="plantas5"/>
+</mat-form-field>
+<label class="labels">USO PREVIO</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Uso previo" formControlName="usoprevio"/>
+</mat-form-field>
+<label class="labels">PRODUCTIVIDAD</label>
+<mat-form-field class="custom-input">
+  <input matInput placeholder="Productividad" formControlName="productividad"/>
+</mat-form-field>
+
+<button class="button-add" mat-raised-button color="primary" type="submit" (click)="onSubmit(partner)">Guardar</button> 
+</div>
+
+</form>

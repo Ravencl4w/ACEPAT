@@ -55,6 +55,8 @@ export class PartnerViewComponent implements AfterViewInit {
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
   selectedElement: any;
+  filtroDNI!: string;
+  filtroSocio!: string;
 
   constructor(private service: PartnerService, private dialog: MatDialog) {}
   ngAfterViewInit() {
@@ -99,6 +101,29 @@ export class PartnerViewComponent implements AfterViewInit {
       data: this.selectedElement
     });
 }
-
+aplicarFiltros() {
+  if(this.filtroDNI&&this.filtroSocio){
+    this.service.getPartnersFilterNameDni(this.filtroSocio,this.filtroDNI).subscribe((partners) => {
+      this.dataSource = new MatTableDataSource<Partner>(partners);
+      this.dataSource.paginator = this.paginator;
+    });
+  }
+  else{
+    if (this.filtroDNI) {
+      this.service.getPartnersFilterDni(this.filtroDNI).subscribe((partners) => {
+        this.dataSource = new MatTableDataSource<Partner>(partners);
+        this.dataSource.paginator = this.paginator;
+      });
+    }
+    else if (this.filtroSocio) {
+      this.service.getPartnersFilterName(this.filtroSocio).subscribe((partners) => {
+        this.dataSource = new MatTableDataSource<Partner>(partners);
+        this.dataSource.paginator = this.paginator;
+      });
+    } else {
+      this.getPartners();
+    }
+  }
+}
 
 }

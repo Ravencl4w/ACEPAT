@@ -14,6 +14,7 @@ import {
   transition,
   animate,
 } from '@angular/animations';
+import { PartnerDetailEditionDialogComponent } from '../partner-detail-edition-dialog/partner-detail-edition-dialog.component';
 
 @Component({
   selector: 'app-partner-edition-dialog',
@@ -126,9 +127,7 @@ getPartnerDetail(): void {
 }
 openEditionDialog(element: PartnerDetail): void {
   this.selectedDetail = element;
-  this.dialog.open(PartnerEditionDialogComponent, {
-    width: '1400px',
-    height:'800px',
+  this.dialog.open(PartnerDetailEditionDialogComponent, {
     data: this.selectedDetail
   });
 }

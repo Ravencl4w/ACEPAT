@@ -38,7 +38,7 @@ import { ReportAcopioTransporteComponent } from './reports/report-acopio-transpo
 import { ComprasAcopioComponent } from './reports/compras-acopio/compras-acopio.component';
 import { PartnerDetailEditionDialogComponent } from './shared/partner-detail-edition-dialog/partner-detail-edition-dialog.component';
 import { DeletePartnerDetailDialogComponent } from './shared/delete-partner-detail-dialog/delete-partner-detail-dialog.component';
-
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -83,7 +83,8 @@ import { DeletePartnerDetailDialogComponent } from './shared/delete-partner-deta
     MatNativeDateModule,
     MatSelectModule,
     MatRadioModule,
-    MatTabsModule
+    MatTabsModule,
+    FormsModule
 
   ],
   providers: [],

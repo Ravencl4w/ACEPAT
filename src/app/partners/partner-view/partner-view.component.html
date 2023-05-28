@@ -23,21 +23,22 @@
         Exportar a Excel
       </button> 
       <div class="div1">
-      <mat-form-field class="example-form-field">
-        <mat-label>Busqueda por DNI</mat-label>
-        <input matInput type="text" >
-        <button  matSuffix mat-icon-button aria-label="search" >
-          <mat-icon>search</mat-icon>
-        </button> 
-      </mat-form-field> </div>
+        <mat-form-field class="example-form-field">
+          <mat-label>Busqueda por DNI</mat-label>
+          <input matInput type="text" [(ngModel)]="filtroDNI" [ngModelOptions]="{ updateOn: 'change' }" (input)="aplicarFiltros()">
+          <button matSuffix mat-icon-button aria-label="search">
+            <mat-icon>search</mat-icon>
+          </button>
+        </mat-form-field>
+    </div>
       <div class="div2">
-      <mat-form-field class="example-form-field">
-        <mat-label>Busqueda por Socio</mat-label>
-        <input matInput type="text" >
-        <button  matSuffix mat-icon-button aria-label="search" >
-          <mat-icon>search</mat-icon>
-        </button>
-      </mat-form-field>
+        <mat-form-field class="example-form-field">
+          <mat-label>Busqueda por Socio</mat-label>
+          <input matInput type="text" [(ngModel)]="filtroSocio" [ngModelOptions]="{ updateOn: 'change' }" (input)="aplicarFiltros()">
+          <button matSuffix mat-icon-button aria-label="search">
+            <mat-icon>search</mat-icon>
+          </button>
+        </mat-form-field>
     </div>    
   </div>
     <div class="info">

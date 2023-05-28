@@ -28,6 +28,10 @@ export class PartnerService {
     const url = `${this.apiurl}/${inputdata.id}`;
     return this.http.patch(url, inputdata);
   }
+  patchPartnerDetail(inputdata: PartnerDetail){
+    const url = `${this.apiurlDetail}/${inputdata.id}`;
+    return this.http.patch(url, inputdata);
+  }
   setPartnerToInactive(inputdata: Partner){
     const url = `${this.apiurl}/${inputdata.id}`;
     inputdata.estado = "I";
@@ -36,6 +40,18 @@ export class PartnerService {
   deleteDetail(inputdata: PartnerDetail){
     const url = `${this.apiurlDetail}/${inputdata.id}`;
     return this.http.delete(url);
+  }
+  getPartnersFilterDni(inputdata: string): Observable<Partner[]> {
+    const url = `${this.apiurl}?dni_like=${inputdata}*&estado_ne=I`;
+    return this.http.get<Partner[]>(url);
+  }  
+  getPartnersFilterName(inputdata: string): Observable<Partner[]>{
+    const url = `${this.apiurl}?nombre_like=${inputdata}*&estado_ne=I`;
+    return this.http.get<Partner[]>(url);
+  }
+  getPartnersFilterNameDni(inputdata: string, inputdata2: string): Observable<Partner[]>{
+    const url = `${this.apiurl}?nombre_like=${inputdata}*&dni_like=${inputdata2}*&estado_ne=I`;
+    return this.http.get<Partner[]>(url);
   }
 
 }
