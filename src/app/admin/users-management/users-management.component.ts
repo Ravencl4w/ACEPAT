@@ -49,17 +49,24 @@ export class UsersManagementComponent implements AfterViewInit {
   }
 
   openDialog(): void {
-    this.dialog.open(UserCreationDialogComponent, {
+    const dialogRef = this.dialog.open(UserCreationDialogComponent, {
       width: '500px'
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      // Aquí puedes llamar al método que deseas cuando se cierra el diálogo
+      this.getUsers();
     });
   }
   openModify(element: any) {
     this.selectedElement = element;
-    this.dialog.open(UserModifyDialogComponent, {
+    const dialogRef = this.dialog.open(UserModifyDialogComponent, {
       width: '500px',
       data: this.selectedElement
     });
-    
+    dialogRef.afterClosed().subscribe(result => {
+      // Aquí puedes llamar al método que deseas cuando se cierra el diálogo
+      this.getUsers();
+    });
   }
   visiblePasswords: boolean[] = [];
 

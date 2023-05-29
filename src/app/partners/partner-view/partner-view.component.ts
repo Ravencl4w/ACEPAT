@@ -90,15 +90,23 @@ export class PartnerViewComponent implements AfterViewInit {
   }
   openEditionDialog(element: Partner): void {
     this.selectedElement = element;
-    this.dialog.open(PartnerEditionDialogComponent, {
+    const dialogRef = this.dialog.open(PartnerEditionDialogComponent, {
       data: this.selectedElement
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      // Aquí puedes llamar al método que deseas cuando se cierra el diálogo
+      this.getPartners();
     });
   }
   
   deleteRow(element: Partner): void {
     this.selectedElement = element;
-    this.dialog.open(DeleteDialogComponent, {
+    const dialogRef = this.dialog.open(DeleteDialogComponent, {
       data: this.selectedElement
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      // Aquí puedes llamar al método que deseas cuando se cierra el diálogo
+      this.getPartners();
     });
 }
 aplicarFiltros() {

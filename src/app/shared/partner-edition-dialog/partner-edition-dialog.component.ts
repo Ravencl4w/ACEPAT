@@ -127,14 +127,22 @@ getPartnerDetail(): void {
 }
 openEditionDialog(element: PartnerDetail): void {
   this.selectedDetail = element;
-  this.dialog.open(PartnerDetailEditionDialogComponent, {
+  const dialogRef = this.dialog.open(PartnerDetailEditionDialogComponent, {
     data: this.selectedDetail
+  });
+  dialogRef.afterClosed().subscribe(result => {
+    // Aquí puedes llamar al método que deseas cuando se cierra el diálogo
+    this.getPartnerDetail();
   });
 }
 deleteRow(element: PartnerDetail): void {
   this.selectedDetail = element;
-  this.dialog.open(DeletePartnerDetailDialogComponent, {
+  const dialogRef = this.dialog.open(DeletePartnerDetailDialogComponent, {
     data: this.selectedDetail
+  });
+  dialogRef.afterClosed().subscribe(result => {
+    // Aquí puedes llamar al método que deseas cuando se cierra el diálogo
+    this.getPartnerDetail();
   });
 }
 }
