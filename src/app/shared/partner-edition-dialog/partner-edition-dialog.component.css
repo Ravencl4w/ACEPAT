@@ -12,9 +12,30 @@
 }
 .button-add{
   height: 50px; ;
-  width: 250px;
+  width: 150px;
   font-size: 18px;
-  left: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-cancel{
+  color: white;
+  background-color: red;
+  height: 50px; ;
+  width: 150px;
+  font-size: 18px;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.dialog-actions-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  column-gap: 10px; /* Ajusta el espacio entre los botones según tus preferencias */
 }
 
 .div1{  
@@ -64,11 +85,6 @@ table {
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
-
-.button-container {
-  display: flex;
-  align-items: center;
 }
 
 .download-btn,

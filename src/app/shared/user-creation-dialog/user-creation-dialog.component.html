@@ -19,6 +19,11 @@
   </div>
 
   <!-- Botón de crear el usuario -->
-  <button mat-raised-button color="primary" type="submit">Crear usuario</button>
+  <mat-dialog-actions class="dialog-actions">
+  <div class="dialog-actions-container">
+  <button class="button-add" mat-raised-button color="primary" type="submit">Crear</button>
+  <button class="button-cancel" mat-button mat-dialog-close color="primary">Cancelar</button>
+  </div>
+  </mat-dialog-actions>
 
 </form>
