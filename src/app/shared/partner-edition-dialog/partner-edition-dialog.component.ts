@@ -85,7 +85,7 @@ export class PartnerEditionDialogComponent implements OnInit {
     this.partner.controls['dni'].setValue(this.selectedElement.dni);
     this.partner.controls['nombre'].setValue(this.selectedElement.nombre);
     this.partner.controls['estado'].setValue(this.selectedElement.estado);
-    this.partner.controls['fechanaci'].setValue(this.selectedElement.fechanaci);
+    this.partner.controls['fechanaci'].setValue(new Date(this.selectedElement.fechanaci));
     this.partner.controls['estadocivil'].setValue(this.selectedElement.estadocivil);
     this.partner.controls['gradoinstruccion'].setValue(this.selectedElement.gradoinstruccion);
     this.partner.controls['telefono'].setValue(this.selectedElement.telefono);
