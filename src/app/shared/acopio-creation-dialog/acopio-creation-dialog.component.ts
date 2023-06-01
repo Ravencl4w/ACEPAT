@@ -47,9 +47,13 @@ export class AcopioCreationDialogComponent implements OnInit {
   dataSource2 = new MatTableDataSource(dataticket);
   list:FormGroup;
   selectedOption: any;
+  selectedOption2: any;
+  selectedOption3: any;
+  selectedOption4: any;
   options: string[] = ['1', '2', '3'];
-  options2: string[] = ['1', '2', '3'];
+  options2: string[] = ['3','4','5'];
   filteredOptions!: Observable<string[]>;
+  filteredOptions2!: Observable<string[]>;
 
   constructor(private fb: FormBuilder) {
     this.list = this.fb.group({
@@ -90,13 +94,19 @@ export class AcopioCreationDialogComponent implements OnInit {
       descuentosoles: ['', Validators.required],
       importesoles: ['', Validators.required],
     });
+
+    this.filteredOptions = this.list.valueChanges.pipe(
+      startWith(''),
+      map(value => this._filter(value || '')),
+    );
+    this.filteredOptions2 = this.list.valueChanges.pipe(
+      startWith(''),
+      map(value => this._filter2(value || '')),
+    );
 }
 
 ngOnInit() {
-  this.filteredOptions = this.list.valueChanges.pipe(
-    startWith(''),
-    map(value => this._filter(value || '')),
-  );
+
 }
 
 applyFilter(event: Event) {
@@ -109,6 +119,11 @@ private _filter(value: string): string[] {
   return this.options.filter(option => option.toLowerCase().includes(filterValue));
 }
 
+private _filter2(value: string): string[] {
+  const filterValue = value.toLowerCase();
+  return this.options2.filter(option => option.toLowerCase().includes(filterValue));
+}
+
 onOptionSelected(event: any) {
   if (event.option.value === '1') {
     this.selectedOption = 'CENTRO DE ACOPIO LA FLORIDA';
@@ -116,6 +131,18 @@ onOptionSelected(event: any) {
     this.selectedOption = 'CENTRO DE ACOPIO PALMERAS';
   } else if(event.option.value === '3') {
     this.selectedOption = 'ALMACEN CENTRAL ACOPIO ACEPAT';
+  }
+}
+
+onOptionSelected2(event: any) {
+  if (event.option.value === '3') {
+    this.selectedOption2 = '07755215';
+    this.selectedOption3 = 'ACOSTA ROBLES NICOLAS TOLENTINO';
+    this.selectedOption4 = '123456789';
+  } else {
+    this.selectedOption2 = '';
+    this.selectedOption3 = '';
+    this.selectedOption4 = '';
   }
 }
 

@@ -33,9 +33,9 @@
                   formControlName="codigosocio"
                   aria-label="Number"
                   matInput
-                  [matAutocomplete]="auto">
-           <mat-autocomplete #auto="matAutocomplete">
-             <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                  [matAutocomplete]="auto2">
+           <mat-autocomplete #auto2="matAutocomplete" (optionSelected)="onOptionSelected2($event)">
+             <mat-option *ngFor="let option of filteredOptions2 | async" [value]="option">
                {{option}}
              </mat-option>
            </mat-autocomplete>
@@ -45,12 +45,13 @@
                 <label class="labels">N° Doc</label>
                 <mat-form-field [style.width.px]="140" [style.height.px]="70" class="custom-input">
                   <input type="text"
+                  [value]="selectedOption2"
                   formControlName="numerodoc"
                   aria-label="Number"
                   matInput
-                  [matAutocomplete]="auto">
-           <mat-autocomplete #auto="matAutocomplete">
-             <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                  [matAutocomplete]="auto3">
+           <mat-autocomplete #auto3="matAutocomplete">
+             <mat-option *ngFor="let option of filteredOptions2 | async" [value]="option">
                {{option}}
              </mat-option>
            </mat-autocomplete>
@@ -59,7 +60,7 @@
               <div class="input-group">
                 <label class="labels">Apellidos y Nombres</label>
                 <mat-form-field [style.width.px]="530" [style.height.px]="70" class="custom-input">
-                  <input matInput formControlName="nombres" />
+                  <input matInput formControlName="nombres" [value]="selectedOption3" />
                 </mat-form-field>
               </div>
               <div class="input-group">
@@ -81,7 +82,7 @@
               <div class="input-group">
                 <label class="labels">Cta. Cte.</label>
                 <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
-                  <input matInput formControlName="cuentacte" />
+                  <input matInput formControlName="cuentacte" [value]="selectedOption4" />
                 </mat-form-field>
               </div>
               <div class="input-group">
