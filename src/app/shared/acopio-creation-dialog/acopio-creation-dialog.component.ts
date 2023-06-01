@@ -1,19 +1,35 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import { AcopioListComponent } from 'src/app/acopio/acopio-list/acopio-list.component';
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+export interface DatosProducto {
+  producto: string;
+  codigo: string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
+const dataproducto: DatosProducto[] = [
+  {codigo: 'RFF', producto: 'RACIMO DE FRUTA FRESCA DE P.A'},
+  {codigo: 'FS', producto: 'FRUTO SUELTO DE P.A'},
+];
+
+export interface DatosTicket {
+  ticket: number;
+  cantidad: number;
+  undmedida: string;
+  descripcion: string;
+  preciou: number;
+  igv: number;
+  descuento: number;
+  importe:number;
+}
+
+const dataticket: DatosTicket[] = [
+  {ticket:1, cantidad: 12, undmedida:'KILOS', descripcion:'Se ordenaron muchos kilos', preciou: 12, igv: 0, descuento: 0, importe: 12},
+  {ticket:2, cantidad: 12, undmedida:'KILOS', descripcion:'Se ordenaron muchos kilos', preciou: 12, igv: 0, descuento: 0, importe: 12},
+  {ticket:3, cantidad: 12, undmedida:'KILOS', descripcion:'Se ordenaron muchos kilos', preciou: 12, igv: 0, descuento: 0, importe: 12},
+  {ticket:4, cantidad: 12, undmedida:'KILOS', descripcion:'Se ordenaron muchos kilos', preciou: 12, igv: 0, descuento: 0, importe: 12},
 ];
 
 
@@ -24,8 +40,10 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class AcopioCreationDialogComponent {
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];  
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  displayedColumns: string[] = ['codigo', 'producto'];  
+  displayedColumns2: string[] = ['ticket', 'cantidad', 'undmedida', 'descripcion', 'preciou', 'igv', 'descuento', 'importe'];  
+  dataSource = new MatTableDataSource(dataproducto);
+  dataSource2 = new MatTableDataSource(dataticket);
   list:FormGroup;
 
   constructor(private fb: FormBuilder) {
@@ -72,4 +90,5 @@ applyFilter(event: Event) {
   const filterValue = (event.target as HTMLInputElement).value;
   this.dataSource.filter = filterValue.trim().toLowerCase();
 }
+
 }
