@@ -39,6 +39,8 @@ import { ComprasAcopioComponent } from './reports/compras-acopio/compras-acopio.
 import { PartnerDetailEditionDialogComponent } from './shared/partner-detail-edition-dialog/partner-detail-edition-dialog.component';
 import { DeletePartnerDetailDialogComponent } from './shared/delete-partner-detail-dialog/delete-partner-detail-dialog.component';
 import { FormsModule } from '@angular/forms';
+import { AcopioListComponent } from './acopio/acopio-list/acopio-list.component';
+import { AcopioCreationDialogComponent } from './shared/acopio-creation-dialog/acopio-creation-dialog.component';
 
 
 
@@ -59,7 +61,9 @@ import { FormsModule } from '@angular/forms';
     ReportAcopioTransporteComponent,
     ComprasAcopioComponent,
     PartnerDetailEditionDialogComponent,
-    DeletePartnerDetailDialogComponent
+    DeletePartnerDetailDialogComponent,
+    AcopioListComponent,
+    AcopioCreationDialogComponent
   ],
   imports: [
     BrowserModule,

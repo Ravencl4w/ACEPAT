@@ -1,0 +1,50 @@
+.main_content .header {
+  padding: 30px;
+  background: #fff;
+  color: #717171;
+  border-bottom: 1px solid #e0e4e8;
+  font-size: 35px;
+}
+
+table {
+  width: 100%;
+}
+
+
+.button-container {
+  display: flex;
+  
+}
+.boton{
+position: relative;
+max-width: 600px;
+top: 10px;
+height: 50px;
+width: 200px;
+font-size: 16px;
+left: 10px;
+
+}
+.div1
+{
+  position: relative;
+  left: 940px;
+top: 10px;
+  
+}
+.date{
+  position: relative;
+  left:1100px;
+  top: 10px;
+  
+ 
+
+}
+.date2{
+  position: relative;
+  left:570px;
+top: 10px; 
+ 
+
+}
+
