@@ -13,6 +13,7 @@ export class AcopioListComponent {
 
   openAcopioCreationDialog(): void {
     this.dialog.open(AcopioCreationDialogComponent, {
+      height: '900px',
     });
   }
 

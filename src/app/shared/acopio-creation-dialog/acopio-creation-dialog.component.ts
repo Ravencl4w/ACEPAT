@@ -1,13 +1,31 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+
+export interface PeriodicElement {
+  name: string;
+  position: number;
+  weight: number;
+  symbol: string;
+}
+
+const ELEMENT_DATA: PeriodicElement[] = [
+  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
+  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
+  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
+  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
+];
+
 
 @Component({
   selector: 'app-acopio-creation-dialog',
   templateUrl: './acopio-creation-dialog.component.html',
-  styleUrls: ['./acopio-creation-dialog.component.css']
+  styleUrls: ['./acopio-creation-dialog.component.css'],
 })
 export class AcopioCreationDialogComponent {
 
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];  
+  dataSource = new MatTableDataSource(ELEMENT_DATA);
   list:FormGroup;
 
   constructor(private fb: FormBuilder) {
@@ -49,5 +67,9 @@ export class AcopioCreationDialogComponent {
       descuentosoles: ['', Validators.required],
       importesoles: ['', Validators.required],
     });
+}
+applyFilter(event: Event) {
+  const filterValue = (event.target as HTMLInputElement).value;
+  this.dataSource.filter = filterValue.trim().toLowerCase();
 }
 }

@@ -24,6 +24,11 @@
     flex-basis: 50%;
   }
 
+  .columna4{
+    display: flex;
+    align-items: center;
+  }
+
 
   .labels {
     font-size: 16px; 
@@ -53,6 +58,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    padding-right: 50px;
   }
 
   .datos-compra{
@@ -69,13 +75,22 @@
     align-items: flex-start;
   }
 
-  .input-container {
-    display: flex;
+  .tabla-datos{
+    width: 100%;
   }
   
-  .input-item {
-    flex: 1;
-    margin-right: 8px;
-    width: 50%;
+  .custom-button {
+    background-color: transparent;
+    border: none;
+    transition: transform 0.3s;
+  }
+  
+  .custom-button:hover {
+    transform: scale(1.2);
+  }
+  
+  .custom-icon {
+    color: green;
+    transform: scale(1.6);
   }
   
