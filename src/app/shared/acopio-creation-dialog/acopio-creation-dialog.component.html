@@ -10,9 +10,8 @@
                   formControlName="codigoacopio"
                   aria-label="Number"
                   matInput
-                  [formControl]="myControl"
                   [matAutocomplete]="auto">
-           <mat-autocomplete #auto="matAutocomplete">
+           <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onOptionSelected($event)">
              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
                {{option}}
              </mat-option>
@@ -22,7 +21,7 @@
               <div class="input-group">
                 <label class="labels">Centro Acopio</label>
                 <mat-form-field [style.width.px]="680" [style.height.px]="70" class="custom-input">
-                  <input matInput formControlName="centroacopio" />
+                  <input matInput [value]="selectedOption" formControlName="centroacopio" />
                 </mat-form-field>
               </div>
             </div>
@@ -34,7 +33,6 @@
                   formControlName="codigosocio"
                   aria-label="Number"
                   matInput
-                  [formControl]="myControl"
                   [matAutocomplete]="auto">
            <mat-autocomplete #auto="matAutocomplete">
              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
@@ -50,7 +48,6 @@
                   formControlName="numerodoc"
                   aria-label="Number"
                   matInput
-                  [formControl]="myControl"
                   [matAutocomplete]="auto">
            <mat-autocomplete #auto="matAutocomplete">
              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">

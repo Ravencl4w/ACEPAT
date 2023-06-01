@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import { Observable, map, startWith } from 'rxjs';
@@ -46,8 +46,9 @@ export class AcopioCreationDialogComponent implements OnInit {
   dataSource = new MatTableDataSource(dataproducto);
   dataSource2 = new MatTableDataSource(dataticket);
   list:FormGroup;
-  myControl = new FormControl('');
-  options: string[] = ['One', 'Two', 'Three'];
+  selectedOption: any;
+  options: string[] = ['1', '2', '3'];
+  options2: string[] = ['1', '2', '3'];
   filteredOptions!: Observable<string[]>;
 
   constructor(private fb: FormBuilder) {
@@ -92,7 +93,7 @@ export class AcopioCreationDialogComponent implements OnInit {
 }
 
 ngOnInit() {
-  this.filteredOptions = this.myControl.valueChanges.pipe(
+  this.filteredOptions = this.list.valueChanges.pipe(
     startWith(''),
     map(value => this._filter(value || '')),
   );
@@ -105,8 +106,17 @@ applyFilter(event: Event) {
 
 private _filter(value: string): string[] {
   const filterValue = value.toLowerCase();
-
   return this.options.filter(option => option.toLowerCase().includes(filterValue));
+}
+
+onOptionSelected(event: any) {
+  if (event.option.value === '1') {
+    this.selectedOption = 'CENTRO DE ACOPIO LA FLORIDA';
+  } else if(event.option.value === '2') {
+    this.selectedOption = 'CENTRO DE ACOPIO PALMERAS';
+  } else if(event.option.value === '3') {
+    this.selectedOption = 'ALMACEN CENTRAL ACOPIO ACEPAT';
+  }
 }
 
 }
