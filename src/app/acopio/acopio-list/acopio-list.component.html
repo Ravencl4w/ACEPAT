@@ -1,5 +1,202 @@
+<div class="main_content">
+  <div class="header">Listado Acopio</div>
 
-<div>
-    <button (click)="openAcopioCreationDialog()">Sí</button>
-</div>
+  <div class="button-container">
+    <!-- date picker -->
+   
+      <button mat-raised-button color="primary" class="boton" (click)="openAcopioCreationDialog()">Crear Acopios</button>
+  
+  
+   <div class="date">
+    <mat-form-field>
+      <mat-label>Hasta</mat-label>
+      <input matInput [matDatepicker]="picker" />
+
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+
+  <div class="date2">
+    <mat-form-field>
+      <mat-label>Desde</mat-label>
+      <input matInput [matDatepicker]="picker" />
+
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+    <!-- barra de busqueda -->
+    <div class="div1">
+      <mat-form-field class="example-form-field">
+        <mat-label>Buscar</mat-label>
+        <input matInput type="text" />
+        <button matSuffix mat-icon-button aria-label="search">
+          <mat-icon>search</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="info">
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource" class="mat-table">
+        <!-- Position Column -->
+        <ng-container matColumnDef="fechadoc">
+          <th mat-header-cell *matHeaderCellDef>FECHA DOC</th>
+          <td mat-cell *matCellDef="let element" >{{ element.fechadoc }}</td>
+        </ng-container>
+
+        <!-- Name Column -->
+        
+        <ng-container matColumnDef="fechaing">
+         <th mat-header-cell *matHeaderCellDef>FECHA ING</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
+          <td mat-cell *matCellDef="let element" >{{ element.fechaing }}</td>
+        </ng-container>
+       <!-- Name Column -->
+        
+       <ng-container matColumnDef="fechaolp">
+        <th mat-header-cell *matHeaderCellDef>FECHA OLP</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
+         <td mat-cell *matCellDef="let element" >{{ element.fechaolp }}</td>
+       </ng-container>
+       <!-- Name Column -->
+        
+       <ng-container matColumnDef="doc">
+        <th mat-header-cell *matHeaderCellDef>DOCUMENTO</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
+         <td mat-cell *matCellDef="let element" >{{ element.doc }}</td>
+       </ng-container>
+       <!-- Name Column -->
+        
+       <ng-container matColumnDef="num_doc">
+        <th mat-header-cell *matHeaderCellDef>NUMERO DOC</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
+         <td mat-cell *matCellDef="let element" >{{ element.num_doc }}</td>
+       </ng-container>
+       <!-- Name Column -->
+        
+       <ng-container matColumnDef="serie">
+        <th mat-header-cell *matHeaderCellDef>SERIE</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
+         <td mat-cell *matCellDef="let element" >{{ element.serie }}</td>
+       </ng-container>
+       <!-- Name Column -->
+        
+       <ng-container matColumnDef="numero">
+        <th mat-header-cell *matHeaderCellDef>NUMERO</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
+         <td mat-cell *matCellDef="let element" >{{ element.numero }}</td>
+       </ng-container>
+       <!-- Name Column -->
+        
+       <ng-container matColumnDef="cod_acopio">
+        <th mat-header-cell *matHeaderCellDef>COD ACOPIO</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
+         <td mat-cell *matCellDef="let element" >{{ element.cod_acopio }}</td>
+       </ng-container>
+       <!-- Name Column -->
+        
+       <ng-container matColumnDef="dni">
+        <th mat-header-cell *matHeaderCellDef>DNI</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
+         <td mat-cell *matCellDef="let element" >{{ element.dni }}</td>
+       </ng-container>
+       <!-- Name Column -->
+        
+       <ng-container matColumnDef="datos">
+        <th mat-header-cell *matHeaderCellDef>DATOS</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
+         <td mat-cell *matCellDef="let element" >{{ element.datos }}</td>
+       </ng-container>
+       <!-- Name Column -->
+        
+       <ng-container matColumnDef="tipos">
+        <th mat-header-cell *matHeaderCellDef>TIPOS</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
+         <td mat-cell *matCellDef="let element" >{{ element.tipos }}</td>
+       </ng-container>
+       <!-- Name Column -->
+        
+       <ng-container matColumnDef="transaccion">
+        <th mat-header-cell *matHeaderCellDef>TRANSACCION</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
+         <td mat-cell *matCellDef="let element" >{{ element.transaccion }}</td>
+       </ng-container>
+       <!-- Name Column -->
+        
+       <ng-container matColumnDef="banco">
+        <th mat-header-cell *matHeaderCellDef>BANCO</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
+         <td mat-cell *matCellDef="let element" >{{ element.banco }}</td>
+       </ng-container>
+       <!-- Name Column -->
+        
+       <ng-container matColumnDef="num_banco">
+        <th mat-header-cell *matHeaderCellDef>NUM BANCO</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
+         <td mat-cell *matCellDef="let element" >{{ element.num_banco }}</td>
+       </ng-container>
+       <!-- Name Column -->
+        
+       <ng-container matColumnDef="moneda">
+        <th mat-header-cell *matHeaderCellDef>MONEDA</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
+         <td mat-cell *matCellDef="let element" >{{ element.moneda }}</td>
+       </ng-container>
+       <!-- Name Column -->
+        
+       <ng-container matColumnDef="cantidad">
+        <th mat-header-cell *matHeaderCellDef>CANTIDAD</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
+         <td mat-cell *matCellDef="let element" >{{ element.cantidad }}</td>
+       </ng-container>
+       <!-- Name Column -->
+        
+       <ng-container matColumnDef="pago">
+        <th mat-header-cell *matHeaderCellDef>PAGO</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
+         <td mat-cell *matCellDef="let element" >{{ element.pago }}</td>
+       </ng-container>
+       <!-- Name Column -->
+        
+       <ng-container matColumnDef="neto">
+        <th mat-header-cell *matHeaderCellDef>NETO</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
+         <td mat-cell *matCellDef="let element" >{{ element.neto }}</td>
+       </ng-container>
+       <!-- Name Column -->
+        
+       <ng-container matColumnDef="dscto">
+        <th mat-header-cell *matHeaderCellDef>DSCTO</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
+         <td mat-cell *matCellDef="let element" >{{ element.dscto }}</td>
+       </ng-container>
+       <!-- Name Column -->
+        
+       <ng-container matColumnDef="flete">
+        <th mat-header-cell *matHeaderCellDef>FLETE</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
+         <td mat-cell *matCellDef="let element" >{{ element.flete }}</td>
+       </ng-container>
+       <!-- Name Column -->
+        
+       <ng-container matColumnDef="total">
+        <th mat-header-cell *matHeaderCellDef>TOTAL</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
+         <td mat-cell *matCellDef="let element" >{{ element.total }}</td>
+       </ng-container>
+       <!-- Name Column -->
+        
+       <ng-container matColumnDef="estado">
+        <th mat-header-cell *matHeaderCellDef>ESTADO</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
+         <td mat-cell *matCellDef="let element" >{{ element.estado }}</td>
+       </ng-container>
+       <!-- Name Column -->
+        
+       <ng-container matColumnDef="usuario">
+        <th mat-header-cell *matHeaderCellDef>USUARIO</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
+         <td mat-cell *matCellDef="let element" >{{ element.usuario }}</td>
+       </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns" [@hoverAnimation]="row.hoverState" (mouseover)="row.hoverState = 'hovered'" (mouseout)="row.hoverState = 'initial'"></tr>
+        
+      </table>
+
+      <mat-paginator
+        [pageSizeOptions]="[5, 10, 20]"
+        showFirstLastButtons
+        aria-label="Select page of periodic elements"
+      >
+      </mat-paginator>
+    </div>
+  </div>
 
