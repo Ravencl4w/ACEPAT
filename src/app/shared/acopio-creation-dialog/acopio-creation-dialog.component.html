@@ -6,7 +6,17 @@
               <div class="input-group">
                 <label class="labels">Codigo</label>
                 <mat-form-field [style.width.px]="140" [style.height.px]="70" class="custom-input">
-                  <input matInput formControlName="codigoacopio" />
+                  <input type="text"
+                  formControlName="codigoacopio"
+                  aria-label="Number"
+                  matInput
+                  [formControl]="myControl"
+                  [matAutocomplete]="auto">
+           <mat-autocomplete #auto="matAutocomplete">
+             <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+               {{option}}
+             </mat-option>
+           </mat-autocomplete>
                 </mat-form-field>
               </div>
               <div class="input-group">
@@ -20,13 +30,33 @@
               <div class="input-group">
                 <label class="labels">Codigo</label>
                 <mat-form-field [style.width.px]="140" [style.height.px]="70" class="custom-input">
-                  <input matInput formControlName="codigosocio" />
+                  <input type="text"
+                  formControlName="codigosocio"
+                  aria-label="Number"
+                  matInput
+                  [formControl]="myControl"
+                  [matAutocomplete]="auto">
+           <mat-autocomplete #auto="matAutocomplete">
+             <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+               {{option}}
+             </mat-option>
+           </mat-autocomplete>
                 </mat-form-field>
               </div>
               <div class="input-group">
                 <label class="labels">N° Doc</label>
                 <mat-form-field [style.width.px]="140" [style.height.px]="70" class="custom-input">
-                  <input matInput formControlName="numerodoc" />
+                  <input type="text"
+                  formControlName="numerodoc"
+                  aria-label="Number"
+                  matInput
+                  [formControl]="myControl"
+                  [matAutocomplete]="auto">
+           <mat-autocomplete #auto="matAutocomplete">
+             <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+               {{option}}
+             </mat-option>
+           </mat-autocomplete>
                 </mat-form-field>
               </div>
               <div class="input-group">
@@ -137,9 +167,14 @@
             </div>
             <div class="input-group">
               <label class="labels">T.C. Compra - Venta</label>
-              <mat-form-field [style.width.px]="200" [style.height.px]="70" class="custom-input">
+              <div class="datos-compraventa">
+              <mat-form-field [style.width.px]="95" [style.height.px]="70" class="custom-input">
                 <input matInput formControlName="compra" />
               </mat-form-field>
+              <mat-form-field [style.width.px]="95" [style.height.px]="70" class="custom-input">
+                <input matInput formControlName="venta" />
+              </mat-form-field>
+              </div>
             </div>
             <div class="input-group">
               <label class="labels">Flete</label>
@@ -202,7 +237,7 @@
                   </div>
                   <div class="input-group">
                     <label class="labels">Cantidad</label>
-                    <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
+                    <mat-form-field [style.width.px]="135" [style.height.px]="70" class="custom-input">
                       <input matInput formControlName="cantidad" />
                     </mat-form-field>
                   </div>

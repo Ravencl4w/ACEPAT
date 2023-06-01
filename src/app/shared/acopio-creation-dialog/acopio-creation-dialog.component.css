@@ -75,6 +75,11 @@
     align-items: flex-start;
   }
 
+  .datos-compraventa {
+    display: flex;
+    gap: 10px; /* Ajusta el espacio entre los inputs según tus preferencias */
+  }
+
   .tabla-datos{
     width: 100%;
   }

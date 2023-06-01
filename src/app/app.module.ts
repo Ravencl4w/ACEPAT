@@ -41,6 +41,7 @@ import { DeletePartnerDetailDialogComponent } from './shared/delete-partner-deta
 import { FormsModule } from '@angular/forms';
 import { AcopioListComponent } from './acopio/acopio-list/acopio-list.component';
 import { AcopioCreationDialogComponent } from './shared/acopio-creation-dialog/acopio-creation-dialog.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 
 
@@ -88,7 +89,8 @@ import { AcopioCreationDialogComponent } from './shared/acopio-creation-dialog/a
     MatSelectModule,
     MatRadioModule,
     MatTabsModule,
-    FormsModule
+    FormsModule,
+    MatAutocompleteModule,
 
   ],
   providers: [],

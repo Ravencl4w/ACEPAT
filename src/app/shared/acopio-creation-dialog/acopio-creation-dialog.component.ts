@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import { Observable, map, startWith } from 'rxjs';
 import { AcopioListComponent } from 'src/app/acopio/acopio-list/acopio-list.component';
 
 export interface DatosProducto {
@@ -38,13 +39,16 @@ const dataticket: DatosTicket[] = [
   templateUrl: './acopio-creation-dialog.component.html',
   styleUrls: ['./acopio-creation-dialog.component.css'],
 })
-export class AcopioCreationDialogComponent {
+export class AcopioCreationDialogComponent implements OnInit {
 
   displayedColumns: string[] = ['codigo', 'producto'];  
   displayedColumns2: string[] = ['ticket', 'cantidad', 'undmedida', 'descripcion', 'preciou', 'igv', 'descuento', 'importe'];  
   dataSource = new MatTableDataSource(dataproducto);
   dataSource2 = new MatTableDataSource(dataticket);
   list:FormGroup;
+  myControl = new FormControl('');
+  options: string[] = ['One', 'Two', 'Three'];
+  filteredOptions!: Observable<string[]>;
 
   constructor(private fb: FormBuilder) {
     this.list = this.fb.group({
@@ -86,9 +90,23 @@ export class AcopioCreationDialogComponent {
       importesoles: ['', Validators.required],
     });
 }
+
+ngOnInit() {
+  this.filteredOptions = this.myControl.valueChanges.pipe(
+    startWith(''),
+    map(value => this._filter(value || '')),
+  );
+}
+
 applyFilter(event: Event) {
   const filterValue = (event.target as HTMLInputElement).value;
   this.dataSource.filter = filterValue.trim().toLowerCase();
+}
+
+private _filter(value: string): string[] {
+  const filterValue = value.toLowerCase();
+
+  return this.options.filter(option => option.toLowerCase().includes(filterValue));
 }
 
 }
