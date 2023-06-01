@@ -1,0 +1,258 @@
+<div class="cuerpo">
+  <form class="form-group" [formGroup]="list">
+    <div class="fila fila1">
+        <div class="columna1">
+            <div class="centro-acopio">
+              <div class="input-group">
+                <label class="labels">Codigo</label>
+                <mat-form-field [style.width.px]="140" [style.height.px]="70" class="custom-input">
+                  <input matInput formControlName="codigoacopio" />
+                </mat-form-field>
+              </div>
+              <div class="input-group">
+                <label class="labels">Centro Acopio</label>
+                <mat-form-field [style.width.px]="680" [style.height.px]="70" class="custom-input">
+                  <input matInput placeholder="Centro acopio" formControlName="centroacopio" />
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="datos-socio">
+              <div class="input-group">
+                <label class="labels">Codigo</label>
+                <mat-form-field [style.width.px]="140" [style.height.px]="70" class="custom-input">
+                  <input matInput placeholder="Codigo" formControlName="codigosocio" />
+                </mat-form-field>
+              </div>
+              <div class="input-group">
+                <label class="labels">N° Doc</label>
+                <mat-form-field [style.width.px]="140" [style.height.px]="70" class="custom-input">
+                  <input matInput placeholder="Numero de documento" formControlName="numerodoc" />
+                </mat-form-field>
+              </div>
+              <div class="input-group">
+                <label class="labels">Apellidos y Nombres</label>
+                <mat-form-field [style.width.px]="530" [style.height.px]="70" class="custom-input">
+                  <input matInput placeholder="Apellidos y Nombres" formControlName="nombres" />
+                </mat-form-field>
+              </div>
+              <div class="input-group">
+                <label class="labels">Dirección</label>
+                <mat-form-field [style.width.px]="410" [style.height.px]="70" class="custom-input">
+                  <input matInput placeholder="Dirección" formControlName="direccion" />
+                </mat-form-field>
+              </div>
+              <div class="input-group">
+                <label class="labels">Cta Bancarias</label>
+                <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
+                  <input matInput placeholder="Cuenta Bancaria" formControlName="cuentaban" />
+                </mat-form-field>
+              </div>
+              <div class="input-group">
+                <label class="labels">Cta. Cte.</label>
+                <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
+                  <input matInput placeholder="Cuenta Corriente" formControlName="cuentacte" />
+                </mat-form-field>
+              </div>
+              <div class="input-group">
+                <label class="labels">Transacción</label>
+                <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
+                  <input matInput placeholder="Transacción" formControlName="transaccion" />
+                </mat-form-field>
+              </div>
+              <div class="input-group">
+                <label class="labels">Sector Central</label>
+                <mat-form-field [style.width.px]="160" [style.height.px]="70" class="custom-input">
+                  <input matInput placeholder="Sector Central" formControlName="sectorcentral" />
+                </mat-form-field>
+              </div>
+              <div class="input-group">
+                <label class="labels">Sector Local</label>
+                <mat-form-field [style.width.px]="160" [style.height.px]="70" class="custom-input">
+                  <input matInput placeholder="Sector Local" formControlName="sectorlocal" />
+                </mat-form-field>
+              </div>
+              <div class="input-group">
+                <label class="labels">R.U.C</label>
+                <mat-form-field [style.width.px]="160" [style.height.px]="70" class="custom-input">
+                  <input matInput placeholder="R.U.C" formControlName="ruc" />
+                </mat-form-field>
+              </div>
+              <div class="input-group">
+                <label class="labels">Transportista</label>
+                <mat-form-field [style.width.px]="320" [style.height.px]="70" class="custom-input">
+                  <input matInput placeholder="Transportista" formControlName="transportista" />
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div class="columna2">
+            <div class="datos-comprobante">
+            <div class="input-group">
+              <label class="labels">Fecha Comprobante</label>
+              <mat-form-field [style.width.px]="210" [style.height.px]="70" class="custom-input">
+                <input matInput placeholder="Fecha Comprobante" formControlName="fechacomprobante" />
+              </mat-form-field>
+            </div>
+            <div class="input-group">
+              <label class="labels">Forma Pago</label>
+              <mat-form-field [style.width.px]="170" [style.height.px]="70" class="custom-input">
+                <input matInput placeholder="Forma Pago" formControlName="formapago" />
+              </mat-form-field>
+            </div>
+            <div class="input-group">
+              <label class="labels">Moneda</label>
+              <mat-form-field [style.width.px]="170" [style.height.px]="70" class="custom-input">
+                <input matInput placeholder="Moneda" formControlName="moneda" />
+              </mat-form-field>
+            </div>
+            <div class="input-group">
+              <label class="labels">Fecha Registro</label>
+              <mat-form-field [style.width.px]="210" [style.height.px]="70" class="custom-input">
+                <input matInput placeholder="Fecha Registro" formControlName="fecharegistro" />
+              </mat-form-field>
+            </div>
+            <div class="input-group">
+              <label class="labels">T.C. Compra - Venta</label>
+              <mat-form-field [style.width.px]="210" [style.height.px]="70" class="custom-input">
+                <input matInput placeholder="Compra" formControlName="compra" />
+              </mat-form-field>
+            </div>
+            <div class="input-group">
+              <label class="labels">Flete</label>
+              <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
+                <input matInput placeholder="Flete" formControlName="flete" />
+              </mat-form-field>
+            </div>
+            <div class="input-group">
+              <label class="labels">Comprobante</label>
+              <mat-form-field [style.width.px]="310" [style.height.px]="70" class="custom-input">
+                <input matInput placeholder="Comprobante" formControlName="comprobante" />
+              </mat-form-field>
+            </div>
+            <div class="input-group">
+              <label class="labels">Serie</label>
+              <mat-form-field [style.width.px]="120" [style.height.px]="70" class="custom-input">
+                <input matInput placeholder="Serie" formControlName="serie" />
+              </mat-form-field>
+            </div>
+            <div class="input-group">
+              <label class="labels">Correlativo</label>
+              <mat-form-field [style.width.px]="120" [style.height.px]="70" class="custom-input">
+                <input matInput placeholder="Correlativo" formControlName="correlativo" />
+              </mat-form-field>
+            </div>
+          </div>      
+        </div>     
+    </div>
+    <div class="fila fila2">
+        <div class="columna3">
+            <div class="productos">
+                <div class="input-group">
+                    <label class="labels">Correlativo</label>
+                    <mat-form-field [style.width.px]="120" [style.height.px]="70" class="custom-input">
+                      <input matInput placeholder="Correlativo" formControlName="correlativo" />
+                    </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">Correlativo</label>
+                    <mat-form-field [style.width.px]="120" [style.height.px]="70" class="custom-input">
+                      <input matInput placeholder="Correlativo" formControlName="correlativo" />
+                    </mat-form-field>
+                  </div>
+            </div>
+        </div>
+        <div class="columna4">
+            <div class="datos-compra">
+                <div class="input-group">
+                    <label class="labels">N° Ticket</label>
+                    <mat-form-field [style.width.px]="138" [style.height.px]="70" class="custom-input">
+                      <input matInput placeholder="Correlativo" formControlName="ticket" />
+                    </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">Cantidad</label>
+                    <mat-form-field [style.width.px]="135" [style.height.px]="70" class="custom-input">
+                      <input matInput placeholder="Correlativo" formControlName="cantidad" />
+                    </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">Precio $ R</label>
+                    <mat-form-field [style.width.px]="135" [style.height.px]="70" class="custom-input">
+                      <input matInput placeholder="Correlativo" formControlName="preciodolarr" />
+                    </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">Precio S/ R</label>
+                    <mat-form-field [style.width.px]="135" [style.height.px]="70" class="custom-input">
+                      <input matInput placeholder="Correlativo" formControlName="preciosolesr" />
+                    </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">Und M</label>
+                    <mat-form-field [style.width.px]="135" [style.height.px]="70" class="custom-input">
+                      <input matInput placeholder="Correlativo" formControlName="unidadm" />
+                    </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">Precio $</label>
+                    <mat-form-field [style.width.px]="175" [style.height.px]="70" class="custom-input">
+                      <input matInput placeholder="Correlativo" formControlName="preciodolar" />
+                    </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">I.G.V. $</label>
+                    <mat-form-field [style.width.px]="170" [style.height.px]="70" class="custom-input">
+                      <input matInput placeholder="Correlativo" formControlName="igvdolar" />
+                    </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">Descuento %</label>
+                    <mat-form-field [style.width.px]="170" [style.height.px]="70" class="custom-input">
+                      <input matInput placeholder="Correlativo" formControlName="descuentodolar" />
+                    </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">Importe $</label>
+                    <mat-form-field [style.width.px]="175" [style.height.px]="70" class="custom-input">
+                      <input matInput placeholder="Correlativo" formControlName="importadolar" />
+                    </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">Precio S/</label>
+                    <mat-form-field [style.width.px]="175" [style.height.px]="70" class="custom-input">
+                      <input matInput placeholder="Correlativo" formControlName="preciosoles" />
+                    </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">I.G.V. S/</label>
+                    <mat-form-field [style.width.px]="170" [style.height.px]="70" class="custom-input">
+                      <input matInput placeholder="Correlativo" formControlName="igvsoles" />
+                    </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">Descuento %</label>
+                    <mat-form-field [style.width.px]="170" [style.height.px]="70" class="custom-input">
+                      <input matInput placeholder="Correlativo" formControlName="descuentosoles" />
+                    </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">Importe S/</label>
+                    <mat-form-field [style.width.px]="175" [style.height.px]="70" class="custom-input">
+                      <input matInput placeholder="Correlativo" formControlName="importesoles" />
+                    </mat-form-field>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="fila fila3">
+        <div class="tabla-datos">
+            <div class="input-group">
+                <label class="labels">Importe S/</label>
+                <mat-form-field [style.width.px]="175" [style.height.px]="70" class="custom-input">
+                  <input matInput placeholder="Correlativo" formControlName="importesoles" />
+                </mat-form-field>
+              </div>
+        </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,81 @@
+.cuerpo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .fila{
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+  }
+
+  .columna1{
+    flex-basis: 60%;
+  }
+
+  .columna2{
+    flex-basis: 40%;
+  }
+
+  .columna3,
+  .columna4{
+    flex-basis: 50%;
+  }
+
+
+  .labels {
+    font-size: 16px; 
+    left: 20px; 
+    top: 10px; 
+  }
+
+  .centro-acopio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .datos-socio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .datos-comprobante{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .datos-compra{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    align-items: flex-start;
+  }
+
+  .input-container {
+    display: flex;
+  }
+  
+  .input-item {
+    flex: 1;
+    margin-right: 8px;
+    width: 50%;
+  }
+  
