@@ -70,6 +70,9 @@ export class AcopioCreationDialogComponent implements OnInit {
   filteredOptions!: Observable<string[]>;
   filteredOptions2!: Observable<string[]>;
   filteredOptions3!: Observable<string[]>;
+  filteredOptions4!: Observable<string[]>;
+  filteredOptions5!: Observable<string[]>;
+  filteredOptions6!: Observable<string[]>;
   selectedOption6: any;
   selectedOption7: any;
   selectedOption8: any;
@@ -131,6 +134,16 @@ ngOnInit() {
 
 loadOptions() {
   // Realiza la solicitud HTTP para obtener los datos del endpoint
+  this.gatService.getCenters().subscribe(data => {
+    // Mapea los datos de respuesta al formato de opciones que necesitas (id y value)
+    const options4 = data.map(item => item.centro);
+    
+    // Configura la lógica de filtrado y asigna las opciones filtradas a la variable
+    this.filteredOptions4 = this.list.valueChanges.pipe(
+      startWith(''),
+      map(value => this.filterOptions(value, options4))
+    );
+  });
 
   this.gatService.getTransportistas().subscribe(data => {
     // Mapea los datos de respuesta al formato de opciones que necesitas (id y value)
@@ -164,6 +177,26 @@ loadOptions() {
       map(value => this.filterOptions(value, options2))
     );
   });
+  this.service.getPartners().subscribe(data => {
+    // Mapea los datos de respuesta al formato de opciones que necesitas (id y value)
+    const options5 = data.map(item => item.dni);
+    
+    // Configura la lógica de filtrado y asigna las opciones filtradas a la variable
+    this.filteredOptions5 = this.list.valueChanges.pipe(
+      startWith(''),
+      map(value => this.filterOptions(value, options5))
+    );
+  });
+  this.service.getPartners().subscribe(data => {
+    // Mapea los datos de respuesta al formato de opciones que necesitas (id y value)
+    const options6 = data.map(item => item.nombre);
+    
+    // Configura la lógica de filtrado y asigna las opciones filtradas a la variable
+    this.filteredOptions6 = this.list.valueChanges.pipe(
+      startWith(''),
+      map(value => this.filterOptions(value, options6))
+    );
+  });
 }
 
 filterOptions(value: string, options: string[]): string[] {
@@ -181,6 +214,12 @@ onOptionSelected(event: any) {
 
   this.gatService.getCentersById(event.option.value).subscribe(data => {
     this.selectedOption = data.centro;
+    
+  });
+}
+onOptionSelected3(event: any) {
+  this.gatService.getCentersByName(event.option.value).subscribe(data => {
+    this.selectedOption15 = data.id;
   });
 }
 
@@ -188,6 +227,26 @@ onOptionSelected2(event: any) {
   this.service.getPartnersById(event.option.value).subscribe(data => {
     this.selectedOption2 = data.dni;
     this.selectedOption3 = data.nombre;
+    this.selectedOption4 = data.nrocuenta;
+    this.selectedOption5 = data.localidad;
+  });
+  
+}
+
+onOptionSelected4(event: any) {
+  this.service.getPartnersByDni(event.option.value).subscribe(data => {
+    this.selectedOption17 = data.id;
+    this.selectedOption3 = data.nombre;
+    this.selectedOption4 = data.nrocuenta;
+    this.selectedOption5 = data.localidad;
+  });
+  
+}
+onOptionSelected5(event: any) {
+  this.service.getPartnersByName(event.option.value).subscribe(data => {
+    this.selectedOption17 = data.id;
+    this.selectedOption3 = data.nombre;
+    this.selectedOption2 = data.dni;
     this.selectedOption4 = data.nrocuenta;
     this.selectedOption5 = data.localidad;
   });
