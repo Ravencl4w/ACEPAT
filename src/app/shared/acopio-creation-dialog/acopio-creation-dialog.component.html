@@ -66,16 +66,16 @@
               <div class="input-group">
                 <label class="labels">Dirección</label>
                 <mat-form-field [style.width.px]="410" [style.height.px]="70" class="custom-input">
-                  <input matInput formControlName="direccion" />
+                  <input matInput formControlName="direccion" [value]="selectedOption5" />
                 </mat-form-field>
               </div>
               <div class="input-group">
                 <label class="labels">Cta Bancarias</label>
                 <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
                     <mat-select disableRipple formControlName="cuentaban">
-                      <mat-option value="1">Option 1</mat-option>
-                      <mat-option value="2">Option 2</mat-option>
-                      <mat-option value="3">Option 3</mat-option>
+                      <mat-option value="1">BCP</mat-option>
+                      <mat-option value="2">BBVA</mat-option>
+                      <mat-option value="3">COOPACT</mat-option>
                     </mat-select>
                   </mat-form-field>
               </div>
@@ -89,7 +89,7 @@
                 <label class="labels">Transacción</label>
                 <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
                     <mat-select disableRipple formControlName="transaccion">
-                      <mat-option value="1">Option 1</mat-option>
+                      <mat-option value="COMPRA DE MATERIA PRIMA">COMPRA DE MATERIA PRIMA</mat-option>
                       <mat-option value="2">Option 2</mat-option>
                       <mat-option value="3">Option 3</mat-option>
                     </mat-select>
@@ -124,11 +124,16 @@
               <div class="input-group">
                 <label class="labels">Transportista</label>
                 <mat-form-field [style.width.px]="320" [style.height.px]="70" class="custom-input">
-                    <mat-select disableRipple formControlName="transportista">
-                      <mat-option value="1">Option 1</mat-option>
-                      <mat-option value="2">Option 2</mat-option>
-                      <mat-option value="3">Option 3</mat-option>
-                    </mat-select>
+                  <input type="text"
+                  formControlName="transportista"
+                  aria-label="Number"
+                  matInput
+                  [matAutocomplete]="auto4">
+           <mat-autocomplete #auto4="matAutocomplete">
+             <mat-option *ngFor="let option of filteredOptions3 | async" [value]="option">
+               {{option}}
+             </mat-option>
+           </mat-autocomplete>
                   </mat-form-field>
               </div>
             </div>
@@ -146,13 +151,19 @@
             <div class="input-group">
               <label class="labels">Forma Pago</label>
               <mat-form-field [style.width.px]="165" [style.height.px]="70" class="custom-input">
-                <input matInput formControlName="formapago" />
+                <mat-select disableRipple formControlName="formapago">
+                  <mat-option value="CREDITO">CREDITO</mat-option>
+                  <mat-option value="CONTADO">CONTADO</mat-option>
+                </mat-select>
               </mat-form-field>
             </div>
             <div class="input-group">
               <label class="labels">Moneda</label>
               <mat-form-field [style.width.px]="165" [style.height.px]="70" class="custom-input">
-                <input matInput formControlName="moneda" />
+                <mat-select disableRipple formControlName="moneda">
+                  <mat-option value="SOLES">SOLES</mat-option>
+                  <mat-option value="DOLARES">DOLARES</mat-option>
+                </mat-select>
               </mat-form-field>
             </div>
             <div class="input-group">
@@ -167,10 +178,10 @@
               <label class="labels">T.C. Compra - Venta</label>
               <div class="datos-compraventa">
               <mat-form-field [style.width.px]="95" [style.height.px]="70" class="custom-input">
-                <input matInput formControlName="compra" />
+                <input matInput formControlName="compra" [value]="selectedCompra"/>
               </mat-form-field>
               <mat-form-field [style.width.px]="95" [style.height.px]="70" class="custom-input">
-                <input matInput formControlName="venta" />
+                <input matInput formControlName="venta" [value]="selectedVenta"/>
               </mat-form-field>
               </div>
             </div>
@@ -183,13 +194,21 @@
             <div class="input-group">
               <label class="labels">Comprobante</label>
               <mat-form-field [style.width.px]="300" [style.height.px]="70" class="custom-input">
-                <input matInput formControlName="comprobante" />
+                <mat-select disableRipple formControlName="comprobante">
+                  <mat-option value="LIQUIDACION DE COMPRA ELECTRONICA">LIQUIDACION DE COMPRA ELECTRONICA</mat-option>
+                  <mat-option value="COMPROBANTE DE OPERACIONES">COMPROBANTE DE OPERACIONES</mat-option>
+                  <mat-option value="FACTURA ELECTRONICA EXTERNA">FACTURA ELECTRONICA EXTERNA</mat-option>
+                </mat-select>
               </mat-form-field>
             </div>
             <div class="input-group">
               <label class="labels">Serie</label>
               <mat-form-field [style.width.px]="120" [style.height.px]="70" class="custom-input">
-                <input matInput formControlName="serie" />
+                <mat-select disableRipple formControlName="serie">
+                  <mat-option value="F001">F001</mat-option>
+                  <mat-option value="F002">F002</mat-option>
+                  <mat-option value="F003">F003</mat-option>
+                </mat-select>
               </mat-form-field>
             </div>
             <div class="input-group">
@@ -213,15 +232,15 @@
                     <!-- Columna Codigo -->
                     <ng-container matColumnDef="codigo">
                       <th mat-header-cell *matHeaderCellDef>Codigo</th>
-                      <td mat-cell *matCellDef="let element"> {{element.codigo}} </td>
+                      <td mat-cell *matCellDef="let element" (click)="getData(element.codigo)"> {{element.codigo}} </td>
                     </ng-container>
                     <!-- Columna Producto -->
                     <ng-container matColumnDef="producto">
                       <th mat-header-cell *matHeaderCellDef>Producto</th>
-                      <td mat-cell *matCellDef="let element"> {{element.producto}} </td>
+                      <td mat-cell *matCellDef="let element" (click)="getData(element.codigo)"> {{element.producto}} </td>
                     </ng-container>
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>           
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns" [@hoverAnimation]="row.hoverState" (mouseover)="row.hoverState = 'hovered'" (mouseout)="row.hoverState = 'initial'"></tr>           
                   </table>
             </div>
         </div>
@@ -242,20 +261,20 @@
                   <div class="input-group">
                     <label class="labels">Precio $ R</label>
                     <mat-form-field [style.width.px]="135" [style.height.px]="70" class="custom-input">
-                      <input matInput formControlName="preciodolarr" />
+                      <input matInput formControlName="preciodolarr" [value]="selectedOption6" />
                     </mat-form-field>
                   </div>
                   <div class="input-group">
                     <label class="labels">Precio S/ R</label>
                     <mat-form-field [style.width.px]="135" [style.height.px]="70" class="custom-input">
-                      <input matInput formControlName="preciosolesr" />
+                      <input matInput formControlName="preciosolesr" [value]="selectedOption7"/>
                     </mat-form-field>
                   </div>
                   <div class="input-group">
                     <label class="labels">Und M</label>
                     <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
                         <mat-select disableRipple formControlName="unidadm">
-                          <mat-option value="1">Option 1</mat-option>
+                          <mat-option value="1">TN</mat-option>
                           <mat-option value="2">Option 2</mat-option>
                           <mat-option value="3">Option 3</mat-option>
                         </mat-select>
@@ -264,13 +283,13 @@
                   <div class="input-group">
                     <label class="labels">Precio $</label>
                     <mat-form-field [style.width.px]="135" [style.height.px]="70" class="custom-input">
-                      <input matInput formControlName="preciodolar" />
+                      <input matInput formControlName="preciodolar" [value]="selectedOption8"/>
                     </mat-form-field>
                   </div>
                   <div class="input-group">
                     <label class="labels">I.G.V. $</label>
                     <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
-                      <input matInput formControlName="igvdolar" />
+                      <input matInput formControlName="igvdolar" [value]="selectedOption9"/>
                     </mat-form-field>
                   </div>
                   <div class="input-group">
@@ -282,7 +301,7 @@
                   <div class="input-group">
                     <label class="labels">Importe $</label>
                     <mat-form-field [style.width.px]="135" [style.height.px]="70" class="custom-input">
-                      <input matInput formControlName="importadolar" />
+                      <input matInput formControlName="importadolar" [value]="selectedOption10"/>
                     </mat-form-field>
                   </div>
                   <button [style.width.px]="130" [style.height.px]="70" class="custom-button">
@@ -292,13 +311,13 @@
                   <div class="input-group">
                     <label class="labels">Precio S/</label>
                     <mat-form-field [style.width.px]="170" [style.height.px]="70" class="custom-input">
-                      <input matInput formControlName="preciosoles" />
+                      <input matInput formControlName="preciosoles" [value]="selectedOption11"/>
                     </mat-form-field>
                   </div>
                   <div class="input-group">
                     <label class="labels">I.G.V. S/</label>
                     <mat-form-field [style.width.px]="170" [style.height.px]="70" class="custom-input">
-                      <input matInput formControlName="igvsoles" />
+                      <input matInput formControlName="igvsoles" [value]="selectedOption12"/>
                     </mat-form-field>
                   </div>
                   <div class="input-group">
@@ -310,7 +329,7 @@
                   <div class="input-group">
                     <label class="labels">Importe S/</label>
                     <mat-form-field [style.width.px]="170" [style.height.px]="70" class="custom-input">
-                      <input matInput formControlName="importesoles" />
+                      <input matInput formControlName="importesoles" [value]="selectedOption13"/>
                     </mat-form-field>
                   </div>
             </div>
@@ -361,7 +380,7 @@
                 </ng-container>
               
                 <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
-                <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns2" [@hoverAnimation]="row.hoverState" (mouseover)="row.hoverState = 'hovered'" (mouseout)="row.hoverState = 'initial'"></tr>
               </table>
         </div>
     </div>
