@@ -1,10 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatDialogRef } from '@angular/material/dialog';
-import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import {MatTableDataSource} from '@angular/material/table';
 import { Observable, map, startWith } from 'rxjs';
-import { AcopioListComponent } from 'src/app/acopio/acopio-list/acopio-list.component';
-
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate,
+} from '@angular/animations';
+import { PartnerService } from 'src/app/services/partner.service';
+import { GatheringService } from 'src/app/services/gathering.service';
 export interface DatosProducto {
   producto: string;
   codigo: string;
@@ -38,6 +44,14 @@ const dataticket: DatosTicket[] = [
   selector: 'app-acopio-creation-dialog',
   templateUrl: './acopio-creation-dialog.component.html',
   styleUrls: ['./acopio-creation-dialog.component.css'],
+  animations: [
+    trigger('hoverAnimation', [
+      state('initial', style({})),
+      state('hovered', style({ background: 'lightgray' })),
+      transition('initial => hovered', animate('225ms ease')),
+      transition('hovered => initial', animate('225ms ease')),
+    ]),
+  ],
 })
 export class AcopioCreationDialogComponent implements OnInit {
 
@@ -47,11 +61,30 @@ export class AcopioCreationDialogComponent implements OnInit {
   dataSource2 = new MatTableDataSource(dataticket);
   list:FormGroup;
   selectedOption: any;
-  options: string[] = ['1', '2', '3'];
-  options2: string[] = ['1', '2', '3'];
+  selectedOption2: any;
+  selectedOption3: any;
+  selectedOption4: any;
+  selectedOption5: any;
+  selectedCompra: any;
+  selectedVenta: any;
   filteredOptions!: Observable<string[]>;
+  filteredOptions2!: Observable<string[]>;
+  filteredOptions3!: Observable<string[]>;
+  selectedOption6: any;
+  selectedOption7: any;
+  selectedOption8: any;
+  selectedOption9: any;
+  selectedOption10: any;
+  selectedOption11: any;
+  selectedOption12: any;
+  selectedOption13: any;
+  selectedOption14: any;
+  selectedOption15: any;
+  selectedOption16: any;
+  selectedOption17: any;
 
-  constructor(private fb: FormBuilder) {
+
+  constructor(private fb: FormBuilder, private service: PartnerService, private gatService: GatheringService) {
     this.list = this.fb.group({
       codigoacopio: ['', Validators.required],
       centroacopio: ['', Validators.required],
@@ -66,12 +99,12 @@ export class AcopioCreationDialogComponent implements OnInit {
       sectorlocal: ['', Validators.required],
       ruc: ['', Validators.required],
       transportista: ['', Validators.required],
-      fechacomprobante: ['', Validators.required],
+      fechacomprobante: [new Date().toISOString(), Validators.required],
       formapago: ['', Validators.required],
       moneda: ['', Validators.required],
-      fecharegistro: ['', Validators.required],
-      compra: ['', Validators.required],
-      venta: ['', Validators.required],
+      fecharegistro: [new Date().toISOString(), Validators.required],
+      compra: [3.676, Validators.required],
+      venta: [3.684, Validators.required],
       flete: ['', Validators.required],
       comprobante: ['', Validators.required],
       serie: ['', Validators.required],
@@ -93,10 +126,50 @@ export class AcopioCreationDialogComponent implements OnInit {
 }
 
 ngOnInit() {
-  this.filteredOptions = this.list.valueChanges.pipe(
-    startWith(''),
-    map(value => this._filter(value || '')),
-  );
+  this.loadOptions();
+}
+
+loadOptions() {
+  // Realiza la solicitud HTTP para obtener los datos del endpoint
+
+  this.gatService.getTransportistas().subscribe(data => {
+    // Mapea los datos de respuesta al formato de opciones que necesitas (id y value)
+    const options3 = data.map(item => item.transporte);
+    
+    // Configura la lógica de filtrado y asigna las opciones filtradas a la variable
+    this.filteredOptions3 = this.list.valueChanges.pipe(
+      startWith(''),
+      map(value => this.filterOptions(value, options3))
+    );
+  });
+
+  this.gatService.getCenters().subscribe(data => {
+    // Mapea los datos de respuesta al formato de opciones que necesitas (id y value)
+    const options = data.map(item => item.id);
+    
+    // Configura la lógica de filtrado y asigna las opciones filtradas a la variable
+    this.filteredOptions = this.list.valueChanges.pipe(
+      startWith(''),
+      map(value => this.filterOptions(value, options))
+    );
+  });
+
+  this.service.getPartners().subscribe(data => {
+    // Mapea los datos de respuesta al formato de opciones que necesitas (id y value)
+    const options2 = data.map(item => item.id);
+    
+    // Configura la lógica de filtrado y asigna las opciones filtradas a la variable
+    this.filteredOptions2 = this.list.valueChanges.pipe(
+      startWith(''),
+      map(value => this.filterOptions(value, options2))
+    );
+  });
+}
+
+filterOptions(value: string, options: string[]): string[] {
+  // Filtra las opciones basadas en el valor de entrada
+  const filterValue = value.toLowerCase();
+  return options.filter(option => option.toLowerCase().includes(filterValue));
 }
 
 applyFilter(event: Event) {
@@ -104,18 +177,36 @@ applyFilter(event: Event) {
   this.dataSource.filter = filterValue.trim().toLowerCase();
 }
 
-private _filter(value: string): string[] {
-  const filterValue = value.toLowerCase();
-  return this.options.filter(option => option.toLowerCase().includes(filterValue));
+onOptionSelected(event: any) {
+
+  this.gatService.getCentersById(event.option.value).subscribe(data => {
+    this.selectedOption = data.centro;
+  });
 }
 
-onOptionSelected(event: any) {
-  if (event.option.value === '1') {
-    this.selectedOption = 'CENTRO DE ACOPIO LA FLORIDA';
-  } else if(event.option.value === '2') {
-    this.selectedOption = 'CENTRO DE ACOPIO PALMERAS';
-  } else if(event.option.value === '3') {
-    this.selectedOption = 'ALMACEN CENTRAL ACOPIO ACEPAT';
+onOptionSelected2(event: any) {
+  this.service.getPartnersById(event.option.value).subscribe(data => {
+    this.selectedOption2 = data.dni;
+    this.selectedOption3 = data.nombre;
+    this.selectedOption4 = data.nrocuenta;
+    this.selectedOption5 = data.localidad;
+  });
+  
+}
+
+getData(id: string){
+  if(id === 'RFF'){
+    this.selectedOption6 = '164.00';
+    this.selectedOption7 = '603.028';
+    this.selectedOption8 = '164';
+    this.selectedOption9 = '0.000';
+    this.selectedOption10 = '0.000';
+    this.selectedOption11 = '603.028';
+    this.selectedOption12 = '0.000';
+    this.selectedOption13 = '0.000';
+  }
+  else{
+
   }
 }
 

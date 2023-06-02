@@ -20,6 +20,10 @@ export class PartnerService {
     const url = `${this.apiurl}?estado=A`;
     return this.http.get<Partner[]>(url);
   }
+  getPartnersById(inputdata: string): Observable<Partner>{
+    const url = `${this.apiurl}/${inputdata}`;
+    return this.http.get<Partner>(url);
+  }
   getPartnerDetails(inputdata: string): Observable<PartnerDetail[]>{
     const url = `${this.apiurlDetail}?id_socio=${inputdata}`;
     return this.http.get<PartnerDetail[]>(url);
