@@ -139,7 +139,7 @@ loadOptions() {
     const options4 = data.map(item => item.centro);
     
     // Configura la lógica de filtrado y asigna las opciones filtradas a la variable
-    this.filteredOptions4 = this.list.valueChanges.pipe(
+    this.filteredOptions4 = this.list.controls['centroacopio'].valueChanges.pipe(
       startWith(''),
       map(value => this.filterOptions(value, options4))
     );
@@ -150,7 +150,7 @@ loadOptions() {
     const options3 = data.map(item => item.transporte);
     
     // Configura la lógica de filtrado y asigna las opciones filtradas a la variable
-    this.filteredOptions3 = this.list.valueChanges.pipe(
+    this.filteredOptions3 = this.list.controls['transportista'].valueChanges.pipe(
       startWith(''),
       map(value => this.filterOptions(value, options3))
     );
@@ -161,7 +161,7 @@ loadOptions() {
     const options = data.map(item => item.id);
     
     // Configura la lógica de filtrado y asigna las opciones filtradas a la variable
-    this.filteredOptions = this.list.valueChanges.pipe(
+    this.filteredOptions = this.list.controls['codigoacopio'].valueChanges.pipe(
       startWith(''),
       map(value => this.filterOptions(value, options))
     );
@@ -172,7 +172,7 @@ loadOptions() {
     const options2 = data.map(item => item.id);
     
     // Configura la lógica de filtrado y asigna las opciones filtradas a la variable
-    this.filteredOptions2 = this.list.valueChanges.pipe(
+    this.filteredOptions2 = this.list.controls['codigosocio'].valueChanges.pipe(
       startWith(''),
       map(value => this.filterOptions(value, options2))
     );
@@ -182,7 +182,7 @@ loadOptions() {
     const options5 = data.map(item => item.dni);
     
     // Configura la lógica de filtrado y asigna las opciones filtradas a la variable
-    this.filteredOptions5 = this.list.valueChanges.pipe(
+    this.filteredOptions5 = this.list.controls['numerodoc'].valueChanges.pipe(
       startWith(''),
       map(value => this.filterOptions(value, options5))
     );
@@ -192,7 +192,7 @@ loadOptions() {
     const options6 = data.map(item => item.nombre);
     
     // Configura la lógica de filtrado y asigna las opciones filtradas a la variable
-    this.filteredOptions6 = this.list.valueChanges.pipe(
+    this.filteredOptions6 = this.list.controls['nombres'].valueChanges.pipe(
       startWith(''),
       map(value => this.filterOptions(value, options6))
     );
