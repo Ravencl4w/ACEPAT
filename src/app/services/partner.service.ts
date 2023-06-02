@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of, switchMap, throwError } from 'rxjs';
 import { Partner } from '../interfaces/Partner';
 import { PartnerDetail } from '../interfaces/PartnerDetail';
 
@@ -23,6 +23,32 @@ export class PartnerService {
   getPartnersById(inputdata: string): Observable<Partner>{
     const url = `${this.apiurl}/${inputdata}`;
     return this.http.get<Partner>(url);
+  }
+  getPartnersByDni(inputdata: string): Observable<Partner>{
+    const url = `${this.apiurl}/?dni=${inputdata}`;
+     this.http.get<Partner>(url);
+    return this.http.get<Partner[]>(url).pipe(
+      switchMap(results => {
+        if (results.length === 1) {
+          return of(results[0]);
+        } else {
+          return throwError('No se encontró un resultado único');
+        }
+      })
+    ) as Observable<Partner>;
+  }
+  getPartnersByName(inputdata: string): Observable<Partner>{
+    const url = `${this.apiurl}?nombre=${inputdata}`;
+    this.http.get<Partner>(url);
+    return this.http.get<Partner[]>(url).pipe(
+      switchMap(results => {
+        if (results.length === 1) {
+          return of(results[0]);
+        } else {
+          return throwError('No se encontró un resultado único');
+        }
+      })
+    ) as Observable<Partner>;
   }
   getPartnerDetails(inputdata: string): Observable<PartnerDetail[]>{
     const url = `${this.apiurlDetail}?id_socio=${inputdata}`;
