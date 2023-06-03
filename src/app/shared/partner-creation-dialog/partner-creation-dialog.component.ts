@@ -1,7 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
+import { MatTableDataSource } from '@angular/material/table';
 import { PartnerService } from 'src/app/services/partner.service';
+
+export interface DatosProducto {
+  producto: string;
+  codigo: string;
+}
+
+const dataproducto: DatosProducto[] = [
+  {codigo: 'RFF', producto: 'RACIMO DE FRUTA FRESCA DE P.A'},
+  {codigo: 'FS', producto: 'FRUTO SUELTO DE P.A'},
+];
 
 
 @Component({
@@ -12,37 +23,39 @@ import { PartnerService } from 'src/app/services/partner.service';
 export class PartnerCreationDialogComponent implements OnInit {
 
   formulario: FormGroup;
-  selectedFile: File | null = null;
-  selectedFileUrl: string | ArrayBuffer | null = null;
+  dataSource = new MatTableDataSource(dataproducto);
+  displayedColumns: string[] = ['codigo', 'producto']; 
+  
 
 
   constructor(private fb: FormBuilder, public dialogRef: MatDialogRef<PartnerCreationDialogComponent>, private service: PartnerService) {
     
     this.formulario = this.fb.group({
-      date_emp: [new Date().toISOString(), Validators.required],
-      date_asoc: [new Date().toISOString(), Validators.required],
-      date_nac: [new Date().toISOString(), Validators.required],
+      estadosocio: ['', Validators.required],
+      genero: ['', Validators.required],
       codigo: ['', Validators.required],
-      foto: ['', Validators.required],
-      tipo_doc: ['', Validators.required],
-      numero_doc: ['', Validators.required],
-      apellido_p: ['', Validators.required],
-      apellido_m: ['', Validators.required],
+      dateasoc: [new Date().toISOString(), Validators.required],
+      dateemp: [new Date().toISOString(), Validators.required],
+      tipodoc: ['', Validators.required],
+      numerodoc: ['', Validators.required],
+      datenac: [new Date().toISOString(), Validators.required],
+      apellidop: ['', Validators.required],
       celular: ['', Validators.required],
+      apellidom: ['', Validators.required],
       nombres: ['', Validators.required],
       ruc: ['', Validators.required],
-      estado_civil: ['', Validators.required],
-      grado_i: ['', Validators.required],
+      estadocivil: ['', Validators.required],
+      gradoi: ['', Validators.required],
       produccion: ['', Validators.required],
       direccion: ['', Validators.required],
       ocupacion: ['', Validators.required],
-      socio: ['', Validators.required],
-      genero: ['', Validators.required],
+
       dpto: ['', Validators.required],
       provincia: ['', Validators.required],
       distrito: ['', Validators.required],
-      comite_central: ['', Validators.required],
-      comite_local: ['', Validators.required],
+      comitecentral: ['', Validators.required],
+      comitelocal: ['', Validators.required],
+      
       parientes: ['', Validators.required],
       fundos: ['', Validators.required],
       cuentas: ['', Validators.required]
@@ -51,21 +64,6 @@ export class PartnerCreationDialogComponent implements OnInit {
 
   ngOnInit(): void {
     //agregar metodo
-  }
-
-  onFileSelected(event: any) {
-    this.selectedFile = event.target.files[0];
-    this.getFileUrl();
-  }
-
-  getFileUrl() {
-    if (this.selectedFile) {
-      const reader = new FileReader();
-      reader.onload = (event: any) => {
-        this.selectedFileUrl = event.target.result;
-      };
-      reader.readAsDataURL(this.selectedFile);
-    }
   }
 
   onSubmit(formulario: FormGroup) {
