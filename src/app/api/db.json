@@ -51290,5 +51290,740 @@
       "usoprevio": "PURMA",
       "productividad": "13"
     }
-  ]
+  ],
+  "centro-acopio":
+  [
+    {
+        "id": "37",
+        "centro": "ACOPIO TRANSPORTE",
+        "abreviatura": "0",
+        "direccion": "VILLA PALMA S-N",
+        "estado": "A",
+        "telefono": "",
+        "usuario": "ADMIN",
+        "creado": "2023-06-01"
+    },
+    {
+        "id": "38",
+        "centro": "CENTRO DE ACOPIO LA FLORIDA",
+        "abreviatura": "01-AF",
+        "direccion": "LA FLORIDA",
+        "estado": "A",
+        "telefono": "964916332",
+        "usuario": "ADMIN",
+        "creado": "2023-06-01"
+    },
+    {
+        "id": "39",
+        "centro": "CENTRO DE ACOPIO PALMERAS",
+        "abreviatura": "02-AP",
+        "direccion": "LAS PALMERAS S-N",
+        "estado": "A",
+        "telefono": "925929124",
+        "usuario": "ADMIN",
+        "creado": "2023-06-01"
+    },
+    {
+        "id": "40",
+        "centro": "ALMACEN CENTRAL ACOPIO ACEPAT",
+        "abreviatura": "03-AC",
+        "direccion": "VILLA PALMA S-N-C.P VILLA PALMA",
+        "estado": "A",
+        "telefono": "916730254",
+        "usuario": "ADMIN",
+        "creado": "2023-06-01"
+    },
+    {
+        "id": "41",
+        "centro": "CENTRO DE ACOPIO TANANTA",
+        "abreviatura": "04-AT",
+        "direccion": "BARRIO RESIDENCIAL - LOS ANGELES S-N - TANANTA",
+        "estado": "A",
+        "telefono": "",
+        "usuario": "ADMIN",
+        "creado": "2023-06-01"
+    },
+    {
+        "id": "42",
+        "centro": "PARCELA TANANTA",
+        "abreviatura": "04-P1",
+        "direccion": "TANANTA",
+        "estado": "A",
+        "telefono": "",
+        "usuario": "ADMIN",
+        "creado": "2023-06-01"
+    },
+    {
+        "id": "43",
+        "centro": "PARCELA LAS PALMERAS",
+        "abreviatura": "05-P2",
+        "direccion": "LAS PALMERAS-TOCACHE-TOCACHE-SAN MARTIN",
+        "estado": "A",
+        "telefono": "",
+        "usuario": "ADMIN",
+        "creado": "2023-06-01"
+    },
+    {
+        "id": "44",
+        "centro": "EXCEDENTE C.A. TANANTA",
+        "abreviatura": "06-E1",
+        "direccion": "TANANTA-TOCACHE-TOCACHE-SAN MARTIN",
+        "estado": "A",
+        "telefono": "",
+        "usuario": "ADMIN",
+        "creado": "2023-06-01"
+    },
+    {
+        "id": "45",
+        "centro": "EXCEDENTE C.A. LAS PALMERAS",
+        "abreviatura": "07-E2",
+        "direccion": "LAS PALMERAS-TOCACHE-TOCACHE-SAN MARTIN",
+        "estado": "A",
+        "telefono": "",
+        "usuario": "ADMIN",
+        "creado": "2023-06-01"
+    }
+],
+"transporte":
+[
+  {
+      "id": "214",
+      "documento": "10009341566",
+      "transporte": "ROMERO RIOS LUIS ALBERTO",
+      "direccion": "TOCACHE",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "215",
+      "documento": "10009620970",
+      "transporte": "ANCORI VALERA JOSE",
+      "direccion": "AV. AVIACION S-N - TOCACHE - TOCACHE",
+      "telefono": "966993489",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "216",
+      "documento": "10009628229",
+      "transporte": "PAPA TRUJILLO ELADIO",
+      "direccion": "JR. RAMON CASTILLA S-N TOCACHE - TOCACHE - SAN MARTIN",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "217",
+      "documento": "10009855551",
+      "transporte": "QUIROZ LOPEZ FELIPE",
+      "direccion": "JR. MANA HERMOSO Nª S-N (CDRA. 01) CAS. CHALLUAYACU",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "218",
+      "documento": "10009936217",
+      "transporte": "CHINCHAYHUARA MEDINA ANTOLIN",
+      "direccion": "AV MIRAFLORES S-N NVO BAMBAMARCA",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "219",
+      "documento": "10010019767",
+      "transporte": "CENIZARIO ABURTO JORGE",
+      "direccion": "CASERIO VILLA PALMA - TOCACHE - TOCACHE",
+      "telefono": "942308140",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "220",
+      "documento": "10010142623",
+      "transporte": "BUSTAMANTE ESTELA ABEL",
+      "direccion": "CAS. LAS PALMERAS",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "221",
+      "documento": "10011860660",
+      "transporte": "PINO CABELLOS REINALDO",
+      "direccion": "JR. CESAR VALLEJO - TOCACHE - TOCACHE - SAN MARTIN",
+      "telefono": "991686112",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "222",
+      "documento": "10078931952",
+      "transporte": "CANCHANYA PALIAN FRANCISCO",
+      "direccion": "JR.FREDY ALIAGA Nº3104- TOCACHE - TOCACHE - TOCACHE",
+      "telefono": "979857221",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "223",
+      "documento": "10108623484",
+      "transporte": "TAPIA HUARCAYA JHONNY AMADEO",
+      "direccion": "JR. FREDY ALIAGA S-N CDRA 16 TOCACHE - TOCACHE - SAN MARTIN",
+      "telefono": "942038998",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "224",
+      "documento": "10154348722",
+      "transporte": "TRUJILLO CARRANZA NATALIA",
+      "direccion": "S-N C.P. PUCAYACU - TOCACHE - TOCACHE - SAN MARTIN",
+      "telefono": "916193116",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "225",
+      "documento": "10194156168",
+      "transporte": "TORRES ANTICONA FELIPE WILDER",
+      "direccion": "JR. LOS JARDINES Nº S-N TOCACHE-TOCACHE-SAN MARTIN",
+      "telefono": "971457296",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "226",
+      "documento": "10198716435",
+      "transporte": "ROMERO PALIAN RUBEN",
+      "direccion": "JR. CHORRO SAN JUAN C-06 S-N TOCACHE - TOCACHE - SAN MARTIN",
+      "telefono": "910353406",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "227",
+      "documento": "10209004076",
+      "transporte": "MELENDEZ ENCARNACION ANIVAL ELOY",
+      "direccion": "CAS. LA FLORIDA S-N",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "228",
+      "documento": "10224637867",
+      "transporte": "REEVES HUAPAYA LUDICINO FERNANDO",
+      "direccion": "JR.ANDRES AVELINO CACERES Nº327-URB.TUPAC AMARU",
+      "telefono": "969037182",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "229",
+      "documento": "10225004639",
+      "transporte": "SHAHUANO DOMINGUEZ SIXTO RIDER",
+      "direccion": "AV. PUCAYACU CDRA 01-SEC. PUCAYACU-TOCACHE",
+      "telefono": "942677704",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "230",
+      "documento": "10274434304",
+      "transporte": "CIEZA BUSTAMANTE ROIFER",
+      "direccion": "C.P. TANANTA S-N TOCACHE - TOCACHE - SAN MARTIN",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "231",
+      "documento": "10338188183",
+      "transporte": "VELASQUEZ RIOS EDWIN RAUL",
+      "direccion": "JR. LOS ANGELES S-N TANANTA - TOCACHE - TOCACHE - SAN MARTIN",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "232",
+      "documento": "10338190790",
+      "transporte": "VASQUEZ RAMOS ALEYDA",
+      "direccion": "AV. ARICA N°0101 TOCACHE - TOCACHE - SAN MARTIN",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "233",
+      "documento": "10400970829",
+      "transporte": "SANGAMA REATEGUI RODBIN",
+      "direccion": "TOCACHE-TOCACHE-SAN MARTIN",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "234",
+      "documento": "10408010867",
+      "transporte": "TAFUR ESCUDERO ROBERTO",
+      "direccion": "C.P. PUCAYACU S-N -TOCACHE-TOCACHE-SAN MARTIN",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "235",
+      "documento": "10409639360",
+      "transporte": "DELGADO MONTEJO JOSE JEFFERSON",
+      "direccion": "JR. LOS ANGELES S-N TOCACHE - TOCACHE - SAN MARTIN",
+      "telefono": "942945569",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "236",
+      "documento": "10409671859",
+      "transporte": "CASTILLO HUAROC EDWIN SERAPIO",
+      "direccion": "TOCACHE-TOCACHE-SAN MARTIN",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "237",
+      "documento": "10411188324",
+      "transporte": "CENIZARIO DEL CASTILLO WILLIAM ROBERTO",
+      "direccion": "JR. ALAMEDA S-N TOCACHE - TOCACHE- SAN MARTIN",
+      "telefono": "954876399",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "238",
+      "documento": "10413238337",
+      "transporte": "PUIQUIN GUIOP JITLER",
+      "direccion": "TOCACHE-TOCACHE-SAN MARTIN",
+      "telefono": "921487494",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "239",
+      "documento": "10415232263",
+      "transporte": "SEVILLANO CARTAGENA ALBERTO",
+      "direccion": "C.P. LAS PALMERAS - TOCACHE",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "240",
+      "documento": "10415902927",
+      "transporte": "VELASQUEZ ACOSTA RONALD PERCY",
+      "direccion": "C.P PARAISO S-N",
+      "telefono": "921388293",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "241",
+      "documento": "10416266056",
+      "transporte": "MEJIA CASIMIRO LUIS AMENO",
+      "direccion": "JR. MANUEL ENCINA - AA.HH. LAS FLORES - TOCACHE",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "242",
+      "documento": "10417157510",
+      "transporte": "QUIROZ ASCENCIO HENRY ANTONIO",
+      "direccion": "JR. MANA HERMOSO S-N° - CAS. CHALLUAYACU - TOCACHE",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "243",
+      "documento": "10420881211",
+      "transporte": "CUENCA QUISPE ELVIA JERTRUDIS",
+      "direccion": "TANANTA S-N - TOCACHE - TOCACHE - SAN MARTIN",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "244",
+      "documento": "10421062124",
+      "transporte": "VALDIVIEZO CASTILLO NERY AIDEE",
+      "direccion": "CAS. VILLA PALMA CDRA. Nº04",
+      "telefono": "975010612",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "245",
+      "documento": "10423211615",
+      "transporte": "TERREL LOAYZA MAXIMO LUIS",
+      "direccion": "JR. RAMON CASTILLA S-N TOCACHE - TOCACHE - SAN MARTIN",
+      "telefono": "959177134",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "246",
+      "documento": "10432761687",
+      "transporte": "VIERA SOPAN MARCELO",
+      "direccion": "NUEVO BAMBAMARCA S-N-TOCACHE-TOCACHE-SAN MARTIN",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "247",
+      "documento": "10434036955",
+      "transporte": "TRUJILLO ZEGARRA RAMOS IVAN",
+      "direccion": "C.P PARAISO S-N",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "248",
+      "documento": "10434233106",
+      "transporte": "HORNA LANARES SILVIA",
+      "direccion": "JR.BOLOGNESI S-N ZONA CDRA 111",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "249",
+      "documento": "10438239915",
+      "transporte": "CULQUICONDOR LLOCLLA ERLIS MARIN",
+      "direccion": "CHORROS SAN JUAN CDR. 5",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "250",
+      "documento": "10441829308",
+      "transporte": "CRISTOBAL BUSTILLOS EDER JHON",
+      "direccion": "CAS. LA FLORIDA - POLVORA - TOCACHE - SAN MARTIN",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "251",
+      "documento": "10443131898",
+      "transporte": "TRINIDAD DOMINGUEZ LUIS",
+      "direccion": "C.P TANANTA S-N",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "252",
+      "documento": "10446712620",
+      "transporte": "DIAZ CERON NELY MADELAYNE",
+      "direccion": "VILLA PALMA - CP. VILLA PALMA",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "253",
+      "documento": "10446972249",
+      "transporte": "QUIROZ ASENCIO JANINA",
+      "direccion": "CAS. CHALLUAYACU S-N - POLVORA",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "254",
+      "documento": "10449406864",
+      "transporte": "HERRERA VASQUEZ MIGUEL ANGEL",
+      "direccion": "AV. LOS ANGELES S-N -C.P. TANANTA",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "255",
+      "documento": "10449563455",
+      "transporte": "CABRERA VASQUEZ LUIS MIGUEL",
+      "direccion": "NUEVO BAMBAMARCA S-N-TOCACHE-TOCACHE-SAN MARTIN",
+      "telefono": "945178705",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "256",
+      "documento": "10451420441",
+      "transporte": "VILLANUEVA SILVA ELIZA",
+      "direccion": "JR. MAGISTERIAL S-N TOCACHE - TOCACHE - SAN MARTIN",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "257",
+      "documento": "10454919888",
+      "transporte": "HERRERA CARBAJAL DAVID",
+      "direccion": "CP. TANANTA",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "258",
+      "documento": "10460172191",
+      "transporte": "CHIHUALA VILLANUEVA BRAULIO FERMIN",
+      "direccion": "C.P NUEVO BAMBAMARCA",
+      "telefono": "917811895",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "259",
+      "documento": "10460393103",
+      "transporte": "ECHEVARRIA ROSAS FRANKLIN",
+      "direccion": "CP. PARAISO-CHOLON-MARAÑON-HUANUCO",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "260",
+      "documento": "10464945071",
+      "transporte": "AVALOS VALVERDE ESTELA MABEL",
+      "direccion": "TIPO Y NOMBRE VÍA AV. FERNANDO BELAUNDE TERRY",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "261",
+      "documento": "10465362141",
+      "transporte": "PONCE RODRIGUEZ ANGEL NICOLAS",
+      "direccion": "CAS. NUEVO HORIZONTE - POLVORA - TOCACHE - SAN MARTIN",
+      "telefono": "925539809",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "262",
+      "documento": "10466963173",
+      "transporte": "HERNANDEZ HERRERA CRISTHIAN",
+      "direccion": "BARRIO RESIDENCIAL TANANTA MZ. M, LOTE 1",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "263",
+      "documento": "10468484621",
+      "transporte": "CAPA CONDOR SEGUNDO PEDRO",
+      "direccion": "CAS. TANANTA - TOCACHE - TOCACHE - SAN MARTIN",
+      "telefono": "921180494",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "264",
+      "documento": "10470490361",
+      "transporte": "PUIQUIN GUIOP ROBINSON",
+      "direccion": "TOCACHE-TOCACHE-SAN MARTIN",
+      "telefono": "918367270",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "265",
+      "documento": "10470532101",
+      "transporte": "VASQUEZ GUEVARA YOEL",
+      "direccion": "JR. 28 DE JULIO Nº S-N-TOCACHE-TOCACHE-SAN MARTIN",
+      "telefono": "967909848",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "266",
+      "documento": "10475252832",
+      "transporte": "MOLINA REYES MARIBEL GERARDA",
+      "direccion": "CP. TANANTA",
+      "telefono": "921687463",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "267",
+      "documento": "10475455962",
+      "transporte": "LOPEZ MEZA JUVENAL",
+      "direccion": "BOLOGNESI BAMBAMARCA S-N TOCACHE - TOCACHE - SAN MARTIN",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "268",
+      "documento": "10477340402",
+      "transporte": "COTRINA QUIROZ ELENA MARGARITA",
+      "direccion": "LAS PALMERAS S-N TOCACHE - TOCACHE - SAN MARTIN",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "269",
+      "documento": "10478579069",
+      "transporte": "CABALLERO UPIACHIHUA JESUS ALBERTO",
+      "direccion": "CAS. TANANTA",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "270",
+      "documento": "10482108216",
+      "transporte": "HARO QUISPE NELVER JOHNATAN",
+      "direccion": "CAS. YACUSISA",
+      "telefono": "916229007",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "271",
+      "documento": "10715381538",
+      "transporte": "VASQUEZ SHAHUANO ROBINSON",
+      "direccion": "JR. SARA ANITA S-N-URB. CERCADO. TOCACHE-TOCACHE-SAN MARTIN",
+      "telefono": "942677704",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "272",
+      "documento": "10725814106",
+      "transporte": "ECHEVARRIA ROSAS NICOLAS ELI",
+      "direccion": "CP. PARAISO - CHOLON - MARAÑON - HUANUCO",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "273",
+      "documento": "10741276602",
+      "transporte": "ARGOMEDO PINEDO JOEL",
+      "direccion": "CAS. VILLA PALMA N° S-N SAN MARTIN - TOCACHE - TOCACHE",
+      "telefono": "969021227",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "274",
+      "documento": "10757103457",
+      "transporte": "JORGE SANTILLAN NEIL DIESEL",
+      "direccion": "JR. SARGENTO LORES C-03 - NUEVO PROGRESO - TOCACHE",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "275",
+      "documento": "10801702878",
+      "transporte": "MERA FLORES SEGUNDO",
+      "direccion": "VILLA LOS ANGELES S-N - POLVORA - TOCACHE - SAN MARTIN",
+      "telefono": "961614127",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "276",
+      "documento": "10804691249",
+      "transporte": "GUTIERREZ MURAYARI PILAR",
+      "direccion": "CIUDAD TOCACHE - TOCACHE - TOCACHE",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "277",
+      "documento": "10805735924",
+      "transporte": "MEDINA PEREZ REYNA",
+      "direccion": "CAS. LA FLORIDA S-N",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "278",
+      "documento": "16772607",
+      "transporte": "BAUTISTA MASLUCAN HERMEL",
+      "direccion": "AV. JULIO SHAHUANO - PUCAYACU",
+      "telefono": "931027783",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "279",
+      "documento": "20404175912",
+      "transporte": "COOPERATIVA AGRARIA ACEPAT-SHACMAN",
+      "direccion": "VILLA PALMA S-N C. P. VILLA PALMA",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "280",
+      "documento": "20404175913",
+      "transporte": "COOPERATIVA AGRARIA ACEPAT-RAFA II",
+      "direccion": "CAS. VILLA PALMA S-N-C. P. VILLA PALMA",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "281",
+      "documento": "20494164583",
+      "transporte": "EMPRESA DE PRODUCCION Y COMERCIALIZACION DE RACIMOS DE FRUTA FRESCA DE PALMA ACEITERA E.I.R.L.",
+      "direccion": "AV. PUCAYACU NRO. S-N (C-02) SAN MARTIN - TOCACHE - TOCACHE",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "282",
+      "documento": "20531404590",
+      "transporte": "ASOCIACION DE PRODUCCION Y DESARROLLO DE PALMA ACEITERA TANANTA",
+      "direccion": "TANANTA N°58 SAN MARTIN -TOCACHE-TOCACHE",
+      "telefono": "921487602",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "283",
+      "documento": "20609325276",
+      "transporte": "TRANSPORTES CAYUMBA E.I.R.L",
+      "direccion": "CP. PARAISO - CHOLON - MARAÑON",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  },
+  {
+      "id": "284",
+      "documento": "41807699",
+      "transporte": "RUIZ PAREDES HUGO EUSTAQUIO",
+      "direccion": "CP. TANANTA",
+      "telefono": "",
+      "usuario": "ADMIN",
+      "creado": "2023-06-01"
+  }
+]
 }
