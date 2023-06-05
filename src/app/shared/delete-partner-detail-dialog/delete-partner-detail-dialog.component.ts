@@ -1,7 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Partner } from 'src/app/interfaces/Partner';
-import { PartnerDetail } from 'src/app/interfaces/PartnerDetail';
+import { PartnerDetail } from 'src/app/Interfaces/PartnerDetail';
 import { PartnerService } from 'src/app/services/partner.service';
 
 @Component({
