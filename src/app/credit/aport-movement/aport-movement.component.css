@@ -1,0 +1,29 @@
+  .header {
+    padding: 30px;
+    background: #fff;
+    color: #717171;
+    border-bottom: 1px solid #e0e4e8;
+    font-size: 35px;
+  }
+
+  .opciones-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .opciones-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  .button-group {
+    display: flex;
+    gap: 20px;
+  }

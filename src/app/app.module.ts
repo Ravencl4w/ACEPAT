@@ -42,6 +42,9 @@ import { FormsModule } from '@angular/forms';
 import { AcopioListComponent } from './acopio/acopio-list/acopio-list.component';
 import { AcopioCreationDialogComponent } from './shared/acopio-creation-dialog/acopio-creation-dialog.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { AportMovementComponent } from './credit/aport-movement/aport-movement.component';
+import { CollectContributionsComponent } from './shared/collect-contributions/collect-contributions.component';
+import { ReportingMovementComponent } from './shared/reporting-movement/reporting-movement.component';
 
 
 
@@ -64,7 +67,10 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     PartnerDetailEditionDialogComponent,
     DeletePartnerDetailDialogComponent,
     AcopioListComponent,
-    AcopioCreationDialogComponent
+    AcopioCreationDialogComponent,
+    AportMovementComponent,
+    CollectContributionsComponent,
+    ReportingMovementComponent
   ],
   imports: [
     BrowserModule,

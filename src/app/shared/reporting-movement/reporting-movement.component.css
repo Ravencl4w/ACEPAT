@@ -1,0 +1,46 @@
+.cuerpo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .fila{
+    border: 1px solid rgb(156, 156, 156);
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+  }
+
+  .columna1{
+    flex-basis: 30%;
+  }
+
+  .columna2{
+    flex-basis: 70%;
+  }
+
+  .labels {
+    font-size: 16px; 
+    left: 20px; 
+    top: 10px; 
+  }
+
+  .datos-socio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .datos-caja {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    align-items: flex-start;
+  }
