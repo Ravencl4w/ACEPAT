@@ -3,6 +3,38 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Observable, map, startWith } from 'rxjs';
 import { PartnerService } from 'src/app/services/partner.service';
 
+export interface TablaDeudas {
+  fecha: Date;
+  monto: number;
+  pagos: number;
+  saldo:number;
+  estado: string;
+}
+
+const ELEMENT_DATA: TablaDeudas[] = [
+  {
+    fecha: new Date('2022-01-01'),
+    monto: 100,
+    pagos: 1,
+    saldo: 50,
+    estado: 'Pendiente',
+  },
+  {
+    fecha: new Date('2022-02-01'),
+    monto: 200,
+    pagos: 2,
+    saldo: 100,
+    estado: 'Pagado',
+  },
+  {
+    fecha: new Date('2022-03-01'),
+    monto: 300,
+    pagos: 3,
+    saldo: 150,
+    estado: 'Pendiente',
+  },
+];
+
 @Component({
   selector: 'app-reporting-movement',
   templateUrl: './reporting-movement.component.html',
@@ -16,6 +48,9 @@ export class ReportingMovementComponent implements OnInit {
   selectedCodigo: any;
   selectedDni: any;
   selectedNombre: any;
+  displayedColumns: string[] = ['fecha', 'monto', 'pagos', 'saldo', 'estado'];
+  dataSource = ELEMENT_DATA;
+  selectedData!: TablaDeudas;
 
   constructor(private fb: FormBuilder, private service: PartnerService) {
     this.aportes = this.fb.group({
@@ -103,4 +138,5 @@ export class ReportingMovementComponent implements OnInit {
       this.selectedNombre = data.nombre;
     });
   }
+
 }

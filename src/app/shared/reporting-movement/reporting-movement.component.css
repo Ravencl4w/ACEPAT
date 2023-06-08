@@ -2,9 +2,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    height: 900px;
   }
 
-  .fila{
+  .fila1,
+  .fila2{
     border: 1px solid rgb(156, 156, 156);
     padding: 10px;
     margin: 10px;
@@ -37,10 +39,47 @@
     justify-content: flex-start;
   }
 
+  .custom-input2{
+    margin-left: 10px;
+  margin-right: 10px;
+  }
+
   .input-group {
     display: flex;
     flex-direction: column;
     margin-right: 10px;
     margin-bottom: 10px;
     align-items: flex-start;
+  }
+
+  .table-no-border-animation {
+    box-shadow: none !important;
+  }
+
+  table{
+    padding-left: 20px;
+  }
+
+  .botones{
+    padding-left: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .lista-deudas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+  }
+
+  .btn {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+
+  .btn-agregar {
+    margin-left: 10px; /* Ajusta el margen izquierdo según sea necesario */
+    color: green;
+    background-color: rgb(226, 226, 226);
   }
