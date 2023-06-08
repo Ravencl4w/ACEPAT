@@ -1,333 +1,392 @@
 <div class="cuerpo">
   <form class="form-group" [formGroup]="list">
     <div class="fila fila1">
-        <div class="columna1">
-            <div class="centro-acopio">
-              <div class="input-group">
-                <label class="labels">Codigo</label>
-                <mat-form-field [style.width.px]="140" [style.height.px]="70" class="custom-input">
-                  <input matInput formControlName="codigoacopio" />
-                </mat-form-field>
-              </div>
-              <div class="input-group">
-                <label class="labels">Centro Acopio</label>
-                <mat-form-field [style.width.px]="680" [style.height.px]="70" class="custom-input">
-                  <input matInput formControlName="centroacopio" />
-                </mat-form-field>
-              </div>
-            </div>
-            <div class="datos-socio">
-              <div class="input-group">
-                <label class="labels">Codigo</label>
-                <mat-form-field [style.width.px]="140" [style.height.px]="70" class="custom-input">
-                  <input matInput formControlName="codigosocio" />
-                </mat-form-field>
-              </div>
-              <div class="input-group">
-                <label class="labels">N° Doc</label>
-                <mat-form-field [style.width.px]="140" [style.height.px]="70" class="custom-input">
-                  <input matInput formControlName="numerodoc" />
-                </mat-form-field>
-              </div>
-              <div class="input-group">
-                <label class="labels">Apellidos y Nombres</label>
-                <mat-form-field [style.width.px]="530" [style.height.px]="70" class="custom-input">
-                  <input matInput formControlName="nombres" />
-                </mat-form-field>
-              </div>
-              <div class="input-group">
-                <label class="labels">Dirección</label>
-                <mat-form-field [style.width.px]="410" [style.height.px]="70" class="custom-input">
-                  <input matInput formControlName="direccion" />
-                </mat-form-field>
-              </div>
-              <div class="input-group">
-                <label class="labels">Cta Bancarias</label>
-                <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
-                    <mat-select disableRipple formControlName="cuentaban">
-                      <mat-option value="1">Option 1</mat-option>
-                      <mat-option value="2">Option 2</mat-option>
-                      <mat-option value="3">Option 3</mat-option>
-                    </mat-select>
-                  </mat-form-field>
-              </div>
-              <div class="input-group">
-                <label class="labels">Cta. Cte.</label>
-                <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
-                  <input matInput formControlName="cuentacte" />
-                </mat-form-field>
-              </div>
-              <div class="input-group">
-                <label class="labels">Transacción</label>
-                <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
-                    <mat-select disableRipple formControlName="transaccion">
-                      <mat-option value="1">Option 1</mat-option>
-                      <mat-option value="2">Option 2</mat-option>
-                      <mat-option value="3">Option 3</mat-option>
-                    </mat-select>
-                  </mat-form-field>
-              </div>
-              <div class="input-group">
-                <label class="labels">Sector Central</label>
-                <mat-form-field [style.width.px]="160" [style.height.px]="70" class="custom-input">
-                    <mat-select disableRipple disabled>
-                      <mat-option value="1">Option 1</mat-option>
-                      <mat-option value="2">Option 2</mat-option>
-                      <mat-option value="3">Option 3</mat-option>
-                    </mat-select>
-                  </mat-form-field>
-              </div>
-              <div class="input-group">
-                <label class="labels">Sector Local</label>
-                <mat-form-field [style.width.px]="160" [style.height.px]="70" class="custom-input">
-                    <mat-select disableRipple disabled>
-                      <mat-option value="1">Option 1</mat-option>
-                      <mat-option value="2">Option 2</mat-option>
-                      <mat-option value="3">Option 3</mat-option>
-                    </mat-select>
-                  </mat-form-field>
-              </div>
-              <div class="input-group">
-                <label class="labels">R.U.C</label>
-                <mat-form-field [style.width.px]="160" [style.height.px]="70" class="custom-input">
-                  <input matInput formControlName="ruc" />
-                </mat-form-field>
-              </div>
-              <div class="input-group">
-                <label class="labels">Transportista</label>
-                <mat-form-field [style.width.px]="320" [style.height.px]="70" class="custom-input">
-                    <mat-select disableRipple formControlName="transportista">
-                      <mat-option value="1">Option 1</mat-option>
-                      <mat-option value="2">Option 2</mat-option>
-                      <mat-option value="3">Option 3</mat-option>
-                    </mat-select>
-                  </mat-form-field>
-              </div>
+      <div class="columna1">
+        <div class="centro-acopio">
+          <div class="input-group">
+            <label class="labels">Codigo</label>
+            <mat-form-field [style.width.px]="140" [style.height.px]="70" class="custom-input">
+              <input type="text" formControlName="codigoacopio" aria-label="Number" matInput [value]="selectedOption15"
+                [matAutocomplete]="auto">
+              <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onOptionSelected($event)">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                  {{option}}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Centro Acopio</label>
+            <mat-form-field [style.width.px]="680" [style.height.px]="70" class="custom-input">
+              <input type="text" formControlName="centroacopio" aria-label="Number" matInput [value]="selectedOption"
+                [matAutocomplete]="auto5">
+              <mat-autocomplete #auto5="matAutocomplete" (optionSelected)="onOptionSelected3($event)">
+                <mat-option *ngFor="let option of filteredOptions4 | async" [value]="option">
+                  {{option}}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="datos-socio">
+          <div class="input-group">
+            <label class="labels">Codigo</label>
+            <mat-form-field [style.width.px]="140" [style.height.px]="70" class="custom-input">
+              <input type="text" formControlName="codigosocio" aria-label="Number" matInput [value]="selectedOption17"
+                [matAutocomplete]="auto2">
+              <mat-autocomplete #auto2="matAutocomplete" (optionSelected)="onOptionSelected2($event)">
+                <mat-option *ngFor="let option of filteredOptions2 | async" [value]="option">
+                  {{option}}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">N° Doc</label>
+            <mat-form-field [style.width.px]="140" [style.height.px]="70" class="custom-input">
+              <input type="text" [value]="selectedOption2" formControlName="numerodoc" aria-label="Number" matInput
+                [matAutocomplete]="auto3">
+              <mat-autocomplete #auto3="matAutocomplete" (optionSelected)="onOptionSelected4($event)">
+                <mat-option *ngFor="let option of filteredOptions5 | async" [value]="option ">
+                  {{option}}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Apellidos y Nombres</label>
+            <mat-form-field [style.width.px]="530" [style.height.px]="70" class="custom-input">
+              <input type="text" [value]="selectedOption3" formControlName="nombres" aria-label="Number" matInput
+                [matAutocomplete]="auto8">
+              <mat-autocomplete #auto8="matAutocomplete" (optionSelected)="onOptionSelected5($event)">
+                <mat-option *ngFor="let option of filteredOptions6 | async" [value]="option ">
+                  {{option}}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Dirección</label>
+            <mat-form-field [style.width.px]="410" [style.height.px]="70" class="custom-input">
+              <input matInput formControlName="direccion" [value]="selectedOption5" />
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Cta Bancarias</label>
+            <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
+              <mat-select disableRipple formControlName="cuentaban">
+                <mat-option value="1">BCP</mat-option>
+                <mat-option value="2">BBVA</mat-option>
+                <mat-option value="3">COOPACT</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Cta. Cte.</label>
+            <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
+              <input matInput formControlName="cuentacte" [value]="selectedOption4" />
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Transacción</label>
+            <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
+              <mat-select disableRipple formControlName="transaccion">
+                <mat-option value="COMPRA DE MATERIA PRIMA">COMPRA DE MATERIA PRIMA</mat-option>
+                <mat-option value="2">Option 2</mat-option>
+                <mat-option value="3">Option 3</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Sector Central</label>
+            <mat-form-field [style.width.px]="160" [style.height.px]="70" class="custom-input">
+              <mat-select disableRipple disabled>
+                <mat-option value="1">Option 1</mat-option>
+                <mat-option value="2">Option 2</mat-option>
+                <mat-option value="3">Option 3</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Sector Local</label>
+            <mat-form-field [style.width.px]="160" [style.height.px]="70" class="custom-input">
+              <mat-select disableRipple disabled>
+                <mat-option value="1">Option 1</mat-option>
+                <mat-option value="2">Option 2</mat-option>
+                <mat-option value="3">Option 3</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">R.U.C</label>
+            <mat-form-field [style.width.px]="160" [style.height.px]="70" class="custom-input">
+              <input matInput formControlName="ruc" />
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Transportista</label>
+            <mat-form-field [style.width.px]="320" [style.height.px]="70" class="custom-input">
+              <input type="text" formControlName="transportista" aria-label="Number" matInput [matAutocomplete]="auto4">
+              <mat-autocomplete #auto4="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions3 | async" [value]="option">
+                  {{option}}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div class="columna2">
+        <div class="datos-comprobante">
+          <div class="input-group">
+            <label class="labels">Fecha Comprobante</label>
+            <mat-form-field [style.width.px]="210" [style.height.px]="70" class="custom-input">
+              <input matInput [matDatepicker]="datecomprobante" formControlName="fechacomprobante">
+              <mat-datepicker-toggle matIconSuffix [for]="datecomprobante"></mat-datepicker-toggle>
+              <mat-datepicker #datecomprobante></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Forma Pago</label>
+            <mat-form-field [style.width.px]="165" [style.height.px]="70" class="custom-input">
+              <mat-select disableRipple formControlName="formapago">
+                <mat-option value="CREDITO">CREDITO</mat-option>
+                <mat-option value="CONTADO">CONTADO</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Moneda</label>
+            <mat-form-field [style.width.px]="165" [style.height.px]="70" class="custom-input">
+              <mat-select disableRipple formControlName="moneda">
+                <mat-option value="SOLES">SOLES</mat-option>
+                <mat-option value="DOLARES">DOLARES</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Fecha Registro</label>
+            <mat-form-field [style.width.px]="210" [style.height.px]="70" class="custom-input">
+              <input matInput [matDatepicker]="dateregistro" formControlName="fecharegistro">
+              <mat-datepicker-toggle matIconSuffix [for]="dateregistro"></mat-datepicker-toggle>
+              <mat-datepicker #dateregistro></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">T.C. Compra - Venta</label>
+            <div class="datos-compraventa">
+              <mat-form-field [style.width.px]="95" [style.height.px]="70" class="custom-input">
+                <input matInput formControlName="compra" [value]="selectedCompra" />
+              </mat-form-field>
+              <mat-form-field [style.width.px]="95" [style.height.px]="70" class="custom-input">
+                <input matInput formControlName="venta" [value]="selectedVenta" />
+              </mat-form-field>
             </div>
           </div>
-          <div class="columna2">
-            <div class="datos-comprobante">
-            <div class="input-group">
-              <label class="labels">Fecha Comprobante</label>
-              <mat-form-field [style.width.px]="210" [style.height.px]="70" class="custom-input">
-                <input matInput [matDatepicker]="datecomprobante" formControlName="fechacomprobante">
-                <mat-datepicker-toggle matIconSuffix [for]="datecomprobante"></mat-datepicker-toggle>
-                <mat-datepicker #datecomprobante></mat-datepicker>
-              </mat-form-field>
-            </div>
-            <div class="input-group">
-              <label class="labels">Forma Pago</label>
-              <mat-form-field [style.width.px]="165" [style.height.px]="70" class="custom-input">
-                <input matInput formControlName="formapago" />
-              </mat-form-field>
-            </div>
-            <div class="input-group">
-              <label class="labels">Moneda</label>
-              <mat-form-field [style.width.px]="165" [style.height.px]="70" class="custom-input">
-                <input matInput formControlName="moneda" />
-              </mat-form-field>
-            </div>
-            <div class="input-group">
-              <label class="labels">Fecha Registro</label>
-              <mat-form-field [style.width.px]="210" [style.height.px]="70" class="custom-input">
-                <input matInput [matDatepicker]="dateregistro" formControlName="fecharegistro">
-                <mat-datepicker-toggle matIconSuffix [for]="dateregistro"></mat-datepicker-toggle>
-                <mat-datepicker #dateregistro></mat-datepicker>
-              </mat-form-field>
-            </div>
-            <div class="input-group">
-              <label class="labels">T.C. Compra - Venta</label>
-              <mat-form-field [style.width.px]="200" [style.height.px]="70" class="custom-input">
-                <input matInput formControlName="compra" />
-              </mat-form-field>
-            </div>
-            <div class="input-group">
-              <label class="labels">Flete</label>
-              <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
-                <input matInput formControlName="flete" />
-              </mat-form-field>
-            </div>
-            <div class="input-group">
-              <label class="labels">Comprobante</label>
-              <mat-form-field [style.width.px]="300" [style.height.px]="70" class="custom-input">
-                <input matInput formControlName="comprobante" />
-              </mat-form-field>
-            </div>
-            <div class="input-group">
-              <label class="labels">Serie</label>
-              <mat-form-field [style.width.px]="120" [style.height.px]="70" class="custom-input">
-                <input matInput formControlName="serie" />
-              </mat-form-field>
-            </div>
-            <div class="input-group">
-              <label class="labels">Correlativo</label>
-              <mat-form-field [style.width.px]="120" [style.height.px]="70" class="custom-input">
-                <input matInput formControlName="correlativo" />
-              </mat-form-field>
-            </div>
-          </div>      
-        </div>     
+          <div class="input-group">
+            <label class="labels">Flete</label>
+            <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
+              <input matInput formControlName="flete" />
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Comprobante</label>
+            <mat-form-field [style.width.px]="300" [style.height.px]="70" class="custom-input">
+              <mat-select disableRipple formControlName="comprobante">
+                <mat-option value="LIQUIDACION DE COMPRA ELECTRONICA">LIQUIDACION DE COMPRA ELECTRONICA</mat-option>
+                <mat-option value="COMPROBANTE DE OPERACIONES">COMPROBANTE DE OPERACIONES</mat-option>
+                <mat-option value="FACTURA ELECTRONICA EXTERNA">FACTURA ELECTRONICA EXTERNA</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Serie</label>
+            <mat-form-field [style.width.px]="120" [style.height.px]="70" class="custom-input">
+              <mat-select disableRipple formControlName="serie">
+                <mat-option value="F001">F001</mat-option>
+                <mat-option value="F002">F002</mat-option>
+                <mat-option value="F003">F003</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Correlativo</label>
+            <mat-form-field [style.width.px]="120" [style.height.px]="70" class="custom-input">
+              <input matInput formControlName="correlativo" />
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="fila fila2">
-        <div class="columna3">
-            <div class="productos">
-                <div class="input-group">
-                    <mat-form-field [style.width.px]="400" [style.height.px]="70" class="custom-input">
-                    <input placeholder="Buscar" matInput (keyup)="applyFilter($event)" #input>
-                  </mat-form-field>
-                </div>
-                  <table mat-table [dataSource]="dataSource" class="tabla-productos">
-                    <!-- Position Column -->
-                    <ng-container matColumnDef="position">
-                      <th mat-header-cell *matHeaderCellDef> No. </th>
-                      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-                    </ng-container>
-                  
-                    <!-- Name Column -->
-                    <ng-container matColumnDef="name">
-                      <th mat-header-cell *matHeaderCellDef> Name </th>
-                      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-                    </ng-container>
-                  
-                    <!-- Weight Column -->
-                    <ng-container matColumnDef="weight">
-                      <th mat-header-cell *matHeaderCellDef> Weight </th>
-                      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-                    </ng-container>
-                  
-                    <!-- Symbol Column -->
-                    <ng-container matColumnDef="symbol">
-                      <th mat-header-cell *matHeaderCellDef> Symbol </th>
-                      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-                    </ng-container>
-                  
-                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>           
-                  </table>
-            </div>
+      <div class="columna3">
+        <div class="productos">
+          <div class="input-group">
+            <mat-form-field [style.width.px]="400" [style.height.px]="70" class="custom-input">
+              <input placeholder="Buscar" matInput (keyup)="applyFilter($event)" #input>
+            </mat-form-field>
+          </div>
+          <table mat-table [dataSource]="dataSource" class="tabla-productos">
+            <!-- Columna Codigo -->
+            <ng-container matColumnDef="codigo">
+              <th mat-header-cell *matHeaderCellDef>Codigo</th>
+              <td mat-cell *matCellDef="let element" (click)="getData(element.codigo)"> {{element.codigo}} </td>
+            </ng-container>
+            <!-- Columna Producto -->
+            <ng-container matColumnDef="producto">
+              <th mat-header-cell *matHeaderCellDef>Producto</th>
+              <td mat-cell *matCellDef="let element" (click)="getData(element.codigo)"> {{element.producto}} </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns" [@hoverAnimation]="row.hoverState"
+              (mouseover)="row.hoverState = 'hovered'" (mouseout)="row.hoverState = 'initial'"></tr>
+          </table>
         </div>
-        <div class="columna4">
-            <div class="datos-compra">
-                <div class="input-group">
-                    <label class="labels">N° Ticket</label>
-                    <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
-                      <input matInput formControlName="ticket" />
-                    </mat-form-field>
-                  </div>
-                  <div class="input-group">
-                    <label class="labels">Cantidad</label>
-                    <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
-                      <input matInput formControlName="cantidad" />
-                    </mat-form-field>
-                  </div>
-                  <div class="input-group">
-                    <label class="labels">Precio $ R</label>
-                    <mat-form-field [style.width.px]="135" [style.height.px]="70" class="custom-input">
-                      <input matInput formControlName="preciodolarr" />
-                    </mat-form-field>
-                  </div>
-                  <div class="input-group">
-                    <label class="labels">Precio S/ R</label>
-                    <mat-form-field [style.width.px]="135" [style.height.px]="70" class="custom-input">
-                      <input matInput formControlName="preciosolesr" />
-                    </mat-form-field>
-                  </div>
-                  <div class="input-group">
-                    <label class="labels">Und M</label>
-                    <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
-                        <mat-select disableRipple formControlName="unidadm">
-                          <mat-option value="1">Option 1</mat-option>
-                          <mat-option value="2">Option 2</mat-option>
-                          <mat-option value="3">Option 3</mat-option>
-                        </mat-select>
-                      </mat-form-field>
-                  </div>
-                  <div class="input-group">
-                    <label class="labels">Precio $</label>
-                    <mat-form-field [style.width.px]="135" [style.height.px]="70" class="custom-input">
-                      <input matInput formControlName="preciodolar" />
-                    </mat-form-field>
-                  </div>
-                  <div class="input-group">
-                    <label class="labels">I.G.V. $</label>
-                    <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
-                      <input matInput formControlName="igvdolar" />
-                    </mat-form-field>
-                  </div>
-                  <div class="input-group">
-                    <label class="labels">Descuento %</label>
-                    <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
-                      <input matInput formControlName="descuentodolar" />
-                    </mat-form-field>
-                  </div>
-                  <div class="input-group">
-                    <label class="labels">Importe $</label>
-                    <mat-form-field [style.width.px]="135" [style.height.px]="70" class="custom-input">
-                      <input matInput formControlName="importadolar" />
-                    </mat-form-field>
-                  </div>
-                  <button [style.width.px]="130" [style.height.px]="70" class="custom-button">
-                    <mat-icon class="custom-icon">add_circle</mat-icon>
-                  </button>
-                  
-                  <div class="input-group">
-                    <label class="labels">Precio S/</label>
-                    <mat-form-field [style.width.px]="170" [style.height.px]="70" class="custom-input">
-                      <input matInput formControlName="preciosoles" />
-                    </mat-form-field>
-                  </div>
-                  <div class="input-group">
-                    <label class="labels">I.G.V. S/</label>
-                    <mat-form-field [style.width.px]="170" [style.height.px]="70" class="custom-input">
-                      <input matInput formControlName="igvsoles" />
-                    </mat-form-field>
-                  </div>
-                  <div class="input-group">
-                    <label class="labels">Descuento %</label>
-                    <mat-form-field [style.width.px]="170" [style.height.px]="70" class="custom-input">
-                      <input matInput formControlName="descuentosoles" />
-                    </mat-form-field>
-                  </div>
-                  <div class="input-group">
-                    <label class="labels">Importe S/</label>
-                    <mat-form-field [style.width.px]="170" [style.height.px]="70" class="custom-input">
-                      <input matInput formControlName="importesoles" />
-                    </mat-form-field>
-                  </div>
-            </div>
+      </div>
+      <div class="columna4">
+        <div class="datos-compra">
+          <div class="input-group">
+            <label class="labels">N° Ticket</label>
+            <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
+              <input matInput formControlName="ticket" />
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Cantidad</label>
+            <mat-form-field [style.width.px]="135" [style.height.px]="70" class="custom-input">
+              <input matInput formControlName="cantidad"/>
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Precio $ R</label>
+            <mat-form-field [style.width.px]="135" [style.height.px]="70" class="custom-input">
+              <input matInput formControlName="preciodolarr" [value]="precioDolarR" [readonly]="true"/>
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Precio S/ R</label>
+            <mat-form-field [style.width.px]="135" [style.height.px]="70" class="custom-input">
+              <input matInput formControlName="preciosolesr" [value]="precioSolesR" [readonly]="true"/>
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Und M</label>
+            <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
+              <mat-select disableRipple formControlName="unidadm">
+                <mat-option value="TN">TN</mat-option>
+                <mat-option value="2">Option 2</mat-option>
+                <mat-option value="3">Option 3</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Precio $</label>
+            <mat-form-field [style.width.px]="135" [style.height.px]="70" class="custom-input">
+              <input matInput formControlName="preciodolar" [value]="precioDolar" [readonly]="true"/>
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">I.G.V. $</label>
+            <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
+              <input matInput formControlName="igvdolar" [value]="igvDolar" [readonly]="true"/>
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Descuento %</label>
+            <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
+              <input matInput formControlName="descuentodolar" [readonly]="true"/>
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Importe $</label>
+            <mat-form-field [style.width.px]="135" [style.height.px]="70" class="custom-input">
+              <input matInput formControlName="importadolar" [value]="importeDolares" [readonly]="true"/>
+            </mat-form-field>
+          </div>
+          <button [style.width.px]="130" [style.height.px]="70" class="custom-button" (click)="crearTicket()">
+            <mat-icon class="custom-icon">add_circle</mat-icon>
+          </button>
+
+          <div class="input-group">
+            <label class="labels">Precio S/</label>
+            <mat-form-field [style.width.px]="170" [style.height.px]="70" class="custom-input">
+              <input matInput  formControlName="preciosoles" [value]="precioSoles" [readonly]="true"/>
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">I.G.V. S/</label>
+            <mat-form-field [style.width.px]="170" [style.height.px]="70" class="custom-input">
+              <input matInput formControlName="igvsoles" [value]="igvSoles" [readonly]="true"/>
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Descuento %</label>
+            <mat-form-field [style.width.px]="170" [style.height.px]="70" class="custom-input">
+              <input matInput formControlName="descuentosoles" [readonly]="true"/>
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Importe S/</label>
+            <mat-form-field [style.width.px]="170" [style.height.px]="70" class="custom-input">
+              <input matInput formControlName="importesoles" [value]="importeSoles" />
+            </mat-form-field>
+          </div>
         </div>
+      </div>
     </div>
     <div class="fila fila3">
-        <div class="tabla-datos">
-            <table mat-table [dataSource]="dataSource" class="datos-ticket">
-                <!-- Position Column -->
-                <ng-container matColumnDef="position">
-                  <th mat-header-cell *matHeaderCellDef> No. </th>
-                  <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-                </ng-container>
-              
-                <!-- Name Column -->
-                <ng-container matColumnDef="name">
-                  <th mat-header-cell *matHeaderCellDef> Name </th>
-                  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-                </ng-container>
-              
-                <!-- Weight Column -->
-                <ng-container matColumnDef="weight">
-                  <th mat-header-cell *matHeaderCellDef> Weight </th>
-                  <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-                </ng-container>
-              
-                <!-- Symbol Column -->
-                <ng-container matColumnDef="symbol">
-                  <th mat-header-cell *matHeaderCellDef> Symbol </th>
-                  <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-                </ng-container>
-              
-                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-              </table>
-        </div>
+      <div class="tabla-datos">
+        <table mat-table [dataSource]="dataSource2" class="datos-ticket">
+          <!-- COLUMNA NUMERO DE TICKET -->
+          <ng-container matColumnDef="ticket">
+            <th mat-header-cell *matHeaderCellDef>N°TICKET</th>
+            <td mat-cell *matCellDef="let element"> {{element.ticket}} </td>
+          </ng-container>
+          <!-- COLUMNA CANTIDAD -->
+          <ng-container matColumnDef="cantidad">
+            <th mat-header-cell *matHeaderCellDef>CANTIDAD</th>
+            <td mat-cell *matCellDef="let element"> {{element.cantidad}} </td>
+          </ng-container>
+          <!-- COLUMNA UNIDAD DE MEDIDA -->
+          <ng-container matColumnDef="undmedida">
+            <th mat-header-cell *matHeaderCellDef>UNID MEDIDA</th>
+            <td mat-cell *matCellDef="let element"> {{element.undmedida}} </td>
+          </ng-container>
+          <!-- COLUMNA DESCRIPCION -->
+          <ng-container matColumnDef="descripcion">
+            <th mat-header-cell *matHeaderCellDef>DESCRIPCIÓN</th>
+            <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+          </ng-container>
+          <!-- COLUMNA DE PRECIO UNITARIO -->
+          <ng-container matColumnDef="preciou">
+            <th mat-header-cell *matHeaderCellDef>PRECIO U.</th>
+            <td mat-cell *matCellDef="let element"> {{element.preciou}} </td>
+          </ng-container>
+          <!-- COLUMNA DE IGV -->
+          <ng-container matColumnDef="igv">
+            <th mat-header-cell *matHeaderCellDef>IGV</th>
+            <td mat-cell *matCellDef="let element"> {{element.igv}} </td>
+          </ng-container>
+          <!-- COLUMNA DE DESCUENTOS -->
+          <ng-container matColumnDef="descuento">
+            <th mat-header-cell *matHeaderCellDef>DSCTOS</th>
+            <td mat-cell *matCellDef="let element"> {{element.descuento}} </td>
+          </ng-container>
+          <!-- COLUMNA DE IMPORTE -->
+          <ng-container matColumnDef="importe">
+            <th mat-header-cell *matHeaderCellDef>IMPORTE</th>
+            <td mat-cell *matCellDef="let element"> {{element.importe}} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns2" [@hoverAnimation]="row.hoverState"
+            (mouseover)="row.hoverState = 'hovered'" (mouseout)="row.hoverState = 'initial'"></tr>
+        </table>
+      </div>
+    </div>
+    <div class="botones">
+      <button class="btn btn-guardar" mat-raised-button color="primary">Guardar</button>
+      <button class="btn btn-cancelar" mat-raised-button color="warn" mat-dialog-close>Cancelar</button>
     </div>
   </form>
 </div>

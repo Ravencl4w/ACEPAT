@@ -43,6 +43,10 @@ import { AcopioListComponent } from './acopio/acopio-list/acopio-list.component'
 import { AcopioCreationDialogComponent } from './shared/acopio-creation-dialog/acopio-creation-dialog.component';
 import { CentroAcopioComponent } from './comercializacion/centro-acopio/centro-acopio.component';
 import { CentroAcopioDialogComponent } from './shared/centro-acopio-dialog/centro-acopio-dialog.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { AportMovementComponent } from './credit/aport-movement/aport-movement.component';
+import { CollectContributionsComponent } from './shared/collect-contributions/collect-contributions.component';
+import { ReportingMovementComponent } from './shared/reporting-movement/reporting-movement.component';
 
 
 
@@ -66,6 +70,9 @@ import { CentroAcopioDialogComponent } from './shared/centro-acopio-dialog/centr
     DeletePartnerDetailDialogComponent,
     AcopioListComponent,
     AcopioCreationDialogComponent,
+    AportMovementComponent,
+    CollectContributionsComponent,
+    ReportingMovementComponent,
     CentroAcopioComponent,
     CentroAcopioDialogComponent
   ],
@@ -92,7 +99,8 @@ import { CentroAcopioDialogComponent } from './shared/centro-acopio-dialog/centr
     MatSelectModule,
     MatRadioModule,
     MatTabsModule,
-    FormsModule
+    FormsModule,
+    MatAutocompleteModule,
 
   ],
   providers: [],

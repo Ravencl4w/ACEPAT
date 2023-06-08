@@ -6,7 +6,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Partner } from 'src/app/interfaces/Partner';
 import { PartnerService } from 'src/app/services/partner.service';
 import { DeletePartnerDetailDialogComponent } from '../delete-partner-detail-dialog/delete-partner-detail-dialog.component';
-import { PartnerDetail } from 'src/app/interfaces/PartnerDetail';
+import { PartnerDetail } from 'src/app/Interfaces/PartnerDetail';
 import {
   trigger,
   state,

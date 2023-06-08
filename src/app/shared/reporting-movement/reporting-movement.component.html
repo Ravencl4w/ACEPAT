@@ -1,0 +1,129 @@
+<div class="cuerpo">
+    <form class="form-group" [formGroup]="aportes">
+        <div class="fila fila1">
+            <div class="datos-socio">
+            <div class="input-group">
+                <label class="labels">Codigo</label>
+                <mat-form-field [style.width.px]="220" [style.height.px]="70" class="custom-input">
+                  <input type="text" formControlName="codigo" aria-label="Number" matInput [value]="selectedCodigo"
+                  [matAutocomplete]="autoCodigo">
+                <mat-autocomplete #autoCodigo="matAutocomplete" (optionSelected)="onCodigoSelected($event)">
+                  <mat-option *ngFor="let option of filteredCodigo | async" [value]="option">
+                    {{option}}
+                  </mat-option>
+                </mat-autocomplete>
+                </mat-form-field>
+              </div>
+              <div class="input-group">
+                <label class="labels">DNI</label>
+                <mat-form-field [style.width.px]="220" [style.height.px]="70" class="custom-input">
+                  <input type="text" formControlName="dni" aria-label="Number" matInput [value]="selectedDni"
+                  [matAutocomplete]="autoDNI">
+                <mat-autocomplete #autoDNI="matAutocomplete" (optionSelected)="onDniSelected($event)">
+                  <mat-option *ngFor="let option of filteredDni | async" [value]="option">
+                    {{option}}
+                  </mat-option>
+                </mat-autocomplete>
+                </mat-form-field>
+              </div>
+              <div class="input-group">
+                <label class="labels">Apellidos y nombres</label>
+                <mat-form-field [style.width.px]="990" [style.height.px]="70" class="custom-input">
+                  <input type="text" formControlName="nombres" aria-label="Number" matInput [value]="selectedNombre"
+                  [matAutocomplete]="autoNombre">
+                <mat-autocomplete #autoNombre="matAutocomplete" (optionSelected)="onNombreSelected($event)">
+                  <mat-option *ngFor="let option of filteredNombre | async" [value]="option">
+                    {{option}}
+                  </mat-option>
+                </mat-autocomplete>
+                </mat-form-field>
+              </div>
+            </div>
+        </div>
+        <div class="fila fila2">
+            <div class="columna1">
+                <div class="datos-caja">
+                <div class="input-group">
+                    <label class="labels">Caja</label>
+                    <mat-form-field [style.width.px]="450" [style.height.px]="70" class="custom-input">
+                        <mat-select disableRipple formControlName="caja">
+                            <mat-option value="cajaventa">CAJA VENTAS</mat-option>
+                          </mat-select>
+                      </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">Comprobantes</label>
+                    <mat-form-field [style.width.px]="140" [style.height.px]="70" class="custom-input">
+                        <mat-select disableRipple formControlName="comprobantes">
+                          <mat-option value="reapor">REAPOR</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">Serie</label>
+                    <mat-form-field [style.width.px]="140" [style.height.px]="70" class="custom-input">
+                        <mat-select disableRipple formControlName="serie">
+                          <mat-option value="rapa">RAPA</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">Correlativo</label>
+                    <mat-form-field [style.width.px]="150" [style.height.px]="70" class="custom-input">
+                      <input matInput formControlName="correlativo"/>
+                    </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">Fecha</label>
+                    <mat-form-field [style.width.px]="220" [style.height.px]="70" class="custom-input">
+                        <input matInput [matDatepicker]="reportepicker" formControlName="fecha">
+                        <mat-datepicker-toggle matIconSuffix [for]="reportepicker"></mat-datepicker-toggle>
+                        <mat-datepicker #reportepicker></mat-datepicker>
+                      </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">Monto</label>
+                    <mat-form-field [style.width.px]="220" [style.height.px]="70" class="custom-input">
+                      <input matInput formControlName="monto"/>
+                    </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">Aporte</label>
+                    <mat-form-field [style.width.px]="450" [style.height.px]="70" class="custom-input">
+                        <mat-select disableRipple formControlName="aporte">
+                          <mat-option value="aportes">APORTES</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">Glosa</label>
+                    <mat-form-field [style.width.px]="450" [style.height.px]="150" class="custom-input">
+                      <textarea matInput formControlName="glosa" rows="4"></textarea>
+                    </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">Cargo</label>
+                    <mat-form-field [style.width.px]="150" [style.height.px]="70" class="custom-input">
+                      <input matInput formControlName="cargo"/>
+                    </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">Abono</label>
+                    <mat-form-field [style.width.px]="140" [style.height.px]="70" class="custom-input">
+                      <input matInput formControlName="abono"/>
+                    </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">Saldo</label>
+                    <mat-form-field [style.width.px]="140" [style.height.px]="70" class="custom-input">
+                      <input matInput formControlName="saldo"/>
+                    </mat-form-field>
+                  </div>
+            </div>
+        </div>
+            <div class="columna2">
+
+            </div>
+        </div>
+    </form>
+</div>

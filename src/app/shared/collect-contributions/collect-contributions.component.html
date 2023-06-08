@@ -1,0 +1,67 @@
+<div class="cuerpo">
+    <form class="form-group" [formGroup]="aportes">
+        <div class="fila fila1">
+            <div class="datos">
+                <div class="input-group">
+                    <label class="labels">Aporte</label>
+                    <mat-form-field [style.width.px]="500" [style.height.px]="70" class="custom-input">
+                      <input matInput formControlName="aporte" [readonly]="!modoEdicion"/>
+                    </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">Periodo Mes</label>
+                    <mat-form-field [style.width.px]="150" [style.height.px]="70" class="custom-input">
+                      <input matInput formControlName="periodomes" [readonly]="!modoEdicion"/>
+                    </mat-form-field>
+                  </div>
+                  <div class="input-group">
+                    <label class="labels">Monto</label>
+                    <mat-form-field [style.width.px]="170" [style.height.px]="70" class="custom-input">
+                      <input matInput formControlName="monto" [readonly]="!modoEdicion"/>
+                    </mat-form-field>
+                  </div>
+                  <div class="fila fila2">
+                  <div class="input-group">
+                    <label class="labels">Descripcion</label>
+                    <mat-form-field [style.width.px]="840" [style.height.px]="200" class="custom-input">
+                      <textarea matInput formControlName="descripcion" rows="6" [readonly]="!modoEdicion"></textarea>
+                    </mat-form-field>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="fila fila3">
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" [ngClass]="'table-no-border-animation'">
+        <!-- Position Column -->
+        <ng-container matColumnDef="aporte">
+          <th mat-header-cell *matHeaderCellDef>APORTE</th>
+          <td mat-cell *matCellDef="let element" (click)="seleccionarFila(element)"> {{element.aporte}} </td>
+        </ng-container>
+        <!-- Name Column -->
+        <ng-container matColumnDef="periodo">
+          <th mat-header-cell *matHeaderCellDef>PERIODO</th>
+          <td mat-cell *matCellDef="let element" (click)="seleccionarFila(element)"> {{element.periodo}} </td>
+        </ng-container>
+        <!-- Weight Column -->
+        <ng-container matColumnDef="monto">
+          <th mat-header-cell *matHeaderCellDef>MONTO</th>
+          <td mat-cell *matCellDef="let element" (click)="seleccionarFila(element)"> {{element.monto}} </td>
+        </ng-container>
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="descripcion">
+          <th mat-header-cell *matHeaderCellDef>DESCRIPCION</th>
+          <td mat-cell *matCellDef="let element" (click)="seleccionarFila(element)"> {{element.descripcion}} </td>
+        </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </div>
+        <div class="botones">
+        <button class="btn btn-guardar" mat-raised-button color="primary" (click)="activarModoEdicion()">
+          {{ modoEdicion ? 'Guardar cambios' : 'Editar' }}
+        </button>
+        <button class="btn btn-cancelar" mat-raised-button color="warn" mat-dialog-close>Cancelar</button>
+      </div>
+    </form>
+</div>
