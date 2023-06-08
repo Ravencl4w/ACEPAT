@@ -1,0 +1,84 @@
+<div class="main_content"> 
+    <div class="header">Centros de Acopio</div>
+    <div class="button-container-padre">
+        <div class="button-container-hijo1">
+          <button mat-fab extended color="primary" class="boton1" (click)="openCreationDialog()">
+              <mat-icon>place</mat-icon>
+              Centro de Acopio
+            </button> 
+        </div>
+            <div class="button-container-hijo2 ">
+              <button mat-fab extended color="primary" class="boton1">
+                  <mat-icon>person</mat-icon>
+                  Acopiador
+                </button>
+            </div>
+                <div class="button-container-hijo3">
+                    <mat-form-field >
+                        <mat-label>Buscar</mat-label>
+                        <input matInput  />
+                        <mat-icon matPrefix>search</mat-icon>
+                      </mat-form-field>
+              </div>
+      </div>
+      <div class="info">
+        <div class="mat-elevation-z8">
+          <table mat-table [dataSource]="dataSource" class="mat-table">
+            <!-- Position Column -->
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef>ID</th>
+              <td mat-cell *matCellDef="let element" >{{ element.id }}</td>
+            </ng-container>
+    
+            <!-- Name Column -->
+            
+            <ng-container matColumnDef="codigo">
+             <th mat-header-cell *matHeaderCellDef>CODIGO</th> <th mat-header-cell *matHeaderCellDef>CODIGO</th>
+              <td mat-cell *matCellDef="let element" >{{ element.codigo }}</td>
+            </ng-container>
+            <!-- Weight Column -->
+            <ng-container matColumnDef="cAcopio">
+              <th mat-header-cell *matHeaderCellDef>C_ACOPIO</th>
+              <td mat-cell *matCellDef="let element">{{ element.cAcopio }}</td>
+            </ng-container>
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="sectorLocal">
+              <th mat-header-cell *matHeaderCellDef>SECTOR LOCAL</th>
+              <td mat-cell *matCellDef="let element">{{ element.sectorLocal }}</td>
+            </ng-container>
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="sectorCentral">
+              <th mat-header-cell *matHeaderCellDef>SECTOR CENTRAL</th>
+              <td mat-cell *matCellDef="let element" >{{ element.sectorCentral }}</td>
+            </ng-container>
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="responsable">
+              <th mat-header-cell *matHeaderCellDef>RESPONSABLE</th>
+              <td mat-cell *matCellDef="let element" >{{ element.responsable }}</td>
+            </ng-container>
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="acopiador">
+              <th mat-header-cell *matHeaderCellDef>ACOPIADOR</th>
+              <td mat-cell *matCellDef="let element" >{{ element.acopiador }}</td>
+            </ng-container>
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="estado">
+              <th mat-header-cell *matHeaderCellDef>ESTADO</th>
+              <td mat-cell *matCellDef="let element" >{{ element.estado }}</td>
+            </ng-container>
+           
+    
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns" [@hoverAnimation]="row.hoverState" (mouseover)="row.hoverState = 'hovered'" (mouseout)="row.hoverState = 'initial'"></tr>
+            
+          </table>
+    
+          <mat-paginator
+          [pageSizeOptions]="[5, 10, 20]"
+          showFirstLastButtons
+          aria-label="Select page of periodic elements"
+        >
+        </mat-paginator>
+        </div>
+      </div>
+    </div>

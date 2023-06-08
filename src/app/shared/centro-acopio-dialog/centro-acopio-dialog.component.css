@@ -1,0 +1,102 @@
+.main_content .header {
+    padding: 30px;
+    background: #fff;
+    color: #717171;
+    border-bottom: 1px solid #e0e4e8;
+    font-size: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .custom-grupo1{
+    max-width: 180px;
+  }
+  .apellidoYnombres{
+    width: 320px;
+  }
+  .labels {
+    font-size: 16px; 
+    left: 20px; 
+    top: 10px; 
+  }
+
+  .fila{
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+  }
+  .columna1{
+    flex-basis: 60%;
+  }
+
+  .columna2{
+    flex-basis: 40%;
+  }
+
+  
+  .grupo1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .grupo2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .grupo3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .grupo-pequeño{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 55px;
+  }
+
+  .grupo4{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .grupo5{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .grupo6{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    align-items: flex-start;
+  }
+  .grupotab{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-right: 50px;
+  }
+  .grupotab2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-right: 50px;
+  }
+  .grupotab3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-right: 50px;
+  }

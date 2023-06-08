@@ -1,0 +1,44 @@
+.main_content .header {
+    padding: 30px;
+    background: #fff;
+    color: #717171;
+    border-bottom: 1px solid #e0e4e8;
+    font-size: 35px;
+  }
+  .button-container-padre {
+    display: flex;
+
+    
+  }
+.boton1{
+  font-size: 18px;
+}
+
+  .button-container-hijo1 {
+    position: relative;
+    top: 30px;
+   
+    
+  }
+  .button-container-hijo2 {
+    position: relative;
+    top: 30px;
+    left: 30px;
+  }
+  
+    .button-container-hijo3 {
+      position: relative;
+     top: 30px;
+     left: 1080px;
+    }
+    
+
+
+  
+  .info {
+    margin-top: 30px;
+  }
+  
+
+  
+  

@@ -1,0 +1,228 @@
+<div class="main_content">
+  <div class="header">Centro de Acopio</div>
+  <div class="fila fila1">
+    <div class="columna1">
+      <div class="grupo1">
+        <div class="input-group">
+            <label class="labels">Codigo</label>
+          <mat-form-field class="custom-grupo1">
+            <mat-label></mat-label> 
+            <input matInput >
+          </mat-form-field>
+        </div>
+        <div class="input-group">
+            <label class="labels">Centro de Acopio</label>
+          <mat-form-field class="custom-grupo1">
+            <mat-label></mat-label>
+            <input matInput />
+          </mat-form-field>
+        </div>
+        <div class="input-group">
+            <label class="labels">Saldo Soles</label>
+          <mat-form-field class="custom-grupo1">
+            <mat-label></mat-label>
+            <input matInput value="0.00">
+          </mat-form-field>
+        </div>
+        <div class="input-group">
+            <label class="labels"> Saldo Acopio
+            </label>
+          <mat-form-field class="custom-grupo1">
+            <mat-label></mat-label>
+            <input matInput value="0.00">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="grupo2">
+        <div class="input-group">
+            <label class="labels">Dirección</label>
+          <mat-form-field class="example-full-width">
+            <mat-label></mat-label>
+            <input matInput />
+          </mat-form-field>
+        </div>
+        <div class="input-group">
+            <label class="labels">Telefono/Celular</label>
+          <mat-form-field class="example-full-width">
+            <mat-label></mat-label>
+            <input matInput />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="grupo3">
+        <div class="input-group">
+            <label class="labels">Codigo</label>
+          <mat-form-field class="example-full-width">
+            <mat-label></mat-label>
+            <input matInput  />
+          </mat-form-field>
+        </div>
+        <div class="input-group">
+            <label class="labels">N° Documento</label>
+          <mat-form-field class="example-full-width">
+            <mat-label> </mat-label>
+            <input matInput  />
+          </mat-form-field>
+        </div>
+        <div class="input-group">
+            <label class="labels">Apellido y Nombre</label>
+          <mat-form-field class="apellidoYnombres">
+            <mat-label></mat-label>
+            <input matInput  />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="grupo4">
+        <div class="input-group">
+          <label class="example-margin">Datos Acopiador:</label> <br />
+          <mat-radio-group>
+            <mat-radio-button class="check">Masculino</mat-radio-button> <br />
+            <mat-radio-button class="check">Femenino</mat-radio-button>
+          </mat-radio-group>
+        </div> 
+        <div class="grupo-pequeño">
+        <div class="input-group">
+          
+          <mat-form-field>
+            <mat-label>Fecha inicio</mat-label>
+            <input matInput [matDatepicker]="picker" />
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle
+              matIconSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="input-group">
+          <mat-form-field>
+           
+            <mat-label>Tipo Doc.</mat-label>
+            <mat-select>
+              <mat-option value="one">First option</mat-option>
+              <mat-option value="two">Second option</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+    </div>
+        <div class="grupo5">
+          <div class="input-group">
+            
+            <label class="labels">Num Doc</label>
+            <mat-form-field class="custom-grupo1">
+              <mat-label></mat-label>
+              <input matInput />
+            </mat-form-field>
+          </div>
+
+          <div class="input-group">
+            <label class="labels">Apellido Paterno</label>
+            <mat-form-field class="custom-grupo1">
+                
+            
+              <mat-label></mat-label>
+              <input matInput />
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            
+            <label class="labels">Apellido Materno</label>
+            <mat-form-field class="custom-grupo1">
+              <mat-label></mat-label>
+              <input matInput />
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            
+            <label class="labels">Nombres</label>
+            <mat-form-field class="custom-grupo1">
+              <mat-label></mat-label>
+              <input matInput />
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="grupo6">
+          <div class="input-group">
+            
+            <label class="labels">Dirección</label>
+            <mat-form-field class="example-full-width">
+              <mat-label></mat-label>
+              <input matInput />
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            
+            <label class="labels">R.U.C.</label>
+            <mat-form-field class="example-full-width">
+              <mat-label></mat-label>
+              <input matInput placeholder="Ejemplo: 72456638" />
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Celular</label>
+            <mat-form-field class="example-full-width">
+              <mat-label></mat-label>
+              <input matInput placeholder="Ejemplo: 72456638" />
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columna2">
+      <div class="grupotab">
+        <div class="input-group">
+          <mat-form-field>
+            <mat-label>Tipo Doc.</mat-label>
+            <mat-select>
+              <mat-option value="one">First option</mat-option>
+              <mat-option value="two">Second option</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="input-group">
+          <mat-form-field>
+            <mat-label>Tipo Doc.</mat-label>
+            <mat-select>
+              <mat-option value="one">First option</mat-option>
+              <mat-option value="two">Second option</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="grupotab2">
+        <div class="input-group">
+          <mat-form-field>
+            <mat-label>Tipo Doc.</mat-label>
+            <mat-select>
+              <mat-option value="one">First option</mat-option>
+              <mat-option value="two">Second option</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="input-group">
+          <mat-form-field>
+            <mat-label>Tipo Doc.</mat-label>
+            <mat-select disabled>
+              <mat-option value="one">First option</mat-option>
+              <mat-option value="two">Second option</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="grupotab3">
+        <div class="input-group">
+          <mat-form-field>
+            <mat-label >Tipo Doc.</mat-label>
+            <mat-select disabled>
+              <mat-option value="one">First option</mat-option>
+              <mat-option value="two">Second option</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
