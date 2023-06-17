@@ -26,16 +26,17 @@
   "socios": [
     {
       "id": "1",
+      "code": "ACE-040221",
       "dni": "00986284",
       "nombre": "ABURTO VASQUEZ JOSE ZACARIAS",
       "estado": "A",
       "fechanaci": "9/6/48",
-      "estadocivil": "CASADO",
+      "estadocivil": "SOLTERO",
       "gradoinstruccion": "PRIMARIA COMPLETA",
       "telefono": "925543211",
       "comitesectorial": "APRODEPAT",
       "entidadbancaria": "BANCO DE LA NACION",
-      "nrocuenta": "4498061848",
+      "nrocuenta": "04498061848",
       "email": "",
       "residencia": "CENTRO MIRAFLORES S/N",
       "localidad": "TANANTA",
@@ -43,12 +44,13 @@
       "provincia": "TOCACHE",
       "departamento": "SAN MARTIN",
       "beneficiario": "RODRIGUEZ JARA LEOVINA",
-      "dnibeneficiario": "985684",
+      "dnibeneficiario": "00985684",
       "estadodelpredio": "PROPIETARIO",
       "hoverState": ""
     },
     {
       "id": "2",
+      "code": "ACE-010855",
       "dni": "00986028",
       "nombre": "ACOSTA CENIZARIO SANTOS",
       "estado": "A",
@@ -66,17 +68,18 @@
       "provincia": "TOCACHE",
       "departamento": "SAN MARTIN",
       "beneficiario": "CHINCHAYHUARA RUIZ VICTORIA",
-      "dnibeneficiario": "1010912",
+      "dnibeneficiario": "01010912",
       "estadodelpredio": "",
       "hoverState": ""
     },
     {
       "id": "3",
+      "code": "ACE-030209",
       "dni": "07755215",
       "nombre": "ACOSTA ROBLES NICOLAS TOLENTINO",
       "estado": "A",
       "fechanaci": "9/10/55",
-      "estadocivil": "SOLTERO",
+      "estadocivil": "CASADO",
       "gradoinstruccion": "SECUNDARIA",
       "telefono": "917723225",
       "comitesectorial": "APUMHSA",
@@ -95,6 +98,7 @@
     },
     {
       "id": "4",
+      "code": "ACE-080374",
       "dni": "00985407",
       "nombre": "ACUÑA COLCHADO ABERCIO",
       "estado": "A",
@@ -118,6 +122,7 @@
     },
     {
       "id": "5",
+      "code": "ACE-100442",
       "dni": "10125058",
       "nombre": "ACUÑA DAMIAN CIRO BUENAVENTURA",
       "estado": "A",
@@ -141,6 +146,7 @@
     },
     {
       "id": "6",
+      "code": "ACE-160850",
       "dni": "06882953",
       "nombre": "ACUÑA MORILLO ANDREZ HUMBERTO",
       "estado": "A",
@@ -164,6 +170,7 @@
     },
     {
       "id": "7",
+      "code": "ACE-020748",
       "dni": "00961374",
       "nombre": "ACUÑA SANDOVAL REMIGIO",
       "estado": "A",
@@ -187,6 +194,7 @@
     },
     {
       "id": "8",
+      "code": "ACE-080373",
       "dni": "70810478",
       "nombre": "ACUÑA SOBRADOS MERLITH MAGDIEL",
       "estado": "A",
@@ -210,6 +218,7 @@
     },
     {
       "id": "9",
+      "code": "ACE-020838",
       "dni": "00977239",
       "nombre": "AGUILAR FUENTES SEGUNDO PEDRO",
       "estado": "A",
@@ -233,6 +242,7 @@
     },
     {
       "id": "10",
+      "code": "ACE-120546",
       "dni": "44211372",
       "nombre": "AGUIRRE CARLOS ALCIDES",
       "estado": "A",
@@ -256,6 +266,7 @@
     },
     {
       "id": "11",
+      "code": "ACE-060289",
       "dni": "01001887",
       "nombre": "ALAMO MEDINA BERNARDO",
       "estado": "A",
@@ -279,6 +290,7 @@
     },
     {
       "id": "12",
+      "code": "",
       "dni": "00985652",
       "nombre": "ALEGRIA DE DIAZ SARA",
       "estado": "I",
@@ -302,6 +314,7 @@
     },
     {
       "id": "13",
+      "code": "ACE-080692",
       "dni": "47926333",
       "nombre": "ALFARO LEON YANETH",
       "estado": "A",
@@ -325,6 +338,7 @@
     },
     {
       "id": "14",
+      "code": "ACE-010002",
       "dni": "00986011",
       "nombre": "ALTAMIRANO ABURTO NICANOR",
       "estado": "A",
@@ -348,6 +362,7 @@
     },
     {
       "id": "15",
+      "code": "ACE-010003",
       "dni": "10208181",
       "nombre": "ALTAMIRANO MELENDEZ JUAN BAUTISTA",
       "estado": "A",
@@ -371,6 +386,7 @@
     },
     {
       "id": "16",
+      "code": "ACE-010004",
       "dni": "00986340",
       "nombre": "ALVA MEDINA ISIDORO",
       "estado": "A",
@@ -394,6 +410,7 @@
     },
     {
       "id": "17",
+      "code": "ACE-060290",
       "dni": "00985247",
       "nombre": "ALVARADO DIAZ ALFREDO",
       "estado": "A",
@@ -417,6 +434,7 @@
     },
     {
       "id": "18",
+      "code": "ACE-040815",
       "dni": "48393307",
       "nombre": "ALVARADO MORALES MARIA",
       "estado": "A",
@@ -440,6 +458,7 @@
     },
     {
       "id": "19",
+      "code": "ACE-140491",
       "dni": "00993668",
       "nombre": "ALVARADO RAMOS JOSE MIGUEL",
       "estado": "A",
@@ -463,6 +482,7 @@
     },
     {
       "id": "20",
+      "code": "ACE-140492",
       "dni": "01189544",
       "nombre": "ALVARADO RAMOS JULIO ANDRES",
       "estado": "A",
@@ -486,6 +506,7 @@
     },
     {
       "id": "21",
+      "code": "ACE-020157",
       "dni": "22404664",
       "nombre": "ALVARADO SALAZAR MELITON",
       "estado": "A",
@@ -509,6 +530,7 @@
     },
     {
       "id": "22",
+      "code": "ACE-080376",
       "dni": "05323468",
       "nombre": "ALVES PAIMA LUIS",
       "estado": "A",
@@ -532,6 +554,7 @@
     },
     {
       "id": "23",
+      "code": "ACE-040222",
       "dni": "21532167",
       "nombre": "ALVITES MALQUI MARCO ANTONIO",
       "estado": "A",
@@ -555,6 +578,7 @@
     },
     {
       "id": "24",
+      "code": "ACE-070310",
       "dni": "70817552",
       "nombre": "ANCHILLO CARTAGENA PETER ANTONY",
       "estado": "A",
@@ -578,6 +602,7 @@
     },
     {
       "id": "25",
+      "code": "ACE-040223",
       "dni": "00985502",
       "nombre": "ANCHILLO VDA DE DAZA SANTA HONORATA",
       "estado": "A",
@@ -601,6 +626,7 @@
     },
     {
       "id": "26",
+      "code": "ACE-060291",
       "dni": "18059091",
       "nombre": "ANTICONA LOPEZ ANTOLINO",
       "estado": "A",
@@ -624,6 +650,7 @@
     },
     {
       "id": "27",
+      "code": "ACE-180772",
       "dni": "22711050",
       "nombre": "ANTONIO JUSTO ELISEO",
       "estado": "A",
@@ -647,6 +674,7 @@
     },
     {
       "id": "28",
+      "code": "ACE-170795",
       "dni": "28682544",
       "nombre": "ARCE SOSA FELICITAS",
       "estado": "A",
@@ -670,6 +698,7 @@
     },
     {
       "id": "29",
+      "code": "ACE-010504",
       "dni": "00992324",
       "nombre": "ARELLANO CABELLOS ADRIANA",
       "estado": "A",
@@ -693,6 +722,7 @@
     },
     {
       "id": "30",
+      "code": "ACE-010006",
       "dni": "00985463",
       "nombre": "ARELLANO CABELLOS ANDRES",
       "estado": "A",
@@ -716,6 +746,7 @@
     },
     {
       "id": "31",
+      "code": "ACE-010007",
       "dni": "01186651",
       "nombre": "ARELLANO CABELLOS JOSE",
       "estado": "A",
@@ -739,6 +770,7 @@
     },
     {
       "id": "32",
+      "code": "ACE-010008",
       "dni": "00985376",
       "nombre": "ARELLANO HERRERA SANTOS",
       "estado": "A",
@@ -762,6 +794,7 @@
     },
     {
       "id": "33",
+      "code": "ACE-070308",
       "dni": "01016733",
       "nombre": "AREVALO PANDURO MAXIMO",
       "estado": "A",
@@ -785,6 +818,7 @@
     },
     {
       "id": "34",
+      "code": "ACE-150547",
       "dni": "45222367",
       "nombre": "ARTEAGA FLORES EDWIN",
       "estado": "A",
@@ -808,7 +842,8 @@
     },
     {
       "id": "35",
-      "dni": "19402625",
+      "code": "ACE-150512",
+      "dni": "19402635",
       "nombre": "ARTEAGA MARREROS DANIEL",
       "estado": "A",
       "fechanaci": "4/24/63",
@@ -831,6 +866,7 @@
     },
     {
       "id": "36",
+      "code": "ACE-070312",
       "dni": "00172744",
       "nombre": "ASENCIOS VELASQUEZ RAMON REMIGIO",
       "estado": "A",
@@ -854,6 +890,7 @@
     },
     {
       "id": "37",
+      "code": "ACE-070311",
       "dni": "15657494",
       "nombre": "ASENCIOS VELASQUEZ TEODORA",
       "estado": "A",
@@ -877,6 +914,7 @@
     },
     {
       "id": "38",
+      "code": "ACE-160827",
       "dni": "44478024",
       "nombre": "AZAÑEDO CARRERA MARILU MIRTHA",
       "estado": "A",
@@ -900,6 +938,7 @@
     },
     {
       "id": "39",
+      "code": "ACE-170603",
       "dni": "01170208",
       "nombre": "BACA PARDO FAUSTO",
       "estado": "A",
@@ -923,6 +962,7 @@
     },
     {
       "id": "40",
+      "code": "ACE-170601",
       "dni": "17524900",
       "nombre": "BALDERA SUYON JOSE SANTOS",
       "estado": "A",
@@ -946,6 +986,7 @@
     },
     {
       "id": "41",
+      "code": "ACE-170726",
       "dni": "09800187",
       "nombre": "BARAZORDA FALCON ANTONIO",
       "estado": "A",
@@ -969,6 +1010,7 @@
     },
     {
       "id": "42",
+      "code": "ACE-010010",
       "dni": "26708915",
       "nombre": "BARBOZA PEREZ JUAN EDILBERTO",
       "estado": "A",
@@ -992,6 +1034,7 @@
     },
     {
       "id": "43",
+      "code": "ACE-010011",
       "dni": "01001009",
       "nombre": "BARBOZA RUIZ ABELINO",
       "estado": "A",
@@ -1015,6 +1058,7 @@
     },
     {
       "id": "44",
+      "code": "ACE-100444",
       "dni": "01001847",
       "nombre": "BARDALES LUCANO RAIMUNDO",
       "estado": "A",
@@ -1038,6 +1082,7 @@
     },
     {
       "id": "45",
+      "code": "ACE-010012",
       "dni": "01000677",
       "nombre": "BARRIOS RAMOS AUGUSTO",
       "estado": "A",
@@ -1061,6 +1106,7 @@
     },
     {
       "id": "46",
+      "code": "ACE-170602",
       "dni": "45921132",
       "nombre": "BARRIOS VASQUEZ LIZETH JACKELINE",
       "estado": "A",
@@ -1084,6 +1130,7 @@
     },
     {
       "id": "47",
+      "code": "ACE-060725",
       "dni": "33340625",
       "nombre": "BAUTISTA ALEGRE PRIMITIVO ANTONIO",
       "estado": "A",
@@ -1107,6 +1154,7 @@
     },
     {
       "id": "48",
+      "code": "ACE-010013",
       "dni": "32972571",
       "nombre": "BAYLON RAMIREZ MIRIAM ROXANA",
       "estado": "A",
@@ -1130,6 +1178,7 @@
     },
     {
       "id": "49",
+      "code": "ACE-130468",
       "dni": "00962876",
       "nombre": "BECERRA NUÑEZ ANTOLINO",
       "estado": "A",
@@ -1153,6 +1202,7 @@
     },
     {
       "id": "50",
+      "code": "ACE-170605",
       "dni": "33818731",
       "nombre": "BENDEZU MARTINEZ MARIANO",
       "estado": "A",
@@ -1176,6 +1226,7 @@
     },
     {
       "id": "51",
+      "code": "ACE-140830",
       "dni": "01015498",
       "nombre": "BENITES CRUZADO LUCILA",
       "estado": "A",
@@ -1199,6 +1250,7 @@
     },
     {
       "id": "52",
+      "code": "ACE-160674",
       "dni": "01016638",
       "nombre": "BENITES ESPINOZA MAXIMIANO",
       "estado": "A",
@@ -1222,6 +1274,7 @@
     },
     {
       "id": "53",
+      "code": "ACE-090737",
       "dni": "19433759",
       "nombre": "BENITES PALACIOS FRANCISCO",
       "estado": "A",
@@ -1245,6 +1298,7 @@
     },
     {
       "id": "54",
+      "code": "ACE-120547",
       "dni": "01013037",
       "nombre": "BERMEO ALBERCA MARIA JULIA",
       "estado": "A",
@@ -1268,6 +1322,7 @@
     },
     {
       "id": "55",
+      "code": "ACE-070846",
       "dni": "01015641",
       "nombre": "BOGARIN VALDIVIEZO JORGE",
       "estado": "A",
@@ -1291,6 +1346,7 @@
     },
     {
       "id": "56",
+      "code": "ACE-010043",
       "dni": "01001612",
       "nombre": "BUENO MARIÑO ELENA ELMA",
       "estado": "A",
@@ -1314,6 +1370,7 @@
     },
     {
       "id": "57",
+      "code": "ACE-070313",
       "dni": "19404689",
       "nombre": "BURNES CORONEL ANGEL",
       "estado": "A",
@@ -1337,6 +1394,7 @@
     },
     {
       "id": "58",
+      "code": "ACE-040837",
       "dni": "44848146",
       "nombre": "BUSTAMANTE TARRILLO EMELINA",
       "estado": "A",
@@ -1360,6 +1418,7 @@
     },
     {
       "id": "59",
+      "code": "ACE-010847",
       "dni": "00961717",
       "nombre": "BUSTAMANTE TRUJILLO NICOLAS",
       "estado": "A",
@@ -1383,6 +1442,7 @@
     },
     {
       "id": "60",
+      "code": "ACE-040225",
       "dni": "01000696",
       "nombre": "CABALLERO ALVARADO JORGE LUIS",
       "estado": "A",
@@ -1406,6 +1466,7 @@
     },
     {
       "id": "61",
+      "code": "ACE-090740",
       "dni": "47916832",
       "nombre": "CABALLERO DOMINGUEZ JOEL",
       "estado": "A",
@@ -1429,6 +1490,7 @@
     },
     {
       "id": "62",
+      "code": "ACE-090739",
       "dni": "42623518",
       "nombre": "CABALLERO DOMINGUEZ JOSE LUIS",
       "estado": "A",
@@ -1452,6 +1514,7 @@
     },
     {
       "id": "63",
+      "code": "ACE-150513",
       "dni": "01000972",
       "nombre": "CABELLOS HARO EUSEBIO",
       "estado": "A",
@@ -1475,6 +1538,7 @@
     },
     {
       "id": "64",
+      "code": "ACE-160530",
       "dni": "00999164",
       "nombre": "CABELLOS MUÑOZ MARCELINO",
       "estado": "A",
@@ -1498,6 +1562,7 @@
     },
     {
       "id": "65",
+      "code": "ACE-060294",
       "dni": "00120938",
       "nombre": "CACERES CALLISAYA MARIANO",
       "estado": "A",
@@ -1521,6 +1586,7 @@
     },
     {
       "id": "66",
+      "code": "ACE-030210",
       "dni": "01189395",
       "nombre": "CACHA FLORES ZOSIMO TEODULO",
       "estado": "A",
@@ -1544,6 +1610,7 @@
     },
     {
       "id": "67",
+      "code": "ACE-160821",
       "dni": "01187093",
       "nombre": "CAHUANA SULCA CIPRIAN",
       "estado": "A",
@@ -1567,6 +1634,7 @@
     },
     {
       "id": "68",
+      "code": "ACE-130469",
       "dni": "40416899",
       "nombre": "CAICO QUINO ELI MELCHEL",
       "estado": "A",
@@ -1590,6 +1658,7 @@
     },
     {
       "id": "69",
+      "code": "ACE-140541",
       "dni": "00999712",
       "nombre": "CAIPO ESCOBEDO ESTEBAN",
       "estado": "A",
@@ -1613,6 +1682,7 @@
     },
     {
       "id": "70",
+      "code": "ACE-070314",
       "dni": "01187556",
       "nombre": "CALDERON VALLE ALBERTO",
       "estado": "A",
@@ -1636,6 +1706,7 @@
     },
     {
       "id": "71",
+      "code": "ACE-070315",
       "dni": "00998721",
       "nombre": "CAMPOS CASTILLO TEDELVINA",
       "estado": "A",
@@ -1659,6 +1730,7 @@
     },
     {
       "id": "72",
+      "code": "ACE-140494",
       "dni": "01013119",
       "nombre": "CAMPOS HERNANDEZ JUANA",
       "estado": "A",
@@ -1682,6 +1754,7 @@
     },
     {
       "id": "73",
+      "code": "ACE-010016",
       "dni": "00986131",
       "nombre": "CAMPOS HERRERA JUAN",
       "estado": "A",
@@ -1705,6 +1778,7 @@
     },
     {
       "id": "74",
+      "code": "ACE-160531",
       "dni": "00992043",
       "nombre": "CAMPOS JARA IRENO",
       "estado": "A",
@@ -1728,6 +1802,7 @@
     },
     {
       "id": "75",
+      "code": "ACE-160532",
       "dni": "41618070",
       "nombre": "CAMPOS PUELLES DAVID",
       "estado": "A",
@@ -1751,6 +1826,7 @@
     },
     {
       "id": "76",
+      "code": "ACE-160675",
       "dni": "43586751",
       "nombre": "CAMPOS PUELLES WILMER",
       "estado": "A",
@@ -1774,6 +1850,7 @@
     },
     {
       "id": "77",
+      "code": "ACE-040226",
       "dni": "40525530",
       "nombre": "CAMPOS QUEZADA JORGE DANIEL",
       "estado": "A",
@@ -1797,6 +1874,7 @@
     },
     {
       "id": "78",
+      "code": "ACE-160778",
       "dni": "00993793",
       "nombre": "CAMPOS VALDIVIEZO JULIO",
       "estado": "A",
@@ -1820,6 +1898,7 @@
     },
     {
       "id": "79",
+      "code": "ACE-150514",
       "dni": "30488820",
       "nombre": "CANALES CCENCHO JESUS",
       "estado": "A",
@@ -1843,6 +1922,7 @@
     },
     {
       "id": "80",
+      "code": "ACE-040228",
       "dni": "01014712",
       "nombre": "CAPA VIGO ELMER GENARO",
       "estado": "A",
@@ -1866,6 +1946,7 @@
     },
     {
       "id": "81",
+      "code": "ACE-010018",
       "dni": "00993579",
       "nombre": "CAPAC LUNA TEODORO",
       "estado": "A",
@@ -1889,6 +1970,7 @@
     },
     {
       "id": "82",
+      "code": "ACE-020158",
       "dni": "22733614",
       "nombre": "CAPCHA ALVARADO ALFONSO",
       "estado": "A",
@@ -1912,6 +1994,7 @@
     },
     {
       "id": "83",
+      "code": "ACE-020160",
       "dni": "32771608",
       "nombre": "CARAZAS TORRES JUANA BERNARDITA",
       "estado": "A",
@@ -1935,6 +2018,7 @@
     },
     {
       "id": "84",
+      "code": "ACE-020159",
       "dni": "41102165",
       "nombre": "CARBAJAL HUESEMBER KEYLA",
       "estado": "A",
@@ -1958,6 +2042,7 @@
     },
     {
       "id": "85",
+      "code": "ACE-010814",
       "dni": "40805082",
       "nombre": "CARDENAS FLORES RICHER OSWALDO",
       "estado": "A",
@@ -1981,6 +2066,7 @@
     },
     {
       "id": "86",
+      "code": "ACE-160535",
       "dni": "41712333",
       "nombre": "CARDENAS GUEVARA JHONY",
       "estado": "A",
@@ -2004,6 +2090,7 @@
     },
     {
       "id": "87",
+      "code": "ACE-120549",
       "dni": "01017321",
       "nombre": "CARLOS ARTEAGA JUAN ANASTACIO",
       "estado": "A",
@@ -2027,6 +2114,7 @@
     },
     {
       "id": "88",
+      "code": "ACE-010023",
       "dni": "00985775",
       "nombre": "CARRANZA SIFUENTES LUCAS",
       "estado": "A",
@@ -2050,6 +2138,7 @@
     },
     {
       "id": "89",
+      "code": "ACE-010022",
       "dni": "19400716",
       "nombre": "CARRANZA SIFUENTES PEDRO",
       "estado": "A",
@@ -2073,6 +2162,7 @@
     },
     {
       "id": "90",
+      "code": "ACE-010024",
       "dni": "08829249",
       "nombre": "CARRANZA TAFUR ISABEL",
       "estado": "A",
@@ -2096,6 +2186,7 @@
     },
     {
       "id": "91",
+      "code": "ACE-070316",
       "dni": "01000286",
       "nombre": "CARRERA FLORES MARCELINO",
       "estado": "A",
@@ -2119,6 +2210,7 @@
     },
     {
       "id": "92",
+      "code": "ACE-070318",
       "dni": "41794751",
       "nombre": "CARRERA JARA MARLENI MARUJA",
       "estado": "A",
@@ -2142,6 +2234,7 @@
     },
     {
       "id": "93",
+      "code": "ACE-070319",
       "dni": "44493351",
       "nombre": "CARRERA JARA YORELA ROSARIO",
       "estado": "A",
@@ -2165,6 +2258,7 @@
     },
     {
       "id": "94",
+      "code": "ACE-140495",
       "dni": "01000121",
       "nombre": "CARRERA PIMENTEL SILVIA",
       "estado": "A",
@@ -2188,6 +2282,7 @@
     },
     {
       "id": "95",
+      "code": "ACE-070525",
       "dni": "00985608",
       "nombre": "CARTAGENA ESCALANTE ELIA",
       "estado": "A",
@@ -2211,6 +2306,7 @@
     },
     {
       "id": "96",
+      "code": "ACE-070325",
       "dni": "00999030",
       "nombre": "CARTAGENA ESCALANTE GRACIELA",
       "estado": "A",
@@ -2234,6 +2330,7 @@
     },
     {
       "id": "97",
+      "code": "ACE-070323",
       "dni": "00985833",
       "nombre": "CARTAGENA ESCALANTE JOSE",
       "estado": "A",
@@ -2257,6 +2354,7 @@
     },
     {
       "id": "98",
+      "code": "ACE-070324",
       "dni": "01012288",
       "nombre": "CARTAGENA ESCALANTE LUZ MARINA",
       "estado": "A",
@@ -2280,6 +2378,7 @@
     },
     {
       "id": "99",
+      "code": "ACE-070322",
       "dni": "00996284",
       "nombre": "CARTAGENA ESCALANTE ROSA ANGELICA",
       "estado": "A",
@@ -2303,6 +2402,7 @@
     },
     {
       "id": "100",
+      "code": "ACE-020161",
       "dni": "01012258",
       "nombre": "CARTAGENA RUIZ MIRIAM EDELMIRA",
       "estado": "A",
@@ -2326,6 +2426,7 @@
     },
     {
       "id": "101",
+      "code": "ACE-060295",
       "dni": "80047187",
       "nombre": "CARUAJULCA DIAZ SEGUNDO MARCIAL",
       "estado": "A",
@@ -2349,6 +2450,7 @@
     },
     {
       "id": "102",
+      "code": "ACE-090738",
       "dni": "00984830",
       "nombre": "CASAHUAMAN IZAGUIRRE TEODORO",
       "estado": "A",
@@ -2372,6 +2474,7 @@
     },
     {
       "id": "103",
+      "code": "ACE-010816",
       "dni": "00978593",
       "nombre": "CASTILLO AGUIRRE BERONICA",
       "estado": "A",
@@ -2395,6 +2498,7 @@
     },
     {
       "id": "104",
+      "code": "ACE-010025",
       "dni": "01001751",
       "nombre": "CASTILLO CAPA AURELIANO",
       "estado": "A",
@@ -2418,6 +2522,7 @@
     },
     {
       "id": "105",
+      "code": "",
       "dni": "00986067",
       "nombre": "CASTILLO CENIZARIO DAVLIN ULARIO",
       "estado": "I",
@@ -2441,6 +2546,7 @@
     },
     {
       "id": "106",
+      "code": "ACE-010027",
       "dni": "17875419",
       "nombre": "CASTILLO FLORES ANGEL DOMINGO",
       "estado": "A",
@@ -2464,6 +2570,7 @@
     },
     {
       "id": "107",
+      "code": "ACE-010028",
       "dni": "01017697",
       "nombre": "CASTILLO FLORES LUCILA BEATRIZ",
       "estado": "A",
@@ -2487,6 +2594,7 @@
     },
     {
       "id": "108",
+      "code": "ACE-160536",
       "dni": "00994676",
       "nombre": "CASTILLO MEDINA AURELIANO",
       "estado": "A",
@@ -2510,6 +2618,7 @@
     },
     {
       "id": "109",
+      "code": "ACE-050273",
       "dni": "01016792",
       "nombre": "CASTILLO OJEDA YOLANDA",
       "estado": "A",
@@ -2533,6 +2642,7 @@
     },
     {
       "id": "110",
+      "code": "ACE-080694",
       "dni": "44889513",
       "nombre": "CASTILLO PEREZ ALEJANDRO",
       "estado": "A",
@@ -2556,6 +2666,7 @@
     },
     {
       "id": "111",
+      "code": "ACE-080695",
       "dni": "40964751",
       "nombre": "CASTILLO PEREZ HERNAN",
       "estado": "A",
@@ -2579,6 +2690,7 @@
     },
     {
       "id": "112",
+      "code": "ACE-020841",
       "dni": "01186247",
       "nombre": "CASTILLO UMAN BRIGIDA",
       "estado": "A",
@@ -2602,6 +2714,7 @@
     },
     {
       "id": "113",
+      "code": "ACE-040517",
       "dni": "32975004",
       "nombre": "CASTILLO VIERA HONORATO",
       "estado": "A",
@@ -2625,6 +2738,7 @@
     },
     {
       "id": "114",
+      "code": "ACE-010030",
       "dni": "01186044",
       "nombre": "CASTILLO VIERA SIMON",
       "estado": "A",
@@ -2648,6 +2762,7 @@
     },
     {
       "id": "115",
+      "code": "ACE-020176",
       "dni": "00985380",
       "nombre": "CASTRO TINTA REY ESTEBAN",
       "estado": "A",
@@ -2671,6 +2786,7 @@
     },
     {
       "id": "116",
+      "code": "ACE-160537",
       "dni": "00962528",
       "nombre": "CAYATOPA LOZANO YREY",
       "estado": "A",
@@ -2694,6 +2810,7 @@
     },
     {
       "id": "117",
+      "code": "ACE-010031",
       "dni": "01001976",
       "nombre": "CENIZARIO ABURTO JORGE",
       "estado": "A",
@@ -2717,6 +2834,7 @@
     },
     {
       "id": "118",
+      "code": "ACE-100544",
       "dni": "41248811",
       "nombre": "CENTENO GUTIERREZ CRISTINA",
       "estado": "A",
@@ -2740,6 +2858,7 @@
     },
     {
       "id": "119",
+      "code": "ACE-050274",
       "dni": "42391474",
       "nombre": "CERCADO FERNANDEZ SELSO",
       "estado": "A",
@@ -2763,6 +2882,7 @@
     },
     {
       "id": "120",
+      "code": "ACE-100789",
       "dni": "00994069",
       "nombre": "CHANTA ALBERCA TAVITA",
       "estado": "A",
@@ -2786,6 +2906,7 @@
     },
     {
       "id": "121",
+      "code": "ACE-010032",
       "dni": "00128355",
       "nombre": "CHAVEZ VELASQUEZ BEBERLY",
       "estado": "A",
@@ -2809,6 +2930,7 @@
     },
     {
       "id": "122",
+      "code": "ACE-020849",
       "dni": "01187329",
       "nombre": "CHIHUALA LECCA BAUDILLO",
       "estado": "A",
@@ -2832,6 +2954,7 @@
     },
     {
       "id": "123",
+      "code": "ACE-010039",
       "dni": "01013633",
       "nombre": "CHINCHAYHUARA OTINIANO JHONATAN",
       "estado": "A",
@@ -2855,6 +2978,7 @@
     },
     {
       "id": "124",
+      "code": "ACE-010033",
       "dni": "00985981",
       "nombre": "CHISTAMA PEREZ WERLINGER",
       "estado": "A",
@@ -2878,6 +3002,7 @@
     },
     {
       "id": "125",
+      "code": "ACE-010034",
       "dni": "01189393",
       "nombre": "CHUMBE GONZALES WILIAN",
       "estado": "A",
@@ -2901,6 +3026,7 @@
     },
     {
       "id": "126",
+      "code": "ACE-130472",
       "dni": "01186705",
       "nombre": "CHUQUILLIN MONTERO EDILBERTO FELICIANO",
       "estado": "A",
@@ -2924,6 +3050,7 @@
     },
     {
       "id": "127",
+      "code": "ACE-010035",
       "dni": "01016637",
       "nombre": "CIEZA COTRINA JULIAN",
       "estado": "A",
@@ -2947,6 +3074,7 @@
     },
     {
       "id": "128",
+      "code": "ACE-080861",
       "dni": "33242501",
       "nombre": "COLCHADO MACHAO CLAUDIA CELESTINA",
       "estado": "A",
@@ -2970,6 +3098,7 @@
     },
     {
       "id": "129",
+      "code": "ACE-070326",
       "dni": "00992195",
       "nombre": "COLLANTES CADILLO LUCAS",
       "estado": "A",
@@ -2993,6 +3122,7 @@
     },
     {
       "id": "130",
+      "code": "ACE-070327",
       "dni": "44898495",
       "nombre": "COLLANTES RAMIREZ VANESA IRIS",
       "estado": "A",
@@ -3016,6 +3146,7 @@
     },
     {
       "id": "131",
+      "code": "",
       "dni": "46640286",
       "nombre": "CONTRERAS FLORES DAVID CRESENCIO",
       "estado": "I",
@@ -3039,6 +3170,7 @@
     },
     {
       "id": "132",
+      "code": "ACE-160539",
       "dni": "01012945",
       "nombre": "CORDOVA CORDOVA HENRY",
       "estado": "A",
@@ -3062,6 +3194,7 @@
     },
     {
       "id": "133",
+      "code": "ACE-020162",
       "dni": "01170070",
       "nombre": "CORO DIAZ JUAN MARTIN",
       "estado": "A",
@@ -3085,6 +3218,7 @@
     },
     {
       "id": "134",
+      "code": "ACE-160541",
       "dni": "01187098",
       "nombre": "CORONEL HEREDIA JOSE LUIS",
       "estado": "A",
@@ -3108,6 +3242,7 @@
     },
     {
       "id": "135",
+      "code": "ACE-140496",
       "dni": "01189741",
       "nombre": "CORREA CARRERA ARTURO",
       "estado": "A",
@@ -3131,6 +3266,7 @@
     },
     {
       "id": "136",
+      "code": "ACE-140542",
       "dni": "44211916",
       "nombre": "CORREA CARRERA ELMER",
       "estado": "A",
@@ -3154,6 +3290,7 @@
     },
     {
       "id": "137",
+      "code": "ACE-010036",
       "dni": "01189691",
       "nombre": "CORREA FLORES ESTEBAN",
       "estado": "A",
@@ -3177,6 +3314,7 @@
     },
     {
       "id": "138",
+      "code": "ACE-070328",
       "dni": "33819023",
       "nombre": "CORREA GAMEZ ZONIA",
       "estado": "A",
@@ -3200,6 +3338,7 @@
     },
     {
       "id": "139",
+      "code": "ACE-130534",
       "dni": "01012706",
       "nombre": "CORREA PONCE SENAIDA",
       "estado": "A",
@@ -3223,6 +3362,7 @@
     },
     {
       "id": "140",
+      "code": "ACE-130471",
       "dni": "01015031",
       "nombre": "CORREA SUELPERES ALBIRIO",
       "estado": "A",
@@ -3246,6 +3386,7 @@
     },
     {
       "id": "141",
+      "code": "ACE-010762",
       "dni": "00985958",
       "nombre": "CORREA ZEGARRA IRMA",
       "estado": "A",
@@ -3269,6 +3410,7 @@
     },
     {
       "id": "142",
+      "code": "ACE-150527",
       "dni": "00909263",
       "nombre": "CRISTANCHO VALLES CESAR",
       "estado": "A",
@@ -3292,6 +3434,7 @@
     },
     {
       "id": "143",
+      "code": "ACE-100844",
       "dni": "00961993",
       "nombre": "CRUZ CARDENAS CECILIO",
       "estado": "A",
@@ -3315,6 +3458,7 @@
     },
     {
       "id": "144",
+      "code": "ACE-120806",
       "dni": "41285021",
       "nombre": "CRUZ CRUZ OLMER",
       "estado": "A",
@@ -3338,6 +3482,7 @@
     },
     {
       "id": "145",
+      "code": "ACE-060296",
       "dni": "00985661",
       "nombre": "CRUZADO VIERA DOMINGO MANUEL",
       "estado": "A",
@@ -3361,6 +3506,7 @@
     },
     {
       "id": "146",
+      "code": "ACE-010664",
       "dni": "00986034",
       "nombre": "CUENCA RAMOS PEDRO",
       "estado": "A",
@@ -3384,6 +3530,7 @@
     },
     {
       "id": "147",
+      "code": "ACE-010503",
       "dni": "26714869",
       "nombre": "CUEVA LULICHAC JOSE CRUZ",
       "estado": "A",
@@ -3407,6 +3554,7 @@
     },
     {
       "id": "148",
+      "code": "ACE-010037",
       "dni": "00986121",
       "nombre": "CUEVA MEZA APOLINARIO",
       "estado": "A",
@@ -3430,6 +3578,7 @@
     },
     {
       "id": "149",
+      "code": "ACE-040229",
       "dni": "00985749",
       "nombre": "CUEVA MORILLO MARIA",
       "estado": "A",
@@ -3453,6 +3602,7 @@
     },
     {
       "id": "150",
+      "code": "ACE-010038",
       "dni": "00984968",
       "nombre": "CUEVA SAAVEDRA BALDETRUDES",
       "estado": "A",
@@ -3476,6 +3626,7 @@
     },
     {
       "id": "151",
+      "code": "ACE-030211",
       "dni": "60206459",
       "nombre": "CULQUE MALDONADO LOCTHAR",
       "estado": "A",
@@ -3499,6 +3650,7 @@
     },
     {
       "id": "152",
+      "code": "ACE-170606",
       "dni": "01014074",
       "nombre": "CURO LAPA ARMINDA",
       "estado": "A",
@@ -3522,6 +3674,7 @@
     },
     {
       "id": "153",
+      "code": "ACE-150550",
       "dni": "80362422",
       "nombre": "CUSMA CARUAJULCA ROSA ELVIRA",
       "estado": "A",
@@ -3545,6 +3698,7 @@
     },
     {
       "id": "154",
+      "code": "ACE-170607",
       "dni": "01017593",
       "nombre": "DAZA REINA NELSON SEGUNDO",
       "estado": "A",
@@ -3568,6 +3722,7 @@
     },
     {
       "id": "155",
+      "code": "ACE-070329",
       "dni": "01011006",
       "nombre": "DELGADO CARTAGENA AMADIT",
       "estado": "A",
@@ -3591,6 +3746,7 @@
     },
     {
       "id": "156",
+      "code": "ACE-010040",
       "dni": "00986101",
       "nombre": "DELGADO LLATAS JOSE SANTOS",
       "estado": "A",
@@ -3614,6 +3770,7 @@
     },
     {
       "id": "157",
+      "code": "ACE-160677",
       "dni": "00992985",
       "nombre": "DELGADO VILLANUEVA JUAN",
       "estado": "A",
@@ -3637,6 +3794,7 @@
     },
     {
       "id": "158",
+      "code": "ACE-150516",
       "dni": "01047265",
       "nombre": "DIAZ ALTAMIRANO JOSE VISITACION",
       "estado": "A",
@@ -3660,6 +3818,7 @@
     },
     {
       "id": "159",
+      "code": "ACE-100446",
       "dni": "01035946",
       "nombre": "DIAZ BANDA SEGUNDO PAULINO",
       "estado": "A",
@@ -3683,6 +3842,7 @@
     },
     {
       "id": "160",
+      "code": "ACE-030212",
       "dni": "46254604",
       "nombre": "DIAZ CAMONES MARCO ANTONIO",
       "estado": "A",
@@ -3706,6 +3866,7 @@
     },
     {
       "id": "161",
+      "code": "ACE-030213",
       "dni": "71712062",
       "nombre": "DIAZ CAMONES MERCEDES SONIA",
       "estado": "A",
@@ -3729,6 +3890,7 @@
     },
     {
       "id": "162",
+      "code": "ACE-140498",
       "dni": "00962858",
       "nombre": "DIAZ CRUZADO JORGE ANGEL",
       "estado": "A",
@@ -3752,6 +3914,7 @@
     },
     {
       "id": "163",
+      "code": "ACE-030215",
       "dni": "19407838",
       "nombre": "DIAZ GADEA TOMAS",
       "estado": "A",
@@ -3775,6 +3938,7 @@
     },
     {
       "id": "164",
+      "code": "ACE-030521",
       "dni": "01001733",
       "nombre": "DIAZ JULCA ESPERANZA AURELIA",
       "estado": "A",
@@ -3798,6 +3962,7 @@
     },
     {
       "id": "165",
+      "code": "ACE-030216",
       "dni": "31768110",
       "nombre": "DIAZ JULCA OSCAR LUIS",
       "estado": "A",
@@ -3821,6 +3986,7 @@
     },
     {
       "id": "166",
+      "code": "ACE-170727",
       "dni": "01186322",
       "nombre": "DIESTRA SIFUENTES WILLY ELMER",
       "estado": "A",
@@ -3844,6 +4010,7 @@
     },
     {
       "id": "167",
+      "code": "ACE-010041",
       "dni": "01000672",
       "nombre": "DIONICIO BONIFACIO ALFREDO",
       "estado": "A",
@@ -3867,6 +4034,7 @@
     },
     {
       "id": "168",
+      "code": "ACE-090741",
       "dni": "00984966",
       "nombre": "DOMINGUEZ CUEVA SUSANA",
       "estado": "A",
@@ -3890,6 +4058,7 @@
     },
     {
       "id": "169",
+      "code": "ACE-070330",
       "dni": "19409829",
       "nombre": "DOMINGUEZ FLORES FRANCISCO",
       "estado": "A",
@@ -3913,6 +4082,7 @@
     },
     {
       "id": "170",
+      "code": "ACE-160817",
       "dni": "01016086",
       "nombre": "DOMINGUEZ HARO EMILIANO",
       "estado": "A",
@@ -3936,6 +4106,7 @@
     },
     {
       "id": "171",
+      "code": "ACE-010509",
       "dni": "00986308",
       "nombre": "DOMINGUEZ HERNANDEZ FRANCISCO",
       "estado": "A",
@@ -3959,6 +4130,7 @@
     },
     {
       "id": "172",
+      "code": "ACE-050275",
       "dni": "01001463",
       "nombre": "DOMINGUEZ LIMAS LUCIO",
       "estado": "A",
@@ -3982,6 +4154,7 @@
     },
     {
       "id": "173",
+      "code": "ACE-160543",
       "dni": "33819579",
       "nombre": "DOMINGUEZ ROSAS HOMERO",
       "estado": "A",
@@ -4005,6 +4178,7 @@
     },
     {
       "id": "174",
+      "code": "ACE-160863",
       "dni": "40140937",
       "nombre": "DOMINGUEZ ROSAS MARTHA",
       "estado": "A",
@@ -4028,6 +4202,7 @@
     },
     {
       "id": "175",
+      "code": "ACE-160544",
       "dni": "00994785",
       "nombre": "DOMINGUEZ SALDAÑA SEGUNDO ANDRES",
       "estado": "A",
@@ -4051,6 +4226,7 @@
     },
     {
       "id": "176",
+      "code": "ACE-160799",
       "dni": "00999471",
       "nombre": "DOMINGUEZ SOLIS GLICERIA",
       "estado": "A",
@@ -4074,6 +4250,7 @@
     },
     {
       "id": "177",
+      "code": "ACE-050276",
       "dni": "00962377",
       "nombre": "ESCUDERO ZEGARRA FEDERICO",
       "estado": "A",
@@ -4097,6 +4274,7 @@
     },
     {
       "id": "178",
+      "code": "ACE-160678",
       "dni": "43358393",
       "nombre": "ESPINOZA JARA CRESILA",
       "estado": "A",
@@ -4120,6 +4298,7 @@
     },
     {
       "id": "179",
+      "code": "ACE-020165",
       "dni": "10164082",
       "nombre": "ESPINOZA LOZANO GLENDA",
       "estado": "A",
@@ -4143,6 +4322,7 @@
     },
     {
       "id": "180",
+      "code": "ACE-020166",
       "dni": "01001034",
       "nombre": "ESPINOZA LOZANO HELI EDGARD",
       "estado": "A",
@@ -4166,6 +4346,7 @@
     },
     {
       "id": "181",
+      "code": "",
       "dni": "00986312",
       "nombre": "ESPINOZA RUIZ ADELA",
       "estado": "I",
@@ -4189,6 +4370,7 @@
     },
     {
       "id": "182",
+      "code": "ACE-010044",
       "dni": "00985735",
       "nombre": "ESTEBAN MUÑOZ GLADYS SIMONA",
       "estado": "A",
@@ -4212,6 +4394,7 @@
     },
     {
       "id": "183",
+      "code": "ACE-160641",
       "dni": "80137451",
       "nombre": "ESTELA OLIVAR EDGAR JORGE",
       "estado": "A",
@@ -4235,6 +4418,7 @@
     },
     {
       "id": "184",
+      "code": "ACE-080697",
       "dni": "19423939",
       "nombre": "ESTRADA QUEZADA JESUS FLORES",
       "estado": "A",
@@ -4258,6 +4442,7 @@
     },
     {
       "id": "185",
+      "code": "ACE-080698",
       "dni": "19424586",
       "nombre": "ESTRADA QUEZADA LEONOR",
       "estado": "A",
@@ -4281,6 +4466,7 @@
     },
     {
       "id": "186",
+      "code": "ACE-080696",
       "dni": "19424284",
       "nombre": "ESTRADA QUEZADA SANTOS",
       "estado": "A",
@@ -4304,6 +4490,7 @@
     },
     {
       "id": "187",
+      "code": "ACE-150517",
       "dni": "00998042",
       "nombre": "FASABI GOMEZ OLIGAR",
       "estado": "A",
@@ -4327,6 +4514,7 @@
     },
     {
       "id": "188",
+      "code": "ACE-150518",
       "dni": "33818996",
       "nombre": "FASABI SATALAYA NELBI",
       "estado": "A",
@@ -4350,6 +4538,7 @@
     },
     {
       "id": "189",
+      "code": "ACE-040232",
       "dni": "00986283",
       "nombre": "FASANANDO PANAIFO CLEIDER DAMIAN",
       "estado": "A",
@@ -4373,6 +4562,7 @@
     },
     {
       "id": "190",
+      "code": "ACE-170609",
       "dni": "00961665",
       "nombre": "FERNANDEZ LOZANO ANTONIO",
       "estado": "A",
@@ -4396,6 +4586,7 @@
     },
     {
       "id": "191",
+      "code": "ACE-130473",
       "dni": "00997723",
       "nombre": "FERNANDEZ REGALADO CELSO",
       "estado": "A",
@@ -4419,6 +4610,7 @@
     },
     {
       "id": "192",
+      "code": "ACE-100447",
       "dni": "25531559",
       "nombre": "FLORES BENANCIO DELFILIA",
       "estado": "A",
@@ -4442,6 +4634,7 @@
     },
     {
       "id": "193",
+      "code": "ACE-160548",
       "dni": "00985612",
       "nombre": "FLORES DE VALDIVIEZO CANDELARIA",
       "estado": "A",
@@ -4465,6 +4658,7 @@
     },
     {
       "id": "194",
+      "code": "ACE-160547",
       "dni": "00999448",
       "nombre": "FLORES INGA PAULINA",
       "estado": "A",
@@ -4488,6 +4682,7 @@
     },
     {
       "id": "195",
+      "code": "ACE-070331",
       "dni": "00962482",
       "nombre": "FLORES OJEDA REYNA BELINDA",
       "estado": "A",
@@ -4511,6 +4706,7 @@
     },
     {
       "id": "196",
+      "code": "ACE-010046",
       "dni": "22965229",
       "nombre": "FLORES RIOS MARIA REGINA",
       "estado": "A",
@@ -4534,6 +4730,7 @@
     },
     {
       "id": "197",
+      "code": "ACE-140499",
       "dni": "00993547",
       "nombre": "FLORES SHUPINGAHUA WUILMER",
       "estado": "A",
@@ -4557,6 +4754,7 @@
     },
     {
       "id": "198",
+      "code": "ACE-080699",
       "dni": "03216832",
       "nombre": "FLORES YAJAHUANCA TRASLACION",
       "estado": "A",
@@ -4580,6 +4778,7 @@
     },
     {
       "id": "199",
+      "code": "ACE-010047",
       "dni": "00985897",
       "nombre": "FLORES YPARRAGUIRRE WUILFREDO",
       "estado": "A",
@@ -4603,6 +4802,7 @@
     },
     {
       "id": "200",
+      "code": "ACE-040234",
       "dni": "00992474",
       "nombre": "FRANCO VIGO FELICIANO",
       "estado": "A",
@@ -4626,6 +4826,7 @@
     },
     {
       "id": "201",
+      "code": "ACE-020168",
       "dni": "00984821",
       "nombre": "FRANCO VIGO VIRGILIO",
       "estado": "A",
@@ -4649,6 +4850,7 @@
     },
     {
       "id": "202",
+      "code": "ACE-130475",
       "dni": "01186312",
       "nombre": "FUSTER HURTADO VICTOR",
       "estado": "A",
@@ -4672,6 +4874,7 @@
     },
     {
       "id": "203",
+      "code": "ACE-020169",
       "dni": "01013060",
       "nombre": "GADEA GUEVARA JORGE",
       "estado": "A",
@@ -4695,6 +4898,7 @@
     },
     {
       "id": "204",
+      "code": "ACE-010048",
       "dni": "01001574",
       "nombre": "GALINDOS LOPEZ LUCINDO",
       "estado": "A",
@@ -4718,6 +4922,7 @@
     },
     {
       "id": "205",
+      "code": "ACE-020170",
       "dni": "01001644",
       "nombre": "GAMEZ GAMEZ AIDA",
       "estado": "A",
@@ -4741,6 +4946,7 @@
     },
     {
       "id": "206",
+      "code": "ACE-070334",
       "dni": "01000403",
       "nombre": "GAMEZ HERNANDEZ MARIA DELINA",
       "estado": "A",
@@ -4764,6 +4970,7 @@
     },
     {
       "id": "207",
+      "code": "ACE-160680",
       "dni": "00992525",
       "nombre": "GAMEZ MAZA ALBERTO",
       "estado": "A",
@@ -4787,6 +4994,7 @@
     },
     {
       "id": "208",
+      "code": "ACE-160551",
       "dni": "00985886",
       "nombre": "GENOVEZ FLORES ZENAIDA",
       "estado": "A",
@@ -4810,6 +5018,7 @@
     },
     {
       "id": "209",
+      "code": "ACE-120807",
       "dni": "80678798",
       "nombre": "GENOVEZ MARREROS JULIO",
       "estado": "A",
@@ -4833,6 +5042,7 @@
     },
     {
       "id": "210",
+      "code": "ACE-130476",
       "dni": "05323218",
       "nombre": "GONZALES INDAMA ZENON",
       "estado": "A",
@@ -4856,6 +5066,7 @@
     },
     {
       "id": "211",
+      "code": "ACE-170610",
       "dni": "01189524",
       "nombre": "GONZALES MOREY LIZ ANDREA",
       "estado": "A",
@@ -4879,6 +5090,7 @@
     },
     {
       "id": "212",
+      "code": "ACE-010051",
       "dni": "00992077",
       "nombre": "GRANDEZ ISMINIO ENMA OFELIA",
       "estado": "A",
@@ -4902,6 +5114,7 @@
     },
     {
       "id": "213",
+      "code": "ACE-020515",
       "dni": "00992468",
       "nombre": "GRANDEZ REATEGUI AQUILIO",
       "estado": "A",
@@ -4925,6 +5138,7 @@
     },
     {
       "id": "214",
+      "code": "ACE-130477",
       "dni": "27373581",
       "nombre": "GUEVARA BARRANTES ISIDRO",
       "estado": "A",
@@ -4948,6 +5162,7 @@
     },
     {
       "id": "215",
+      "code": "ACE-070526",
       "dni": "44942953",
       "nombre": "GUEVARA LUDEÑA LIRA DIRSE",
       "estado": "A",
@@ -4971,6 +5186,7 @@
     },
     {
       "id": "216",
+      "code": "ACE-160835",
       "dni": "01186723",
       "nombre": "GUEVARA SANCHEZ ELENA",
       "estado": "A",
@@ -4994,6 +5210,7 @@
     },
     {
       "id": "217",
+      "code": "ACE-010505",
       "dni": "00985849",
       "nombre": "GUZMAN ANGULO EDA TEONILA",
       "estado": "A",
@@ -5017,6 +5234,7 @@
     },
     {
       "id": "218",
+      "code": "ACE-070333",
       "dni": "00992549",
       "nombre": "GUZMAN BARTRA DE GRANDEZ ELSI",
       "estado": "A",
@@ -5040,6 +5258,7 @@
     },
     {
       "id": "219",
+      "code": "ACE-040235",
       "dni": "01001466",
       "nombre": "HARO CARBAJAL RODOLFO",
       "estado": "A",
@@ -5063,6 +5282,7 @@
     },
     {
       "id": "220",
+      "code": "ACE-070337",
       "dni": "01011332",
       "nombre": "HARO DOMINGUEZ JOSE",
       "estado": "A",
@@ -5086,6 +5306,7 @@
     },
     {
       "id": "221",
+      "code": "ACE-130638",
       "dni": "40786194",
       "nombre": "HARO GALINDOS HITLER",
       "estado": "A",
@@ -5109,6 +5330,7 @@
     },
     {
       "id": "222",
+      "code": "ACE-170611",
       "dni": "01013878",
       "nombre": "HARO VIERA MOISES EDUARDO",
       "estado": "A",
@@ -5132,6 +5354,7 @@
     },
     {
       "id": "223",
+      "code": "ACE-040236",
       "dni": "00986053",
       "nombre": "HAUXWELL TENAZOA ROSA BELMIRA",
       "estado": "A",
@@ -5155,6 +5378,7 @@
     },
     {
       "id": "224",
+      "code": "ACE-040239",
       "dni": "01014072",
       "nombre": "HERNANDEZ MORALES HUGO",
       "estado": "A",
@@ -5178,6 +5402,7 @@
     },
     {
       "id": "225",
+      "code": "ACE-040238",
       "dni": "00986277",
       "nombre": "HERNANDEZ PAREDES AQUILES",
       "estado": "A",
@@ -5201,6 +5426,7 @@
     },
     {
       "id": "226",
+      "code": "ACE-080700",
       "dni": "08093697",
       "nombre": "HERNANDEZ SALAZAR JOSE DILMAN",
       "estado": "A",
@@ -5224,6 +5450,7 @@
     },
     {
       "id": "227",
+      "code": "ACE-010053",
       "dni": "00985895",
       "nombre": "HERRERA CARHUANIRA CIRILA",
       "estado": "A",
@@ -5247,6 +5474,7 @@
     },
     {
       "id": "228",
+      "code": "ACE-010857",
       "dni": "00986070",
       "nombre": "HERRERA DE PALMI REBECA",
       "estado": "A",
@@ -5270,6 +5498,7 @@
     },
     {
       "id": "229",
+      "code": "ACE-070338",
       "dni": "00961616",
       "nombre": "HERRERA GOMEZ FILOMENO",
       "estado": "A",
@@ -5293,6 +5522,7 @@
     },
     {
       "id": "230",
+      "code": "ACE-080702",
       "dni": "19432620",
       "nombre": "HERRERA MALDONADO GERMAN",
       "estado": "A",
@@ -5316,6 +5546,7 @@
     },
     {
       "id": "231",
+      "code": "ACE-080701",
       "dni": "01011441",
       "nombre": "HERRERA MALDONADO ROSARIO",
       "estado": "A",
@@ -5339,6 +5570,7 @@
     },
     {
       "id": "232",
+      "code": "ACE-120460",
       "dni": "01012495",
       "nombre": "HERRERA MARTINEZ ANGULO",
       "estado": "A",
@@ -5362,6 +5594,7 @@
     },
     {
       "id": "233",
+      "code": "ACE-010054",
       "dni": "01001223",
       "nombre": "HERRERA MARTINEZ FRANCISCO",
       "estado": "A",
@@ -5373,8 +5606,8 @@
       "entidadbancaria": "",
       "nrocuenta": "",
       "email": "",
-      "residencia": "",
-      "localidad": "",
+      "residencia": "BANBAMARCA",
+      "localidad": "BANBAMARCA",
       "distrito": "TOCACHE",
       "provincia": "TOCACHE",
       "departamento": "SAN MARTIN",
@@ -5385,6 +5618,7 @@
     },
     {
       "id": "234",
+      "code": "ACE-020173",
       "dni": "01001621",
       "nombre": "HERRERA MARTINEZ JUAN",
       "estado": "A",
@@ -5408,6 +5642,7 @@
     },
     {
       "id": "235",
+      "code": "ACE-010055",
       "dni": "01014068",
       "nombre": "HERRERA MARTINEZ MARIA SALOME",
       "estado": "A",
@@ -5431,6 +5666,7 @@
     },
     {
       "id": "236",
+      "code": "ACE-080703",
       "dni": "41770511",
       "nombre": "HERRERA MODESTO HECTOR",
       "estado": "A",
@@ -5454,6 +5690,7 @@
     },
     {
       "id": "237",
+      "code": "ACE-010506",
       "dni": "19423845",
       "nombre": "HERRERA RAMOS FRANCISCO MARCOS",
       "estado": "A",
@@ -5477,6 +5714,7 @@
     },
     {
       "id": "238",
+      "code": "ACE-010057",
       "dni": "00986245",
       "nombre": "HERRERA RAMOS MIGUEL",
       "estado": "A",
@@ -5500,6 +5738,7 @@
     },
     {
       "id": "239",
+      "code": "ACE-160818",
       "dni": "01012676",
       "nombre": "HERRERA RONDO ANIBAL NICOLAS",
       "estado": "A",
@@ -5523,6 +5762,7 @@
     },
     {
       "id": "240",
+      "code": "ACE-040237",
       "dni": "44940686",
       "nombre": "HERRERA VASQUEZ MIGUEL ANGEL",
       "estado": "A",
@@ -5546,6 +5786,7 @@
     },
     {
       "id": "241",
+      "code": "ACE-050277",
       "dni": "00985541",
       "nombre": "HINOSTROZA CACHA EUZEBIO",
       "estado": "A",
@@ -5569,6 +5810,7 @@
     },
     {
       "id": "242",
+      "code": "ACE-010058",
       "dni": "00985781",
       "nombre": "HONORIO JUANPEDRO ANCELMO",
       "estado": "A",
@@ -5592,6 +5834,7 @@
     },
     {
       "id": "243",
+      "code": "ACE-170770",
       "dni": "00985659",
       "nombre": "HUALCAS BRIONES AGUSTINA",
       "estado": "A",
@@ -5615,6 +5858,7 @@
     },
     {
       "id": "244",
+      "code": "ACE-010059",
       "dni": "00985703",
       "nombre": "HUALCAS CORONEL VICENTE",
       "estado": "A",
@@ -5638,6 +5882,7 @@
     },
     {
       "id": "245",
+      "code": "ACE-080704",
       "dni": "08820196",
       "nombre": "HUAMAN JUNCO LEONIDAS",
       "estado": "A",
@@ -5661,6 +5906,7 @@
     },
     {
       "id": "246",
+      "code": "ACE-070339",
       "dni": "00961505",
       "nombre": "HUAMAN REYNA ABEL",
       "estado": "A",
@@ -5684,6 +5930,7 @@
     },
     {
       "id": "247",
+      "code": "ACE-080782",
       "dni": "44049348",
       "nombre": "HUAMAN SALINAS NERI",
       "estado": "A",
@@ -5707,6 +5954,7 @@
     },
     {
       "id": "248",
+      "code": "ACE-140543",
       "dni": "80678773",
       "nombre": "HUARAHUARA CAMPOMANES JAQUELINE ERCILIA",
       "estado": "A",
@@ -5730,6 +5978,7 @@
     },
     {
       "id": "249",
+      "code": "ACE-160553",
       "dni": "01015392",
       "nombre": "HUIZA ROJAS AMERICO",
       "estado": "A",
@@ -5753,6 +6002,7 @@
     },
     {
       "id": "250",
+      "code": "ACE-040852",
       "dni": "33818757",
       "nombre": "INGA ASPAJO EMILIANO",
       "estado": "A",
@@ -5776,6 +6026,7 @@
     },
     {
       "id": "251",
+      "code": "ACE-010060",
       "dni": "00976073",
       "nombre": "INGA QUILICHI ARQUIMIDES",
       "estado": "A",
@@ -5799,6 +6050,7 @@
     },
     {
       "id": "252",
+      "code": "ACE-020848",
       "dni": "00961783",
       "nombre": "JAMBO LARA ROGELIO",
       "estado": "A",
@@ -5822,6 +6074,7 @@
     },
     {
       "id": "253",
+      "code": "ACE-140796",
       "dni": "00999859",
       "nombre": "JARA CABALLERO ADELA",
       "estado": "A",
@@ -5845,6 +6098,7 @@
     },
     {
       "id": "254",
+      "code": "ACE-080390",
       "dni": "00985208",
       "nombre": "JARA CARLOS HUMBERTO",
       "estado": "A",
@@ -5868,6 +6122,7 @@
     },
     {
       "id": "255",
+      "code": "ACE-020518",
       "dni": "00986384",
       "nombre": "JARA DOMINGUEZ REINALDO",
       "estado": "A",
@@ -5891,6 +6146,7 @@
     },
     {
       "id": "256",
+      "code": "ACE-070340",
       "dni": "00999896",
       "nombre": "JARA OTINIANO LUCIA",
       "estado": "A",
@@ -5914,6 +6170,7 @@
     },
     {
       "id": "257",
+      "code": "ACE-080705",
       "dni": "00999203",
       "nombre": "JARA ROSAS MAURO",
       "estado": "A",
@@ -5937,6 +6194,7 @@
     },
     {
       "id": "258",
+      "code": "ACE-070341",
       "dni": "00976027",
       "nombre": "JARA VIDAL BACILIO JACOB",
       "estado": "A",
@@ -5960,6 +6218,7 @@
     },
     {
       "id": "259",
+      "code": "ACE-160681",
       "dni": "00999006",
       "nombre": "JARAMILLO ESTEBAN ISIDORO",
       "estado": "A",
@@ -5983,6 +6242,7 @@
     },
     {
       "id": "260",
+      "code": "",
       "dni": "00985382",
       "nombre": "JESUS VASQUEZ NORA",
       "estado": "I",
@@ -6006,6 +6266,7 @@
     },
     {
       "id": "261",
+      "code": "ACE-150520",
       "dni": "02616969",
       "nombre": "JIMENEZ GONZA JORGE LUIS",
       "estado": "A",
@@ -6029,6 +6290,7 @@
     },
     {
       "id": "262",
+      "code": "ACE-080836",
       "dni": "43508573",
       "nombre": "JULCA DELGADO NICOLAS",
       "estado": "A",
@@ -6052,6 +6314,7 @@
     },
     {
       "id": "263",
+      "code": "ACE-080706",
       "dni": "80413720",
       "nombre": "JULCA DELGADO SANTOS AGAPITO",
       "estado": "A",
@@ -6075,6 +6338,7 @@
     },
     {
       "id": "264",
+      "code": "ACE-130536",
       "dni": "01189204",
       "nombre": "JULCA PALOMINO SAUL",
       "estado": "A",
@@ -6098,6 +6362,7 @@
     },
     {
       "id": "265",
+      "code": "ACE-010062",
       "dni": "01011338",
       "nombre": "LAGUNA VILLANUEVA PEDRO ALEJANDRO",
       "estado": "A",
@@ -6121,6 +6386,7 @@
     },
     {
       "id": "266",
+      "code": "ACE-160555",
       "dni": "00993629",
       "nombre": "LANARES VDA DE HORNA PAULA",
       "estado": "A",
@@ -6144,6 +6410,7 @@
     },
     {
       "id": "267",
+      "code": "ACE-010061",
       "dni": "00986341",
       "nombre": "LASTRA MIRAVAL LAVERIANO",
       "estado": "A",
@@ -6167,6 +6434,7 @@
     },
     {
       "id": "268",
+      "code": "ACE-040240",
       "dni": "09469860",
       "nombre": "LAZARO BALBOA ARTURO",
       "estado": "A",
@@ -6190,6 +6458,7 @@
     },
     {
       "id": "269",
+      "code": "ACE-040241",
       "dni": "00985513",
       "nombre": "LAZARO CHACON TEODORO",
       "estado": "A",
@@ -6213,6 +6482,7 @@
     },
     {
       "id": "270",
+      "code": "ACE-140504",
       "dni": "01015375",
       "nombre": "LECCA SANDOVAL FRANCISCA",
       "estado": "A",
@@ -6236,6 +6506,7 @@
     },
     {
       "id": "271",
+      "code": "ACE-060299",
       "dni": "00985267",
       "nombre": "LECCA VILLARREAL ELEOTERIO",
       "estado": "A",
@@ -6247,7 +6518,7 @@
       "entidadbancaria": "BANCO DE LA NACION",
       "nrocuenta": "498083779",
       "email": "",
-      "residencia": "",
+      "residencia": "CAÑUTO",
       "localidad": "NUEVO HORIZONTE",
       "distrito": "TOCACHE",
       "provincia": "TOCACHE",
@@ -6259,6 +6530,7 @@
     },
     {
       "id": "272",
+      "code": "ACE-020645",
       "dni": "01001730",
       "nombre": "LEONARDO VILLANUEVA ZACARIAS",
       "estado": "A",
@@ -6282,6 +6554,7 @@
     },
     {
       "id": "273",
+      "code": "ACE-080783",
       "dni": "40840783",
       "nombre": "LEZAMA ROMERO MARIELA ELENA",
       "estado": "A",
@@ -6305,6 +6578,7 @@
     },
     {
       "id": "274",
+      "code": "ACE-130479",
       "dni": "20693976",
       "nombre": "LIMACHE CAMAC JUANA",
       "estado": "A",
@@ -6328,6 +6602,7 @@
     },
     {
       "id": "275",
+      "code": "",
       "dni": "19431655",
       "nombre": "LINGAN ORTEGA LUIS",
       "estado": "I",
@@ -6351,6 +6626,7 @@
     },
     {
       "id": "276",
+      "code": "ACE-180771",
       "dni": "45416762",
       "nombre": "LINO GOBIA CLEDY",
       "estado": "A",
@@ -6374,6 +6650,7 @@
     },
     {
       "id": "277",
+      "code": "ACE-010064",
       "dni": "03862817",
       "nombre": "LOAYZA PAREJA MANUEL JESUS",
       "estado": "A",
@@ -6397,6 +6674,7 @@
     },
     {
       "id": "278",
+      "code": "ACE-010065",
       "dni": "08384127",
       "nombre": "LOAYZA PAREJA VICTOR",
       "estado": "A",
@@ -6420,6 +6698,7 @@
     },
     {
       "id": "279",
+      "code": "ACE-080395",
       "dni": "00985254",
       "nombre": "LOPEZ ALVA NICOLAS",
       "estado": "A",
@@ -6443,6 +6722,7 @@
     },
     {
       "id": "280",
+      "code": "ACE-010066",
       "dni": "01001911",
       "nombre": "LOPEZ BONIFACIO ALBERTO",
       "estado": "A",
@@ -6466,6 +6746,7 @@
     },
     {
       "id": "281",
+      "code": "ACE-010067",
       "dni": "01001073",
       "nombre": "LOPEZ BONIFACIO ASUNCION",
       "estado": "A",
@@ -6489,6 +6770,7 @@
     },
     {
       "id": "282",
+      "code": "ACE-040242",
       "dni": "00993951",
       "nombre": "LOPEZ DOMINGUEZ ESTANISLAO",
       "estado": "A",
@@ -6512,6 +6794,7 @@
     },
     {
       "id": "283",
+      "code": "ACE-020178",
       "dni": "19401231",
       "nombre": "LOPEZ DOMINGUEZ SANTOS",
       "estado": "A",
@@ -6535,6 +6818,7 @@
     },
     {
       "id": "284",
+      "code": "ACE-010068",
       "dni": "32802401",
       "nombre": "LOPEZ GADEA LUIS",
       "estado": "A",
@@ -6558,6 +6842,7 @@
     },
     {
       "id": "285",
+      "code": "ACE-160556",
       "dni": "45740137",
       "nombre": "LOPEZ GUEVARA DIANA ISABEL",
       "estado": "A",
@@ -6581,6 +6866,7 @@
     },
     {
       "id": "286",
+      "code": "ACE-160557",
       "dni": "76807281",
       "nombre": "LOPEZ GUEVARA JOSE JOAQUIN",
       "estado": "A",
@@ -6604,6 +6890,7 @@
     },
     {
       "id": "287",
+      "code": "ACE-160779",
       "dni": "46716993",
       "nombre": "LOPEZ GUEVARA YEGNER ALEJANDRO",
       "estado": "A",
@@ -6627,6 +6914,7 @@
     },
     {
       "id": "288",
+      "code": "ACE-010069",
       "dni": "00986250",
       "nombre": "LOPEZ MARTINEZ FEDERICO",
       "estado": "A",
@@ -6650,6 +6938,7 @@
     },
     {
       "id": "289",
+      "code": "ACE-160559",
       "dni": "01186260",
       "nombre": "LOPEZ RAMIREZ JOSE ALEJANDRO",
       "estado": "A",
@@ -6673,6 +6962,7 @@
     },
     {
       "id": "290",
+      "code": "ACE-010070",
       "dni": "32972494",
       "nombre": "LOPEZ ROSALES GENARO RAFAEL",
       "estado": "A",
@@ -6696,6 +6986,7 @@
     },
     {
       "id": "291",
+      "code": "ACE-080707",
       "dni": "01001588",
       "nombre": "LOPEZ RUIZ DIONICIO",
       "estado": "A",
@@ -6719,6 +7010,7 @@
     },
     {
       "id": "292",
+      "code": "ACE-010752",
       "dni": "42812462",
       "nombre": "LOPEZ RUIZ GYZZA MARIA",
       "estado": "A",
@@ -6742,6 +7034,7 @@
     },
     {
       "id": "293",
+      "code": "ACE-030217",
       "dni": "31825996",
       "nombre": "LOPEZ SAENZ ANICETO",
       "estado": "A",
@@ -6765,6 +7058,7 @@
     },
     {
       "id": "294",
+      "code": "ACE-080708",
       "dni": "00962806",
       "nombre": "LOPEZ SALCEDO MANUEL ISMAEL",
       "estado": "A",
@@ -6788,6 +7082,7 @@
     },
     {
       "id": "295",
+      "code": "",
       "dni": "07464593",
       "nombre": "LOPEZ SIFUENTES FELICIANO VALERIANO",
       "estado": "I",
@@ -6811,6 +7106,7 @@
     },
     {
       "id": "296",
+      "code": "ACE-100448",
       "dni": "01015393",
       "nombre": "LOPEZ SOBRADOS MATILDO",
       "estado": "A",
@@ -6834,6 +7130,7 @@
     },
     {
       "id": "297",
+      "code": "ACE-120808",
       "dni": "27051996",
       "nombre": "LOZANO MEJIA TELESVINDA DE MERICI",
       "estado": "A",
@@ -6857,6 +7154,7 @@
     },
     {
       "id": "298",
+      "code": "ACE-040243",
       "dni": "01017872",
       "nombre": "LOZANO RAMIREZ LINDER",
       "estado": "A",
@@ -6880,6 +7178,7 @@
     },
     {
       "id": "299",
+      "code": "ACE-170615",
       "dni": "00999138",
       "nombre": "LOZANO REYES ROLANDO ENRIQUE",
       "estado": "A",
@@ -6903,6 +7202,7 @@
     },
     {
       "id": "300",
+      "code": "ACE-140766",
       "dni": "01186382",
       "nombre": "LUCAS GUERRA CRISANTA",
       "estado": "A",
@@ -6926,6 +7226,7 @@
     },
     {
       "id": "301",
+      "code": "ACE-070342",
       "dni": "00985620",
       "nombre": "LUDEÑA CARTAGENA LIRA",
       "estado": "A",
@@ -6949,6 +7250,7 @@
     },
     {
       "id": "302",
+      "code": "ACE-070343",
       "dni": "00986125",
       "nombre": "LUERA MORILLO JUAN BAUTISTA",
       "estado": "A",
@@ -6972,6 +7274,7 @@
     },
     {
       "id": "303",
+      "code": "ACE-160560",
       "dni": "00962673",
       "nombre": "LUNA GAMEZ ROBERT LUIS",
       "estado": "A",
@@ -6995,6 +7298,7 @@
     },
     {
       "id": "304",
+      "code": "ACE-040244",
       "dni": "27047842",
       "nombre": "MALAVER VASQUEZ ELVIRA",
       "estado": "A",
@@ -7018,6 +7322,7 @@
     },
     {
       "id": "305",
+      "code": "ACE-030218",
       "dni": "19418242",
       "nombre": "MALDONADO LOPEZ MARCELA",
       "estado": "A",
@@ -7041,6 +7346,7 @@
     },
     {
       "id": "306",
+      "code": "ACE-160561",
       "dni": "42545171",
       "nombre": "MALLA PAREDES JOEL JAIMER",
       "estado": "A",
@@ -7064,6 +7370,7 @@
     },
     {
       "id": "307",
+      "code": "ACE-010072",
       "dni": "00986148",
       "nombre": "MALPARTIDA SALINAS PERFECTO",
       "estado": "A",
@@ -7087,6 +7394,7 @@
     },
     {
       "id": "308",
+      "code": "ACE-040245",
       "dni": "10175982",
       "nombre": "MANRRIQUE FERNANDEZ DIODONO ELOY",
       "estado": "A",
@@ -7110,6 +7418,7 @@
     },
     {
       "id": "309",
+      "code": "ACE-010828",
       "dni": "01187368",
       "nombre": "MARGARIN ALBARADO NERIA GRACIELA",
       "estado": "A",
@@ -7133,6 +7442,7 @@
     },
     {
       "id": "310",
+      "code": "ACE-040646",
       "dni": "00986122",
       "nombre": "MARGARIN HERNANDEZ EULALIA",
       "estado": "A",
@@ -7156,6 +7466,7 @@
     },
     {
       "id": "311",
+      "code": "ACE-010834",
       "dni": "00977207",
       "nombre": "MARGARIN HERNANDEZ PAULINA",
       "estado": "A",
@@ -7179,6 +7490,7 @@
     },
     {
       "id": "312",
+      "code": "ACE-160682",
       "dni": "01017462",
       "nombre": "MARGARIN HERNANDEZ VICTORIA",
       "estado": "A",
@@ -7202,6 +7514,7 @@
     },
     {
       "id": "313",
+      "code": "ACE-160563",
       "dni": "00986040",
       "nombre": "MARIÑOS OTINIANO BALVINO",
       "estado": "A",
@@ -7225,6 +7538,7 @@
     },
     {
       "id": "314",
+      "code": "ACE-020179",
       "dni": "18028161",
       "nombre": "MARIÑOS VARGAS JORGE LUIS",
       "estado": "A",
@@ -7248,6 +7562,7 @@
     },
     {
       "id": "315",
+      "code": "ACE-010073",
       "dni": "00985841",
       "nombre": "MARQUEZ GONZALES LOURDES",
       "estado": "A",
@@ -7271,6 +7586,7 @@
     },
     {
       "id": "316",
+      "code": "ACE-010074",
       "dni": "00986108",
       "nombre": "MARREROS ACUÑA HERMAN",
       "estado": "A",
@@ -7294,6 +7610,7 @@
     },
     {
       "id": "317",
+      "code": "ACE-120809",
       "dni": "00993003",
       "nombre": "MARREROS DOMINGUEZ CONSUELO",
       "estado": "A",
@@ -7317,6 +7634,7 @@
     },
     {
       "id": "318",
+      "code": "ACE-010075",
       "dni": "22094686",
       "nombre": "MARROQUIN REJI ROMULO TIMOTEO",
       "estado": "A",
@@ -7340,6 +7658,7 @@
     },
     {
       "id": "319",
+      "code": "ACE-170617",
       "dni": "00999745",
       "nombre": "MARTINEZ JARA JESUS ELIAZAR",
       "estado": "A",
@@ -7363,6 +7682,7 @@
     },
     {
       "id": "320",
+      "code": "ACE-140765",
       "dni": "41274775",
       "nombre": "MARTINEZ JARA MONICA",
       "estado": "A",
@@ -7386,6 +7706,7 @@
     },
     {
       "id": "321",
+      "code": "ACE-140505",
       "dni": "00977237",
       "nombre": "MARTINEZ JARA ROMAN",
       "estado": "A",
@@ -7409,6 +7730,7 @@
     },
     {
       "id": "322",
+      "code": "ACE-160564",
       "dni": "33818625",
       "nombre": "MARTINEZ RAMOS JOSE LUIS",
       "estado": "A",
@@ -7432,6 +7754,7 @@
     },
     {
       "id": "323",
+      "code": "ACE-070344",
       "dni": "33818708",
       "nombre": "MATOS CAMPOS VIDAL",
       "estado": "A",
@@ -7455,6 +7778,7 @@
     },
     {
       "id": "324",
+      "code": "ACE-070345",
       "dni": "01189442",
       "nombre": "MATOS HERNANDEZ MARISA",
       "estado": "A",
@@ -7478,6 +7802,7 @@
     },
     {
       "id": "325",
+      "code": "ACE-010080",
       "dni": "01017991",
       "nombre": "MAZA GAMEZ AMALIA",
       "estado": "A",
@@ -7501,6 +7826,7 @@
     },
     {
       "id": "326",
+      "code": "ACE-150521",
       "dni": "00814655",
       "nombre": "MEDINA GUEVARA ARISTIDES",
       "estado": "A",
@@ -7524,6 +7850,7 @@
     },
     {
       "id": "327",
+      "code": "ACE-160683",
       "dni": "00977342",
       "nombre": "MEDINA LOPEZ ALEJANDRO",
       "estado": "A",
@@ -7547,6 +7874,7 @@
     },
     {
       "id": "328",
+      "code": "ACE-130800",
       "dni": "42015477",
       "nombre": "MEDINA SANCHEZ MARIA GRICELDA",
       "estado": "A",
@@ -7570,6 +7898,7 @@
     },
     {
       "id": "329",
+      "code": "ACE-170619",
       "dni": "00999070",
       "nombre": "MEDINA SIXE ROBERT",
       "estado": "A",
@@ -7593,6 +7922,7 @@
     },
     {
       "id": "330",
+      "code": "ACE-010077",
       "dni": "27552289",
       "nombre": "MEJIA CABRERA MELIDA",
       "estado": "A",
@@ -7616,6 +7946,7 @@
     },
     {
       "id": "331",
+      "code": "ACE-020180",
       "dni": "01000654",
       "nombre": "MEJIA TANTALEAN SEGUNDO JULIO",
       "estado": "A",
@@ -7639,6 +7970,7 @@
     },
     {
       "id": "332",
+      "code": "ACE-050278",
       "dni": "01001222",
       "nombre": "MELGAREJO LUCIO SAMUEL",
       "estado": "A",
@@ -7662,6 +7994,7 @@
     },
     {
       "id": "333",
+      "code": "ACE-170729",
       "dni": "00994292",
       "nombre": "MELGAREJO PINO FRANCISCO",
       "estado": "A",
@@ -7685,6 +8018,7 @@
     },
     {
       "id": "334",
+      "code": "",
       "dni": "46519221",
       "nombre": "MENDO CARTAGENA KARIN SOLI",
       "estado": "I",
@@ -7708,6 +8042,7 @@
     },
     {
       "id": "335",
+      "code": "ACE-050281",
       "dni": "42233796",
       "nombre": "MENDOZA CUEVA MARIBEL",
       "estado": "A",
@@ -7731,6 +8066,7 @@
     },
     {
       "id": "336",
+      "code": "ACE-010078",
       "dni": "00986060",
       "nombre": "MENDOZA FLORES ANDRES",
       "estado": "A",
@@ -7754,6 +8090,7 @@
     },
     {
       "id": "337",
+      "code": "ACE-010079",
       "dni": "19412715",
       "nombre": "MENDOZA MENDOZA BENITO",
       "estado": "A",
@@ -7777,6 +8114,7 @@
     },
     {
       "id": "338",
+      "code": "ACE-050279",
       "dni": "00992122",
       "nombre": "MENDOZA MORILLO TIMOTEO",
       "estado": "A",
@@ -7800,6 +8138,7 @@
     },
     {
       "id": "339",
+      "code": "ACE-050280",
       "dni": "00986310",
       "nombre": "MENDOZA ROJAS NICACIO",
       "estado": "A",
@@ -7823,6 +8162,7 @@
     },
     {
       "id": "340",
+      "code": "ACE-050282",
       "dni": "00986059",
       "nombre": "MENDOZA ROJAS PEDRO",
       "estado": "A",
@@ -7846,6 +8186,7 @@
     },
     {
       "id": "341",
+      "code": "ACE-080709",
       "dni": "19424514",
       "nombre": "MEZA ARTEAGA HERLINDA NATALI",
       "estado": "A",
@@ -7869,6 +8210,7 @@
     },
     {
       "id": "342",
+      "code": "ACE-010746",
       "dni": "00993657",
       "nombre": "MEZA PALACIOS SANTIAGO",
       "estado": "A",
@@ -7892,6 +8234,7 @@
     },
     {
       "id": "343",
+      "code": "ACE-010081",
       "dni": "00986051",
       "nombre": "MEZA ROSAS TEODOLO",
       "estado": "A",
@@ -7915,6 +8258,7 @@
     },
     {
       "id": "344",
+      "code": "ACE-090744",
       "dni": "45296688",
       "nombre": "MIRANDA MONTERO KARIN RUTH",
       "estado": "A",
@@ -7938,6 +8282,7 @@
     },
     {
       "id": "345",
+      "code": "ACE-130483",
       "dni": "43049490",
       "nombre": "MISAYCO ORTIZ JUAN MICHAEL",
       "estado": "A",
@@ -7961,6 +8306,7 @@
     },
     {
       "id": "346",
+      "code": "ACE-070346",
       "dni": "00993514",
       "nombre": "MISAYCO VARGAS SIXTO JUAN",
       "estado": "A",
@@ -7984,6 +8330,7 @@
     },
     {
       "id": "347",
+      "code": "ACE-170620",
       "dni": "19896059",
       "nombre": "MONTEJO CALVO MILCA",
       "estado": "A",
@@ -8007,6 +8354,7 @@
     },
     {
       "id": "348",
+      "code": "ACE-170730",
       "dni": "05071193",
       "nombre": "MONTEJO SALDAÑA WILLIAM",
       "estado": "A",
@@ -8030,6 +8378,7 @@
     },
     {
       "id": "349",
+      "code": "ACE-170731",
       "dni": "41725083",
       "nombre": "MONTEJO SANTAMARIA DIANA CLAIRE",
       "estado": "A",
@@ -8053,6 +8402,7 @@
     },
     {
       "id": "350",
+      "code": "ACE-020181",
       "dni": "18133533",
       "nombre": "MONTENEGRO GONZALES ALVIO",
       "estado": "A",
@@ -8076,6 +8426,7 @@
     },
     {
       "id": "351",
+      "code": "ACE-130484",
       "dni": "41458380",
       "nombre": "MONTOYA QUINTEROS SEGUNDO",
       "estado": "A",
@@ -8099,6 +8450,7 @@
     },
     {
       "id": "352",
+      "code": "ACE-010082",
       "dni": "33818812",
       "nombre": "MORALES ESTRADA NARCISO PATRICIO",
       "estado": "A",
@@ -8122,6 +8474,7 @@
     },
     {
       "id": "353",
+      "code": "ACE-050283",
       "dni": "48814483",
       "nombre": "MORALES NORIEGA DEYSI",
       "estado": "A",
@@ -8145,6 +8498,7 @@
     },
     {
       "id": "354",
+      "code": "ACE-150801",
       "dni": "23659785",
       "nombre": "MORAN VILA YRAIDA",
       "estado": "A",
@@ -8168,6 +8522,7 @@
     },
     {
       "id": "355",
+      "code": "ACE-080711",
       "dni": "19401115",
       "nombre": "MORENO SILVA DEMESIO",
       "estado": "A",
@@ -8191,6 +8546,7 @@
     },
     {
       "id": "356",
+      "code": "ACE-010083",
       "dni": "18182255",
       "nombre": "MORI SANCHEZ TOMAS",
       "estado": "A",
@@ -8214,6 +8570,7 @@
     },
     {
       "id": "357",
+      "code": "ACE-180775",
       "dni": "32976805",
       "nombre": "MOSCOSO NUREÑA JUANA",
       "estado": "A",
@@ -8237,6 +8594,7 @@
     },
     {
       "id": "358",
+      "code": "ACE-060660",
       "dni": "00986152",
       "nombre": "MUÑOZ LUNA ROSA",
       "estado": "A",
@@ -8260,6 +8618,7 @@
     },
     {
       "id": "359",
+      "code": "ACE-020650",
       "dni": "01186287",
       "nombre": "NARRO ANDONAIRE ROSAS",
       "estado": "A",
@@ -8283,6 +8642,7 @@
     },
     {
       "id": "360",
+      "code": "ACE-020183",
       "dni": "18838779",
       "nombre": "NARRO ANDONAYRE RODOLFO",
       "estado": "A",
@@ -8306,6 +8666,7 @@
     },
     {
       "id": "361",
+      "code": "ACE-010822",
       "dni": "47076069",
       "nombre": "NARRO PIMENTEL DANIXA",
       "estado": "A",
@@ -8329,6 +8690,7 @@
     },
     {
       "id": "362",
+      "code": "ACE-020184",
       "dni": "00962025",
       "nombre": "NEYRA DA SILVA ELSA PATRICIA",
       "estado": "A",
@@ -8352,6 +8714,7 @@
     },
     {
       "id": "363",
+      "code": "ACE-020854",
       "dni": "00985510",
       "nombre": "NEYRA PARRILLA RAFAEL",
       "estado": "A",
@@ -8375,6 +8738,7 @@
     },
     {
       "id": "364",
+      "code": "ACE-170648",
       "dni": "03088011",
       "nombre": "NUÑEZ MOROCHO MAGNO",
       "estado": "A",
@@ -8398,6 +8762,7 @@
     },
     {
       "id": "365",
+      "code": "ACE-160566",
       "dni": "00985803",
       "nombre": "OJEDA BARDALES CARLOS HUGO",
       "estado": "A",
@@ -8421,6 +8786,7 @@
     },
     {
       "id": "366",
+      "code": "ACE-160567",
       "dni": "00994673",
       "nombre": "OJEDA BARDALES CLAYRO",
       "estado": "A",
@@ -8444,6 +8810,7 @@
     },
     {
       "id": "367",
+      "code": "ACE-160568",
       "dni": "00985821",
       "nombre": "OJEDA BARDALES ROBERTO",
       "estado": "A",
@@ -8467,6 +8834,7 @@
     },
     {
       "id": "368",
+      "code": "ACE-180776",
       "dni": "26947860",
       "nombre": "OLANO RODRIGUEZ CRECENCIO",
       "estado": "A",
@@ -8490,6 +8858,7 @@
     },
     {
       "id": "369",
+      "code": "ACE-010084",
       "dni": "00986088",
       "nombre": "OLAZABAL LOPEZ CARLOS FIDEL",
       "estado": "A",
@@ -8513,6 +8882,7 @@
     },
     {
       "id": "370",
+      "code": "ACE-150523",
       "dni": "16639415",
       "nombre": "OLIVA SERRAN MERCEDES",
       "estado": "A",
@@ -8536,6 +8906,7 @@
     },
     {
       "id": "371",
+      "code": "ACE-020519",
       "dni": "09849975",
       "nombre": "OLIVERA BARRIENTOS RAUL EVER",
       "estado": "A",
@@ -8559,9 +8930,10 @@
     },
     {
       "id": "372",
+      "code": "ACE-140820",
       "dni": "01186015",
       "nombre": "OLORTEGUE PRINCIPE OLEGARIO",
-      "estado": "I",
+      "estado": "A",
       "fechanaci": "11/5/66",
       "estadocivil": "CONVIVIENTE",
       "gradoinstruccion": "PRIMARIA",
@@ -8582,6 +8954,7 @@
     },
     {
       "id": "373",
+      "code": "ACE-170623",
       "dni": "41869670",
       "nombre": "OLORTEGUI MEDINA ROSARIO",
       "estado": "A",
@@ -8605,6 +8978,7 @@
     },
     {
       "id": "374",
+      "code": "ACE-080785",
       "dni": "44159577",
       "nombre": "OLORTIGA SALINAS JESUS",
       "estado": "A",
@@ -8628,6 +9002,7 @@
     },
     {
       "id": "375",
+      "code": "ACE-160570",
       "dni": "00998108",
       "nombre": "ORTEGA OJEDA ERESVITA",
       "estado": "A",
@@ -8651,6 +9026,7 @@
     },
     {
       "id": "376",
+      "code": "ACE-160571",
       "dni": "01017214",
       "nombre": "OTINIANO QUIJANO MARIA CRISTINA",
       "estado": "A",
@@ -8674,6 +9050,7 @@
     },
     {
       "id": "377",
+      "code": "ACE-070348",
       "dni": "19420693",
       "nombre": "OTINIANO QUIÑONES JORGE FERNANDO",
       "estado": "A",
@@ -8697,6 +9074,7 @@
     },
     {
       "id": "378",
+      "code": "ACE-070349",
       "dni": "44813515",
       "nombre": "PACAYA PINEDO PATRICIA",
       "estado": "A",
@@ -8720,6 +9098,7 @@
     },
     {
       "id": "379",
+      "code": "ACE-070823",
       "dni": "00998829",
       "nombre": "PADILLA DOMINGUEZ MARCIANO",
       "estado": "A",
@@ -8743,6 +9122,7 @@
     },
     {
       "id": "380",
+      "code": "ACE-010086",
       "dni": "00986134",
       "nombre": "PADILLA PINO CRESENCIO",
       "estado": "A",
@@ -8766,6 +9146,7 @@
     },
     {
       "id": "381",
+      "code": "ACE-140506",
       "dni": "00998947",
       "nombre": "PADILLA VERGARA MANUEL",
       "estado": "A",
@@ -8789,6 +9170,7 @@
     },
     {
       "id": "382",
+      "code": "ACE-020637",
       "dni": "09699739",
       "nombre": "PAICO NAVARRO VDA DE FASABI MARIA ISABEL",
       "estado": "A",
@@ -8812,6 +9194,7 @@
     },
     {
       "id": "383",
+      "code": "ACE-010802",
       "dni": "22501199",
       "nombre": "PALMI HERRERA PILAR DEL ROSARIO",
       "estado": "A",
@@ -8835,6 +9218,7 @@
     },
     {
       "id": "384",
+      "code": "ACE-010089",
       "dni": "01010642",
       "nombre": "PANDURO ASPAJO EDINSON",
       "estado": "A",
@@ -8858,6 +9242,7 @@
     },
     {
       "id": "385",
+      "code": "ACE-010090",
       "dni": "10145272",
       "nombre": "PANDURO DE VILLACORTA SOFIA",
       "estado": "A",
@@ -8881,6 +9266,7 @@
     },
     {
       "id": "386",
+      "code": "ACE-140819",
       "dni": "08155670",
       "nombre": "PANDURO PISCO WILLIAM WILMER",
       "estado": "A",
@@ -8904,6 +9290,7 @@
     },
     {
       "id": "387",
+      "code": "ACE-070350",
       "dni": "44340072",
       "nombre": "PANTOJA ARELLANO PASCUALA DELINA",
       "estado": "A",
@@ -8927,6 +9314,7 @@
     },
     {
       "id": "388",
+      "code": "ACE-160572",
       "dni": "19409604",
       "nombre": "PAREDES VIERA NICOLAS",
       "estado": "A",
@@ -8950,6 +9338,7 @@
     },
     {
       "id": "389",
+      "code": "ACE-010091",
       "dni": "41747436",
       "nombre": "PAREDES VILLANUEVA ISMAEL",
       "estado": "A",
@@ -8973,6 +9362,7 @@
     },
     {
       "id": "390",
+      "code": "ACE-120810",
       "dni": "18188949",
       "nombre": "PASTOR DIAZ DE DIAZ FELIPA",
       "estado": "A",
@@ -8996,6 +9386,7 @@
     },
     {
       "id": "391",
+      "code": "ACE-010088",
       "dni": "01170053",
       "nombre": "PAULINO LUERA YOVAN CASTRO",
       "estado": "A",
@@ -9019,6 +9410,7 @@
     },
     {
       "id": "392",
+      "code": "ACE-170735",
       "dni": "00994675",
       "nombre": "PEÑA DOMINGUEZ MIQUEAS",
       "estado": "A",
@@ -9042,6 +9434,7 @@
     },
     {
       "id": "393",
+      "code": "ACE-070528",
       "dni": "00961008",
       "nombre": "PEÑA HARO ALEJANDRA",
       "estado": "A",
@@ -9065,6 +9458,7 @@
     },
     {
       "id": "394",
+      "code": "ACE-100537",
       "dni": "01015497",
       "nombre": "PEÑA PUMACHAICO CELESTINO",
       "estado": "A",
@@ -9088,6 +9482,7 @@
     },
     {
       "id": "395",
+      "code": "ACE-070527",
       "dni": "41375156",
       "nombre": "PEREZ CARTAGENA MARGOTH",
       "estado": "A",
@@ -9111,6 +9506,7 @@
     },
     {
       "id": "396",
+      "code": "ACE-010095",
       "dni": "70477033",
       "nombre": "PEREZ CASTILLO CRISTHIAN PEDRO",
       "estado": "A",
@@ -9134,6 +9530,7 @@
     },
     {
       "id": "397",
+      "code": "ACE-010094",
       "dni": "70477032",
       "nombre": "PEREZ CASTILLO LUCELI DAYANA",
       "estado": "A",
@@ -9157,6 +9554,7 @@
     },
     {
       "id": "398",
+      "code": "ACE-010092",
       "dni": "43724947",
       "nombre": "PEREZ CASTILLO NIMIDA LUCY",
       "estado": "A",
@@ -9180,6 +9578,7 @@
     },
     {
       "id": "399",
+      "code": "",
       "dni": "32977237",
       "nombre": "PEREZ ESPINOZA HONORATA",
       "estado": "I",
@@ -9203,6 +9602,7 @@
     },
     {
       "id": "400",
+      "code": "ACE-070532",
       "dni": "01001199",
       "nombre": "PEREZ GONZALES DENNIS",
       "estado": "A",
@@ -9226,6 +9626,7 @@
     },
     {
       "id": "401",
+      "code": "ACE-020845",
       "dni": "07217629",
       "nombre": "PEREZ HONORIO RUDBEKIA MAGDALENA",
       "estado": "A",
@@ -9249,6 +9650,7 @@
     },
     {
       "id": "402",
+      "code": "ACE-040247",
       "dni": "00985712",
       "nombre": "PEREZ PAREDES JORGE LUIS",
       "estado": "A",
@@ -9272,6 +9674,7 @@
     },
     {
       "id": "403",
+      "code": "ACE-160574",
       "dni": "01186925",
       "nombre": "PEREZ RUIZ JOSE",
       "estado": "A",
@@ -9295,6 +9698,7 @@
     },
     {
       "id": "404",
+      "code": "ACE-020187",
       "dni": "18190181",
       "nombre": "PEREZ YOSHINAGA ADRIANA ADELA",
       "estado": "A",
@@ -9318,6 +9722,7 @@
     },
     {
       "id": "405",
+      "code": "ACE-010803",
       "dni": "44190234",
       "nombre": "PICCHIOTTI  MASSIMO",
       "estado": "A",
@@ -9341,6 +9746,7 @@
     },
     {
       "id": "406",
+      "code": "ACE-150673",
       "dni": "01101419",
       "nombre": "PINCHI LOZANO CRISTOBAL",
       "estado": "A",
@@ -9364,6 +9770,7 @@
     },
     {
       "id": "407",
+      "code": "ACE-010098",
       "dni": "00114695",
       "nombre": "PINEDO CARDENAS MANACES",
       "estado": "A",
@@ -9387,6 +9794,7 @@
     },
     {
       "id": "408",
+      "code": "ACE-010858",
       "dni": "00832424",
       "nombre": "PINEDO GARCIA WILMER",
       "estado": "A",
@@ -9410,6 +9818,7 @@
     },
     {
       "id": "409",
+      "code": "ACE-020520",
       "dni": "00961463",
       "nombre": "PINEDO ISHUIZA AQUILINO",
       "estado": "A",
@@ -9433,6 +9842,7 @@
     },
     {
       "id": "410",
+      "code": "ACE-160575",
       "dni": "22649278",
       "nombre": "PINEDO SOPAM JACINTO",
       "estado": "A",
@@ -9456,6 +9866,7 @@
     },
     {
       "id": "411",
+      "code": "ACE-160576",
       "dni": "00994572",
       "nombre": "PINEDO SOPAN LEONCIO",
       "estado": "A",
@@ -9479,6 +9890,7 @@
     },
     {
       "id": "412",
+      "code": "ACE-130485",
       "dni": "00993430",
       "nombre": "PINO ARELLANO LAUREANO",
       "estado": "A",
@@ -9502,6 +9914,7 @@
     },
     {
       "id": "413",
+      "code": "ACE-140545",
       "dni": "19431028",
       "nombre": "PINO CABELLOS NICACIO",
       "estado": "A",
@@ -9525,6 +9938,7 @@
     },
     {
       "id": "414",
+      "code": "ACE-010099",
       "dni": "00985355",
       "nombre": "PINO MORILLO FRANCISCO",
       "estado": "A",
@@ -9548,6 +9962,7 @@
     },
     {
       "id": "415",
+      "code": "ACE-120811",
       "dni": "01014173",
       "nombre": "PINTO DUEÑAS ANTERO GILBERTO",
       "estado": "A",
@@ -9571,6 +9986,7 @@
     },
     {
       "id": "416",
+      "code": "ACE-070794",
       "dni": "80616802",
       "nombre": "PISCO GARCIA ISRAEL",
       "estado": "A",
@@ -9594,6 +10010,7 @@
     },
     {
       "id": "417",
+      "code": "ACE-020189",
       "dni": "00994083",
       "nombre": "POMA VELASQUEZ DE LOPEZ EUFEMIA",
       "estado": "A",
@@ -9617,6 +10034,7 @@
     },
     {
       "id": "418",
+      "code": "ACE-150524",
       "dni": "00985371",
       "nombre": "PONCE CAPA EMILIANO",
       "estado": "A",
@@ -9640,6 +10058,7 @@
     },
     {
       "id": "419",
+      "code": "ACE-080767",
       "dni": "19416770",
       "nombre": "PONCE CAPA RAFAEL",
       "estado": "A",
@@ -9663,6 +10082,7 @@
     },
     {
       "id": "420",
+      "code": "ACE-150525",
       "dni": "43396059",
       "nombre": "PONCE MAZA IDELSA",
       "estado": "A",
@@ -9686,6 +10106,7 @@
     },
     {
       "id": "421",
+      "code": "ACE-150790",
       "dni": "60244896",
       "nombre": "PONCE MAZA LUIS ALBERTO",
       "estado": "A",
@@ -9709,6 +10130,7 @@
     },
     {
       "id": "422",
+      "code": "ACE-070353",
       "dni": "19410815",
       "nombre": "PONCE RAMOS SIMION",
       "estado": "A",
@@ -9732,6 +10154,7 @@
     },
     {
       "id": "423",
+      "code": "ACE-070354",
       "dni": "01187580",
       "nombre": "PONTE ARELLANO LEOPOLDO",
       "estado": "A",
@@ -9755,6 +10178,7 @@
     },
     {
       "id": "424",
+      "code": "ACE-070529",
       "dni": "01186887",
       "nombre": "PONTE VALDEZ MARTINA",
       "estado": "A",
@@ -9778,6 +10202,7 @@
     },
     {
       "id": "425",
+      "code": "ACE-040248",
       "dni": "20572307",
       "nombre": "PUENTE AGUILAR ELVIS ALEJANDRO",
       "estado": "A",
@@ -9801,6 +10226,7 @@
     },
     {
       "id": "426",
+      "code": "ACE-020190",
       "dni": "00962246",
       "nombre": "QUEZADA MELGAREJO ADELA ESPERANZA",
       "estado": "A",
@@ -9824,6 +10250,7 @@
     },
     {
       "id": "427",
+      "code": "ACE-010101",
       "dni": "00985521",
       "nombre": "QUIJANO LOPEZ LORENZO JUSTINIANO",
       "estado": "A",
@@ -9847,6 +10274,7 @@
     },
     {
       "id": "428",
+      "code": "ACE-080407",
       "dni": "16639649",
       "nombre": "QUINTANA ZAPATA JOSE SEGUNDO",
       "estado": "A",
@@ -9870,6 +10298,7 @@
     },
     {
       "id": "429",
+      "code": "ACE-050284",
       "dni": "04652852",
       "nombre": "QUINTANILLA JIMENEZ FELICIANO ZENON",
       "estado": "A",
@@ -9893,6 +10322,7 @@
     },
     {
       "id": "430",
+      "code": "ACE-160578",
       "dni": "44411457",
       "nombre": "QUIROZ CABALLERO ALICIA",
       "estado": "A",
@@ -9916,6 +10346,7 @@
     },
     {
       "id": "431",
+      "code": "ACE-040249",
       "dni": "19427898",
       "nombre": "QUIROZ VELASQUEZ PEDRO",
       "estado": "A",
@@ -9939,6 +10370,7 @@
     },
     {
       "id": "432",
+      "code": "ACE-010102",
       "dni": "04014279",
       "nombre": "QUISPE CHOQUE RAUL",
       "estado": "A",
@@ -9962,6 +10394,7 @@
     },
     {
       "id": "433",
+      "code": "ACE-010103",
       "dni": "00986050",
       "nombre": "RAMIREZ PUA MAMERTO",
       "estado": "A",
@@ -9985,6 +10418,7 @@
     },
     {
       "id": "434",
+      "code": "ACE-040826",
       "dni": "10322025",
       "nombre": "RAMIREZ SEIJAS DE AREVALO PETRONILA",
       "estado": "A",
@@ -10008,6 +10442,7 @@
     },
     {
       "id": "435",
+      "code": "ACE-070357",
       "dni": "33818750",
       "nombre": "RAMOS CARRERA DANIEL",
       "estado": "A",
@@ -10031,6 +10466,7 @@
     },
     {
       "id": "436",
+      "code": "ACE-070356",
       "dni": "46312035",
       "nombre": "RAMOS CARRERA JORGE TEODORO",
       "estado": "A",
@@ -10054,6 +10490,7 @@
     },
     {
       "id": "437",
+      "code": "ACE-020656",
       "dni": "01015733",
       "nombre": "RAMOS FLORES TEOMILO",
       "estado": "A",
@@ -10077,6 +10514,7 @@
     },
     {
       "id": "438",
+      "code": "ACE-040661",
       "dni": "40217982",
       "nombre": "RAMOS MUÑOZ EUDES",
       "estado": "A",
@@ -10100,6 +10538,7 @@
     },
     {
       "id": "439",
+      "code": "ACE-080409",
       "dni": "00985416",
       "nombre": "RAMOS POMA FRANCISCO",
       "estado": "A",
@@ -10123,6 +10562,7 @@
     },
     {
       "id": "440",
+      "code": "ACE-010104",
       "dni": "01001575",
       "nombre": "RAYMUNDO AQUINO FRANCISCO",
       "estado": "A",
@@ -10146,6 +10586,7 @@
     },
     {
       "id": "441",
+      "code": "ACE-020191",
       "dni": "40884716",
       "nombre": "RAYMUNDO BACA LILIANA",
       "estado": "A",
@@ -10169,6 +10610,7 @@
     },
     {
       "id": "442",
+      "code": "ACE-040250",
       "dni": "33818746",
       "nombre": "RENGIFO AREVALO TADEO",
       "estado": "A",
@@ -10192,6 +10634,7 @@
     },
     {
       "id": "443",
+      "code": "ACE-170732",
       "dni": "01187044",
       "nombre": "RENGIFO LOZANO CESAR AUGUSTO",
       "estado": "A",
@@ -10215,6 +10658,7 @@
     },
     {
       "id": "444",
+      "code": "ACE-010105",
       "dni": "00986236",
       "nombre": "RENGIFO RODRIGUEZ MANAHEN",
       "estado": "A",
@@ -10238,6 +10682,7 @@
     },
     {
       "id": "445",
+      "code": "ACE-010106",
       "dni": "00986055",
       "nombre": "RENGIFO RODRIGUEZ NELIT",
       "estado": "A",
@@ -10261,6 +10706,7 @@
     },
     {
       "id": "446",
+      "code": "ACE-080715",
       "dni": "19419106",
       "nombre": "REYES CONTRERAS CARMEN",
       "estado": "A",
@@ -10284,6 +10730,7 @@
     },
     {
       "id": "447",
+      "code": "ACE-080413",
       "dni": "19422659",
       "nombre": "REYES CONTRERAS EMILIO",
       "estado": "A",
@@ -10307,6 +10754,7 @@
     },
     {
       "id": "448",
+      "code": "ACE-080414",
       "dni": "19432677",
       "nombre": "REYES CONTRERAS REMIGIO",
       "estado": "A",
@@ -10330,6 +10778,7 @@
     },
     {
       "id": "449",
+      "code": "ACE-080716",
       "dni": "19418048",
       "nombre": "REYES CONTRERAS SEBASTIAN",
       "estado": "A",
@@ -10353,6 +10802,7 @@
     },
     {
       "id": "450",
+      "code": "ACE-010107",
       "dni": "00975961",
       "nombre": "REYES CURO JULIANA",
       "estado": "A",
@@ -10376,6 +10826,7 @@
     },
     {
       "id": "451",
+      "code": "ACE-010114",
       "dni": "00986291",
       "nombre": "RIOS LAIZA DOMINGA",
       "estado": "A",
@@ -10399,6 +10850,7 @@
     },
     {
       "id": "452",
+      "code": "ACE-130487",
       "dni": "10522767",
       "nombre": "RIOS LOZANO DARWIN",
       "estado": "A",
@@ -10422,6 +10874,7 @@
     },
     {
       "id": "453",
+      "code": "ACE-010108",
       "dni": "00986151",
       "nombre": "RIOS MARAVI MARCOS",
       "estado": "A",
@@ -10445,6 +10898,7 @@
     },
     {
       "id": "454",
+      "code": "ACE-160579",
       "dni": "01189481",
       "nombre": "RIVERA PEÑA ROSA NELLY",
       "estado": "A",
@@ -10468,6 +10922,7 @@
     },
     {
       "id": "455",
+      "code": "ACE-010109",
       "dni": "00985264",
       "nombre": "ROCA QUISPE VICENTE",
       "estado": "A",
@@ -10491,6 +10946,7 @@
     },
     {
       "id": "456",
+      "code": "ACE-010110",
       "dni": "00986056",
       "nombre": "RODRIGUEZ DE RENGIFO DELFINA",
       "estado": "A",
@@ -10514,6 +10970,7 @@
     },
     {
       "id": "457",
+      "code": "ACE-050522",
       "dni": "00986268",
       "nombre": "RODRIGUEZ FERNANDEZ ALPIDIO WILMER",
       "estado": "A",
@@ -10537,6 +10994,7 @@
     },
     {
       "id": "458",
+      "code": "ACE-160580",
       "dni": "00986017",
       "nombre": "ROJAS DOMINGUEZ PORFIRIO ANDRES",
       "estado": "A",
@@ -10560,6 +11018,7 @@
     },
     {
       "id": "459",
+      "code": "ACE-140508",
       "dni": "00993969",
       "nombre": "ROJAS PONCE FLORENTINO",
       "estado": "A",
@@ -10583,6 +11042,7 @@
     },
     {
       "id": "460",
+      "code": "ACE-160687",
       "dni": "21400340",
       "nombre": "ROJAS YUPANQUI SONIA RENEE",
       "estado": "A",
@@ -10606,6 +11066,7 @@
     },
     {
       "id": "461",
+      "code": "ACE-010508",
       "dni": "19032327",
       "nombre": "ROSAS CRUZ FELIPE",
       "estado": "A",
@@ -10629,6 +11090,7 @@
     },
     {
       "id": "462",
+      "code": "ACE-090440",
       "dni": "43917951",
       "nombre": "ROSAS PALACIOS IGNACIO",
       "estado": "A",
@@ -10652,6 +11114,7 @@
     },
     {
       "id": "463",
+      "code": "ACE-160582",
       "dni": "45061020",
       "nombre": "ROSAS VILLANUEVA JUSTINA",
       "estado": "A",
@@ -10675,6 +11138,7 @@
     },
     {
       "id": "464",
+      "code": "ACE-100450",
       "dni": "01014130",
       "nombre": "RUBIO MEJIA SEGUNDO FRANES",
       "estado": "A",
@@ -10698,6 +11162,7 @@
     },
     {
       "id": "465",
+      "code": "ACE-100452",
       "dni": "01189633",
       "nombre": "RUBIO MEJIA TELECILA",
       "estado": "A",
@@ -10721,6 +11186,7 @@
     },
     {
       "id": "466",
+      "code": "ACE-100451",
       "dni": "42352279",
       "nombre": "RUBIO MEJIA TEODORO",
       "estado": "A",
@@ -10732,8 +11198,8 @@
       "entidadbancaria": "",
       "nrocuenta": "",
       "email": "",
-      "residencia": "",
-      "localidad": "",
+      "residencia": "SAN ANTONIO",
+      "localidad": "SAN ANTONIO",
       "distrito": "POLVORA",
       "provincia": "TOCACHE",
       "departamento": "SAN MARTIN",
@@ -10744,6 +11210,7 @@
     },
     {
       "id": "467",
+      "code": "ACE-020193",
       "dni": "00997636",
       "nombre": "RUIZ FLORES VICTORIA",
       "estado": "A",
@@ -10767,6 +11234,7 @@
     },
     {
       "id": "468",
+      "code": "ACE-020192",
       "dni": "32918061",
       "nombre": "RUIZ GOMEZ DOMINGO GERMAN",
       "estado": "A",
@@ -10790,6 +11258,7 @@
     },
     {
       "id": "469",
+      "code": "ACE-060305",
       "dni": "06088353",
       "nombre": "RUIZ HERNANDO ANTONIO",
       "estado": "A",
@@ -10813,6 +11282,7 @@
     },
     {
       "id": "470",
+      "code": "ACE-010115",
       "dni": "00994128",
       "nombre": "RUIZ MONCADA GERMY OTILIA",
       "estado": "A",
@@ -10836,6 +11306,7 @@
     },
     {
       "id": "471",
+      "code": "ACE-010116",
       "dni": "01012662",
       "nombre": "RUIZ RUIZ ALEJANDRA",
       "estado": "A",
@@ -10859,6 +11330,7 @@
     },
     {
       "id": "472",
+      "code": "ACE-080718",
       "dni": "01000711",
       "nombre": "SAAVEDRA DEL CASTILLO TANITH",
       "estado": "A",
@@ -10882,6 +11354,7 @@
     },
     {
       "id": "473",
+      "code": "ACE-010117",
       "dni": "00992725",
       "nombre": "SAAVEDRA PEREZ YARMES",
       "estado": "A",
@@ -10905,6 +11378,7 @@
     },
     {
       "id": "474",
+      "code": "ACE-010118",
       "dni": "00986057",
       "nombre": "SAAVEDRA RODRIGUEZ ELDITH",
       "estado": "A",
@@ -10928,6 +11402,7 @@
     },
     {
       "id": "475",
+      "code": "ACE-080719",
       "dni": "01187014",
       "nombre": "SAAVEDRA YUPANQUI ERNESTO ENGELBERTO",
       "estado": "A",
@@ -10951,6 +11426,7 @@
     },
     {
       "id": "476",
+      "code": "ACE-010668",
       "dni": "80671775",
       "nombre": "SABINO BONIFACIO HERNESTINA DINA",
       "estado": "A",
@@ -10974,6 +11450,7 @@
     },
     {
       "id": "477",
+      "code": "ACE-010119",
       "dni": "00985724",
       "nombre": "SABINO BONIFACIO MARGARITA CRESPINA",
       "estado": "A",
@@ -10997,6 +11474,7 @@
     },
     {
       "id": "478",
+      "code": "ACE-040252",
       "dni": "32975062",
       "nombre": "SALAS ARAUJO LAZARO",
       "estado": "A",
@@ -11007,12 +11485,12 @@
       "comitesectorial": "APRODEPAT",
       "entidadbancaria": "null",
       "nrocuenta": "null",
-      "email": "null",
-      "residencia": "null",
-      "localidad": "null",
-      "distrito": "null",
-      "provincia": "null",
-      "departamento": "null",
+      "email": "",
+      "residencia": "TANANTA",
+      "localidad": "TANANTA",
+      "distrito": "TOCACHE",
+      "provincia": "TOCACHE",
+      "departamento": "SAN MARTIN",
       "beneficiario": "null",
       "dnibeneficiario": "null",
       "estadodelpredio": "null",
@@ -11020,6 +11498,7 @@
     },
     {
       "id": "479",
+      "code": "ACE-040253",
       "dni": "32979669",
       "nombre": "SALAS ARAUJO MOISES YLDEFONSO",
       "estado": "A",
@@ -11043,6 +11522,7 @@
     },
     {
       "id": "480",
+      "code": "ACE-100538",
       "dni": "27972089",
       "nombre": "SALAZAR LOZANO ANTENOR HUMBERTO",
       "estado": "A",
@@ -11066,6 +11546,7 @@
     },
     {
       "id": "481",
+      "code": "ACE-140825",
       "dni": "07848860",
       "nombre": "SALDAÑA PONTE HILDAURA",
       "estado": "A",
@@ -11089,6 +11570,7 @@
     },
     {
       "id": "482",
+      "code": "ACE-040254",
       "dni": "01001645",
       "nombre": "SALDAÑA RUIZ BERITH",
       "estado": "A",
@@ -11112,6 +11594,7 @@
     },
     {
       "id": "483",
+      "code": "ACE-010121",
       "dni": "00985470",
       "nombre": "SALDAÑA TAPULLIMA LEOCADIA",
       "estado": "A",
@@ -11135,6 +11618,7 @@
     },
     {
       "id": "484",
+      "code": "ACE-160585",
       "dni": "19419583",
       "nombre": "SALINAS PIZAN PASCUAL",
       "estado": "A",
@@ -11158,6 +11642,7 @@
     },
     {
       "id": "485",
+      "code": "ACE-040255",
       "dni": "08676605",
       "nombre": "SALVATIERRA AUQUI ANGELINO",
       "estado": "A",
@@ -11181,6 +11666,7 @@
     },
     {
       "id": "486",
+      "code": "ACE-080420",
       "dni": "19428074",
       "nombre": "SANCHEZ BACA ORLANDO",
       "estado": "A",
@@ -11204,6 +11690,7 @@
     },
     {
       "id": "487",
+      "code": "ACE-040831",
       "dni": "00886492",
       "nombre": "SANCHEZ BURGA JULIO",
       "estado": "A",
@@ -11227,6 +11714,7 @@
     },
     {
       "id": "488",
+      "code": "ACE-020788",
       "dni": "43101914",
       "nombre": "SANCHEZ DEL AGUILA LINDER",
       "estado": "A",
@@ -11250,6 +11738,7 @@
     },
     {
       "id": "489",
+      "code": "ACE-020759",
       "dni": "06698356",
       "nombre": "SANCHEZ DOMINGUEZ JOSE SANTOS",
       "estado": "A",
@@ -11273,6 +11762,7 @@
     },
     {
       "id": "490",
+      "code": "ACE-010122",
       "dni": "00992120",
       "nombre": "SANCHEZ FALCON NESTOR",
       "estado": "A",
@@ -11296,6 +11786,7 @@
     },
     {
       "id": "491",
+      "code": "ACE-020195",
       "dni": "33819477",
       "nombre": "SANCHEZ GRANDEZ HAISTER",
       "estado": "A",
@@ -11319,6 +11810,7 @@
     },
     {
       "id": "492",
+      "code": "ACE-020196",
       "dni": "22527668",
       "nombre": "SANCHEZ GRANDEZ KATIA",
       "estado": "A",
@@ -11342,6 +11834,7 @@
     },
     {
       "id": "493",
+      "code": "ACE-020197",
       "dni": "41247502",
       "nombre": "SANCHEZ GRANDEZ SUSANA",
       "estado": "A",
@@ -11365,6 +11858,7 @@
     },
     {
       "id": "494",
+      "code": "ACE-160587",
       "dni": "45708312",
       "nombre": "SANCHEZ OJEDA SANDRA GAVINIA",
       "estado": "A",
@@ -11388,6 +11882,7 @@
     },
     {
       "id": "495",
+      "code": "ACE-020787",
       "dni": "00986219",
       "nombre": "SANCHEZ RIOS ELI NEY",
       "estado": "A",
@@ -11411,6 +11906,7 @@
     },
     {
       "id": "496",
+      "code": "ACE-160689",
       "dni": "00986013",
       "nombre": "SANCHEZ RIOS FREYDER",
       "estado": "A",
@@ -11434,6 +11930,7 @@
     },
     {
       "id": "497",
+      "code": "ACE-170851",
       "dni": "01012231",
       "nombre": "SANTISTEBAN VALVERDE ARMANDA",
       "estado": "A",
@@ -11457,6 +11954,7 @@
     },
     {
       "id": "498",
+      "code": "ACE-010123",
       "dni": "01001480",
       "nombre": "SATALAYA ISUIZA JOSE LIBORIO",
       "estado": "A",
@@ -11480,6 +11978,7 @@
     },
     {
       "id": "499",
+      "code": "ACE-080421",
       "dni": "00998887",
       "nombre": "SATALAYA SALAS JAIME",
       "estado": "A",
@@ -11503,6 +12002,7 @@
     },
     {
       "id": "500",
+      "code": "ACE-040257",
       "dni": "01170424",
       "nombre": "SEBASTIAN MARCOS JERONIMO",
       "estado": "A",
@@ -11526,6 +12026,7 @@
     },
     {
       "id": "501",
+      "code": "ACE-010124",
       "dni": "19433219",
       "nombre": "SEVILLANO BENITES TEODORO EMILIO",
       "estado": "A",
@@ -11549,6 +12050,7 @@
     },
     {
       "id": "502",
+      "code": "ACE-070359",
       "dni": "41135012",
       "nombre": "SEVILLANO CARTAGENA EVERLITH",
       "estado": "A",
@@ -11572,6 +12074,7 @@
     },
     {
       "id": "503",
+      "code": "ACE-070360",
       "dni": "01013834",
       "nombre": "SEVILLANO CARTAGENA LUIS",
       "estado": "A",
@@ -11583,7 +12086,7 @@
       "entidadbancaria": "",
       "nrocuenta": "",
       "email": "",
-      "residencia": "",
+      "residencia": "CASERIO DE TOCACHE  VIEJO",
       "localidad": "TOCACHE VIEJO",
       "distrito": "TOCACHE",
       "provincia": "TOCACHE",
@@ -11595,6 +12098,7 @@
     },
     {
       "id": "504",
+      "code": "ACE-020199",
       "dni": "00985877",
       "nombre": "SEVILLANO ESPINOZA CANDELARIA",
       "estado": "A",
@@ -11618,6 +12122,7 @@
     },
     {
       "id": "505",
+      "code": "ACE-070793",
       "dni": "00985808",
       "nombre": "SEVILLANO NORIEGA ALBERTO",
       "estado": "A",
@@ -11641,6 +12146,7 @@
     },
     {
       "id": "506",
+      "code": "ACE-160642",
       "dni": "22500463",
       "nombre": "SHAHUANO DOMINGUEZ SIXTO RIDER",
       "estado": "A",
@@ -11664,6 +12170,7 @@
     },
     {
       "id": "507",
+      "code": "ACE-160590",
       "dni": "00993029",
       "nombre": "SIFUENTES FABIAN JUAN",
       "estado": "A",
@@ -11687,6 +12194,7 @@
     },
     {
       "id": "508",
+      "code": "ACE-160591",
       "dni": "01186776",
       "nombre": "SILVA ROSAS ARISTIDES",
       "estado": "A",
@@ -11710,6 +12218,7 @@
     },
     {
       "id": "509",
+      "code": "ACE-010843",
       "dni": "01189398",
       "nombre": "SINARAHUA PASHANASE FIDEL",
       "estado": "A",
@@ -11720,12 +12229,12 @@
       "comitesectorial": "ASPAT",
       "entidadbancaria": "null",
       "nrocuenta": "null",
-      "email": "null",
-      "residencia": "null",
-      "localidad": "null",
-      "distrito": "null",
-      "provincia": "null",
-      "departamento": "null",
+      "email": "",
+      "residencia": "TOCACHE",
+      "localidad": "TOCACHE",
+      "distrito": "TOCACHE",
+      "provincia": "TOCACHE",
+      "departamento": "SAN MARTIN",
       "beneficiario": "null",
       "dnibeneficiario": "null",
       "estadodelpredio": "null",
@@ -11733,6 +12242,7 @@
     },
     {
       "id": "510",
+      "code": "ACE-010125",
       "dni": "00993069",
       "nombre": "SINARAHUA SOLSOL MOISES",
       "estado": "A",
@@ -11756,6 +12266,7 @@
     },
     {
       "id": "511",
+      "code": "ACE-160690",
       "dni": "01000740",
       "nombre": "SOLORZANO CASTILLO AGUSTIN",
       "estado": "A",
@@ -11779,6 +12290,7 @@
     },
     {
       "id": "512",
+      "code": "ACE-130488",
       "dni": "00999428",
       "nombre": "SOLORZANO LUCAR FIDEL",
       "estado": "A",
@@ -11802,6 +12314,7 @@
     },
     {
       "id": "513",
+      "code": "ACE-010126",
       "dni": "01001234",
       "nombre": "SUELPERES HERRERA ESTEBAN",
       "estado": "A",
@@ -11825,6 +12338,7 @@
     },
     {
       "id": "514",
+      "code": "ACE-130489",
       "dni": "23168822",
       "nombre": "SUMARAN RIVERA UNOFRIO LEON",
       "estado": "A",
@@ -11848,6 +12362,7 @@
     },
     {
       "id": "515",
+      "code": "ACE-070531",
       "dni": "01170218",
       "nombre": "TAFUR ESCUDERO FLINDER",
       "estado": "A",
@@ -11871,6 +12386,7 @@
     },
     {
       "id": "516",
+      "code": "ACE-070361",
       "dni": "40801086",
       "nombre": "TAFUR ESCUDERO ROBERTO",
       "estado": "A",
@@ -11894,6 +12410,7 @@
     },
     {
       "id": "517",
+      "code": "ACE-070362",
       "dni": "10112153",
       "nombre": "TAFUR SANCHEZ LUIS",
       "estado": "A",
@@ -11917,6 +12434,7 @@
     },
     {
       "id": "518",
+      "code": "ACE-080720",
       "dni": "19413315",
       "nombre": "TAFUR SENIZARIO GLADIS",
       "estado": "A",
@@ -11940,6 +12458,7 @@
     },
     {
       "id": "519",
+      "code": "ACE-170733",
       "dni": "00994124",
       "nombre": "TAPIA ARTIAGA PRUDENCIO",
       "estado": "A",
@@ -11963,6 +12482,7 @@
     },
     {
       "id": "520",
+      "code": "ACE-080786",
       "dni": "00993404",
       "nombre": "TAPULLIMA GONZALES NORMA",
       "estado": "A",
@@ -11986,6 +12506,7 @@
     },
     {
       "id": "521",
+      "code": "ACE-070530",
       "dni": "44276661",
       "nombre": "TAPULLIMA LECCA MICHAEL",
       "estado": "A",
@@ -12009,6 +12530,7 @@
     },
     {
       "id": "522",
+      "code": "ACE-160593",
       "dni": "01015504",
       "nombre": "TAPULLINA TUANAMA JULIAN",
       "estado": "A",
@@ -12032,6 +12554,7 @@
     },
     {
       "id": "523",
+      "code": "ACE-020200",
       "dni": "01001259",
       "nombre": "TELLO GARCIA VICTORIANO",
       "estado": "A",
@@ -12055,6 +12578,7 @@
     },
     {
       "id": "524",
+      "code": "ACE-170627",
       "dni": "01010816",
       "nombre": "TIRADO PANDURO NELIDA",
       "estado": "A",
@@ -12078,6 +12602,7 @@
     },
     {
       "id": "525",
+      "code": "ACE-130540",
       "dni": "40152020",
       "nombre": "TOCTO MANCHAY SARA",
       "estado": "A",
@@ -12101,6 +12626,7 @@
     },
     {
       "id": "526",
+      "code": "ACE-080722",
       "dni": "23152895",
       "nombre": "TOLENTINO AROSTEGUI SESINIO",
       "estado": "A",
@@ -12124,6 +12650,7 @@
     },
     {
       "id": "527",
+      "code": "ACE-060306",
       "dni": "09552780",
       "nombre": "TORREJON GOMEZ TONY PASTOR",
       "estado": "A",
@@ -12147,6 +12674,7 @@
     },
     {
       "id": "528",
+      "code": "ACE-010127",
       "dni": "00986333",
       "nombre": "TORRES DOMINGUEZ MANUEL CARMEN",
       "estado": "A",
@@ -12170,6 +12698,7 @@
     },
     {
       "id": "529",
+      "code": "ACE-180774",
       "dni": "09517302",
       "nombre": "TORRES DURAND LUIS CESAR",
       "estado": "A",
@@ -12193,6 +12722,7 @@
     },
     {
       "id": "530",
+      "code": "ACE-140764",
       "dni": "01014150",
       "nombre": "TORRES HOYOS BENILDA",
       "estado": "A",
@@ -12216,6 +12746,7 @@
     },
     {
       "id": "531",
+      "code": "ACE-040259",
       "dni": "32763108",
       "nombre": "TORRES TRUJILLO ANDRES",
       "estado": "A",
@@ -12239,6 +12770,7 @@
     },
     {
       "id": "532",
+      "code": "ACE-080723",
       "dni": "19404298",
       "nombre": "TRUJILLO CARRANZA LUCRECIA",
       "estado": "A",
@@ -12262,6 +12794,7 @@
     },
     {
       "id": "533",
+      "code": "ACE-070364",
       "dni": "15434872",
       "nombre": "TRUJILLO CARRANZA NATALIA",
       "estado": "A",
@@ -12285,6 +12818,7 @@
     },
     {
       "id": "534",
+      "code": "ACE-020201",
       "dni": "01001456",
       "nombre": "TRUJILLO MEZA VALENTIN",
       "estado": "A",
@@ -12308,6 +12842,7 @@
     },
     {
       "id": "535",
+      "code": "ACE-010132",
       "dni": "00962121",
       "nombre": "TRUJILLO SALDAÑA RAUL",
       "estado": "A",
@@ -12331,6 +12866,7 @@
     },
     {
       "id": "536",
+      "code": "ACE-010510",
       "dni": "00985720",
       "nombre": "TRUJILLO SANCHEZ PEDRO",
       "estado": "A",
@@ -12354,6 +12890,7 @@
     },
     {
       "id": "537",
+      "code": "ACE-010130",
       "dni": "00986281",
       "nombre": "TRUJILLO VILLANUEVA AURELIO",
       "estado": "A",
@@ -12377,6 +12914,7 @@
     },
     {
       "id": "538",
+      "code": "ACE-010131",
       "dni": "00986249",
       "nombre": "TRUJILLO ZEGARRA LORETO",
       "estado": "A",
@@ -12400,6 +12938,7 @@
     },
     {
       "id": "539",
+      "code": "ACE-070792",
       "dni": "00941943",
       "nombre": "TUANAMA LOPEZ ELENA",
       "estado": "A",
@@ -12423,6 +12962,7 @@
     },
     {
       "id": "540",
+      "code": "ACE-010133",
       "dni": "00985682",
       "nombre": "USQUIANO HARO FORTUNATO",
       "estado": "A",
@@ -12446,6 +12986,7 @@
     },
     {
       "id": "541",
+      "code": "ACE-170736",
       "dni": "07721580",
       "nombre": "VALDERRAMA ARMAS MIGUEL DANILO",
       "estado": "A",
@@ -12469,6 +13010,7 @@
     },
     {
       "id": "542",
+      "code": "ACE-160594",
       "dni": "00962596",
       "nombre": "VALDEZ ARTEAGA MELANIO",
       "estado": "A",
@@ -12492,6 +13034,7 @@
     },
     {
       "id": "543",
+      "code": "ACE-170734",
       "dni": "00998173",
       "nombre": "VALDEZ FELIX FLORENCIO",
       "estado": "A",
@@ -12515,6 +13058,7 @@
     },
     {
       "id": "544",
+      "code": "",
       "dni": "44697201",
       "nombre": "VALDEZ VASQUEZ CARLOS",
       "estado": "I",
@@ -12538,6 +13082,7 @@
     },
     {
       "id": "545",
+      "code": "ACE-020203",
       "dni": "30644443",
       "nombre": "VALDIVIA CONDORI JUAN CANCIO",
       "estado": "A",
@@ -12561,6 +13106,7 @@
     },
     {
       "id": "546",
+      "code": "ACE-070365",
       "dni": "42562303",
       "nombre": "VALDIVIESO CASTILLO TEOLINDA",
       "estado": "A",
@@ -12584,6 +13130,7 @@
     },
     {
       "id": "547",
+      "code": "ACE-070367",
       "dni": "00997738",
       "nombre": "VALDIVIESO MEDINA EMILIANO",
       "estado": "A",
@@ -12607,9 +13154,10 @@
     },
     {
       "id": "548",
+      "code": "ACE-010134",
       "dni": "00986052",
       "nombre": "VALDIVIEZO ALVARADO CATALINO",
-      "estado": "I",
+      "estado": "A",
       "fechanaci": "3/22/59",
       "estadocivil": "CONVIVIENTE",
       "gradoinstruccion": "PRIMARIA",
@@ -12630,6 +13178,7 @@
     },
     {
       "id": "549",
+      "code": "ACE-080427",
       "dni": "44918921",
       "nombre": "VALDIVIEZO CASTILLO JOSE HULLER",
       "estado": "A",
@@ -12653,6 +13202,7 @@
     },
     {
       "id": "550",
+      "code": "ACE-070366",
       "dni": "01012234",
       "nombre": "VALDIVIEZO MEDINA SAMUEL",
       "estado": "A",
@@ -12676,6 +13226,7 @@
     },
     {
       "id": "551",
+      "code": "ACE-030220",
       "dni": "19419291",
       "nombre": "VALDIVIEZO ROMERO NERI",
       "estado": "A",
@@ -12699,6 +13250,7 @@
     },
     {
       "id": "552",
+      "code": "ACE-160853",
       "dni": "00985811",
       "nombre": "VALDIVIEZO VILLANUEVA FELIX",
       "estado": "A",
@@ -12722,6 +13274,7 @@
     },
     {
       "id": "553",
+      "code": "ACE-010840",
       "dni": "09405210",
       "nombre": "VALENZUELA HUAMANI PLACIDA FLORIDA",
       "estado": "A",
@@ -12745,6 +13298,7 @@
     },
     {
       "id": "554",
+      "code": "ACE-120812",
       "dni": "44278904",
       "nombre": "VALVERDE PADILLA SILVIA",
       "estado": "A",
@@ -12768,6 +13322,7 @@
     },
     {
       "id": "555",
+      "code": "ACE-020204",
       "dni": "00994401",
       "nombre": "VARGAS MONTEJO TEOBALDO",
       "estado": "A",
@@ -12791,6 +13346,7 @@
     },
     {
       "id": "556",
+      "code": "ACE-010135",
       "dni": "20073699",
       "nombre": "VARGAS TOVAR ERNESTO RAUL",
       "estado": "A",
@@ -12814,6 +13370,7 @@
     },
     {
       "id": "557",
+      "code": "ACE-050286",
       "dni": "19424554",
       "nombre": "VASQUEZ ARTEAGA BACILIA CATALINA",
       "estado": "A",
@@ -12837,6 +13394,7 @@
     },
     {
       "id": "558",
+      "code": "ACE-040265",
       "dni": "42057402",
       "nombre": "VASQUEZ ARTEAGA GREGORIA",
       "estado": "A",
@@ -12860,6 +13418,7 @@
     },
     {
       "id": "559",
+      "code": "ACE-040266",
       "dni": "45491986",
       "nombre": "VASQUEZ ARTEAGA JANET GUISELA",
       "estado": "A",
@@ -12883,6 +13442,7 @@
     },
     {
       "id": "560",
+      "code": "ACE-040264",
       "dni": "01014750",
       "nombre": "VASQUEZ ARTEAGA NELLY APOLONIA",
       "estado": "A",
@@ -12906,6 +13466,7 @@
     },
     {
       "id": "561",
+      "code": "ACE-040260",
       "dni": "01001536",
       "nombre": "VASQUEZ BALTAZAR DANIEL ASARIAS",
       "estado": "A",
@@ -12929,6 +13490,7 @@
     },
     {
       "id": "562",
+      "code": "ACE-080428",
       "dni": "00978748",
       "nombre": "VASQUEZ BAUTISTA SALATIEL",
       "estado": "A",
@@ -12952,6 +13514,7 @@
     },
     {
       "id": "563",
+      "code": "ACE-160595",
       "dni": "00992002",
       "nombre": "VASQUEZ DAVILA MARCO ANTONIO",
       "estado": "A",
@@ -12975,6 +13538,7 @@
     },
     {
       "id": "564",
+      "code": "ACE-010832",
       "dni": "19425348",
       "nombre": "VASQUEZ DIONICIO ROSA JENNY",
       "estado": "A",
@@ -12998,6 +13562,7 @@
     },
     {
       "id": "565",
+      "code": "ACE-040261",
       "dni": "00986093",
       "nombre": "VASQUEZ DOMINGUEZ EXEQUIEL",
       "estado": "A",
@@ -13021,6 +13586,7 @@
     },
     {
       "id": "566",
+      "code": "ACE-010137",
       "dni": "00985752",
       "nombre": "VASQUEZ FLORES ANTONIO",
       "estado": "A",
@@ -13044,6 +13610,7 @@
     },
     {
       "id": "567",
+      "code": "ACE-040797",
       "dni": "40821025",
       "nombre": "VASQUEZ SALDAÑA YEENY",
       "estado": "A",
@@ -13067,6 +13634,7 @@
     },
     {
       "id": "568",
+      "code": "ACE-010511",
       "dni": "00992678",
       "nombre": "VASQUEZ SOLSOL SARELA",
       "estado": "A",
@@ -13090,6 +13658,7 @@
     },
     {
       "id": "569",
+      "code": "ACE-040263",
       "dni": "32737382",
       "nombre": "VASQUEZ TANTAS CESAR DEMETRIO",
       "estado": "A",
@@ -13113,6 +13682,7 @@
     },
     {
       "id": "570",
+      "code": "ACE-120813",
       "dni": "09589984",
       "nombre": "VASQUEZ VILLANUEVA ISIDORO",
       "estado": "A",
@@ -13136,6 +13706,7 @@
     },
     {
       "id": "571",
+      "code": "ACE-150528",
       "dni": "19407005",
       "nombre": "VEGA MENDIETA PEDRO",
       "estado": "A",
@@ -13159,6 +13730,7 @@
     },
     {
       "id": "572",
+      "code": "ACE-160780",
       "dni": "00985604",
       "nombre": "VELA DE CORDOVA HILDA",
       "estado": "A",
@@ -13182,6 +13754,7 @@
     },
     {
       "id": "573",
+      "code": "ACE-160597",
       "dni": "00986020",
       "nombre": "VELA PINCHI DARWIN",
       "estado": "A",
@@ -13205,6 +13778,7 @@
     },
     {
       "id": "574",
+      "code": "ACE-010140",
       "dni": "00985815",
       "nombre": "VELASQUEZ CHUJUTALLI LISTER",
       "estado": "A",
@@ -13228,6 +13802,7 @@
     },
     {
       "id": "575",
+      "code": "ACE-010142",
       "dni": "00986290",
       "nombre": "VELASQUEZ LOPEZ SANTOS",
       "estado": "A",
@@ -13251,6 +13826,7 @@
     },
     {
       "id": "576",
+      "code": "ACE-080724",
       "dni": "08209772",
       "nombre": "VELASQUEZ SALDAÑA FELICIANO",
       "estado": "A",
@@ -13274,6 +13850,7 @@
     },
     {
       "id": "577",
+      "code": "ACE-010144",
       "dni": "01012502",
       "nombre": "VERA VALDIVIEZO NELSON",
       "estado": "A",
@@ -13297,6 +13874,7 @@
     },
     {
       "id": "578",
+      "code": "ACE-010761",
       "dni": "32845159",
       "nombre": "VERA ZAVALA JOSE ISAIAS",
       "estado": "A",
@@ -13320,6 +13898,7 @@
     },
     {
       "id": "579",
+      "code": "ACE-050287",
       "dni": "01000629",
       "nombre": "VERDI HERRERA NIEVES ASUNCION",
       "estado": "A",
@@ -13343,6 +13922,7 @@
     },
     {
       "id": "580",
+      "code": "ACE-170630",
       "dni": "33819495",
       "nombre": "VIDAL ALBARRAN PAULINO",
       "estado": "A",
@@ -13366,6 +13946,7 @@
     },
     {
       "id": "581",
+      "code": "ACE-020205",
       "dni": "00985255",
       "nombre": "VIERA CRUZ PASION",
       "estado": "A",
@@ -13389,6 +13970,7 @@
     },
     {
       "id": "582",
+      "code": "ACE-160598",
       "dni": "43144037",
       "nombre": "VIERA DELGADO PITER",
       "estado": "A",
@@ -13412,9 +13994,10 @@
     },
     {
       "id": "583",
+      "code": "",
       "dni": "01001459",
       "nombre": "VIERA GAMEZ GONZALO",
-      "estado": "A",
+      "estado": "I",
       "fechanaci": "11/20/54",
       "estadocivil": "CONVIVIENTE",
       "gradoinstruccion": "PRIMARIA",
@@ -13435,6 +14018,7 @@
     },
     {
       "id": "584",
+      "code": "ACE-070309",
       "dni": "00985658",
       "nombre": "VIERA UGARTE GAUDENCIO",
       "estado": "A",
@@ -13458,6 +14042,7 @@
     },
     {
       "id": "585",
+      "code": "ACE-060758",
       "dni": "00985373",
       "nombre": "VIGO ANGASPILCO GILMER ROGELIO",
       "estado": "A",
@@ -13481,6 +14066,7 @@
     },
     {
       "id": "586",
+      "code": "ACE-010145",
       "dni": "00985643",
       "nombre": "VIGO AVILA ANGEL JOSE",
       "estado": "A",
@@ -13504,6 +14090,7 @@
     },
     {
       "id": "587",
+      "code": "ACE-010146",
       "dni": "00985790",
       "nombre": "VIGO AVILA BENIGNO",
       "estado": "A",
@@ -13527,6 +14114,7 @@
     },
     {
       "id": "588",
+      "code": "ACE-010149",
       "dni": "01000624",
       "nombre": "VILLACORTA SAAVEDRA LEONARDO",
       "estado": "A",
@@ -13550,6 +14138,7 @@
     },
     {
       "id": "589",
+      "code": "ACE-070371",
       "dni": "70810475",
       "nombre": "VILLANUEVA DELGADO YURI NATHALY",
       "estado": "A",
@@ -13573,6 +14162,7 @@
     },
     {
       "id": "590",
+      "code": "ACE-130480",
       "dni": "00961106",
       "nombre": "VILLANUEVA DOMINGUEZ EFROCINIA",
       "estado": "A",
@@ -13596,6 +14186,7 @@
     },
     {
       "id": "591",
+      "code": "ACE-040644",
       "dni": "19416363",
       "nombre": "VILLANUEVA DOMINGUEZ ORESTES",
       "estado": "A",
@@ -13619,6 +14210,7 @@
     },
     {
       "id": "592",
+      "code": "ACE-010150",
       "dni": "00985782",
       "nombre": "VILLANUEVA LOPEZ DEMETRIO",
       "estado": "A",
@@ -13642,6 +14234,7 @@
     },
     {
       "id": "593",
+      "code": "",
       "dni": "00994680",
       "nombre": "VILLANUEVA PINEDO ISIDRO",
       "estado": "I",
@@ -13665,6 +14258,7 @@
     },
     {
       "id": "594",
+      "code": "ACE-010862",
       "dni": "00985857",
       "nombre": "VILLANUEVA RAMOS MANUEL",
       "estado": "A",
@@ -13688,6 +14282,7 @@
     },
     {
       "id": "595",
+      "code": "ACE-040798",
       "dni": "01017584",
       "nombre": "VILLANUEVA VALDERDE ANTONIA",
       "estado": "A",
@@ -13711,6 +14306,7 @@
     },
     {
       "id": "596",
+      "code": "ACE-040270",
       "dni": "01000663",
       "nombre": "VILLANUEVA VALVERDE DE TRUJILLO SIMONA",
       "estado": "A",
@@ -13734,6 +14330,7 @@
     },
     {
       "id": "597",
+      "code": "ACE-020207",
       "dni": "43623963",
       "nombre": "ZAVALETA TERRONES LIDIA",
       "estado": "A",
@@ -13757,6 +14354,7 @@
     },
     {
       "id": "598",
+      "code": "ACE-010513",
       "dni": "00985701",
       "nombre": "ZEGARRA ACUÑA DOMICIANO",
       "estado": "A",
@@ -13780,6 +14378,7 @@
     },
     {
       "id": "599",
+      "code": "ACE-010151",
       "dni": "00986143",
       "nombre": "ZEGARRA FIGUEROA ISABEL IGNACIO",
       "estado": "A",
@@ -13803,6 +14402,7 @@
     },
     {
       "id": "600",
+      "code": "ACE-010152",
       "dni": "00986323",
       "nombre": "ZEGARRA OLIVOS JUAN",
       "estado": "A",
@@ -13826,6 +14426,7 @@
     },
     {
       "id": "601",
+      "code": "ACE-100454",
       "dni": "19418205",
       "nombre": "ZEGARRA PIZAN JOSE HONORIO",
       "estado": "A",
@@ -13849,6 +14450,7 @@
     },
     {
       "id": "602",
+      "code": "ACE-040271",
       "dni": "00986265",
       "nombre": "ZEGARRA SILVA SANTOS",
       "estado": "A",
@@ -13872,6 +14474,7 @@
     },
     {
       "id": "603",
+      "code": "ACE-010153",
       "dni": "01000676",
       "nombre": "ZEGARRA TORRES LUIS",
       "estado": "A",
@@ -13895,6 +14498,7 @@
     },
     {
       "id": "604",
+      "code": "ACE-010154",
       "dni": "19400049",
       "nombre": "ZEGARRA TRUJILLO JULIANA",
       "estado": "A",
@@ -13918,6 +14522,7 @@
     },
     {
       "id": "605",
+      "code": "ACE-010512",
       "dni": "32986534",
       "nombre": "ZEGARRA TRUJILLO LUIS HERNANDO",
       "estado": "A",
@@ -13941,8 +14546,9 @@
     },
     {
       "id": "606",
+      "code": "ACE-020208",
       "dni": "00985498",
-      "nombre": "ZEGARRA VILLANUEVA ALCIDES",
+      "nombre": "ZEGARRA VILLANUEVA ALCIDES.",
       "estado": "A",
       "fechanaci": "6/4/61",
       "estadocivil": "CASADO",
@@ -13959,6 +14565,30 @@
       "departamento": "SAN MARTIN",
       "beneficiario": "CAMPOS LOPEZ ANA MARIA",
       "dnibeneficiario": "8546736",
+      "estadodelpredio": "",
+      "hoverState": ""
+    },
+    {
+      "id": "607",
+      "code": "ACE-130481",
+      "dni": "00962568",
+      "nombre": "LOZANO MUÑOZ LELY",
+      "estado": "A",
+      "fechanaci": "26/8/76",
+      "estadocivil": "CASADO",
+      "gradoinstruccion": "",
+      "telefono": "937508101",
+      "comitesectorial": "ASPAT",
+      "entidadbancaria": "",
+      "nrocuenta": "",
+      "email": "",
+      "residencia": "",
+      "localidad": "",
+      "distrito": "TOCACHE",
+      "provincia": "TOCACHE",
+      "departamento": "SAN MARTIN",
+      "beneficiario": "CAMPOS LOPEZ ANA MARIA",
+      "dnibeneficiario": "",
       "estadodelpredio": "",
       "hoverState": ""
     }
@@ -52734,6 +53364,30 @@
       "telefono": "",
       "usuario": "ADMIN",
       "creado": "2023-06-01"
+    }
+  ],
+  "ticket": [
+    {
+      "id": "z0ytk521z",
+      "ticket": "FF-AA",
+      "cantidad": "321",
+      "undmedida": "TN",
+      "descripcion": "no c",
+      "preciou": 602.864,
+      "igv": 0,
+      "descuento": "0.000",
+      "importe": 193519.344
+    },
+    {
+      "id": "s502v6c5u",
+      "ticket": "123121",
+      "cantidad": "1.4",
+      "undmedida": "TN",
+      "descripcion": "no c",
+      "preciou": 602.864,
+      "igv": 0,
+      "descuento": "0.000",
+      "importe": 844.0096
     }
   ]
 }
