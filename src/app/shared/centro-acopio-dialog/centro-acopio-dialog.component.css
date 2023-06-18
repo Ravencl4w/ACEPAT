@@ -8,6 +8,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
   }
+  
   .custom-grupo1{
     max-width: 180px;
   }
@@ -25,6 +26,7 @@
     padding: 10px;
     margin: 10px;
     display: flex;
+  
   }
   .columna1{
     flex-basis: 60%;
@@ -100,3 +102,12 @@
     justify-content: flex-start;
     padding-right: 50px;
   }
+  .grupotab4{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-right: 50px;
+    margin-top: 360px;
+    margin-left: 110px;
+  }
+ 

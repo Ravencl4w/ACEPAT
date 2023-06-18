@@ -1,35 +1,74 @@
 <div class="main_content">
   <div class="header">Centro de Acopio</div>
+  <form class="form-group" [formGroup]="grupo">
   <div class="fila fila1">
     <div class="columna1">
       <div class="grupo1">
         <div class="input-group">
             <label class="labels">Codigo</label>
           <mat-form-field class="custom-grupo1">
-            <mat-label></mat-label> 
-            <input matInput >
+            
+             
+            <input
+              type="text"
+              formControlName="codigoacopio"
+              aria-label="Number"
+              matInput
+              [value]="selectedCodigoAcopio"
+              [matAutocomplete]="autoCodigoAcopio"
+            />
+            <mat-autocomplete
+              #autoCodigoAcopio="matAutocomplete"
+              (optionSelected)="onCodigoAcopioSelected($event)"
+            >
+              <mat-option
+                *ngFor="let option of filteredCodigoAcopio | async"
+                [value]="option"
+              >
+                {{ option }}
+              </mat-option>
+            </mat-autocomplete>
+            
           </mat-form-field>
         </div>
         <div class="input-group">
             <label class="labels">Centro de Acopio</label>
           <mat-form-field class="custom-grupo1">
-            <mat-label></mat-label>
-            <input matInput />
+        
+            <input
+              type="text"
+              formControlName="centroacopio"
+              aria-label="Number"
+              matInput
+              [value]="selectedCentroAcopio"
+              [matAutocomplete]="autoCentroAcopio"
+            />
+            <mat-autocomplete
+              #autoCentroAcopio="matAutocomplete"
+              (optionSelected)="onCentroAcopioSelected($event)"
+            >
+              <mat-option
+                *ngFor="let option of filteredCentroAcopio | async"
+                [value]="option"
+              >
+                {{ option }}
+              </mat-option>
+            </mat-autocomplete>
           </mat-form-field>
         </div>
         <div class="input-group">
             <label class="labels">Saldo Soles</label>
           <mat-form-field class="custom-grupo1">
-            <mat-label></mat-label>
-            <input matInput value="0.00">
+          
+            <input matInput formControlName="saldosoles" placeholder="0.00">
           </mat-form-field>
         </div>
         <div class="input-group">
             <label class="labels"> Saldo Acopio
             </label>
           <mat-form-field class="custom-grupo1">
-            <mat-label></mat-label>
-            <input matInput value="0.00">
+         
+            <input matInput formControlName="saldoacopio" placeholder="0.00">
           </mat-form-field>
         </div>
       </div>
@@ -37,15 +76,15 @@
         <div class="input-group">
             <label class="labels">Dirección</label>
           <mat-form-field class="example-full-width">
-            <mat-label></mat-label>
-            <input matInput />
+        
+            <input matInput formControlName="direccion1">
           </mat-form-field>
         </div>
         <div class="input-group">
             <label class="labels">Telefono/Celular</label>
           <mat-form-field class="example-full-width">
-            <mat-label></mat-label>
-            <input matInput />
+        
+            <input matInput formControlName="telefono">
           </mat-form-field>
         </div>
       </div>
@@ -53,29 +92,83 @@
         <div class="input-group">
             <label class="labels">Codigo</label>
           <mat-form-field class="example-full-width">
-            <mat-label></mat-label>
-            <input matInput  />
+          
+            
+            <input
+              type="text"
+              formControlName="codigosocio"
+              aria-label="Number"
+              matInput
+              [value]="selectedCodigo"
+              [matAutocomplete]="autoCodigo"
+            />
+            <mat-autocomplete
+              #autoCodigo="matAutocomplete"
+              (optionSelected)="onCodigoSelected($event)"
+            >
+              <mat-option
+                *ngFor="let option of filteredCodigo | async"
+                [value]="option"
+              >
+                {{ option }}
+              </mat-option>
+            </mat-autocomplete>
           </mat-form-field>
         </div>
         <div class="input-group">
             <label class="labels">N° Documento</label>
           <mat-form-field class="example-full-width">
-            <mat-label> </mat-label>
-            <input matInput  />
+          
+            <input
+            type="text"
+            formControlName="documento"
+            aria-label="Number"
+            matInput
+            [value]="selectedDni"
+            [matAutocomplete]="autoDNI"
+          />
+          <mat-autocomplete
+            #autoDNI="matAutocomplete"
+            (optionSelected)="onDniSelected($event)"
+          >
+            <mat-option
+              *ngFor="let option of filteredDni | async"
+              [value]="option"
+            >
+              {{ option }}
+            </mat-option>
+          </mat-autocomplete>
           </mat-form-field>
         </div>
         <div class="input-group">
             <label class="labels">Apellido y Nombre</label>
           <mat-form-field class="apellidoYnombres">
-            <mat-label></mat-label>
-            <input matInput  />
+            <input
+              type="text"
+              formControlName="apellidoYnombres"
+              aria-label="Number"
+              matInput
+              [value]="selectedNombre"
+              [matAutocomplete]="autoNombre"
+            />
+            <mat-autocomplete
+              #autoNombre="matAutocomplete"
+              (optionSelected)="onNombreSelected($event)"
+            >
+              <mat-option
+                *ngFor="let option of filteredNombre | async"
+                [value]="option"
+              >
+                {{ option }}
+              </mat-option>
+            </mat-autocomplete>
           </mat-form-field>
         </div>
       </div>
       <div class="grupo4">
         <div class="input-group">
           <label class="example-margin">Datos Acopiador:</label> <br />
-          <mat-radio-group>
+          <mat-radio-group >
             <mat-radio-button class="check">Masculino</mat-radio-button> <br />
             <mat-radio-button class="check">Femenino</mat-radio-button>
           </mat-radio-group>
@@ -85,8 +178,8 @@
           
           <mat-form-field>
             <mat-label>Fecha inicio</mat-label>
-            <input matInput [matDatepicker]="picker" />
-            <mat-hint>MM/DD/YYYY</mat-hint>
+            <input matInput [matDatepicker]="picker" formControlName="fecha">
+        
             <mat-datepicker-toggle
               matIconSuffix
               [for]="picker"
@@ -111,7 +204,7 @@
             <label class="labels">Num Doc</label>
             <mat-form-field class="custom-grupo1">
               <mat-label></mat-label>
-              <input matInput />
+              <input matInput formControlName="numdoc">
             </mat-form-field>
           </div>
 
@@ -121,23 +214,23 @@
                 
             
               <mat-label></mat-label>
-              <input matInput />
+              <input matInput formControlName="apellidopaterno">
             </mat-form-field>
           </div>
           <div class="input-group">
             
             <label class="labels">Apellido Materno</label>
             <mat-form-field class="custom-grupo1">
-              <mat-label></mat-label>
-              <input matInput />
+           
+              <input matInput formControlName="apellidomaterno">
             </mat-form-field>
           </div>
           <div class="input-group">
             
             <label class="labels">Nombres</label>
             <mat-form-field class="custom-grupo1">
-              <mat-label></mat-label>
-              <input matInput />
+         
+              <input matInput formControlName="nombres">
             </mat-form-field>
           </div>
         </div>
@@ -146,23 +239,23 @@
             
             <label class="labels">Dirección</label>
             <mat-form-field class="example-full-width">
-              <mat-label></mat-label>
-              <input matInput />
+        
+              <input matInput formControlName="direccion2">
             </mat-form-field>
           </div>
           <div class="input-group">
             
             <label class="labels">R.U.C.</label>
             <mat-form-field class="example-full-width">
-              <mat-label></mat-label>
-              <input matInput placeholder="Ejemplo: 72456638" />
+        
+              <input matInput formControlName="ruc" />
             </mat-form-field>
           </div>
           <div class="input-group">
             <label class="labels">Celular</label>
             <mat-form-field class="example-full-width">
-              <mat-label></mat-label>
-              <input matInput placeholder="Ejemplo: 72456638" />
+  
+              <input matInput formControlName="celular" >
             </mat-form-field>
           </div>
         </div>
@@ -223,6 +316,18 @@
         </div>
         
       </div>
+      <div class="grupotab4">
+<div class="input-group">
+  <button class="botones" mat-flat-button color="primary">Nuevo</button>
+</div>
+<div class="input-group">
+  <button class="botones" mat-flat-button color="primary">Registrar</button>
+</div>
+<div class="input-group">
+  <button class="botones" mat-flat-button color="warn" matDialogClose>Salir</button>
+</div>
+      </div>
     </div>
   </div>
+</form>
 </div>

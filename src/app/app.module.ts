@@ -47,6 +47,9 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { AportMovementComponent } from './credit/aport-movement/aport-movement.component';
 import { CollectContributionsComponent } from './shared/collect-contributions/collect-contributions.component';
 import { ReportingMovementComponent } from './shared/reporting-movement/reporting-movement.component';
+import { ProduccionComponent } from './comercializacion/produccion/produccion.component';
+import { AsignacionCostosDialogComponent } from './shared/asignacion-costos-dialog/asignacion-costos-dialog.component';
+import { AsignarPrecioVentaComponent } from './shared/asignar-precio-venta/asignar-precio-venta.component';
 
 
 
@@ -74,7 +77,10 @@ import { ReportingMovementComponent } from './shared/reporting-movement/reportin
     CollectContributionsComponent,
     ReportingMovementComponent,
     CentroAcopioComponent,
-    CentroAcopioDialogComponent
+    CentroAcopioDialogComponent,
+    ProduccionComponent,
+    AsignacionCostosDialogComponent,
+    AsignarPrecioVentaComponent
   ],
   imports: [
     BrowserModule,
