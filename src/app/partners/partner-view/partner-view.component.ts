@@ -38,6 +38,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 })
 export class PartnerViewComponent implements AfterViewInit {
   displayedColumns: string[] = [
+    'id',
+    'code',
     'dni',
     'nombre',
     'estado',

@@ -143,7 +143,13 @@ class="form-group"
   <input matInput placeholder="Productividad" formControlName="productividad"/>
 </mat-form-field>
 
-<button class="button-add" mat-raised-button color="primary" type="submit" (click)="onSubmit(partner)">Guardar</button> 
+<mat-dialog-actions class="dialog-actions">
+  <div class="dialog-actions-container">
+<button class="button-add" mat-raised-button color="primary" type="submit" (click)="onSubmit(partner)">Guardar</button>
+<button class="button-cancel" mat-button mat-dialog-close color="primary">Cancelar</button>
 </div>
+</mat-dialog-actions>
+</div>
+
 
 </form>

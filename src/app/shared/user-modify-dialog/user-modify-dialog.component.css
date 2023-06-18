@@ -32,12 +32,31 @@
     width: 400px;
   }
 
-  button[type="submit"] {
-    width: 100%;
-    padding: 25px;
+  .button-add{
+    height: 50px; ;
+    width: 150px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .button-cancel{
     color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+    background-color: red;
+    height: 50px; ;
+    width: 150px;
+    font-size: 18px;
+  }
+  
+  .dialog-actions {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .dialog-actions-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    column-gap: 10px; /* Ajusta el espacio entre los botones según tus preferencias */
   }
   

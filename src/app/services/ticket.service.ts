@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class TicketService {
 
   constructor(private http:HttpClient) { }
-  apiurl='http://localhost:4100/ticket';
+  apiurl='http://26.186.124.160:4100/ticket';
   createTicket(inputdata:any){
     return this.http.post(this.apiurl,inputdata);
   }
