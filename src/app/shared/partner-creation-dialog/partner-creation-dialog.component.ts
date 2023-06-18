@@ -1,4 +1,3 @@
-import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
@@ -308,18 +307,17 @@ export class PartnerCreationDialogComponent implements OnInit {
     'Carhuaz':['Carhuaz','Acopampa','Amashca','Anta','Ataquero','Marcará','Pariahuanca','San Miguel de Aco','Shilla','Tinco','Yungar'],
 
   };
-
+  
   constructor(
     private fb: FormBuilder,
     public dialogRef: MatDialogRef<PartnerCreationDialogComponent>,
-    private service: PartnerService,
-    private datePipe: DatePipe
+    private service: PartnerService
   ) {
     this.formulario = this.fb.group({
       estadosocio: ['', Validators.required],
       genero: ['', Validators.required],
       codigo: ['', Validators.required],
-      dateasoc: [this.datePipe.transform(new Date(), 'dd/MM/yyyy'), Validators.required],
+      dateasoc: [new Date().toISOString(), Validators.required],
       dateemp: [new Date().toISOString(), Validators.required],
       tipodoc: ['', Validators.required],
       numerodoc: ['', Validators.required],

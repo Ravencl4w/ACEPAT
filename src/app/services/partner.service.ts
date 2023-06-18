@@ -11,8 +11,8 @@ export class PartnerService {
 
   constructor(private http:HttpClient) { }
 
-  apiurl='http://26.186.124.160:4100/socios';
-  apiurlDetail='http://26.186.124.160:4100/socios-detalle';
+  apiurl='http://localhost:4100/socios';
+  apiurlDetail='http://localhost:4100/socios-detalle';
   createPartners(inputdata:any){
     return this.http.post(this.apiurl,inputdata);
   }
