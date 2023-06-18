@@ -307,7 +307,7 @@ export class PartnerCreationDialogComponent implements OnInit {
     'Carhuaz':['Carhuaz','Acopampa','Amashca','Anta','Ataquero','Marcará','Pariahuanca','San Miguel de Aco','Shilla','Tinco','Yungar'],
 
   };
-
+  
   constructor(
     private fb: FormBuilder,
     public dialogRef: MatDialogRef<PartnerCreationDialogComponent>,

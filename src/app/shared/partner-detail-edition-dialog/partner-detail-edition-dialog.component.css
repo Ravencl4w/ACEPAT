@@ -10,13 +10,6 @@
     max-width: 1400px;
     max-height: 800px;
   }
-
-  .button-add{
-    height: 50px; ;
-    width: 250px;
-    font-size: 18px;
-    left: 220px;
-  }
   
   .div1{  
     flex: 50%;
@@ -35,4 +28,32 @@
     width: 650px;
     
     flex-direction: column;
+  }
+
+  .button-add{
+    height: 50px; ;
+    width: 150px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .button-cancel{
+    color: white;
+    background-color: red;
+    height: 50px; ;
+    width: 150px;
+    font-size: 18px;
+  }
+  
+  .dialog-actions {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .dialog-actions-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    column-gap: 10px; /* Ajusta el espacio entre los botones según tus preferencias */
   }

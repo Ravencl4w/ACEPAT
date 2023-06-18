@@ -87,12 +87,17 @@
         <input matInput placeholder="Estado predio" formControlName="estadodelpredio"/>
       </mat-form-field>
       
-      <button class="button-add" mat-raised-button color="primary" type="submit" (click)="onSubmit(partner)">Guardar</button> </div>
-    
+      <mat-dialog-actions class="dialog-actions">
+        <div class="dialog-actions-container">
+      <button class="button-add" mat-raised-button color="primary" type="submit" (click)="onSubmit(partner)">Guardar</button> 
+      <button class="button-cancel" mat-button mat-dialog-close color="primary">Cancelar</button>
+    </div>
+      </mat-dialog-actions>
+    </div>
       </form>
     </mat-tab>
     
-    <mat-tab label="DETALLE DE SOCIO" class="sticky-tabs">
+    <mat-tab label="DETALLE DE PREDIO" class="sticky-tabs">
       <div class="info">
         <div class="mat-elevation-z8">
           <table mat-table [dataSource]="dataSource" class="mat-table">

@@ -47,6 +47,9 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { AportMovementComponent } from './credit/aport-movement/aport-movement.component';
 import { CollectContributionsComponent } from './shared/collect-contributions/collect-contributions.component';
 import { ReportingMovementComponent } from './shared/reporting-movement/reporting-movement.component';
+import { DebtListComponent } from './credit/debt-list/debt-list.component';
+import { CreateDebtDialogComponent } from './shared/create-debt-dialog/create-debt-dialog.component';
+import { DatePipe } from '@angular/common';
 import { ProduccionComponent } from './comercializacion/produccion/produccion.component';
 import { AsignacionCostosDialogComponent } from './shared/asignacion-costos-dialog/asignacion-costos-dialog.component';
 import { AsignarPrecioVentaComponent } from './shared/asignar-precio-venta/asignar-precio-venta.component';
@@ -78,6 +81,8 @@ import { AsignarPrecioVentaComponent } from './shared/asignar-precio-venta/asign
     ReportingMovementComponent,
     CentroAcopioComponent,
     CentroAcopioDialogComponent,
+    DebtListComponent,
+    CreateDebtDialogComponent,
     ProduccionComponent,
     AsignacionCostosDialogComponent,
     AsignarPrecioVentaComponent
@@ -107,6 +112,7 @@ import { AsignarPrecioVentaComponent } from './shared/asignar-precio-venta/asign
     MatTabsModule,
     FormsModule,
     MatAutocompleteModule,
+    DatePipe
 
   ],
   providers: [],

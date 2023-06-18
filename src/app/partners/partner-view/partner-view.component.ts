@@ -38,7 +38,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 })
 export class PartnerViewComponent implements AfterViewInit {
   displayedColumns: string[] = [
-    'id',
+    'code',
+    'comitesectorial',
     'dni',
     'nombre',
     'estado',
@@ -71,17 +72,14 @@ export class PartnerViewComponent implements AfterViewInit {
   }
   exportToExcel(): void {
     const data = this.dataSource.data;
-    const paginatedData = data.slice(
-      this.paginator.pageIndex * this.paginator.pageSize,
-      (this.paginator.pageIndex + 1) * this.paginator.pageSize
-    );
-
+  
     const workbook = XLSX.utils.book_new();
-    const worksheet = XLSX.utils.json_to_sheet(paginatedData);
+    const worksheet = XLSX.utils.json_to_sheet(data);
     XLSX.utils.book_append_sheet(workbook, worksheet, 'Datos');
-
+  
     XLSX.writeFile(workbook, 'datos.xlsx');
   }
+  
 
   openCreationDialog(): void {
     this.dialog.open(PartnerCreationDialogComponent, {
