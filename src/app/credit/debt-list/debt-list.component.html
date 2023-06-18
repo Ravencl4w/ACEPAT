@@ -1,0 +1,144 @@
+<div class="cuerpo">
+  <div class="header">Lista de Deudas</div>
+  <div class="opciones">
+    <div class="button-group">
+      <!-- Botón de descarga -->
+      <button
+        mat-raised-button
+        color="primary"
+        class="download-btn"
+        (click)="exportToExcel()"
+      >
+        <mat-icon>get_app</mat-icon>
+        Exportar a Excel
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        class="cobrar-btn"
+        (click)="openCreationDialog()"
+      >
+        Cobrar Aportes
+      </button>
+    </div>
+    <div class="radio-search-container">
+        <mat-radio-group aria-label="Select an option" [(ngModel)]="tablaSeleccionada">
+            <mat-radio-button value="deudores" style="display: block" checked>Deudores</mat-radio-button>
+            <mat-radio-button value="cobranzas" style="display: block">Cobranzas</mat-radio-button>
+          </mat-radio-group>
+    <mat-form-field
+      [style.width.px]="500"
+      [style.height.px]="70"
+      class="busqueda"
+    >
+      <mat-label>Buscar</mat-label>
+      <input matInput (keyup)="applyBusqueda($event)" #input />
+    </mat-form-field>
+</div>
+  </div>
+  <div class="mat-elevation-z8" *ngIf="tablaSeleccionada === 'deudores'">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <!-- Position Column -->
+      <ng-container matColumnDef="documento">
+        <th mat-header-cell *matHeaderCellDef>Documento</th>
+        <td mat-cell *matCellDef="let element" (click)="openCreationDialog()" >{{ element.documento }}</td>
+      </ng-container>
+      <!-- Name Column -->
+      <ng-container matColumnDef="fecha">
+        <th mat-header-cell *matHeaderCellDef>Fecha</th>
+        <td mat-cell *matCellDef="let element" (click)="openCreationDialog()" >{{ element.fecha }}</td>
+      </ng-container>
+      <!-- Weight Column -->
+      <ng-container matColumnDef="importe">
+        <th mat-header-cell *matHeaderCellDef>Importe</th>
+        <td mat-cell *matCellDef="let element" (click)="openCreationDialog()" >{{ element.importe }}</td>
+      </ng-container>
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="codigo">
+        <th mat-header-cell *matHeaderCellDef>Codigo</th>
+        <td mat-cell *matCellDef="let element" (click)="openCreationDialog()" >{{ element.codigo }}</td>
+      </ng-container>
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="docident">
+        <th mat-header-cell *matHeaderCellDef>Doc. Identidad</th>
+        <td mat-cell *matCellDef="let element" (click)="openCreationDialog()" >{{ element.docident }}</td>
+      </ng-container>
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="socio">
+        <th mat-header-cell *matHeaderCellDef>Socio</th>
+        <td mat-cell *matCellDef="let element" (click)="openCreationDialog()" >{{ element.socio }}</td>
+      </ng-container>
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="estado">
+        <th mat-header-cell *matHeaderCellDef>Estado</th>
+        <td mat-cell *matCellDef="let element" (click)="openCreationDialog()" >{{ element.estado }}</td>
+      </ng-container>
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="usuario">
+        <th mat-header-cell *matHeaderCellDef>Usuario</th>
+        <td mat-cell *matCellDef="let element" (click)="openCreationDialog()" >{{ element.usuario }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+
+    <mat-paginator
+      [pageSizeOptions]="[5, 10, 25, 100]"
+      aria-label="Select page of users"
+    ></mat-paginator>
+  </div>
+
+  <div class="mat-elevation-z8" *ngIf="tablaSeleccionada === 'cobranzas'">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <!-- Position Column -->
+      <ng-container matColumnDef="documento">
+        <th mat-header-cell *matHeaderCellDef>DOCUMENTO CAMBIADO PE CAUSA</th>
+        <td mat-cell *matCellDef="let element" (click)="openCreationDialog()" >{{ element.documento }}</td>
+      </ng-container>
+      <!-- Name Column -->
+      <ng-container matColumnDef="fecha">
+        <th mat-header-cell *matHeaderCellDef>Fecha</th>
+        <td mat-cell *matCellDef="let element" (click)="openCreationDialog()" >{{ element.fecha }}</td>
+      </ng-container>
+      <!-- Weight Column -->
+      <ng-container matColumnDef="importe">
+        <th mat-header-cell *matHeaderCellDef>Importe</th>
+        <td mat-cell *matCellDef="let element" (click)="openCreationDialog()" >{{ element.importe }}</td>
+      </ng-container>
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="codigo">
+        <th mat-header-cell *matHeaderCellDef>Codigo</th>
+        <td mat-cell *matCellDef="let element" (click)="openCreationDialog()" >{{ element.codigo }}</td>
+      </ng-container>
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="docident">
+        <th mat-header-cell *matHeaderCellDef>Doc. Identidad</th>
+        <td mat-cell *matCellDef="let element" (click)="openCreationDialog()" >{{ element.docident }}</td>
+      </ng-container>
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="socio">
+        <th mat-header-cell *matHeaderCellDef>Socio</th>
+        <td mat-cell *matCellDef="let element" (click)="openCreationDialog()" >{{ element.socio }}</td>
+      </ng-container>
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="estado">
+        <th mat-header-cell *matHeaderCellDef>Estado</th>
+        <td mat-cell *matCellDef="let element" (click)="openCreationDialog()" >{{ element.estado }}</td>
+      </ng-container>
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="usuario">
+        <th mat-header-cell *matHeaderCellDef>Usuario</th>
+        <td mat-cell *matCellDef="let element" (click)="openCreationDialog()" >{{ element.usuario }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+
+    <mat-paginator
+      [pageSizeOptions]="[5, 10, 25, 100]"
+      aria-label="Select page of users"
+    ></mat-paginator>
+  </div>
+</div>

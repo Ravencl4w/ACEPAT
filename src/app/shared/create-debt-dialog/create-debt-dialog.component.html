@@ -1,0 +1,139 @@
+<div class="cuerpo">
+  <form class="form-group" [formGroup]="deudas">
+    <div class="opciones-datos">
+      <label class="labels">Datos del socio o tercero</label>
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1">Option 1</mat-radio-button>
+        <mat-radio-button value="2">Option 2</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div class="fila fila1">
+      <div class="datos-socio">
+        <div class="input-group">
+          <label class="labels">Codigo</label>
+          <mat-form-field
+            [style.width.px]="500"
+            [style.height.px]="70"
+            class="custom-input"
+          >
+            <input matInput formControlName="codigo" />
+          </mat-form-field>
+        </div>
+        <div class="input-group">
+          <label class="labels">Doc. Identidad</label>
+          <mat-form-field
+            [style.width.px]="500"
+            [style.height.px]="70"
+            class="custom-input"
+          >
+            <input matInput formControlName="docidentidad" />
+          </mat-form-field>
+        </div>
+        <div class="input-group">
+          <label class="labels">N° Doc. Ident.</label>
+          <mat-form-field
+            [style.width.px]="500"
+            [style.height.px]="70"
+            class="custom-input"
+          >
+            <input matInput formControlName="numerodoc" />
+          </mat-form-field>
+        </div>
+        <div class="input-group">
+          <label class="labels">Sector</label>
+          <mat-form-field
+            [style.width.px]="500"
+            [style.height.px]="70"
+            class="custom-input"
+          >
+            <input matInput formControlName="sector" />
+          </mat-form-field>
+        </div>
+        <div class="input-group">
+          <label class="labels">Estado</label>
+          <mat-form-field
+            [style.width.px]="500"
+            [style.height.px]="70"
+            class="custom-input"
+          >
+            <input matInput formControlName="estado" />
+          </mat-form-field>
+        </div>
+        <div class="input-group">
+          <label class="labels">Nombres y Apellidos</label>
+          <mat-form-field
+            [style.width.px]="500"
+            [style.height.px]="70"
+            class="custom-input"
+          >
+            <input matInput formControlName="nombres" />
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="fila fila2">
+        <div class="datos-deuda">
+        <div class="input-group">
+            <label class="labels">Estado</label>
+            <mat-form-field
+              [style.width.px]="500"
+              [style.height.px]="70"
+              class="custom-input"
+            >
+              <input matInput formControlName="estado" />
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Estado</label>
+            <mat-form-field
+              [style.width.px]="500"
+              [style.height.px]="70"
+              class="custom-input"
+            >
+              <input matInput formControlName="estado" />
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Estado</label>
+            <mat-form-field
+              [style.width.px]="500"
+              [style.height.px]="70"
+              class="custom-input"
+            >
+              <input matInput formControlName="estado" />
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Estado</label>
+            <mat-form-field
+              [style.width.px]="500"
+              [style.height.px]="70"
+              class="custom-input"
+            >
+              <input matInput formControlName="estado" />
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Estado</label>
+            <mat-form-field
+              [style.width.px]="500"
+              [style.height.px]="70"
+              class="custom-input"
+            >
+              <input matInput formControlName="estado" />
+            </mat-form-field>
+          </div>
+          <div class="input-group">
+            <label class="labels">Estado</label>
+            <mat-form-field
+              [style.width.px]="500"
+              [style.height.px]="70"
+              class="custom-input"
+            >
+              <input matInput formControlName="estado" />
+            </mat-form-field>
+          </div>
+        </div>
+    </div>
+  </form>
+</div>

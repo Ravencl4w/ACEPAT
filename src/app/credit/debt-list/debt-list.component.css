@@ -1,0 +1,32 @@
+.header {
+    padding: 30px;
+    background: #fff;
+    color: #717171;
+    border-bottom: 1px solid #e0e4e8;
+    font-size: 35px;
+  }
+
+  .button-group {
+    display: flex;
+    gap: 20px;
+  }
+
+  .opciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-bottom: 30px;
+  }
+
+  .radio-search-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .busqueda{
+    padding-left: 70px;
+  }
+  
+  
+  

@@ -47,6 +47,9 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { AportMovementComponent } from './credit/aport-movement/aport-movement.component';
 import { CollectContributionsComponent } from './shared/collect-contributions/collect-contributions.component';
 import { ReportingMovementComponent } from './shared/reporting-movement/reporting-movement.component';
+import { DebtListComponent } from './credit/debt-list/debt-list.component';
+import { CreateDebtDialogComponent } from './shared/create-debt-dialog/create-debt-dialog.component';
+import { DatePipe } from '@angular/common';
 
 
 
@@ -74,7 +77,9 @@ import { ReportingMovementComponent } from './shared/reporting-movement/reportin
     CollectContributionsComponent,
     ReportingMovementComponent,
     CentroAcopioComponent,
-    CentroAcopioDialogComponent
+    CentroAcopioDialogComponent,
+    DebtListComponent,
+    CreateDebtDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -101,6 +106,7 @@ import { ReportingMovementComponent } from './shared/reporting-movement/reportin
     MatTabsModule,
     FormsModule,
     MatAutocompleteModule,
+    DatePipe
 
   ],
   providers: [],
