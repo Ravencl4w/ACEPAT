@@ -21,6 +21,7 @@ import {NgIf} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatSort } from '@angular/material/sort';
 
 
 @Component({
@@ -55,6 +56,8 @@ export class PartnerViewComponent implements AfterViewInit {
 
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
+  @ViewChild(MatSort) 
+  sort!: MatSort;
   selectedElement: any;
   filtroDNI!: string;
   filtroSocio!: string;
@@ -68,6 +71,7 @@ export class PartnerViewComponent implements AfterViewInit {
     this.service.getPartners().subscribe((partners) => {
       this.dataSource = new MatTableDataSource<Partner>(partners);
       this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
     });
   }
   exportToExcel(): void {

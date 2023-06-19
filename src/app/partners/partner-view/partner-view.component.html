@@ -43,60 +43,60 @@
   </div>
     <div class="info">
       <div class="mat-elevation-z8">
-        <table mat-table [dataSource]="dataSource" class="mat-table">
+        <table mat-table [dataSource]="dataSource" matSort class="mat-table">
           <!-- Code Column -->
           <ng-container matColumnDef="code">
-            <th mat-header-cell *matHeaderCellDef >CODIGO</th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>CODIGO</th>
             <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.code }}</td>
           </ng-container>
           <!-- Comite Sectorial Column -->
           <ng-container matColumnDef="comitesectorial">
-            <th mat-header-cell *matHeaderCellDef>COMITE SECTORIAL</th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>COMITE SECTORIAL</th>
             <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.comitesectorial }}</td>
           </ng-container>
           <!-- Name Column -->
           <ng-container matColumnDef="dni">
-           <th mat-header-cell *matHeaderCellDef>DNI</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
+           <th mat-header-cell *matHeaderCellDef mat-sort-header>DNI</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
             <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.dni }}</td>
           </ng-container>
           <!-- Weight Column -->
           <ng-container matColumnDef="nombre">
-            <th mat-header-cell *matHeaderCellDef>SOCIO</th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>SOCIO</th>
             <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.nombre }}</td>
           </ng-container>
           <!-- Symbol Column -->
           <ng-container matColumnDef="estado">
-            <th mat-header-cell *matHeaderCellDef>ESTADO</th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>ESTADO</th>
             <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.estado }}</td>
           </ng-container>
           <!-- Symbol Column -->
           <ng-container matColumnDef="fechanaci">
-            <th mat-header-cell *matHeaderCellDef>FECHA NACIMIENTO</th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>FECHA NACIMIENTO</th>
             <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.fechanaci }}</td>
           </ng-container>
           <!-- Symbol Column -->
           <ng-container matColumnDef="residencia">
-            <th mat-header-cell *matHeaderCellDef>RESIDENCIA</th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>RESIDENCIA</th>
             <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.residencia }}</td>
           </ng-container>
           <!-- Symbol Column -->
           <ng-container matColumnDef="localidad">
-            <th mat-header-cell *matHeaderCellDef>LOCALIDAD</th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>LOCALIDAD</th>
             <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.localidad }}</td>
           </ng-container>
           <!-- Symbol Column -->
           <ng-container matColumnDef="distrito">
-            <th mat-header-cell *matHeaderCellDef>DISTRITO</th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>DISTRITO</th>
             <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.distrito }}</td>
           </ng-container>
           <!-- Symbol Column -->
           <ng-container matColumnDef="provincia">
-            <th mat-header-cell *matHeaderCellDef>PROVINCIA</th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>PROVINCIA</th>
             <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.provincia }}</td>
           </ng-container>
           <!-- Symbol Column -->
           <ng-container matColumnDef="departamento">
-            <th mat-header-cell *matHeaderCellDef>DEPARTAMENTO</th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>DEPARTAMENTO</th>
             <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.departamento }}</td>
           </ng-container>
           <ng-container matColumnDef="delete">
