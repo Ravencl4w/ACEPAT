@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
@@ -10,14 +11,38 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Observable, from, map, of, startWith } from 'rxjs';
 import { PartnerService } from 'src/app/services/partner.service';
 
-export interface DatosProducto {
-  producto: string;
-  codigo: string;
+export interface DatosPariente {
+  beneficiario: string;
+  pariente: string;
+  dni: string;
+  nombres: string;
 }
 
-const dataproducto: DatosProducto[] = [
-  { codigo: 'RFF', producto: 'RACIMO DE FRUTA FRESCA DE P.A' },
-  { codigo: 'FS', producto: 'FRUTO SUELTO DE P.A' },
+const datapariente: DatosPariente[] = [
+  { beneficiario: 'RFF', pariente: 'RACIMO DE FRUTA FRESCA DE P.A', dni: 'RFF', nombres: 'RFF'},
+  { beneficiario: 'FS', pariente: 'FRUTO SUELTO DE P.A', dni: 'RFF', nombres: 'RFF'},
+];
+
+export interface DatosFundo {
+  fundo: string;
+  area: string;
+  estado: string;
+}
+
+const datafundo: DatosFundo[] = [
+  { fundo: 'RFF', area: 'RACIMO DE FRUTA FRESCA DE P.A', estado: 'A' },
+  { fundo: 'FS', area: 'FRUTO SUELTO DE P.A' , estado: 'A' },
+];
+
+export interface DatosCuenta {
+  banco: string;
+  numerocuenta: string;
+  tipocuenta: string;
+}
+
+const datacuenta: DatosCuenta[] = [
+  { banco: 'RFF', numerocuenta: 'RACIMO DE FRUTA FRESCA DE P.A', tipocuenta: 'A' },
+  { banco: 'FS', numerocuenta: 'FRUTO SUELTO DE P.A' , tipocuenta: 'A' },
 ];
 
 @Component({
@@ -27,11 +52,15 @@ const dataproducto: DatosProducto[] = [
 })
 export class PartnerCreationDialogComponent implements OnInit {
   formulario: FormGroup;
-  dataSource = new MatTableDataSource(dataproducto);
+  dataSourceParientes = new MatTableDataSource(datapariente);
+  dataSourceFundo = new MatTableDataSource(datafundo);
+  dataSourceCuentas = new MatTableDataSource(datacuenta);
   filteredOptions!: Observable<string[]>;
   filteredProvincias!: Observable<string[]>;
   filteredDistritos!: Observable<string[]>;
-  displayedColumns: string[] = ['codigo', 'producto'];
+  displayedParientes: string[] = ['beneficiario', 'pariente', 'dni', 'nombres'];
+  displayedFundos: string[] = ['fundo', 'area', 'estado'];
+  displayedCuentas: string[] = ['banco', 'numerocuenta', 'tipocuenta'];
   options: string[] = [
     'Amazonas',
     'Ancash',
@@ -311,12 +340,14 @@ export class PartnerCreationDialogComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     public dialogRef: MatDialogRef<PartnerCreationDialogComponent>,
-    private service: PartnerService
+    private service: PartnerService,
+    private datePipe: DatePipe
   ) {
     this.formulario = this.fb.group({
+      id: ['', Validators.required],
       estadosocio: ['', Validators.required],
       genero: ['', Validators.required],
-      codigo: ['', Validators.required],
+      code: ['', Validators.required],
       dateasoc: [new Date(), Validators.required],
       dateemp: [new Date(), Validators.required],
       tipodoc: ['', Validators.required],
@@ -367,6 +398,9 @@ export class PartnerCreationDialogComponent implements OnInit {
   onSubmit(formulario: FormGroup) {
     this.formulario.value.id = Math.random().toString(36).substr(2, 9);
     const partner = formulario.value;
+    partner.dateasoc = this.datePipe.transform(partner.dateasoc, 'dd/MM/yyyy');
+    partner.dateemp = this.datePipe.transform(partner.dateemp, 'dd/MM/yyyy');
+    partner.datenac = this.datePipe.transform(partner.datenac, 'dd/MM/yyyy');
     this.service.createPartners(partner).subscribe(
       (response) => {
         console.log('Usuario creado:', response);

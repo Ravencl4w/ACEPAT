@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, of, switchMap, throwError } from 'rxjs';
+import { Observable, filter, map, of, switchMap, take, throwError } from 'rxjs';
 import { Partner } from '../interfaces/Partner';
 import { PartnerDetail } from '../Interfaces/PartnerDetail';
 
@@ -16,10 +16,11 @@ export class PartnerService {
   createPartners(inputdata:any){
     return this.http.post(this.apiurl,inputdata);
   }
-  getPartners(): Observable<Partner[]>{
-    const url = `${this.apiurl}?estado=A`;
+  getPartners(): Observable<Partner[]> {
+    const url = `${this.apiurl}?estado=A&_sort=comitesectorial`;
     return this.http.get<Partner[]>(url);
   }
+  
   getPartnersById(inputdata: string): Observable<Partner>{
     const url = `${this.apiurl}/${inputdata}`;
     return this.http.get<Partner>(url);
@@ -72,9 +73,16 @@ export class PartnerService {
     return this.http.delete(url);
   }
   getPartnersFilterDni(inputdata: string): Observable<Partner[]> {
-    const url = `${this.apiurl}?dni_like=${inputdata}*&estado_ne=I`;
-    return this.http.get<Partner[]>(url);
-  }  
+    const url =  `${this.apiurl}?dni_like=${inputdata}&estado_ne=I `;
+  
+    if (inputdata.length === 8) {
+      return this.http.get<Partner[]>(url).pipe(
+        map(results => results.slice(0, 1))
+      );
+    } else {
+      return this.http.get<Partner[]>(url);
+    }
+  }
   getPartnersFilterName(inputdata: string): Observable<Partner[]>{
     const url = `${this.apiurl}?nombre_like=${inputdata}*&estado_ne=I`;
     return this.http.get<Partner[]>(url);

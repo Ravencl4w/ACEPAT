@@ -37,7 +37,7 @@
               [style.height.px]="70"
               class="custom-input"
             >
-              <input matInput formControlName="codigo" />
+              <input matInput formControlName="code" />
             </mat-form-field>
           </div>
           <div class="input-group">
@@ -110,6 +110,7 @@
             >
               <mat-select disableRipple formControlName="estadocivil">
                 <mat-option value="SOLTERO">Soltero</mat-option>
+                <mat-option value="CONVIVIENTE">Conviviente</mat-option>
                 <mat-option value="CASADO">Casado</mat-option>
                 <mat-option value="DIVORCIADO">Divorciado</mat-option>
                 <mat-option value="VIUDO">Viudo</mat-option>
@@ -348,55 +349,75 @@
     <div class="fila fila2">
       <div class="columna3">
         <div class="parientes">
-          <table mat-table [dataSource]="dataSource" class="tabla-productos">
+          <table mat-table [dataSource]="dataSourceParientes" class="tabla-productos">
             <!-- Columna Codigo -->
-            <ng-container matColumnDef="codigo">
-              <th mat-header-cell *matHeaderCellDef>Codigo</th>
-              <td mat-cell *matCellDef="let element">{{ element.codigo }}</td>
+            <ng-container matColumnDef="beneficiario">
+              <th mat-header-cell *matHeaderCellDef>BENEFICIARIO</th>
+              <td mat-cell *matCellDef="let element">{{ element.beneficiario }}</td>
             </ng-container>
             <!-- Columna Producto -->
-            <ng-container matColumnDef="producto">
-              <th mat-header-cell *matHeaderCellDef>Producto</th>
-              <td mat-cell *matCellDef="let element">{{ element.producto }}</td>
+            <ng-container matColumnDef="pariente">
+              <th mat-header-cell *matHeaderCellDef>PARIENTE</th>
+              <td mat-cell *matCellDef="let element">{{ element.pariente }}</td>
             </ng-container>
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+            <!-- Columna Producto -->
+            <ng-container matColumnDef="dni">
+              <th mat-header-cell *matHeaderCellDef>DNI</th>
+              <td mat-cell *matCellDef="let element">{{ element.dni }}</td>
+            </ng-container>
+            <!-- Columna Producto -->
+            <ng-container matColumnDef="nombres">
+              <th mat-header-cell *matHeaderCellDef>APELLIDOS Y NOMBRES</th>
+              <td mat-cell *matCellDef="let element">{{ element.nombres }}</td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedParientes"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedParientes"></tr>
           </table>
         </div>
       </div>
       <div class="columna4">
         <div class="fundos">
-          <table mat-table [dataSource]="dataSource" class="tabla-productos">
-            <!-- Columna Codigo -->
-            <ng-container matColumnDef="codigo">
-              <th mat-header-cell *matHeaderCellDef>Codigo</th>
-              <td mat-cell *matCellDef="let element">{{ element.codigo }}</td>
+          <table mat-table [dataSource]="dataSourceFundo" class="tabla-productos">
+            <!-- Columna FUNDO -->
+            <ng-container matColumnDef="fundo">
+              <th mat-header-cell *matHeaderCellDef>FUNDO</th>
+              <td mat-cell *matCellDef="let element">{{ element.fundo }}</td>
             </ng-container>
-            <!-- Columna Producto -->
-            <ng-container matColumnDef="producto">
-              <th mat-header-cell *matHeaderCellDef>Producto</th>
-              <td mat-cell *matCellDef="let element">{{ element.producto }}</td>
+            <!-- Columna AREA -->
+            <ng-container matColumnDef="area">
+              <th mat-header-cell *matHeaderCellDef>AREA</th>
+              <td mat-cell *matCellDef="let element">{{ element.area }}</td>
             </ng-container>
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+            <!-- Columna ESTADO -->
+            <ng-container matColumnDef="estado">
+              <th mat-header-cell *matHeaderCellDef>ESTADO</th>
+              <td mat-cell *matCellDef="let element">{{ element.estado }}</td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedFundos"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedFundos"></tr>
           </table>
         </div>
       </div>
       <div class="columna5">
         <div class="ctasbancarias">
-          <table mat-table [dataSource]="dataSource" class="tabla-productos">
-            <!-- Columna Codigo -->
-            <ng-container matColumnDef="codigo">
-              <th mat-header-cell *matHeaderCellDef>Codigo</th>
-              <td mat-cell *matCellDef="let element">{{ element.codigo }}</td>
+          <table mat-table [dataSource]="dataSourceCuentas" class="tabla-productos">
+            <!-- Columna BANCO -->
+            <ng-container matColumnDef="banco">
+              <th mat-header-cell *matHeaderCellDef>BANCO</th>
+              <td mat-cell *matCellDef="let element">{{ element.banco }}</td>
             </ng-container>
-            <!-- Columna Producto -->
-            <ng-container matColumnDef="producto">
-              <th mat-header-cell *matHeaderCellDef>Producto</th>
-              <td mat-cell *matCellDef="let element">{{ element.producto }}</td>
+            <!-- Columna NUMERO DE CUENTA -->
+            <ng-container matColumnDef="numerocuenta">
+              <th mat-header-cell *matHeaderCellDef>NUM CUENTA</th>
+              <td mat-cell *matCellDef="let element">{{ element.numerocuenta }}</td>
             </ng-container>
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+            <!-- Columna TIPO DE CUENTA -->
+            <ng-container matColumnDef="tipocuenta">
+              <th mat-header-cell *matHeaderCellDef>TIPO</th>
+              <td mat-cell *matCellDef="let element">{{ element.tipocuenta }}</td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedCuentas"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedCuentas"></tr>
           </table>
         </div>
       </div>
