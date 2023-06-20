@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AcopioDeRacimosComponent } from './acopio/acopio-de-racimos/acopio-de-racimos.component';
 import { PartnerViewComponent } from './partners/partner-view/partner-view.component';
@@ -10,6 +10,7 @@ import { AcopioListComponent } from './acopio/acopio-list/acopio-list.component'
 import { AportMovementComponent } from './credit/aport-movement/aport-movement.component';
 import { CentroAcopioComponent } from './comercializacion/centro-acopio/centro-acopio.component';
 import { DebtListComponent } from './credit/debt-list/debt-list.component';
+import { ProduccionComponent } from './comercializacion/produccion/produccion.component';
 
 const routes: Routes = [
   {path: 'acopio-racimos', component: AcopioDeRacimosComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'acopio-list', component: AcopioListComponent },
   {path: 'centro-acopio', component: CentroAcopioComponent},
   {path: 'lista-deudas', component: DebtListComponent},
+  {path:'produccion',component: ProduccionComponent},
   {path: '', component: LoginComponent}
 
 ];

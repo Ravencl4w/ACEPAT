@@ -50,6 +50,9 @@ import { ReportingMovementComponent } from './shared/reporting-movement/reportin
 import { DebtListComponent } from './credit/debt-list/debt-list.component';
 import { CreateDebtDialogComponent } from './shared/create-debt-dialog/create-debt-dialog.component';
 import { DatePipe } from '@angular/common';
+import { ProduccionComponent } from './comercializacion/produccion/produccion.component';
+import { AsignacionCostosDialogComponent } from './shared/asignacion-costos-dialog/asignacion-costos-dialog.component';
+import { AsignarPrecioVentaComponent } from './shared/asignar-precio-venta/asignar-precio-venta.component';
 
 
 
@@ -79,7 +82,10 @@ import { DatePipe } from '@angular/common';
     CentroAcopioComponent,
     CentroAcopioDialogComponent,
     DebtListComponent,
-    CreateDebtDialogComponent
+    CreateDebtDialogComponent,
+    ProduccionComponent,
+    AsignacionCostosDialogComponent,
+    AsignarPrecioVentaComponent
   ],
   imports: [
     BrowserModule,

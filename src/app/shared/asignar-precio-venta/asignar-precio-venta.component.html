@@ -1,0 +1,161 @@
+<div class="main_content">
+    <div class="header">Asignacion de Precio de Ventas</div>
+    <div class="button-container-padre">
+      <div class="fila fila1">
+        <div class="columna1">
+          <div class="grupo1">
+            <div class="input-group">
+                <mat-form-field class="produccion">
+                  <mat-label>PRODUCCIÓN</mat-label>
+                  <input matInput >
+                </mat-form-field>
+              </div>
+            <div class="input-group">
+              <button
+                mat-mini-fab
+                color="primary"
+                aria-label="butoon">
+                <mat-icon>add</mat-icon>
+              </button>
+            </div>
+            <div class="tabla-datos2">
+              <div class="mat-elevation-z8">
+                <table mat-table [dataSource]="dataSource2" class="mat-table">
+          
+                  <!-- Name Column -->
+                  
+                  <ng-container matColumnDef="codigos">
+                   <th mat-header-cell *matHeaderCellDef>CODIGO</th> <th mat-header-cell *matHeaderCellDef>CODIGO</th>
+                    <td mat-cell *matCellDef="let element" >{{ element.codigos }}</td>
+                  </ng-container>
+                  
+                 
+          
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns2" [@hoverAnimation]="row.hoverState" (mouseover)="row.hoverState = 'hovered'" (mouseout)="row.hoverState = 'initial'"></tr>
+                  
+                </table>
+                
+          
+               
+              </div>
+              
+            </div>  
+            <div class="grupo2">
+          
+            </div>
+           
+          </div>
+        </div>
+        <div class="columna2">
+          <div class="grupotab">
+          <div class="input-group">
+            <mat-form-field>
+                <mat-label>UND MEDIDA</mat-label>
+                <select matNativeControl required>
+                  <option value="volvo">BIENES</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+                </select>
+              </mat-form-field>
+            </div>
+            <div class="input-group">
+              <mat-form-field class="custom-grupo1">
+                <mat-label>VALOR U.M.</mat-label>
+                <input matInput >
+              </mat-form-field>
+            </div>
+            <div class="input-group">
+                <mat-form-field class="custom-grupo1">
+                    <mat-label>PRECIO 1</mat-label>
+                    <input matInput >
+                  </mat-form-field>
+        </div>   
+                   <div class="input-group">
+                    <mat-form-field class="custom-grupo1">
+                        <mat-label>PRECIO 2</mat-label>
+                        <input matInput >
+                      </mat-form-field>
+            </div>   
+            <div class="input-group">
+                <mat-form-field class="custom-grupo1">
+                    <mat-label>PRECIO 3</mat-label>
+                    <input matInput >
+                  </mat-form-field>
+        </div>   
+            <div class="input-group">
+              <button
+                mat-mini-fab
+                color="primary"
+                aria-label="button">
+                <mat-icon>add</mat-icon>
+              </button>
+            </div>
+          </div>
+                 
+        <div class="grupotab3">
+          <div class="tabla-datos">
+              <div class="mat-elevation-z8">
+                <table mat-table [dataSource]="dataSource" class="mat-table">
+          
+                  <!-- Name Column -->
+                  
+                  <ng-container matColumnDef="uMedida">
+                   <th mat-header-cell *matHeaderCellDef>UND MEDIDA</th> <th mat-header-cell *matHeaderCellDef>UND MEDIDA</th>
+                    <td mat-cell *matCellDef="let element" >{{ element.uMedida }}</td>
+                  </ng-container>
+                  <!-- Weight Column -->
+                  <ng-container matColumnDef="valor">
+                    <th mat-header-cell *matHeaderCellDef>VALOR.</th>
+                    <td mat-cell *matCellDef="let element">{{ element.valor }}</td>
+                  </ng-container>
+                  <!-- Symbol Column -->
+                  <ng-container matColumnDef="priof">
+                    <th mat-header-cell *matHeaderCellDef>PRIOF</th>
+                    <td mat-cell *matCellDef="let element">{{ element.priof}}</td>
+                  </ng-container>
+                  <!-- Symbol Column -->
+                  <ng-container matColumnDef="preciouno">
+                    <th mat-header-cell *matHeaderCellDef>PRECIO 1</th>
+                    <td mat-cell *matCellDef="let element" >{{ element.preciouno }}</td>
+                  </ng-container>
+                  <!-- Symbol Column -->
+                  <ng-container matColumnDef="preciodos">
+                    <th mat-header-cell *matHeaderCellDef>PRECIO 2</th>
+                    <td mat-cell *matCellDef="let element" >{{ element.preciodos }}</td>
+                  </ng-container>
+                     <!-- Symbol Column -->
+                     <ng-container matColumnDef="preciotres">
+                        <th mat-header-cell *matHeaderCellDef>PRECIO 3</th>
+                        <td mat-cell *matCellDef="let element" >{{ element.preciotres}}</td>
+                      </ng-container>
+          
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns" [@hoverAnimation]="row.hoverState" (mouseover)="row.hoverState = 'hovered'" (mouseout)="row.hoverState = 'initial'"></tr>
+                  
+                </table>
+                
+          
+               
+              </div>
+              
+            </div>
+            
+        </div>
+        </div>
+        
+      </div>
+      
+    </div>
+    <div class="grupotab4">
+      <div class="input-group">      
+    <button mat-flat-button color="primary">Nuevo</button>
+  </div>  
+ 
+    <div class="input-group">
+  
+    <button mat-flat-button color="warn" matDialogClose>Cerrar</button>
+  </div>  
+              </div>
+  </div>
