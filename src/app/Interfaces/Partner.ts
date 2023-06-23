@@ -18,5 +18,7 @@ export interface Partner {
     departamento: string,
     beneficiario: string,
     dnibeneficiario: string,
-    estadodelpredio: string
+    estadodelpredio: string,
+    dniconyuge: string,
+    nombreconyuge: string
 }

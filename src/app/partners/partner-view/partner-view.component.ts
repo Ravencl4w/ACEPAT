@@ -44,14 +44,7 @@ export class PartnerViewComponent implements AfterViewInit {
     'comitesectorial',
     'dni',
     'nombre',
-    'estado',
-    'fechanaci',
-    'residencia',
-    'localidad',
-    'distrito',
-    'provincia',
-    'departamento',
-    'delete',
+    'delete'
   ];
   dataSource = new MatTableDataSource<Partner>();
 

@@ -847,7 +847,8 @@
       "dnibeneficiario": "00998277",
       "estadodelpredio": "PROPIETARIO",
       "dniconyuge": "00998277",
-      "nombreconyuge": "CARTAGENA ESCALANTE ROSENDA"
+      "nombreconyuge": "CARTAGENA ESCALANTE ROSENDA",
+      "hoverState": "initial"
     },
     {
       "id": "34",
