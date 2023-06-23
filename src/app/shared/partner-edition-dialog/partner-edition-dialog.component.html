@@ -27,17 +27,28 @@
       <label class="labels">ESTADO CIVIL </label>
       <mat-form-field class="custom-input">
         <mat-select disableRipple formControlName="estadocivil">
-          <mat-option value="SOLTERO">Soltero(a)</mat-option>
-          <mat-option value="CONVIVIENTE">Conviviente</mat-option>
-          <mat-option value="CASADO">Casado(a)</mat-option>
-          <mat-option value="VIUDO">Viudo(a)</mat-option>
-          <mat-option value="SEPARADO">Separado(a)</mat-option>
-          <mat-option value="DIVORCIADO">Divorciado(a)</mat-option>
+          <mat-option value="SOLTERO">SOLTERO (A)</mat-option>
+          <mat-option value="CONVIVIENTE">CONVIVIENTE</mat-option>
+          <mat-option value="CASADO">CASADO (A)</mat-option>
+          <mat-option value="VIUDO">VIUDO (A)</mat-option>
+          <mat-option value="SEPARADO">SEPARADO (A)</mat-option>
+          <mat-option value="DIVORCIADO">DIVORCIADO (A)</mat-option>
         </mat-select>
       </mat-form-field>
       <label class="labels">GRADO INSTITUCIÓN</label>
       <mat-form-field class="custom-input">
-        <input matInput placeholder="Grado Instrucción" formControlName="gradoinstruccion"/>
+      <mat-select disableRipple formControlName="gradoinstruccion">
+          <mat-option value="NINGUNO">NINGUNO</mat-option>
+          <mat-option value="INICIAL">INICIAL</mat-option>
+          <mat-option value="PRIMARIA COMPLETA">PRIMARIA COMPLETA</mat-option>
+          <mat-option value="PRIMARIA INCOMPLETA">PRIMARIA INCOMPLETA</mat-option>
+          <mat-option value="SECUNDARIA COMPLETA">SECUNDARIA COMPLETA</mat-option>
+          <mat-option value="SECUNDARIA INCOMPLETA">SECUNDARIA INCOMPLETA</mat-option>
+          <mat-option value="SUPERIOR COMPLETA">SUPERIOR COMPLETA</mat-option>
+          <mat-option value="SUPERIOR INCOMPLETA">SUPERIOR INCOMPLETA</mat-option>
+          <mat-option value="TECNICO SUPERIOR">TECNICO SUPERIOR</mat-option>
+          <mat-option value="SIN ESTUDIOS">SIN ESTUDIOS</mat-option>
+        </mat-select>
       </mat-form-field>
       <label class="labels">TELEFONO</label>
       <mat-form-field class="custom-input">
@@ -45,11 +56,34 @@
       </mat-form-field>
       <label class="labels">COMITE SECTORIAL</label>
       <mat-form-field class="custom-input">
-        <input matInput placeholder="Comite sectorial" formControlName="comitesectorial"/>
+         <mat-select disableRipple formControlName="comitesectorial">
+          <mat-option value="ACAPCEAPAAH - T">ACAPCEAPAAH - T</mat-option>
+          <mat-option value="ADEPALMA">ADEPALMA</mat-option>
+          <mat-option value="APAIN">APAIN</mat-option>
+          <mat-option value="APAMIL">APAMIL</mat-option>
+          <mat-option value="APPAIBO">APPAIBO</mat-option>
+          <mat-option value="APRODEPAT">APRODEPAT</mat-option>
+          <mat-option value="APUMHSA">APUMHSA</mat-option>
+          <mat-option value="ASAPAT">ASAPAT</mat-option>
+          <mat-option value="ASPAL">ASPAL</mat-option>
+          <mat-option value="ASPALTRU">ASPALTRU</mat-option>
+          <mat-option value="ASPAT">ASPAT</mat-option>
+          <mat-option value="ASSUPTA">ASSUPTA</mat-option>
+          <mat-option value="ELBER ALBAN DIAZ">ELBER ALBAN DIAZ</mat-option>
+          <mat-option value="HATUM PALMA ASS">HATUM PALMA ASS</mat-option>
+          <mat-option value="PARAISO">PARAISO</mat-option>
+          <mat-option value="SANTO CRISTO">SANTO CRISTO</mat-option>
+          <mat-option value="VALLE RIO CAÑUTILLO">VALLE RIO CAÑUTILLO</mat-option>          
+          </mat-select>
       </mat-form-field>
       <label class="labels">ENTIDAD BANCARIA</label>
       <mat-form-field class="custom-input">
-        <input matInput placeholder="Entidad bancaria" formControlName="entidadbancaria"/>
+          <mat-select disableRipple formControlName="entidadbancaria">
+            <mat-option value="CAJA PIURA">CMAC PIURA</mat-option>
+          <mat-option value="BANCO DE LA NACION">B. NACION</mat-option>
+          <mat-option value="COOPACT">COOPACT</mat-option>
+   
+          </mat-select>
       </mat-form-field>
       <label class="labels">NÚMERO DE CUENTA</label>
       <mat-form-field class="custom-input">
