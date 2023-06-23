@@ -53,6 +53,8 @@ import { DatePipe } from '@angular/common';
 import { ProduccionComponent } from './comercializacion/produccion/produccion.component';
 import { AsignacionCostosDialogComponent } from './shared/asignacion-costos-dialog/asignacion-costos-dialog.component';
 import { AsignarPrecioVentaComponent } from './shared/asignar-precio-venta/asignar-precio-venta.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { RestorePartnerDialogComponent } from './shared/restore-partner-dialog/restore-partner-dialog.component';
 
 
 
@@ -85,7 +87,8 @@ import { AsignarPrecioVentaComponent } from './shared/asignar-precio-venta/asign
     CreateDebtDialogComponent,
     ProduccionComponent,
     AsignacionCostosDialogComponent,
-    AsignarPrecioVentaComponent
+    AsignarPrecioVentaComponent,
+    RestorePartnerDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -112,7 +115,8 @@ import { AsignarPrecioVentaComponent } from './shared/asignar-precio-venta/asign
     MatTabsModule,
     FormsModule,
     MatAutocompleteModule,
-    DatePipe
+    DatePipe,
+    MatSlideToggleModule
 
   ],
   providers: [

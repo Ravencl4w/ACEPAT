@@ -5,16 +5,6 @@
     border-bottom: 1px solid #e0e4e8;
     font-size: 35px;
   }
-  .div1{
-    position: relative;
-    top: 25px;
-    left: 570px;
-  }
-  .div2{
-    position: relative;
-    top: 25px;
-    left: 590px;
-  }
   .example-form-field {
    
     width: 300px;
@@ -29,11 +19,6 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-  }
-  
-  .button-container {
-    display: flex;
-    align-items: center;
   }
   
   .download-btn,
@@ -52,7 +37,28 @@
   .info {
     margin-top: 30px;
   }
-  
 
+  .opciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   
+  .left-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .right-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .div1,
+  .div2,
+  .estado-socio{
+    margin-right: 30px;
+    padding-top: 30px;
+  }
+
   
