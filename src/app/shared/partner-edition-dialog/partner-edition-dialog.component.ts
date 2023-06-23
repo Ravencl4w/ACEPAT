@@ -75,7 +75,9 @@ export class PartnerEditionDialogComponent implements OnInit {
       departamento: ['', Validators.required],
       beneficiario: ['', Validators.required],
       dnibeneficiario: ['', Validators.required],
-      estadodelpredio: ['', Validators.required]
+      estadodelpredio: ['', Validators.required],
+      dniconyuge: ['', Validators.required],
+      nombreconyuge: ['', Validators.required]
 
     });
   }
@@ -101,6 +103,8 @@ export class PartnerEditionDialogComponent implements OnInit {
     this.partner.controls['beneficiario'].setValue(this.selectedElement.beneficiario);
     this.partner.controls['dnibeneficiario'].setValue(this.selectedElement.dnibeneficiario);
     this.partner.controls['estadodelpredio'].setValue(this.selectedElement.estadodelpredio);
+    this.partner.controls['dniconyuge'].setValue(this.selectedElement.dniconyuge);
+    this.partner.controls['nombreconyuge'].setValue(this.selectedElement.nombreconyuge);
 
   }
 
