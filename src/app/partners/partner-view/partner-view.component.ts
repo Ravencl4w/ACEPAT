@@ -22,6 +22,7 @@ import {FormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatSort } from '@angular/material/sort';
+import { RestorePartnerDialogComponent } from 'src/app/shared/restore-partner-dialog/restore-partner-dialog.component';
 
 
 @Component({
@@ -61,6 +62,7 @@ export class PartnerViewComponent implements AfterViewInit {
   selectedElement: any;
   filtroDNI!: string;
   filtroSocio!: string;
+  showInactivePartners = false;
 
   constructor(private service: PartnerService, private dialog: MatDialog) {}
   ngAfterViewInit() {
@@ -69,7 +71,17 @@ export class PartnerViewComponent implements AfterViewInit {
 
   getPartners(): void {
     this.service.getPartners().subscribe((partners) => {
-      this.dataSource = new MatTableDataSource<Partner>(partners);
+      if (this.showInactivePartners) {
+        // Mostrar socios activos
+        this.dataSource = new MatTableDataSource<Partner>(
+          partners.filter((partner) => partner.estado === 'I')
+        );
+      } else {
+        // Mostrar socios inactivos
+        this.dataSource = new MatTableDataSource<Partner>(
+          partners.filter((partner) => partner.estado === 'A')
+        );
+      }
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
     });
@@ -110,6 +122,18 @@ export class PartnerViewComponent implements AfterViewInit {
       this.getPartners();
     });
 }
+
+restoreRow(element: Partner): void {
+  this.selectedElement = element;
+  const dialogRef = this.dialog.open(RestorePartnerDialogComponent, {
+    data: this.selectedElement
+  });
+  dialogRef.afterClosed().subscribe(result => {
+    // Aquí puedes llamar al método que deseas cuando se cierra el diálogo
+    this.getPartners();
+  });
+}
+
 aplicarFiltros() {
   if(this.filtroDNI&&this.filtroSocio){
     this.service.getPartnersFilterNameDni(this.filtroSocio,this.filtroDNI).subscribe((partners) => {

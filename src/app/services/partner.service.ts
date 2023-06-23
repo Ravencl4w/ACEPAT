@@ -17,7 +17,7 @@ export class PartnerService {
     return this.http.post(this.apiurl,inputdata);
   }
   getPartners(): Observable<Partner[]> {
-    const url = `${this.apiurl}?estado=A&_sort=comitesectorial`;
+    const url = `${this.apiurl}?_sort=comitesectorial`;
     return this.http.get<Partner[]>(url);
   }
   
@@ -66,6 +66,11 @@ export class PartnerService {
   setPartnerToInactive(inputdata: Partner){
     const url = `${this.apiurl}/${inputdata.id}`;
     inputdata.estado = "I";
+    return this.http.patch(url, inputdata);
+  }
+  setPartnerToActive(inputdata: Partner){
+    const url = `${this.apiurl}/${inputdata.id}`;
+    inputdata.estado = "A";
     return this.http.patch(url, inputdata);
   }
   deleteDetail(inputdata: PartnerDetail){
