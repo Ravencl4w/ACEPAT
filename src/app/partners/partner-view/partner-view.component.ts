@@ -67,12 +67,12 @@ export class PartnerViewComponent implements AfterViewInit {
       if (this.showInactivePartners) {
         // Mostrar socios activos
         this.dataSource = new MatTableDataSource<Partner>(
-          partners.filter((partner) => partner.estado === 'I')
+          partners.filter((partner) => partner.estado === 'R')
         );
       } else {
         // Mostrar socios inactivos
         this.dataSource = new MatTableDataSource<Partner>(
-          partners.filter((partner) => partner.estado === 'A')
+          partners.filter((partner) => partner.estado === 'H')
         );
       }
       this.dataSource.paginator = this.paginator;

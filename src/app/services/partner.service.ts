@@ -65,12 +65,12 @@ export class PartnerService {
   }
   setPartnerToInactive(inputdata: Partner){
     const url = `${this.apiurl}/${inputdata.id}`;
-    inputdata.estado = "I";
+    inputdata.estado = "R";
     return this.http.patch(url, inputdata);
   }
   setPartnerToActive(inputdata: Partner){
     const url = `${this.apiurl}/${inputdata.id}`;
-    inputdata.estado = "A";
+    inputdata.estado = "H";
     return this.http.patch(url, inputdata);
   }
   deleteDetail(inputdata: PartnerDetail){
@@ -78,7 +78,7 @@ export class PartnerService {
     return this.http.delete(url);
   }
   getPartnersFilterDni(inputdata: string): Observable<Partner[]> {
-    const url =  `${this.apiurl}?dni_like=${inputdata}&estado_ne=I `;
+    const url =  `${this.apiurl}?dni_like=${inputdata}&estado_ne=R `;
   
     if (inputdata.length === 8) {
       return this.http.get<Partner[]>(url).pipe(
@@ -89,11 +89,11 @@ export class PartnerService {
     }
   }
   getPartnersFilterName(inputdata: string): Observable<Partner[]>{
-    const url = `${this.apiurl}?nombre_like=${inputdata}*&estado_ne=I`;
+    const url = `${this.apiurl}?nombre_like=${inputdata}*&estado_ne=R`;
     return this.http.get<Partner[]>(url);
   }
   getPartnersFilterNameDni(inputdata: string, inputdata2: string): Observable<Partner[]>{
-    const url = `${this.apiurl}?nombre_like=${inputdata}*&dni_like=${inputdata2}*&estado_ne=I`;
+    const url = `${this.apiurl}?nombre_like=${inputdata}*&dni_like=${inputdata2}*&estado_ne=R`;
     return this.http.get<Partner[]>(url);
   }
 
