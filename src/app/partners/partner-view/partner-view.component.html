@@ -45,6 +45,15 @@
             </button>
           </mat-form-field>  
         </div>
+        <div class="div3">
+          <mat-form-field class="example-form-field">
+            <mat-label>Busqueda por Comite Sectorial</mat-label>
+            <input matInput type="text" [(ngModel)]="filtroComite" [ngModelOptions]="{ updateOn: 'change' }" (input)="aplicarFiltros()">
+            <button matSuffix mat-icon-button aria-label="search">
+              <mat-icon>search</mat-icon>
+            </button>
+          </mat-form-field>  
+        </div>
       </div>
   </div>
     <div class="info">
@@ -59,6 +68,11 @@
           <ng-container matColumnDef="comitesectorial">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>COMITE SECTORIAL</th>
             <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.comitesectorial }}</td>
+          </ng-container>
+          <!-- Tecnico Column -->
+          <ng-container matColumnDef="tecnico">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>TECNICO</th>
+            <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.tecnico }}</td>
           </ng-container>
           <!-- Name Column -->
           <ng-container matColumnDef="dni">
@@ -116,10 +130,10 @@
           <ng-container matColumnDef="delete">
             <th mat-header-cell *matHeaderCellDef></th>
             <td mat-cell *matCellDef="let element">
-              <button *ngIf="element.estado==='A'" mat-icon-button color="warn" (click)="deleteRow(element)">
+              <button *ngIf="element.estado==='H'" mat-icon-button color="warn" (click)="deleteRow(element)">
                 <mat-icon>delete</mat-icon>
               </button>
-              <button *ngIf="element.estado==='I'" mat-icon-button color="primary" (click)="restoreRow(element)">
+              <button *ngIf="element.estado==='NH'" mat-icon-button color="primary" (click)="restoreRow(element)">
                 <mat-icon>restore</mat-icon>
               </button>
             </td>

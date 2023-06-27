@@ -18,6 +18,17 @@
       <mat-form-field class="custom-input">
         <input matInput placeholder="Estado" formControlName="estado"/>
       </mat-form-field>
+      <label class="labels">TECNICO</label>
+      <mat-form-field class="custom-input">
+        <mat-select disableRipple formControlName="tecnico">
+          <mat-option value="SOLTERO">SOLTERO (A)</mat-option>
+          <mat-option value="CONVIVIENTE">CONVIVIENTE</mat-option>
+          <mat-option value="CASADO">CASADO (A)</mat-option>
+          <mat-option value="VIUDO">VIUDO (A)</mat-option>
+          <mat-option value="SEPARADO">SEPARADO (A)</mat-option>
+          <mat-option value="DIVORCIADO">DIVORCIADO (A)</mat-option>
+        </mat-select>
+      </mat-form-field>
       <label class="labels">FECHA DE NACIMIENTO</label>
       <mat-form-field class="custom-input">
         <input matInput  formControlName="fechanaci" [matDatepicker]="pickerNacimiento">

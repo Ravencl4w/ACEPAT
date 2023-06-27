@@ -42,6 +42,7 @@ export class PartnerViewComponent implements AfterViewInit {
   displayedColumns: string[] = [
     'code',
     'comitesectorial',
+    'tecnico',
     'dni',
     'nombre',
     'delete'
@@ -55,6 +56,7 @@ export class PartnerViewComponent implements AfterViewInit {
   selectedElement: any;
   filtroDNI!: string;
   filtroSocio!: string;
+  filtroComite!: string;
   showInactivePartners = false;
 
   constructor(private service: PartnerService, private dialog: MatDialog) {}
@@ -67,7 +69,7 @@ export class PartnerViewComponent implements AfterViewInit {
       if (this.showInactivePartners) {
         // Mostrar socios activos
         this.dataSource = new MatTableDataSource<Partner>(
-          partners.filter((partner) => partner.estado === 'R')
+          partners.filter((partner) => partner.estado === 'NH')
         );
       } else {
         // Mostrar socios inactivos
@@ -98,10 +100,6 @@ export class PartnerViewComponent implements AfterViewInit {
     this.selectedElement = element;
     const dialogRef = this.dialog.open(PartnerEditionDialogComponent, {
       data: this.selectedElement
-    });
-    dialogRef.afterClosed().subscribe(result => {
-      // Aquí puedes llamar al método que deseas cuando se cierra el diálogo
-      this.getPartners();
     });
   }
   
@@ -146,7 +144,14 @@ aplicarFiltros() {
         this.dataSource = new MatTableDataSource<Partner>(partners);
         this.dataSource.paginator = this.paginator;
       });
-    } else {
+    } 
+    else if (this.filtroComite) {
+      this.service.getPartnersFilterComite(this.filtroComite).subscribe((partners) => {
+        this.dataSource = new MatTableDataSource<Partner>(partners);
+        this.dataSource.paginator = this.paginator;
+      });
+    }
+    else {
       this.getPartners();
     }
   }
