@@ -72,7 +72,7 @@
           <!-- Tecnico Column -->
           <ng-container matColumnDef="tecnico">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>TECNICO</th>
-            <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.tecnico }}</td>
+            <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ getTecnicoValueById(element.tecnico) }}</td>
           </ng-container>
           <!-- Name Column -->
           <ng-container matColumnDef="dni">

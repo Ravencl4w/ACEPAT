@@ -14,7 +14,7 @@ import * as XLSX from 'xlsx';
   styleUrls: ['./users-management.component.css']
 })
 export class UsersManagementComponent implements AfterViewInit {
-  displayedColumns: string[] = ['id', 'name', 'role', 'password','modify'];
+  displayedColumns: string[] = ['id', 'name','dni', 'role', 'password','modify'];
   dataSource = new MatTableDataSource<User>
 
   @ViewChild(MatPaginator)

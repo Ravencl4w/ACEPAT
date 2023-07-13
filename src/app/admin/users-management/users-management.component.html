@@ -31,7 +31,7 @@
       <table mat-table [dataSource]="dataSource">
         <!-- Columna de ID -->
         <ng-container matColumnDef="id">
-          <th mat-header-cell *matHeaderCellDef>Usario</th>
+          <th mat-header-cell *matHeaderCellDef>Usuario</th>
           <td mat-cell *matCellDef="let element">{{ element.id }}</td>
         </ng-container>
 
@@ -39,6 +39,12 @@
         <ng-container matColumnDef="name">
           <th mat-header-cell *matHeaderCellDef>Nombre</th>
           <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+        </ng-container>
+
+        <!-- Columna de Nombre -->
+        <ng-container matColumnDef="dni">
+          <th mat-header-cell *matHeaderCellDef>DNI</th>
+          <td mat-cell *matCellDef="let element">{{ element.dni }}</td>
         </ng-container>
 
         <!-- Columna de Roles -->

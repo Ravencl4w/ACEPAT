@@ -17,7 +17,8 @@ export class UserCreationDialogComponent {
       id: ['', Validators.required],
       name: ['', Validators.required],
       role: ['', Validators.required],
-      password: ['', Validators.required]
+      password: ['', Validators.required],
+      dni: ['', Validators.required]
     });
   }
 
