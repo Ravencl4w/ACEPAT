@@ -1,28 +1,4 @@
 {
-  "acopio-racimos": [
-    {
-      "codigo": "FS",
-      "produccion": "FRUTO SUELTO DE P.A",
-      "cantidad": 28.75,
-      "importe": 11900,
-      "fecha": "2023-05-11"
-    },
-    {
-      "codigo": "RFF",
-      "produccion": "RACIMO DE FRUTA FRESCA DE P.A",
-      "cantidad": 653.7,
-      "importe": 219590,
-      "fecha": "2023-05-11"
-    },
-    {
-      "id": "m47kfefv8",
-      "codigo": "asdas",
-      "produccion": "fasfasfa",
-      "cantidad": 400,
-      "importe": 12348901273,
-      "fecha": "2023-05-20T14:54:12.433Z"
-    }
-  ],
   "socios": [
     {
       "id": "1",
@@ -55206,28 +55182,9 @@
       "creado": "2023-06-01"
     }
   ],
+  "acopio": [
+
+  ],
   "ticket": [
-    {
-      "id": "z0ytk521z",
-      "ticket": "FF-AA",
-      "cantidad": "321",
-      "undmedida": "TN",
-      "descripcion": "no c",
-      "preciou": 602.864,
-      "igv": 0,
-      "descuento": "0.000",
-      "importe": 193519.344
-    },
-    {
-      "id": "s502v6c5u",
-      "ticket": "123121",
-      "cantidad": "1.4",
-      "undmedida": "TN",
-      "descripcion": "no c",
-      "preciou": 602.864,
-      "igv": 0,
-      "descuento": "0.000",
-      "importe": 844.0096
-    }
   ]
 }
