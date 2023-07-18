@@ -15,14 +15,9 @@ import {
   animate,
 } from '@angular/animations';
 import { DeleteDialogComponent } from 'src/app/shared/delete-dialog/delete-dialog.component';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {NgIf} from '@angular/common';
-import {FormsModule} from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatSort } from '@angular/material/sort';
 import { RestorePartnerDialogComponent } from 'src/app/shared/restore-partner-dialog/restore-partner-dialog.component';
+import { DatePipe } from '@angular/common';
 
 interface Tecnico {
   id: string;
@@ -77,7 +72,7 @@ export class PartnerViewComponent implements AfterViewInit {
   filtroComite!: string;
   showInactivePartners = false;
 
-  constructor(private service: PartnerService, private dialog: MatDialog) {}
+  constructor(private service: PartnerService, private dialog: MatDialog,private datePipe: DatePipe) {}
   ngAfterViewInit() {
     this.getPartners();
   }
@@ -101,14 +96,21 @@ export class PartnerViewComponent implements AfterViewInit {
   }
   exportToExcel(): void {
     const data = this.dataSource.data;
-    
+  
+    // Reemplazar el ID del técnico con el nombre correspondiente durante la asignación de los datos
+    const formattedData = data.map(item => {
+      const tecnico = listaTecnicos.find(t => t.id === item.tecnico);
+      const nombreTecnico = tecnico ? tecnico.nombre : '';
+      const formattedDate = this.datePipe.transform(item.fechanaci, 'dd/MM/yyyy');
+      return { ...item, fechanaci: formattedDate, tecnico: nombreTecnico };
+    });
+  
+    const worksheet = XLSX.utils.json_to_sheet(formattedData);
     const workbook = XLSX.utils.book_new();
-    const worksheet = XLSX.utils.json_to_sheet(data);
     XLSX.utils.book_append_sheet(workbook, worksheet, 'Datos');
   
     XLSX.writeFile(workbook, 'datos.xlsx');
   }
-  
 
   openCreationDialog(): void {
     this.dialog.open(PartnerCreationDialogComponent, {

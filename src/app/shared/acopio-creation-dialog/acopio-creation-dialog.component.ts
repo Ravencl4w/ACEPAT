@@ -73,6 +73,7 @@ export class AcopioCreationDialogComponent implements OnInit {
   importeSoles: any;
   CodigoSelect: any;
   selectedID: any;
+  netoDinero = 0.0000;
   //FIN DE VARIABLES
   constructor(private fb: FormBuilder, private service: PartnerService, private gatService: GatheringService, private ticket: TicketService, public dialogRef: MatDialogRef<AcopioCreationDialogComponent>, private service2: AcopioService) {
     //INICIOFORMULARIO
@@ -121,7 +122,7 @@ export class AcopioCreationDialogComponent implements OnInit {
   ngOnInit() {
     this.loadOptions(); //CARGAR OPCIONES PARA AUTOCOMPLETE
     this.getTickets() //CARGAR TODOS LOS TICKETS
-    this.list.controls['id'].setValue(Math.random().toString(36).substr(2, 9));
+    this.list.controls['id'].setValue(parseInt(Math.random().toString().slice(2, 11), 10));
     this.list.controls['cantidad'].valueChanges.subscribe(() => {
       this.updateTicket();
     });
@@ -345,27 +346,27 @@ export class AcopioCreationDialogComponent implements OnInit {
   let nevoTicket: Ticket; // Quitamos la inicialización como objeto vacío
   if (compra === 'SOLES') {
     nevoTicket = {
-      id: Math.random().toString(36).substr(2, 9),
+      id: parseInt(Math.random().toString().slice(2, 11), 10),
       ticket: this.list.controls['ticket'].value,
       cantidad: this.list.controls['cantidad'].value, // Asigna el valor correspondiente
       undmedida: this.list.controls['unidadm'].value,
       descripcion: 'no c',
       preciou: this.precioSoles,
       igv: this.igvSoles,
-      descuento: '0.000',
+      descuento: 0.000,
       importe: this.importeSoles,
       acopioid: this.list.controls['id'].value
     };
   } else {
     nevoTicket = {
-      id: Math.random().toString(36).substr(2, 9),
+      id: parseInt(Math.random().toString().slice(2, 11), 10),
       ticket: this.list.controls['ticket'].value,
       cantidad: this.list.controls['cantidad'].value, // Asigna el valor correspondiente
       undmedida: this.list.controls['unidadm'].value,
       descripcion: 'no c',
       preciou: this.precioDolar,
       igv: this.igvDolar,
-      descuento: '0.000',
+      descuento: 0.000,
       importe: this.importeDolares,
       acopioid: this.list.controls['id'].value
     };
@@ -374,6 +375,7 @@ export class AcopioCreationDialogComponent implements OnInit {
   this.ticket.createTicket(nevoTicket).subscribe(
     response => {
       this.getTickets();
+      this.netoDinero = this.netoDinero + nevoTicket.importe;
     },
     error => {
       console.error('Error al crear el ticket:', error);
@@ -385,6 +387,8 @@ export class AcopioCreationDialogComponent implements OnInit {
 
   onSubmit(list: FormGroup) {
     let acopio: AcopioList;
+    let total: number;
+    total = this.netoDinero + parseInt(this.list.controls['flete'].value,10) - parseInt(this.list.controls['descuentosoles'].value,10); 
     acopio = {
       id: this.list.controls['id'].value,
       fechadoc: this.list.controls['fechacomprobante'].value,
@@ -404,10 +408,10 @@ export class AcopioCreationDialogComponent implements OnInit {
       moneda: this.list.controls['moneda'].value,
       cantidad: this.list.controls['cantidad'].value,
       pago: this.list.controls['formapago'].value,
-      neto: this.list.controls['comprobante'].value,
+      neto: this.netoDinero,
       dscto: this.list.controls['descuentosoles'].value,
       flete: this.list.controls['flete'].value,
-      total: this.list.controls['comprobante'].value,
+      total: total,
       estado: 'CANCELADO',
       usuario: 'admin'
     }

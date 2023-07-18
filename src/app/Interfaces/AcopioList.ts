@@ -19,7 +19,7 @@ export interface AcopioList{
     pago:number,
     neto:number,
     dscto:number,
-    flete:string,
+    flete:number,
     total:number,
     estado:string,
     usuario:string
