@@ -8,4 +8,5 @@ export interface Ticket{
     igv: string,
     descuento: string,
     importe: string
+    acopioid: string
 }

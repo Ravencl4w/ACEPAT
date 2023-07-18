@@ -56,6 +56,8 @@ import { AsignarPrecioVentaComponent } from './shared/asignar-precio-venta/asign
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { RestorePartnerDialogComponent } from './shared/restore-partner-dialog/restore-partner-dialog.component';
 import { SocioAlertDialogComponent } from './shared/socio-alert-dialog/socio-alert-dialog.component';
+import { registerLocaleData } from '@angular/common';
+import localeEs from '@angular/common/locales/es';
 
 const MY_DATE_FORMATS = {
   parse: {
@@ -139,4 +141,6 @@ const MY_DATE_FORMATS = {
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { constructor() {
+  registerLocaleData(localeEs);
+} }

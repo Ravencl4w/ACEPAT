@@ -15,6 +15,7 @@ import { Ticket } from 'src/app/Interfaces/Ticket';
 import { TicketService } from 'src/app/services/ticket.service';
 import { MatDialogRef } from '@angular/material/dialog';
 import { AcopioService } from 'src/app/services/acopio.service';
+import { AcopioList } from 'src/app/Interfaces/AcopioList';
 export interface DatosProducto {
   producto: string;
   codigo: string;
@@ -76,6 +77,7 @@ export class AcopioCreationDialogComponent implements OnInit {
   constructor(private fb: FormBuilder, private service: PartnerService, private gatService: GatheringService, private ticket: TicketService, public dialogRef: MatDialogRef<AcopioCreationDialogComponent>, private service2: AcopioService) {
     //INICIOFORMULARIO
     this.list = this.fb.group({
+      id:[0, Validators.required],
       codigoacopio: ['', Validators.required],
       centroacopio: ['', Validators.required],
       codigosocio: ['', Validators.required],
@@ -100,7 +102,7 @@ export class AcopioCreationDialogComponent implements OnInit {
       serie: ['', Validators.required],
       correlativo: ['', Validators.required],
       ticket: ['', Validators.required],
-      cantidad: ['', Validators.required],
+      cantidad: [{ value: 0.0000, disabled: false }, Validators.required],
       preciodolarr: [{ value: 0.0000, disabled: true }, Validators.required],
       preciosolesr: [{ value: 0.0000, disabled: true }, Validators.required],
       unidadm: ['TN', Validators.required],
@@ -119,6 +121,7 @@ export class AcopioCreationDialogComponent implements OnInit {
   ngOnInit() {
     this.loadOptions(); //CARGAR OPCIONES PARA AUTOCOMPLETE
     this.getTickets() //CARGAR TODOS LOS TICKETS
+    this.list.controls['id'].setValue(Math.random().toString(36).substr(2, 9));
     this.list.controls['cantidad'].valueChanges.subscribe(() => {
       this.updateTicket();
     });
@@ -288,7 +291,7 @@ export class AcopioCreationDialogComponent implements OnInit {
 
   }
   getTickets(){
-    this.ticket.getTickets().subscribe((tikckets) => {
+    this.ticket.getTickets(this.list.controls['id'].value).subscribe((tikckets) => {
       this.dataSource2 = new MatTableDataSource<Ticket>(tikckets);
     });
   }
@@ -299,27 +302,43 @@ export class AcopioCreationDialogComponent implements OnInit {
       
       const compra = this.list.controls['compra'].value;
       const cantidad = this.list.controls['cantidad'].value;
-      this.list.controls['preciodolarr'].setValue(164.0000);
+      this.precioDolarR = 164.0000;
+      this.list.controls['preciodolarr'].setValue(this.precioDolarR);
       this.precioDolar = 164.0000;
+      this.list.controls['preciodolar'].setValue(this.precioDolar);
       this.igvDolar = 0.0000;
+      this.list.controls['igvdolar'].setValue(this.igvDolar);
       this.igvSoles = 0.0000;
+      this.list.controls['igvsoles'].setValue(this.igvSoles);
       this.precioSolesR = compra * this.precioDolarR;
+      this.list.controls['preciosolesr'].setValue(this.precioSolesR);
       this.precioSoles = compra * this.precioDolarR;
-      this.importeDolares = this.precioDolar * cantidad + this.igvDolar;
-      this.importeSoles = this.precioSoles * cantidad + this.igvSoles;
+      this.list.controls['preciosoles'].setValue(this.precioSoles);
+      this.importeDolares = this.precioDolar * cantidad;
+      this.list.controls['importadolar'].setValue(this.importeDolares);
+      this.importeSoles = this.precioSoles * cantidad;
+      this.list.controls['importesoles'].setValue(this.importeSoles);
 
     }
     else {
-      //TO DO: FUNCION PARA EL OTRO TIPO DE PLATA
+      //TO DO: FUNCION PARA EL OTRO TIPO DE PLANTA
     }
   }
   updateTicket() {
     const compra = this.list.controls['compra'].value;
     const cantidad = this.list.controls['cantidad'].value;
     this.precioSolesR = compra * this.precioDolarR;
+    this.list.controls['preciosolesr'].setValue(this.precioSolesR);
     this.precioSoles = compra * this.precioDolarR;
-    this.importeDolares = this.precioDolar * cantidad + this.igvDolar;
-    this.importeSoles = this.precioSoles * cantidad + this.igvSoles;
+    this.list.controls['preciosoles'].setValue(this.precioSolesR);
+    this.igvDolar = (this.precioDolar * cantidad) * 0.18;
+    this.list.controls['igvdolar'].setValue(this.igvDolar);
+    this.importeDolares = (this.precioDolar * cantidad) + this.igvDolar;
+    this.list.controls['importadolar'].setValue(this.importeDolares);
+    this.igvSoles = (this.precioSoles * cantidad) * 0.18;
+    this.list.controls['igvsoles'].setValue(this.igvSoles);
+    this.importeSoles = (this.precioSoles * cantidad) + this.igvSoles;
+    this.list.controls['importesoles'].setValue(this.importeSoles);
   }
   crearTicket(){
   const compra = this.list.controls['moneda'].value;
@@ -334,7 +353,8 @@ export class AcopioCreationDialogComponent implements OnInit {
       preciou: this.precioSoles,
       igv: this.igvSoles,
       descuento: '0.000',
-      importe: this.importeSoles
+      importe: this.importeSoles,
+      acopioid: this.list.controls['id'].value
     };
   } else {
     nevoTicket = {
@@ -346,7 +366,8 @@ export class AcopioCreationDialogComponent implements OnInit {
       preciou: this.precioDolar,
       igv: this.igvDolar,
       descuento: '0.000',
-      importe: this.importeDolares
+      importe: this.importeDolares,
+      acopioid: this.list.controls['id'].value
     };
   }
 
@@ -363,9 +384,34 @@ export class AcopioCreationDialogComponent implements OnInit {
   }
 
   onSubmit(list: FormGroup) {
-    list.value.id = Math.random().toString(36).substr(2, 9);
-    const partner = list.value;
-    this.service2.createNewAcopios(partner).subscribe(
+    let acopio: AcopioList;
+    acopio = {
+      id: this.list.controls['id'].value,
+      fechadoc: this.list.controls['fechacomprobante'].value,
+      fechaing: this.list.controls['fecharegistro'].value,
+      fechaolp: this.list.controls['fecharegistro'].value,
+      doc:  this.list.controls['comprobante'].value,
+      num_doc: this.list.controls['serie'].value + "-" + this.list.controls['correlativo'].value,
+      serie: this.list.controls['serie'].value,
+      numero: this.list.controls['correlativo'].value,
+      cod_acopio: this.list.controls['codigoacopio'].value,
+      dni: this.list.controls['numerodoc'].value,
+      datos: this.list.controls['nombres'].value,
+      tipos: 'SOCIO',
+      transaccion: this.list.controls['transaccion'].value,
+      banco: this.list.controls['cuentaban'].value,
+      num_banco: this.list.controls['cuentacte'].value,
+      moneda: this.list.controls['moneda'].value,
+      cantidad: this.list.controls['cantidad'].value,
+      pago: this.list.controls['formapago'].value,
+      neto: this.list.controls['comprobante'].value,
+      dscto: this.list.controls['descuentosoles'].value,
+      flete: this.list.controls['flete'].value,
+      total: this.list.controls['comprobante'].value,
+      estado: 'CANCELADO',
+      usuario: 'admin'
+    }
+    this.service2.createNewAcopios(acopio).subscribe(
       response => {
         console.log('Acopio creado:', response);
         this.dialogRef.close();
