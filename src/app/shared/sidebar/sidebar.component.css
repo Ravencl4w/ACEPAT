@@ -16,3 +16,42 @@
     color: white;
     vertical-align: middle;
 }
+
+mat-nav-list ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+mat-nav-list ul mat-list-item{
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  padding-top: 10px;
+}
+
+.item{
+  padding-left: 50px;
+}
+
+mat-nav-list ul ul{
+  height: 0px;
+  overflow: hidden;
+  transition: var(--estado-buda);
+  counter-reset: items;
+}
+
+mat-nav-list ul ul li{
+  counter-increment: items;
+}
+
+
+mat-nav-list ul li:hover ul{
+  height: calc( var(--cantidad-items) * var(--cada-item) );
+}
+
+
+mat-nav-list ul ul mat-list-item{
+  background: transparent;
+}

@@ -56,6 +56,7 @@ import { AsignarPrecioVentaComponent } from './shared/asignar-precio-venta/asign
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { RestorePartnerDialogComponent } from './shared/restore-partner-dialog/restore-partner-dialog.component';
 import { SocioAlertDialogComponent } from './shared/socio-alert-dialog/socio-alert-dialog.component';
+import { MatTreeModule } from '@angular/material/tree';
 
 const MY_DATE_FORMATS = {
   parse: {
@@ -128,7 +129,8 @@ const MY_DATE_FORMATS = {
     FormsModule,
     MatAutocompleteModule,
     DatePipe,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatTreeModule,
 
   ],
   providers: [
