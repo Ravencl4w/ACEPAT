@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "fake-api": "json-server --host 26.186.124.160 --port 4100 --watch ./src/app/api/db.json",
+    "fake-api": "json-server --host localhost --port 4100 --watch ./src/app/api/db.json",
     "produccion": "ng serve --host 26.186.124.160"
   },
   "private": true,

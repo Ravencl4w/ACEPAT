@@ -16,17 +16,24 @@
       </mat-form-field>
       <label class="labels">ESTADO</label>
       <mat-form-field class="custom-input">
-        <input matInput placeholder="Estado" formControlName="estado"/>
+        <mat-select disableRipple formControlName="estado">
+          <mat-option value="H">HABIL</mat-option>
+          <mat-option value="R">RETIRADO</mat-option>
+        </mat-select>
       </mat-form-field>
       <label class="labels">TECNICO</label>
       <mat-form-field class="custom-input">
         <mat-select disableRipple formControlName="tecnico">
-          <mat-option value="SOLTERO">SOLTERO (A)</mat-option>
-          <mat-option value="CONVIVIENTE">CONVIVIENTE</mat-option>
-          <mat-option value="CASADO">CASADO (A)</mat-option>
-          <mat-option value="VIUDO">VIUDO (A)</mat-option>
-          <mat-option value="SEPARADO">SEPARADO (A)</mat-option>
-          <mat-option value="DIVORCIADO">DIVORCIADO (A)</mat-option>
+          <mat-option value="2">Delmer A. Acuña Sobrado</mat-option>
+          <mat-option value="9">Erick Marteines Mendieta</mat-option>
+          <mat-option value="7">Gian Marco Flores Lopez</mat-option>
+          <mat-option value="10">Jean Carlo Soto de la Cruz</mat-option>
+          <mat-option value="5">Jefry Alexander Zegarra Campos</mat-option>
+          <mat-option value="1">Leonel C. Padilla Herrera</mat-option>
+          <mat-option value="6">Mily Villanueva Delgado</mat-option>
+          <mat-option value="3">Mishel sevillano morillo</mat-option>
+          <mat-option value="8">Nick Anderson Pinedo Lopez</mat-option>
+          <mat-option value="4">Nurali Malla Correa</mat-option>
         </mat-select>
       </mat-form-field>
       <label class="labels">FECHA DE NACIMIENTO</label>

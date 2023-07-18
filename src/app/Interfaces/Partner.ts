@@ -20,5 +20,6 @@ export interface Partner {
     dnibeneficiario: string,
     estadodelpredio: string,
     dniconyuge: string,
-    nombreconyuge: string
+    nombreconyuge: string,
+    tecnico: string
 }

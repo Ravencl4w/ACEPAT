@@ -11,9 +11,9 @@ import { Transportista } from '../Interfaces/Transportista';
 export class GatheringService {
   constructor(private http: HttpClient) { }
 
-  apiurl = 'http://26.186.124.160:4100/centro-acopio';
+  apiurl = 'http://localhost:4100/centro-acopio';
   urlSunat = 'https://api.apis.net.pe/v1/tipo-cambio-sunat'
-  apiTransporte = 'http://26.186.124.160:4100/transporte';
+  apiTransporte = 'http://localhost:4100/transporte';
   getCenters(): Observable<GatheringCenter[]>{
     const url = `${this.apiurl}`;
     return this.http.get<GatheringCenter[]>(url);

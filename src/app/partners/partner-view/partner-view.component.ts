@@ -24,6 +24,23 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatSort } from '@angular/material/sort';
 import { RestorePartnerDialogComponent } from 'src/app/shared/restore-partner-dialog/restore-partner-dialog.component';
 
+interface Tecnico {
+  id: string;
+  nombre: string;
+}
+
+const listaTecnicos: Tecnico[] = [
+  { id: '1', nombre: 'Leonel C. Padilla Herrera' },
+  { id: '2', nombre: 'Delmer A. Acuña Sobrado' },
+  { id: '3', nombre: 'Mishel sevillano morillo' },
+  { id: '4', nombre: 'Nurali Malla Correa' },
+  { id: '5', nombre: 'Jefry Alexander Zegarra Campos' },
+  { id: '6', nombre: 'Mily Villanueva Delgado' },
+  { id: '7', nombre: 'Gian Marco Flores Lopez' },
+  { id: '8', nombre: 'Nick Anderson Pinedo Lopez' },
+  { id: '9', nombre: 'Erick Marteines Mendieta' },
+  { id: '10', nombre: 'Jean Carlo Soto de la Cruz' }
+];
 
 @Component({
   selector: 'app-partner-view',
@@ -48,6 +65,7 @@ export class PartnerViewComponent implements AfterViewInit {
     'delete'
   ];
   dataSource = new MatTableDataSource<Partner>();
+  isFiltered = false;
 
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
@@ -83,7 +101,7 @@ export class PartnerViewComponent implements AfterViewInit {
   }
   exportToExcel(): void {
     const data = this.dataSource.data;
-  
+    
     const workbook = XLSX.utils.book_new();
     const worksheet = XLSX.utils.json_to_sheet(data);
     XLSX.utils.book_append_sheet(workbook, worksheet, 'Datos');
@@ -100,6 +118,14 @@ export class PartnerViewComponent implements AfterViewInit {
     this.selectedElement = element;
     const dialogRef = this.dialog.open(PartnerEditionDialogComponent, {
       data: this.selectedElement
+    });
+    dialogRef.afterClosed().subscribe(() => {
+      if(this.isFiltered === false){
+      this.getPartners();
+      }
+      else{
+      this.aplicarFiltros();
+      }
     });
   }
   
@@ -125,7 +151,13 @@ restoreRow(element: Partner): void {
   });
 }
 
+getTecnicoValueById(id: string): string {
+  const tecnico = listaTecnicos.find(item => item.id === id);
+  return tecnico ? tecnico.nombre : '';
+}
+
 aplicarFiltros() {
+  this.isFiltered = true;
   if(this.filtroDNI&&this.filtroSocio){
     this.service.getPartnersFilterNameDni(this.filtroSocio,this.filtroDNI).subscribe((partners) => {
       this.dataSource = new MatTableDataSource<Partner>(partners);

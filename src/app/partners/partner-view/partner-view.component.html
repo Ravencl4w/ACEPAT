@@ -48,10 +48,25 @@
         <div class="div3">
           <mat-form-field class="example-form-field">
             <mat-label>Busqueda por Comite Sectorial</mat-label>
-            <input matInput type="text" [(ngModel)]="filtroComite" [ngModelOptions]="{ updateOn: 'change' }" (input)="aplicarFiltros()">
-            <button matSuffix mat-icon-button aria-label="search">
-              <mat-icon>search</mat-icon>
-            </button>
+            <mat-select disableRipple>
+              <mat-option value="ACAPCEAPAAH - T">ACAPCEAPAAH - T</mat-option>
+              <mat-option value="ADEPALMA">ADEPALMA</mat-option>
+              <mat-option value="APAIN">APAIN</mat-option>
+              <mat-option value="APAMIL">APAMIL</mat-option>
+              <mat-option value="APPAIBO">APPAIBO</mat-option>
+              <mat-option value="APRODEPAT">APRODEPAT</mat-option>
+              <mat-option value="APUMHSA">APUMHSA</mat-option>
+              <mat-option value="ASAPAT">ASAPAT</mat-option>
+              <mat-option value="ASPAL">ASPAL</mat-option>
+              <mat-option value="ASPALTRU">ASPALTRU</mat-option>
+              <mat-option value="ASPAT">ASPAT</mat-option>
+              <mat-option value="ASSUPTA">ASSUPTA</mat-option>
+              <mat-option value="ELBER ALBAN DIAZ">ELBER ALBAN DIAZ</mat-option>
+              <mat-option value="HATUM PALMA ASS">HATUM PALMA ASS</mat-option>
+              <mat-option value="PARAISO">PARAISO</mat-option>
+              <mat-option value="SANTO CRISTO">SANTO CRISTO</mat-option>
+              <mat-option value="VALLE RIO CAÑUTILLO">VALLE RIO CAÑUTILLO</mat-option>
+            </mat-select>
           </mat-form-field>  
         </div>
       </div>
@@ -72,7 +87,9 @@
           <!-- Tecnico Column -->
           <ng-container matColumnDef="tecnico">
             <th mat-header-cell *matHeaderCellDef mat-sort-header>TECNICO</th>
-            <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">{{ element.tecnico }}</td>
+            <td mat-cell *matCellDef="let element" (click)="openEditionDialog(element)">
+              {{ getTecnicoValueById(element.tecnico) }}
+            </td>
           </ng-container>
           <!-- Name Column -->
           <ng-container matColumnDef="dni">
