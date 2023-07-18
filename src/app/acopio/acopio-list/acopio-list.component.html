@@ -49,20 +49,20 @@
         <!-- Position Column -->
         <ng-container matColumnDef="fechadoc">
           <th mat-header-cell *matHeaderCellDef>FECHA DOC</th>
-          <td mat-cell *matCellDef="let element" >{{ element.fechadoc }}</td>
+          <td mat-cell *matCellDef="let element" >{{ formatDate(element.fechadoc) }}</td>
         </ng-container>
 
         <!-- Name Column -->
         
         <ng-container matColumnDef="fechaing">
          <th mat-header-cell *matHeaderCellDef>FECHA ING</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
-          <td mat-cell *matCellDef="let element" >{{ element.fechaing }}</td>
+          <td mat-cell *matCellDef="let element" >{{ formatDate(element.fechaing) }}</td>
         </ng-container>
        <!-- Name Column -->
         
        <ng-container matColumnDef="fechaolp">
         <th mat-header-cell *matHeaderCellDef>FECHA OLP</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
-         <td mat-cell *matCellDef="let element" >{{ element.fechaolp }}</td>
+         <td mat-cell *matCellDef="let element" >{{ formatDate(element.fechaolp) }}</td>
        </ng-container>
        <!-- Name Column -->
         
@@ -90,15 +90,15 @@
        </ng-container>
        <!-- Name Column -->
         
-       <ng-container matColumnDef="codigoacopio">
+       <ng-container matColumnDef="cod_acopio">
         <th mat-header-cell *matHeaderCellDef>COD ACOPIO</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
-         <td mat-cell *matCellDef="let element" >{{ element.codigoacopio }}</td>
+         <td mat-cell *matCellDef="let element" >{{ element.cod_acopio }}</td>
        </ng-container>
        <!-- Name Column -->
         
-       <ng-container matColumnDef="numerodoc">
+       <ng-container matColumnDef="dni">
         <th mat-header-cell *matHeaderCellDef>DNI</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
-         <td mat-cell *matCellDef="let element" >{{ element.numerodoc }}</td>
+         <td mat-cell *matCellDef="let element" >{{ element.dni }}</td>
        </ng-container>
        <!-- Name Column -->
         
@@ -120,15 +120,15 @@
        </ng-container>
        <!-- Name Column -->
         
-       <ng-container matColumnDef="cuentaban">
+       <ng-container matColumnDef="banco">
         <th mat-header-cell *matHeaderCellDef>BANCO</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
-         <td mat-cell *matCellDef="let element" >{{ element.cuentaban }}</td>
+         <td mat-cell *matCellDef="let element" >{{ element.banco }}</td>
        </ng-container>
        <!-- Name Column -->
         
-       <ng-container matColumnDef="cuentacte">
+       <ng-container matColumnDef="num_banco">
         <th mat-header-cell *matHeaderCellDef>NUM BANCO</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
-         <td mat-cell *matCellDef="let element" >{{ element.cuentacte }}</td>
+         <td mat-cell *matCellDef="let element" >{{ element.num_banco }}</td>
        </ng-container>
        <!-- Name Column -->
         
@@ -156,9 +156,9 @@
        </ng-container>
        <!-- Name Column -->
         
-       <ng-container matColumnDef="descuentosoles">
+       <ng-container matColumnDef="dscto">
         <th mat-header-cell *matHeaderCellDef>DSCTO</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
-         <td mat-cell *matCellDef="let element" >{{ element.descuentosoles }}</td>
+         <td mat-cell *matCellDef="let element" >{{ element.dscto }}</td>
        </ng-container>
        <!-- Name Column -->
         
@@ -168,9 +168,9 @@
        </ng-container>
        <!-- Name Column -->
         
-       <ng-container matColumnDef="importesoles">
+       <ng-container matColumnDef="total">
         <th mat-header-cell *matHeaderCellDef>TOTAL</th> <th mat-header-cell *matHeaderCellDef>DNI</th>
-         <td mat-cell *matCellDef="let element" >{{ element.importesoles }}</td>
+         <td mat-cell *matCellDef="let element" >{{ element.total }}</td>
        </ng-container>
        <!-- Name Column -->
         

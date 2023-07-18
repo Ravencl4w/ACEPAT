@@ -1,4 +1,5 @@
 export interface AcopioList{
+    id: number,
     fechadoc:Date,
     fechaing:Date,
     fechaolp:Date,

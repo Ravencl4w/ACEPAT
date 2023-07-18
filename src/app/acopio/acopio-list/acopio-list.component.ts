@@ -5,6 +5,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { AcopioService } from 'src/app/services/acopio.service';
 import { AcopioList } from 'src/app/Interfaces/AcopioList';
+import { DatePipe } from '@angular/common';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
 
@@ -23,10 +24,10 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 })
 export class AcopioListComponent implements AfterViewInit {
   
-  displayedColumns: string[] = ['fechadoc', 'fechaing', 'fechaolp', 'doc',"num_doc","serie","numero","codigoacopio","numerodoc","datos","tipos","transaccion","cuentaban","cuentacte","moneda","cantidad","pago","neto","descuentosoles","flete","importesoles","estado","usuario"];
+  displayedColumns: string[] = ['fechadoc', 'fechaing', 'fechaolp', 'doc',"num_doc","serie","numero","cod_acopio","dni","datos","tipos","transaccion","banco","num_banco","moneda","cantidad","pago","neto","dscto","flete","total","estado","usuario"];
   dataSource = new MatTableDataSource<AcopioList>
 
-  constructor(private dialog: MatDialog, private service: AcopioService) {}
+  constructor(private dialog: MatDialog, private service: AcopioService, private datePipe: DatePipe) {}
   
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
@@ -49,5 +50,8 @@ export class AcopioListComponent implements AfterViewInit {
       height: '900px',
     });
   }
-
+  formatDate(date: string): string {
+    const formattedDate = this.datePipe.transform(date, 'dd/MM/yyyy HH:mm');
+    return formattedDate || '';
+  }
 }
