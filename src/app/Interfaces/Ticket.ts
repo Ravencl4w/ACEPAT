@@ -1,11 +1,12 @@
 export interface Ticket{
-    id: string,
+    id: number,
     ticket: string,
-    cantidad: string,
+    cantidad: number,
     undmedida: string,
     descripcion: string,
-    preciou: string,
-    igv: string,
-    descuento: string,
-    importe: string
+    preciou: number,
+    igv: number,
+    descuento: number,
+    importe: number,
+    acopioid: number
 }

@@ -10,6 +10,7 @@ import {
   transition,
   animate,
 } from '@angular/animations';
+import { SocioAlertDialogComponent } from '../socio-alert-dialog/socio-alert-dialog.component';
 @Component({
   selector: 'app-partner-detail-edition-dialog',
   templateUrl: './partner-detail-edition-dialog.component.html',
@@ -119,4 +120,6 @@ onSubmit(partner: FormGroup) {
 });
 
 }
+
+
 }

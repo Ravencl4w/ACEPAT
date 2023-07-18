@@ -9,11 +9,12 @@ import { Observable } from 'rxjs';
 export class TicketService {
 
   constructor(private http:HttpClient) { }
-  apiurl='http://26.186.124.160:4100/ticket';
+  apiurl='http://localhost:4100/ticket';
   createTicket(inputdata:any){
     return this.http.post(this.apiurl,inputdata);
   }
-  getTickets(): Observable<Ticket[]>{
-    return this.http.get<Ticket[]>(this.apiurl);
+  getTickets(inputdata: any): Observable<Ticket[]>{
+    const url =  `${this.apiurl}?acopioid=${inputdata}`
+    return this.http.get<Ticket[]>(url);
   }
 }

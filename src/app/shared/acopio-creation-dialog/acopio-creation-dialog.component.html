@@ -6,10 +6,10 @@
           <div class="input-group">
             <label class="labels">Codigo</label>
             <mat-form-field [style.width.px]="140" [style.height.px]="70" class="custom-input">
-              <input type="text" formControlName="codigoacopio" aria-label="Number" matInput [value]="selectedOption15"
+              <input type="text" formControlName="codigoacopio" aria-label="Number" matInput [value]="CodigoSelect"
                 [matAutocomplete]="auto">
-              <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onOptionSelected($event)">
-                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onCodigoSeleccionado($event)">
+                <mat-option *ngFor="let option of filtrarCodigo | async" [value]="option">
                   {{option}}
                 </mat-option>
               </mat-autocomplete>
@@ -18,10 +18,10 @@
           <div class="input-group">
             <label class="labels">Centro Acopio</label>
             <mat-form-field [style.width.px]="680" [style.height.px]="70" class="custom-input">
-              <input type="text" formControlName="centroacopio" aria-label="Number" matInput [value]="selectedOption"
+              <input type="text" formControlName="centroacopio" aria-label="Number" matInput [value]="CentroSelected"
                 [matAutocomplete]="auto5">
-              <mat-autocomplete #auto5="matAutocomplete" (optionSelected)="onOptionSelected3($event)">
-                <mat-option *ngFor="let option of filteredOptions4 | async" [value]="option">
+              <mat-autocomplete #auto5="matAutocomplete" (optionSelected)="onCentroSeleccionado($event)">
+                <mat-option *ngFor="let option of filtrarCentro | async" [value]="option">
                   {{option}}
                 </mat-option>
               </mat-autocomplete>
@@ -32,10 +32,10 @@
           <div class="input-group">
             <label class="labels">Codigo</label>
             <mat-form-field [style.width.px]="140" [style.height.px]="70" class="custom-input">
-              <input type="text" formControlName="codigosocio" aria-label="Number" matInput [value]="selectedOption17"
+              <input type="text" formControlName="codigosocio" aria-label="Number" matInput [value]="selectedID"
                 [matAutocomplete]="auto2">
-              <mat-autocomplete #auto2="matAutocomplete" (optionSelected)="onOptionSelected2($event)">
-                <mat-option *ngFor="let option of filteredOptions2 | async" [value]="option">
+              <mat-autocomplete #auto2="matAutocomplete" (optionSelected)="onCodigoSelected($event)">
+                <mat-option *ngFor="let option of filtrarCodigoSocio | async" [value]="option">
                   {{option}}
                 </mat-option>
               </mat-autocomplete>
@@ -44,10 +44,10 @@
           <div class="input-group">
             <label class="labels">N° Doc</label>
             <mat-form-field [style.width.px]="140" [style.height.px]="70" class="custom-input">
-              <input type="text" [value]="selectedOption2" formControlName="numerodoc" aria-label="Number" matInput
+              <input type="text" [value]="selectedDni" formControlName="numerodoc" aria-label="Number" matInput
                 [matAutocomplete]="auto3">
-              <mat-autocomplete #auto3="matAutocomplete" (optionSelected)="onOptionSelected4($event)">
-                <mat-option *ngFor="let option of filteredOptions5 | async" [value]="option ">
+              <mat-autocomplete #auto3="matAutocomplete" (optionSelected)="onDniSelected($event)">
+                <mat-option *ngFor="let option of filtrarDocumento | async" [value]="option ">
                   {{option}}
                 </mat-option>
               </mat-autocomplete>
@@ -56,10 +56,10 @@
           <div class="input-group">
             <label class="labels">Apellidos y Nombres</label>
             <mat-form-field [style.width.px]="530" [style.height.px]="70" class="custom-input">
-              <input type="text" [value]="selectedOption3" formControlName="nombres" aria-label="Number" matInput
+              <input type="text" [value]="selectedNombre" formControlName="nombres" aria-label="Number" matInput
                 [matAutocomplete]="auto8">
-              <mat-autocomplete #auto8="matAutocomplete" (optionSelected)="onOptionSelected5($event)">
-                <mat-option *ngFor="let option of filteredOptions6 | async" [value]="option ">
+              <mat-autocomplete #auto8="matAutocomplete" (optionSelected)="onNombreSelected($event)">
+                <mat-option *ngFor="let option of filtrarNombre | async" [value]="option ">
                   {{option}}
                 </mat-option>
               </mat-autocomplete>
@@ -68,23 +68,23 @@
           <div class="input-group">
             <label class="labels">Dirección</label>
             <mat-form-field [style.width.px]="410" [style.height.px]="70" class="custom-input">
-              <input matInput formControlName="direccion" [value]="selectedOption5" />
+              <input matInput formControlName="direccion" [value]="selectedLocalidad" />
             </mat-form-field>
           </div>
           <div class="input-group">
             <label class="labels">Cta Bancarias</label>
             <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
               <mat-select disableRipple formControlName="cuentaban">
-                <mat-option value="1">BCP</mat-option>
-                <mat-option value="2">BBVA</mat-option>
-                <mat-option value="3">COOPACT</mat-option>
+                <mat-option value="BCP">BCP</mat-option>
+                <mat-option value="BBVA">BBVA</mat-option>
+                <mat-option value="COOPACT">COOPACT</mat-option>
               </mat-select>
             </mat-form-field>
           </div>
           <div class="input-group">
             <label class="labels">Cta. Cte.</label>
             <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
-              <input matInput formControlName="cuentacte" [value]="selectedOption4" />
+              <input matInput formControlName="cuentacte" [value]="selectedNumeroCuenta" />
             </mat-form-field>
           </div>
           <div class="input-group">
@@ -92,8 +92,6 @@
             <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
               <mat-select disableRipple formControlName="transaccion">
                 <mat-option value="COMPRA DE MATERIA PRIMA">COMPRA DE MATERIA PRIMA</mat-option>
-                <mat-option value="2">Option 2</mat-option>
-                <mat-option value="3">Option 3</mat-option>
               </mat-select>
             </mat-form-field>
           </div>
@@ -128,7 +126,7 @@
             <mat-form-field [style.width.px]="320" [style.height.px]="70" class="custom-input">
               <input type="text" formControlName="transportista" aria-label="Number" matInput [matAutocomplete]="auto4">
               <mat-autocomplete #auto4="matAutocomplete">
-                <mat-option *ngFor="let option of filteredOptions3 | async" [value]="option">
+                <mat-option *ngFor="let option of filtrarTransportista | async" [value]="option">
                   {{option}}
                 </mat-option>
               </mat-autocomplete>
@@ -260,13 +258,13 @@
           <div class="input-group">
             <label class="labels">Precio $ R</label>
             <mat-form-field [style.width.px]="135" [style.height.px]="70" class="custom-input">
-              <input matInput formControlName="preciodolarr" [value]="precioDolarR" [readonly]="true"/>
+              <input matInput formControlName="preciodolarr"/>
             </mat-form-field>
           </div>
           <div class="input-group">
             <label class="labels">Precio S/ R</label>
             <mat-form-field [style.width.px]="135" [style.height.px]="70" class="custom-input">
-              <input matInput formControlName="preciosolesr" [value]="precioSolesR" [readonly]="true"/>
+              <input matInput formControlName="preciosolesr"/>
             </mat-form-field>
           </div>
           <div class="input-group">
@@ -282,25 +280,25 @@
           <div class="input-group">
             <label class="labels">Precio $</label>
             <mat-form-field [style.width.px]="135" [style.height.px]="70" class="custom-input">
-              <input matInput formControlName="preciodolar" [value]="precioDolar" [readonly]="true"/>
+              <input matInput formControlName="preciodolar"/>
             </mat-form-field>
           </div>
           <div class="input-group">
             <label class="labels">I.G.V. $</label>
             <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
-              <input matInput formControlName="igvdolar" [value]="igvDolar" [readonly]="true"/>
+              <input matInput formControlName="igvdolar"/>
             </mat-form-field>
           </div>
           <div class="input-group">
             <label class="labels">Descuento %</label>
             <mat-form-field [style.width.px]="130" [style.height.px]="70" class="custom-input">
-              <input matInput formControlName="descuentodolar" [readonly]="true"/>
+              <input matInput formControlName="descuentodolar"/>
             </mat-form-field>
           </div>
           <div class="input-group">
             <label class="labels">Importe $</label>
             <mat-form-field [style.width.px]="135" [style.height.px]="70" class="custom-input">
-              <input matInput formControlName="importadolar" [value]="importeDolares" [readonly]="true"/>
+              <input matInput formControlName="importadolar"/>
             </mat-form-field>
           </div>
           <button [style.width.px]="130" [style.height.px]="70" class="custom-button" (click)="crearTicket()">
@@ -310,25 +308,25 @@
           <div class="input-group">
             <label class="labels">Precio S/</label>
             <mat-form-field [style.width.px]="170" [style.height.px]="70" class="custom-input">
-              <input matInput  formControlName="preciosoles" [value]="precioSoles" [readonly]="true"/>
+              <input matInput  formControlName="preciosoles"/>
             </mat-form-field>
           </div>
           <div class="input-group">
             <label class="labels">I.G.V. S/</label>
             <mat-form-field [style.width.px]="170" [style.height.px]="70" class="custom-input">
-              <input matInput formControlName="igvsoles" [value]="igvSoles" [readonly]="true"/>
+              <input matInput formControlName="igvsoles"/>
             </mat-form-field>
           </div>
           <div class="input-group">
             <label class="labels">Descuento %</label>
             <mat-form-field [style.width.px]="170" [style.height.px]="70" class="custom-input">
-              <input matInput formControlName="descuentosoles" [readonly]="true"/>
+              <input matInput formControlName="descuentosoles"/>
             </mat-form-field>
           </div>
           <div class="input-group">
             <label class="labels">Importe S/</label>
             <mat-form-field [style.width.px]="170" [style.height.px]="70" class="custom-input">
-              <input matInput formControlName="importesoles" [value]="importeSoles" />
+              <input matInput formControlName="importesoles" />
             </mat-form-field>
           </div>
         </div>
@@ -385,7 +383,15 @@
       </div>
     </div>
     <div class="botones">
-      <button class="btn btn-guardar" mat-raised-button color="primary">Guardar</button>
+      <button
+      type="submit"
+      class="btn btn-guardar"
+      (click)="onSubmit(list)"
+      mat-raised-button
+      color="primary"
+    >
+      Guardar
+    </button>
       <button class="btn btn-cancelar" mat-raised-button color="warn" mat-dialog-close>Cancelar</button>
     </div>
   </form>

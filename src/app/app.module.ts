@@ -26,7 +26,7 @@ import { MatListModule } from '@angular/material/list';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MAT_DATE_FORMATS, MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
+import { MAT_DATE_FORMATS, MAT_DATE_FORMATS, MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
 import { UserModifyDialogComponent } from './shared/user-modify-dialog/user-modify-dialog.component';
@@ -55,8 +55,22 @@ import { AsignacionCostosDialogComponent } from './shared/asignacion-costos-dial
 import { AsignarPrecioVentaComponent } from './shared/asignar-precio-venta/asignar-precio-venta.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { RestorePartnerDialogComponent } from './shared/restore-partner-dialog/restore-partner-dialog.component';
+import { SocioAlertDialogComponent } from './shared/socio-alert-dialog/socio-alert-dialog.component';
+import { registerLocaleData } from '@angular/common';
+import localeEs from '@angular/common/locales/es';
+import { MatTreeModule } from '@angular/material/tree';
 
 const MY_DATE_FORMATS = {
+  parse: {
+    dateInput: 'input',
+  },
+  display: {
+    dateInput: { day: '2-digit', month: '2-digit', year: 'numeric' },
+    monthYearLabel: 'MMM yyyy',
+    dateA11yLabel: { year: 'numeric', month: 'long', day: 'numeric' },
+    monthYearA11yLabel: 'MMMM yyyy',
+  },
+};const MY_DATE_FORMATS = {
   parse: {
     dateInput: 'input',
   },
@@ -98,7 +112,8 @@ const MY_DATE_FORMATS = {
     ProduccionComponent,
     AsignacionCostosDialogComponent,
     AsignarPrecioVentaComponent,
-    RestorePartnerDialogComponent
+    RestorePartnerDialogComponent,
+    SocioAlertDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -126,15 +141,19 @@ const MY_DATE_FORMATS = {
     FormsModule,
     MatAutocompleteModule,
     DatePipe,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatTreeModule,
 
   ],
   providers: [
     DatePipe,
     { provide: LOCALE_ID, useValue: 'es' },
     { provide: MAT_DATE_LOCALE, useValue: 'es' },
+    { provide: MAT_DATE_FORMATS, useValue: MY_DATE_FORMATS },
     { provide: MAT_DATE_FORMATS, useValue: MY_DATE_FORMATS }
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { constructor() {
+  registerLocaleData(localeEs);
+} }

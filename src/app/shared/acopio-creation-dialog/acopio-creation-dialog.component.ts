@@ -13,6 +13,9 @@ import { PartnerService } from 'src/app/services/partner.service';
 import { GatheringService } from 'src/app/services/gathering.service';
 import { Ticket } from 'src/app/Interfaces/Ticket';
 import { TicketService } from 'src/app/services/ticket.service';
+import { MatDialogRef } from '@angular/material/dialog';
+import { AcopioService } from 'src/app/services/acopio.service';
+import { AcopioList } from 'src/app/Interfaces/AcopioList';
 export interface DatosProducto {
   producto: string;
   codigo: string;
@@ -44,19 +47,19 @@ export class AcopioCreationDialogComponent implements OnInit {
   dataSource2 = new MatTableDataSource<Ticket>();
   list: FormGroup;
   //OPCIONES FILTRADAS PARA AUTOCOMPLETAR
-  filteredOptions!: Observable<string[]>;
-  filteredOptions2!: Observable<string[]>;
-  filteredOptions3!: Observable<string[]>;
-  filteredOptions4!: Observable<string[]>;
-  filteredOptions5!: Observable<string[]>;
-  filteredOptions6!: Observable<string[]>;
+  filtrarCodigo!: Observable<string[]>;
+  filtrarCodigoSocio!: Observable<string[]>;
+  filtrarTransportista!: Observable<string[]>;
+  filtrarCentro!: Observable<string[]>;
+  filtrarDocumento!: Observable<string[]>;
+  filtrarNombre!: Observable<string[]>;
   //FIN DE AUTOCOMPLETAR
   //VARIABLES DE CADA INPUT
-  selectedOption: any;
-  selectedOption2: any;
-  selectedOption3: any;
-  selectedOption4: any;
-  selectedOption5: any;
+  CentroSelected: any;
+  selectedDni: any;
+  selectedNombre: any;
+  selectedNumeroCuenta: any;
+  selectedLocalidad: any;
   selectedCompra: any;
   selectedVenta: any;
   precioDolarR: any;
@@ -68,14 +71,14 @@ export class AcopioCreationDialogComponent implements OnInit {
   precioSoles: any;
   igvSoles: any;
   importeSoles: any;
-  selectedOption14: any;
-  selectedOption15: any;
-  selectedOption16: any;
-  selectedOption17: any;
+  CodigoSelect: any;
+  selectedID: any;
+  netoDinero = 0.0000;
   //FIN DE VARIABLES
-  constructor(private fb: FormBuilder, private service: PartnerService, private gatService: GatheringService, private ticket: TicketService) {
+  constructor(private fb: FormBuilder, private service: PartnerService, private gatService: GatheringService, private ticket: TicketService, public dialogRef: MatDialogRef<AcopioCreationDialogComponent>, private service2: AcopioService) {
     //INICIOFORMULARIO
     this.list = this.fb.group({
+      id:[0, Validators.required],
       codigoacopio: ['', Validators.required],
       centroacopio: ['', Validators.required],
       codigosocio: ['', Validators.required],
@@ -100,18 +103,18 @@ export class AcopioCreationDialogComponent implements OnInit {
       serie: ['', Validators.required],
       correlativo: ['', Validators.required],
       ticket: ['', Validators.required],
-      cantidad: ['', Validators.required],
-      preciodolarr: ['', Validators.required],
-      preciosolesr: ['', Validators.required],
+      cantidad: [{ value: 0.0000, disabled: false }, Validators.required],
+      preciodolarr: [{ value: 0.0000, disabled: true }, Validators.required],
+      preciosolesr: [{ value: 0.0000, disabled: true }, Validators.required],
       unidadm: ['TN', Validators.required],
-      preciodolar: ['', Validators.required],
-      igvdolar: ['', Validators.required],
-      descuentodolar: ['', Validators.required],
-      importadolar: ['', Validators.required],
-      preciosoles: ['', Validators.required],
-      igvsoles: ['', Validators.required],
-      descuentosoles: ['', Validators.required],
-      importesoles: ['', Validators.required],
+      preciodolar: [{ value: 0.0000, disabled: true }, Validators.required],
+      igvdolar: [{ value: 0.0000, disabled: true }, Validators.required],
+      descuentodolar: [{ value: 0.0000, disabled: true }, Validators.required],
+      importadolar: [{ value: 0.0000, disabled: true }, Validators.required],
+      preciosoles: [{ value: 0.0000, disabled: true }, Validators.required],
+      igvsoles: [{ value: 0.0000, disabled: true }, Validators.required],
+      descuentosoles: [{ value: 0.0000, disabled: true }, Validators.required],
+      importesoles: [{ value: 0.0000, disabled: true }, Validators.required],
     });
     //FIN FORMULARIO
   }
@@ -119,6 +122,7 @@ export class AcopioCreationDialogComponent implements OnInit {
   ngOnInit() {
     this.loadOptions(); //CARGAR OPCIONES PARA AUTOCOMPLETE
     this.getTickets() //CARGAR TODOS LOS TICKETS
+    this.list.controls['id'].setValue(parseInt(Math.random().toString().slice(2, 11), 10));
     this.list.controls['cantidad'].valueChanges.subscribe(() => {
       this.updateTicket();
     });
@@ -131,7 +135,7 @@ export class AcopioCreationDialogComponent implements OnInit {
       const options4 = data.map(item => item.centro);
 
       // Configura la lógica de filtrado y asigna las opciones filtradas a la variable
-      this.filteredOptions4 = this.list.controls['centroacopio'].valueChanges.pipe(
+      this.filtrarCentro = this.list.controls['centroacopio'].valueChanges.pipe(
         startWith(''),
         map(value => this.filterOptions(value, options4))
       );
@@ -142,7 +146,7 @@ export class AcopioCreationDialogComponent implements OnInit {
       const options3 = data.map(item => item.transporte);
 
       // Configura la lógica de filtrado y asigna las opciones filtradas a la variable
-      this.filteredOptions3 = this.list.controls['transportista'].valueChanges.pipe(
+      this.filtrarTransportista = this.list.controls['transportista'].valueChanges.pipe(
         startWith(''),
         map(value => this.filterOptions(value, options3))
       );
@@ -153,7 +157,7 @@ export class AcopioCreationDialogComponent implements OnInit {
       const options = data.map(item => item.id);
 
       // Configura la lógica de filtrado y asigna las opciones filtradas a la variable
-      this.filteredOptions = this.list.controls['codigoacopio'].valueChanges.pipe(
+      this.filtrarCodigo = this.list.controls['codigoacopio'].valueChanges.pipe(
         startWith(''),
         map(value => this.filterOptions(value, options))
       );
@@ -164,7 +168,7 @@ export class AcopioCreationDialogComponent implements OnInit {
       const options2 = data.map(item => item.id);
 
       // Configura la lógica de filtrado y asigna las opciones filtradas a la variable
-      this.filteredOptions2 = this.list.controls['codigosocio'].valueChanges.pipe(
+      this.filtrarCodigoSocio = this.list.controls['codigosocio'].valueChanges.pipe(
         startWith(''),
         map(value => this.filterOptions(value, options2))
       );
@@ -174,7 +178,7 @@ export class AcopioCreationDialogComponent implements OnInit {
       const options5 = data.map(item => item.dni);
 
       // Configura la lógica de filtrado y asigna las opciones filtradas a la variable
-      this.filteredOptions5 = this.list.controls['numerodoc'].valueChanges.pipe(
+      this.filtrarDocumento = this.list.controls['numerodoc'].valueChanges.pipe(
         startWith(''),
         map(value => this.filterOptions(value, options5))
       );
@@ -184,7 +188,7 @@ export class AcopioCreationDialogComponent implements OnInit {
       const options6 = data.map(item => item.nombre);
 
       // Configura la lógica de filtrado y asigna las opciones filtradas a la variable
-      this.filteredOptions6 = this.list.controls['nombres'].valueChanges.pipe(
+      this.filtrarNombre = this.list.controls['nombres'].valueChanges.pipe(
         startWith(''),
         map(value => this.filterOptions(value, options6))
       );
@@ -202,112 +206,176 @@ export class AcopioCreationDialogComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  onOptionSelected(event: any) {
-
-    this.gatService.getCentersById(event.option.value).subscribe(data => {
-      this.selectedOption = data.centro;
-
+  onCodigoSeleccionado(event: any) {
+    const selectedCodigoAcopio = event.option.value;
+  
+    this.gatService.getCentersById(selectedCodigoAcopio).subscribe(data => {
+      const centroAcopioAsociado = data.centro;
+      this.list.patchValue({
+        centroacopio: centroAcopioAsociado
+      });
     });
   }
-  onOptionSelected3(event: any) {
-    this.gatService.getCentersByName(event.option.value).subscribe(data => {
-      this.selectedOption15 = data.id;
+  
+  onCentroSeleccionado(event: any) {
+    const selectedCentroAcopio = event.option.value;
+
+    this.gatService.getCentersByName(selectedCentroAcopio).subscribe(data => {
+      const codigoAcopioAsocio = data.id;
+      this.list.patchValue({
+        codigoacopio: codigoAcopioAsocio
+      });
     });
   }
 
-  onOptionSelected2(event: any) {
-    this.service.getPartnersById(event.option.value).subscribe(data => {
-      this.selectedOption2 = data.dni;
-      this.selectedOption3 = data.nombre;
-      this.selectedOption4 = data.nrocuenta;
-      this.selectedOption5 = data.localidad;
+  onCodigoSelected(event: any) {
+
+    const selectedCodigoPartner = event.option.value;
+
+    this.service.getPartnersById(selectedCodigoPartner).subscribe(data => {
+
+      const dniPartner = data.dni;
+      const nombrePartner = data.nombre;
+      const numeroCuentaPartner = data.nrocuenta;
+      const localidadPartner = data.localidad;
+
+      this.list.patchValue({
+        numerodoc: dniPartner,
+        nombres: nombrePartner,
+        cuentacte: numeroCuentaPartner,
+        direccion: localidadPartner
+      })
     });
 
   }
 
-  onOptionSelected4(event: any) {
-    this.service.getPartnersByDni(event.option.value).subscribe(data => {
-      this.selectedOption17 = data.id;
-      this.selectedOption3 = data.nombre;
-      this.selectedOption4 = data.nrocuenta;
-      this.selectedOption5 = data.localidad;
+  onDniSelected(event: any) {
+
+    const selectedDniPartner = event.option.value;
+
+    this.service.getPartnersByDni(selectedDniPartner).subscribe(data => {
+
+      const idPartner = data.id;
+      const nombrePartner = data.nombre;
+      const numeroCuentaPartner = data.nrocuenta;
+      const localidadPartner = data.localidad;
+
+      this.list.patchValue({
+        codigosocio: idPartner,
+        nombres: nombrePartner,
+        cuentacte: numeroCuentaPartner,
+        direccion: localidadPartner
+      })
     });
 
   }
-  onOptionSelected5(event: any) {
-    this.service.getPartnersByName(event.option.value).subscribe(data => {
-      this.selectedOption17 = data.id;
-      this.selectedOption3 = data.nombre;
-      this.selectedOption2 = data.dni;
-      this.selectedOption4 = data.nrocuenta;
-      this.selectedOption5 = data.localidad;
+  onNombreSelected(event: any) {
+
+    const selectedNombrePartner = event.option.value;
+
+    this.service.getPartnersByName(selectedNombrePartner).subscribe(data => {
+
+      const idPartner = data.id;
+      const nombrePartner = data.nombre;
+      const dniPartner = data.dni;
+      const numeroCuentaPartner = data.nrocuenta;
+      const localidadPartner = data.localidad;
+
+      this.list.patchValue({
+        codigosocio: idPartner,
+        nombres: nombrePartner,
+        numerodoc: dniPartner,
+        cuentacte: numeroCuentaPartner,
+        direccion: localidadPartner
+      })
     });
 
   }
   getTickets(){
-    this.ticket.getTickets().subscribe((tikckets) => {
+    this.ticket.getTickets(this.list.controls['id'].value).subscribe((tikckets) => {
       this.dataSource2 = new MatTableDataSource<Ticket>(tikckets);
     });
   }
 
   getData(id: string) {
+
     if (id === 'RFF') {
+      
       const compra = this.list.controls['compra'].value;
       const cantidad = this.list.controls['cantidad'].value;
       this.precioDolarR = 164.0000;
+      this.list.controls['preciodolarr'].setValue(this.precioDolarR);
       this.precioDolar = 164.0000;
+      this.list.controls['preciodolar'].setValue(this.precioDolar);
       this.igvDolar = 0.0000;
+      this.list.controls['igvdolar'].setValue(this.igvDolar);
       this.igvSoles = 0.0000;
+      this.list.controls['igvsoles'].setValue(this.igvSoles);
       this.precioSolesR = compra * this.precioDolarR;
+      this.list.controls['preciosolesr'].setValue(this.precioSolesR);
       this.precioSoles = compra * this.precioDolarR;
-      this.importeDolares = this.precioDolar * cantidad + this.igvDolar;
-      this.importeSoles = this.precioSoles * cantidad + this.igvSoles;
+      this.list.controls['preciosoles'].setValue(this.precioSoles);
+      this.importeDolares = this.precioDolar * cantidad;
+      this.list.controls['importadolar'].setValue(this.importeDolares);
+      this.importeSoles = this.precioSoles * cantidad;
+      this.list.controls['importesoles'].setValue(this.importeSoles);
 
     }
     else {
-      //TO DO: FUNCION PARA EL OTRO TIPO DE PLATA
+      //TO DO: FUNCION PARA EL OTRO TIPO DE PLANTA
     }
   }
   updateTicket() {
     const compra = this.list.controls['compra'].value;
     const cantidad = this.list.controls['cantidad'].value;
     this.precioSolesR = compra * this.precioDolarR;
+    this.list.controls['preciosolesr'].setValue(this.precioSolesR);
     this.precioSoles = compra * this.precioDolarR;
-    this.importeDolares = this.precioDolar * cantidad + this.igvDolar;
-    this.importeSoles = this.precioSoles * cantidad + this.igvSoles;
+    this.list.controls['preciosoles'].setValue(this.precioSolesR);
+    this.igvDolar = (this.precioDolar * cantidad) * 0.18;
+    this.list.controls['igvdolar'].setValue(this.igvDolar);
+    this.importeDolares = (this.precioDolar * cantidad) + this.igvDolar;
+    this.list.controls['importadolar'].setValue(this.importeDolares);
+    this.igvSoles = (this.precioSoles * cantidad) * 0.18;
+    this.list.controls['igvsoles'].setValue(this.igvSoles);
+    this.importeSoles = (this.precioSoles * cantidad) + this.igvSoles;
+    this.list.controls['importesoles'].setValue(this.importeSoles);
   }
   crearTicket(){
   const compra = this.list.controls['moneda'].value;
   let nevoTicket: Ticket; // Quitamos la inicialización como objeto vacío
   if (compra === 'SOLES') {
     nevoTicket = {
-      id: Math.random().toString(36).substr(2, 9),
+      id: parseInt(Math.random().toString().slice(2, 11), 10),
       ticket: this.list.controls['ticket'].value,
       cantidad: this.list.controls['cantidad'].value, // Asigna el valor correspondiente
       undmedida: this.list.controls['unidadm'].value,
       descripcion: 'no c',
       preciou: this.precioSoles,
       igv: this.igvSoles,
-      descuento: '0.000',
-      importe: this.importeSoles
+      descuento: 0.000,
+      importe: this.importeSoles,
+      acopioid: this.list.controls['id'].value
     };
   } else {
     nevoTicket = {
-      id: Math.random().toString(36).substr(2, 9),
+      id: parseInt(Math.random().toString().slice(2, 11), 10),
       ticket: this.list.controls['ticket'].value,
       cantidad: this.list.controls['cantidad'].value, // Asigna el valor correspondiente
       undmedida: this.list.controls['unidadm'].value,
       descripcion: 'no c',
       preciou: this.precioDolar,
       igv: this.igvDolar,
-      descuento: '0.000',
-      importe: this.importeDolares
+      descuento: 0.000,
+      importe: this.importeDolares,
+      acopioid: this.list.controls['id'].value
     };
   }
 
   this.ticket.createTicket(nevoTicket).subscribe(
     response => {
       this.getTickets();
+      this.netoDinero = this.netoDinero + nevoTicket.importe;
     },
     error => {
       console.error('Error al crear el ticket:', error);
@@ -316,5 +384,51 @@ export class AcopioCreationDialogComponent implements OnInit {
 
   
   }
+
+  onSubmit(list: FormGroup) {
+    let acopio: AcopioList;
+    let total: number;
+    total = this.netoDinero + parseInt(this.list.controls['flete'].value,10) - parseInt(this.list.controls['descuentosoles'].value,10); 
+    acopio = {
+      id: this.list.controls['id'].value,
+      fechadoc: this.list.controls['fechacomprobante'].value,
+      fechaing: this.list.controls['fecharegistro'].value,
+      fechaolp: this.list.controls['fecharegistro'].value,
+      doc:  this.list.controls['comprobante'].value,
+      num_doc: this.list.controls['serie'].value + "-" + this.list.controls['correlativo'].value,
+      serie: this.list.controls['serie'].value,
+      numero: this.list.controls['correlativo'].value,
+      cod_acopio: this.list.controls['codigoacopio'].value,
+      dni: this.list.controls['numerodoc'].value,
+      datos: this.list.controls['nombres'].value,
+      tipos: 'SOCIO',
+      transaccion: this.list.controls['transaccion'].value,
+      banco: this.list.controls['cuentaban'].value,
+      num_banco: this.list.controls['cuentacte'].value,
+      moneda: this.list.controls['moneda'].value,
+      cantidad: this.list.controls['cantidad'].value,
+      pago: this.list.controls['formapago'].value,
+      neto: this.netoDinero,
+      dscto: this.list.controls['descuentosoles'].value,
+      flete: this.list.controls['flete'].value,
+      total: total,
+      estado: 'CANCELADO',
+      usuario: 'admin'
+    }
+    this.service2.createNewAcopios(acopio).subscribe(
+      response => {
+        console.log('Acopio creado:', response);
+        this.dialogRef.close();
+      },
+      error => {
+        console.error('Error al crear el acopio:', error);
+      }
+    );
+  }
+  
+
+onClose(): void {
+  this.dialogRef.close();
+}
 
 }

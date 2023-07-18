@@ -2,26 +2,89 @@
   <h3 matSubheader class="sidebar-title">ACEPAT</h3>
   <!-- DIVISOR DE NAVBAR -->
   <mat-divider></mat-divider>
+  <ul>
+    <li>
+      <mat-list-item>
+        <mat-icon mat-list-icon>home</mat-icon>
+        <span mat-line class="sidebar-item">Reportes </span>
+      </mat-list-item>
+      <ul style="--cantidad-items: 1">
+        <li>
+          <!-- ITEM DE NAVBAR -->
+          <mat-list-item routerLink="/acopio-racimos" class="item">
+            <mat-icon mat-list-icon>home</mat-icon>
+            <span mat-line class="sidebar-item">Reporte de acopios</span>
+          </mat-list-item>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <mat-list-item>
+        <mat-icon mat-list-icon>home</mat-icon>
+        <span mat-line class="sidebar-item">Maestros </span>
+      </mat-list-item>
+      <ul style="--cantidad-items: 1">
+        <li>
+          <!-- ITEM DE NAVBAR -->
+          <mat-list-item routerLink="/centro-acopio" class="item">
+            <mat-icon mat-list-icon>place</mat-icon>
+            <span mat-line class="sidebar-item">Centro Acopio</span>
+          </mat-list-item>
+        </li>
+        <li>
+          <!-- ITEM DE NAVBAR -->
+          <mat-list-item routerLink="/centro-acopio" class="item">
+            <mat-icon mat-list-icon>place</mat-icon>
+            <span mat-line class="sidebar-item">Tecnicos</span>
+          </mat-list-item>
+        </li>
+        <li>
+          <!-- ITEM DE NAVBAR -->
+          <mat-list-item routerLink="/centro-acopio" class="item">
+            <mat-icon mat-list-icon>place</mat-icon>
+            <span mat-line class="sidebar-item">Transportistas</span>
+          </mat-list-item>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <mat-list-item>
+        <mat-icon mat-list-icon>home</mat-icon>
+        <span mat-line class="sidebar-item">Socios </span>
+      </mat-list-item>
+      <ul style="--cantidad-items: 1">
+        <li>
+          <!-- ITEM DE NAVBAR -->
+          <mat-list-item routerLink="/vista-socios" class="item">
+            <mat-icon mat-list-icon>person</mat-icon>
+            <span mat-line class="sidebar-item">Socios</span>
+          </mat-list-item>
+        </li>
+        <li>
+          <!-- ITEM DE NAVBAR -->
+          <mat-list-item routerLink="/vista-socios" class="item">
+            <mat-icon mat-list-icon>person</mat-icon>
+            <span mat-line class="sidebar-item">Proveedores</span>
+          </mat-list-item>
+        </li>
+      </ul>
+    </li>
+  </ul>
   <!-- ITEM DE NAVBAR -->
-  <mat-list-item routerLink="/acopio-racimos">
-    <mat-icon mat-list-icon>home</mat-icon>
-    <span mat-line class="sidebar-item">Reporte de acopios</span>
-  </mat-list-item>
-  <!-- ITEM DE NAVBAR -->
-  <mat-list-item routerLink="/vista-socios">
-    <mat-icon mat-list-icon>person</mat-icon>
-    <span mat-line class="sidebar-item">Socios</span>
+  <mat-list-item routerLink="/reporte-acopio-transporte">
+    <mat-icon mat-list-icon>local_shipping</mat-icon>
+    <span mat-line class="sidebar-item">Acopio Transporte</span>
   </mat-list-item>
   <!-- ITEM DE NAVBAR -->
   <mat-list-item routerLink="/usersmanagement">
     <mat-icon mat-list-icon>admin_panel_settings</mat-icon>
     <span mat-line class="sidebar-item">Administrador</span>
   </mat-list-item>
-  <!-- ITEM DE NAVBAR -->
-  <mat-list-item routerLink="/reporte-acopio-transporte">
-    <mat-icon mat-list-icon>local_shipping</mat-icon>
-    <span mat-line class="sidebar-item">Acopio Transporte</span>
-  </mat-list-item>
+
   <!-- ITEM DE NAVBAR -->
   <mat-list-item routerLink="/compras-acopio">
     <mat-icon mat-list-icon>shopping_basket</mat-icon>
@@ -38,20 +101,15 @@
     <span mat-line class="sidebar-item">Movimiento de Aportes</span>
   </mat-list-item>
   <!-- ITEM DE NAVBAR -->
-  <mat-list-item routerLink="/centro-acopio">
-    <mat-icon mat-list-icon>place</mat-icon>
-    <span mat-line class="sidebar-item">Centro Acopio</span>
-  </mat-list-item>
-  <!-- ITEM DE NAVBAR -->
   <mat-list-item routerLink="/lista-deudas">
     <mat-icon mat-list-icon>place</mat-icon>
     <span mat-line class="sidebar-item">Lista de Deudas</span>
   </mat-list-item>
-        <!-- ITEM DE NAVBAR -->
-        <mat-list-item routerLink="/produccion">
-          <mat-icon mat-list-icon>settings</mat-icon>
-          <span mat-line class="sidebar-item">Produccion</span>
-        </mat-list-item>
+  <!-- ITEM DE NAVBAR -->
+  <mat-list-item routerLink="/produccion">
+    <mat-icon mat-list-icon>settings</mat-icon>
+    <span mat-line class="sidebar-item">Produccion</span>
+  </mat-list-item>
   <!-- DIVISOR DE NAVBAR -->
   <mat-divider></mat-divider>
   <!-- ITEM DE NAVBAR -->
